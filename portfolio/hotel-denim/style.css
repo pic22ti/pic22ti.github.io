@@ -424,6 +424,7 @@ a {
   }
   header > .container:first-child {
     box-sizing: border-box;
+    height: 112px;
   }
   /* menu,book */
   header > .container > .menu {
