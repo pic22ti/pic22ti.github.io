@@ -86,6 +86,7 @@ a {
     height: 60px;
   }
   header > .container {
+    height: 59px;
     display: flex;
     flex-flow: row wrap;
     position: relative;
