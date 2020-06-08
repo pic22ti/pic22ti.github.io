@@ -706,28 +706,6 @@ a {
     height: 340px;
   }
 
-  /* iframe 위로 안올라가서 일단 주석처리 */
-  /* .location > article > .container > div {
-    display: block;
-
-    float: right;
-    margin-top: 60px;
-    width: 31%;
-    height: 220px;
-    background-color: #a68c5d;
-  }
-  .location > article > .container > div > p {
-    color: white;
-    text-align: center;
-    font-weight: 300;
-    letter-spacing: -1px;
-  }
-  .location > article > .container > div > p:first-child {
-    padding: 35px 0;
-    font-weight: 600;
-    letter-spacing: 0;
-  } */
-
   /* -------------------------footer */
   footer { 
     height: 180px;
