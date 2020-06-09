@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <title>HOTEL DENIM SEOUL</title>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <header>
+        <div class="container">
+          <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="logo serif">
+            <div class="box">
+              <a href="hotel-denim-index.html">
+                <p><span>H</span>OTEL <span>D</span>ENIM.</p>
+                <p>SEOUL</p>
+              </a>
+            </div>
+          </div>
+          <a href="hotel-denim-index.html" class="book serif">
+            <div class="menu">BOOK</div>
+          </a>
+        </div>
+        <div class="line"></div>
+        <div class="container">
+          <nav>
+            <ul class="serif">
+              <li><a href="hotel-denim-rooms.html">ROOMS</a></li>
+              <li><a href="hotel-denim-offers.html">OFFERS</a></li>
+              <li><a href="hotel-denim-dining.html">DINING</a></li>
+              <li><a href="hotel-denim-about.html">ABOUT</a></li>
+              <li><a href="hotel-denim-login.html">LOGIN</a></li>
+              <li><a href="hotel-denim-reservation.html">RESERVATION</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section id="main">
+        <div class="container">
+          <div class="serif">
+            <p>HOTEL DENIM</p>
+            <p>COMFORTABLE & STYLISH</p>
+          </div>
+          <form action="hotel-denim-index.html">
+            <ul>
+              <li><p>숙박기간</p></li>
+              <li><input type="date" /></li>
+              <li><p>→</p></li>
+              <li><input type="date" /></li>
+              <li><input type="number" id="night" value="1" /></li>
+              <li><label for="night">박</label></li>
+              <li><label for="room">객실</label></li>
+              <li><input type="number" id="room" value="1" /></li>
+              <li><label for="adult">어른</label></li>
+              <li><input type="number" id="adult" value="2" /></li>
+              <li><label for="child">아이</label></li>
+              <li><input type="number" id="child" value="0" /></li>
+              <li><input type="submit" value="검색" /></li>
+            </ul>
+          </form>
+        </div>
+      </section>
+
+      <section class="container offers">
+        <div class="title">
+          <h2 class="serif">SPECIAL OFFERS</h2>
+          <p class="sans">
+            편안한 객실, 다양한 부대시설, 각종 이벤트, 프로그램등이 어우러진
+            호텔 데님의 상품을 만나보세요.
+          </p>
+        </div>
+        <article>
+          <div class="img"></div>
+          <div>
+            <p class="serif">PROMOTION</p>
+            <p class="sans">봄맞이 자전거 패키지</p>
+            <p class="sans">2020.05.01 ~ 2020.10.31</p>
+          </div>
+        </article>
+        <article>
+          <div class="img"></div>
+          <div>
+            <p class="serif">EXHIBITION</p>
+            <p class="sans">아트라이즈 콜라보레이션 展</p>
+            <p class="sans">2020.05.01 ~ 2020.10.31</p>
+          </div>
+        </article>
+        <article>
+          <div class="img"></div>
+          <div>
+            <p class="serif">EVENT</p>
+            <p class="sans">미팅룸 예약 이벤트</p>
+            <p class="sans">2020.05.01 ~ 2020.10.31</p>
+          </div>
+        </article>
+      </section>
+
+      <div class="dining">
+        <section class="container">
+          <div class="title">
+            <h2 class="serif">DINING</h2>
+            <p class="sans">호텔 데님에서 펼쳐지는 미식의 세계로 초대합니다.</p>
+          </div>
+          <article>
+            <div class="img"></div>
+            <div>
+              <p class="serif">RESTAURANT</p>
+              <p class="sans">데님 레스토랑</p>
+              <p class="sans">유럽, 뉴욕, 상해의 최신 트렌드 뷔페</p>
+            </div>
+          </article>
+          <article>
+            <div class="img"></div>
+            <div>
+              <p class="serif">LOUNGE</p>
+              <p class="sans">로비 라운지</p>
+              <p class="sans">모던한 분위기 음악이 흐르는 라운지</p>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <section class="rooms">
+        <div class="container">
+          <div class="title">
+            <h2 class="serif">ROOMS</h2>
+            <p class="sans">
+              편안한 휴식을 제공해드리는 호텔 데님만의 모던한 스타일의 객실을
+              만나보세요.
+            </p>
+          </div>
+          <article>
+            <div class="img"></div>
+          </article>
+          <article>
+            <div>
+              <p class="serif">DELUXE</p>
+              <p class="serif_kr">디럭스 룸</p>
+              <p class="sans">
+                객실의 느낌에서 데님을 연상시키며 안정감을 주는 컬러인 인디고
+                블루 타입이 스며들어 있는 공간이며, 젊은 감각의 비즈니스 고객과
+                여행객에게 색다른 분위기를 제공할 수 있는 객실입니다.
+              </p>
+            </div>
+            <div class="sans">
+              <a href="hotel-denim-rooms.html">자세히 보기</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="membership">
+        <article class="container">
+          <div class="title">
+            <h2 class="serif">MEMBERSHIP</h2>
+            <p class="sans">
+              호텔 데님 고객님께 특별한 혜택을 제공해드리는 다양한 멤버쉽
+              프로그램을 소개합니다.
+              <br />
+              차별화된 회원 특전과 포인트를 제공하며 고품격 서비스와 다양한
+              혜택이 어우러진
+              <br />
+              회원의 가치를 더욱 빛나게 해줄 차별화된 호텔 데님 멤버쉽를
+              만나보세요.
+            </p>
+          </div>
+          <div>
+            <a href="hotel-denim-login.html" class="sans">멤버쉽 자세히 보기</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="location">
+        <div class="container title">
+          <h2 class="serif">LOCATION</h2>
+        </div>
+        <article>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.344882694169!2d127.04446085001763!3d37.476187036957526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca6c9ebe36ae3%3A0x818c3a3e9ab413a9!2z642w64uY7Zi47YWU!5e0!3m2!1sko!2skr!4v1591447270386!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </article>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="right">
+            <div>
+              <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d7654211-Reviews-Hotel_Denim-Seoul.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <div class="logo serif">
+              <div class="box">
+                <a href="hotel-denim-index.html">
+                  <p><span>H</span>OTEL <span>D</span>ENIM.</p>
+                  <p>SEOUL</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="left sans">
+            <ul>
+              <li><a href="hotel-denim-index.html">오시는 길</a></li>
+              <li>|</li>
+              <li><a href="hotel-denim-index.html">사이트 맵</a></li>
+              <li>|</li>
+              <li><a href="hotel-denim-index.html">개인정보 처리 방침</a></li>
+              <li>|</li>
+              <li><a href="hotel-denim-index.html">이용약관</a></li>
+            </ul>
+            <p class="sans">
+              Copyright © 2014 DENIM HOTEL . All right reserved.
+              <br />
+              사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
+              : 2015-서울강남-01638호 | (주)호텔데님
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>
