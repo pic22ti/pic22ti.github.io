@@ -301,8 +301,9 @@ a {
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  footer > .container > .right > div > img {
-    width: 30px;
+  footer > .container > .right > div > a {
+    font-size: 30px;
+    color: white;
   }
   footer > .container > .right > .logo > .box {
     padding-top: 10px;
