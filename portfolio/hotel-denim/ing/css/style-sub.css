@@ -25,20 +25,19 @@ a {
   color: currentColor;
 }
 
-/* mobile---------------------------- */
-  /* ----------------------------wrap */
+/* mobile_start------------------------ */
+  /* ------------------------------wrap */
   .wrap {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-flow: row wrap;
   }
-
-  /* -----------------------------logo */
+  /* ------------------------------logo */
   .logo {
     width: 100%;
   }
-  .logo > .box {
+  .logo>.box {
     width: 130px;
     margin: 0 auto;
     padding: 11px 0 8px 0;
@@ -46,31 +45,30 @@ a {
     color: white;
     text-align: center;
   }
-  .logo > .box > a > p:first-child {
+  .logo>.box>a>p:first-child {
     font-size: 1.1em;
     letter-spacing: -1px;
   }
-  .logo > .box > a > p > span {
+  .logo>.box>a>p>span {
     font-size: 1.2em;
   }
-  .logo > .box > a > p:last-child {
+  .logo>.box>a>p:last-child {
     font-size: 0.6em;
     letter-spacing: 6px;
   }
- 
-  /* ------------------------------header */
+  /* ----------------------------header */
   header {
     background-color: #212121;
     width: 100%;
     height: 60px;
   }
-  header > .container {
+  header>.container {
     height: 59px;
     display: flex;
     flex-flow: row wrap;
     position: relative;
   }
-  header > .container > .menu {
+  header>.container>.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -82,13 +80,13 @@ a {
     padding-top: 25px;
     padding-left: 23px;
   }
-  header > .container > .menu > div {
+  header>.container>.menu>div {
     background-color: white;
     width: 14px;
     height: 1px;
     margin-bottom: 4px;
   }
-  header > .container > .book {
+  header>.container>.book {
     position: absolute;
     top: 0;
     right: 0;
@@ -102,16 +100,16 @@ a {
     color: white;
     text-align: center;
   }
-  header > .line {
+  header>.line {
     background-color: #434343;
     width: 100%;
     height: 1px;
   }
-  /* ---------------------------------nav */
-  header > div:nth-of-type(3) > nav {
+  /* -------------------------------nav */
+  header>div:nth-of-type(3)>nav {
     display: none;
   }
-  header > div:nth-of-type(3) > nav {
+  header>div:nth-of-type(3)>nav {
     background-color: #212121;
     width: 100%;
     height: 210px;
@@ -119,50 +117,50 @@ a {
     color: white;
     text-align: center;
   }
-  header > div:nth-of-type(3) > nav > ul > li:last-of-type {
+  header>div:nth-of-type(3)>nav>ul>li:last-of-type {
     display: none;
   }
-  header > div:nth-of-type(3) > nav > ul > li {
+  header>div:nth-of-type(3)>nav>ul>li {
     padding-top: 18px;
   }
-  /* ------------------------------------footer */
+  /* ----------------------------footer */
   footer {
     background-color: #212121;
     width: 100%;
   }
-  footer > .container > .right {
+  footer>.container>.right {
     padding-top: 40px;
   }
-  footer > .container > .right > div:nth-of-type(1) {
+  footer>.container>.right>div:nth-of-type(1) {
     margin: 0 auto;
     width: 110px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  footer > .container > .right > div > a {
+  footer>.container>.right>div>a {
     font-size: 30px;
     color: white;
   }
-  footer > .container > .right > .logo > .box {
+  footer>.container>.right>.logo>.box {
     padding-top: 10px;
   }
-  footer > .container > .left {
+  footer>.container>.left {
     padding: 10px 30px;
     font-size: 0.8em;
   }
-  footer > .container > .left > ul > li {
+  footer>.container>.left>ul>li {
     display: inline-block;
     margin-right: 10px;
 
     color: white;
   }
-  footer > .container > div.left > p {
+  footer>.container>div.left>p {
     color: #727272;
     padding: 20px 0;
   }
 
-  /* -------------------------sub section */
+  /* -----------------------sub_section */
   section {
     width: 100%;
     /* 사실 왜 flex를 썼는지 기억이 안남...
@@ -172,7 +170,7 @@ a {
     justify-content: center; */
   }
 
-  /* sub_rooms start------------------- */
+  /* sub_rooms_start------------------- */
   /* -----------------------------title */
   .sub_rooms .title {
     width: 100%;
@@ -180,43 +178,43 @@ a {
     box-sizing: border-box;
     padding: 30px 10px 18px 10px;
   }
-  .sub_rooms .title > h2 {
+  .sub_rooms .title>h2 {
     padding-bottom: 10px;
     color: #a68c5d;
     font-size: 1.6rem;
     font-weight: 500;
     letter-spacing: -1px;
   }
-  .sub_rooms .title > p {
+  .sub_rooms .title>p {
     padding-bottom: 26px;
     color: #5e5e5e;
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: -1px;
   }
-  .sub_rooms .title > nav > ul > li {
+  .sub_rooms .title>nav>ul>li {
     display: inline-block;
     padding-right: 20px;
     color: #bebebe;
     font-size: 1.1rem;
   }
-  .sub_rooms .title > nav > ul > li:hover {
+  .sub_rooms .title>nav>ul>li:hover {
     text-decoration: underline;
     color: #333333;
   }
-  .sub_rooms .title > nav > ul > li:nth-of-type(1) {
+  .sub_rooms .title>nav>ul>li:nth-of-type(1) {
     text-decoration: underline;
     color: #333333;
   }
-  /* ----------------------------image */
-  .sub_rooms > div > div:nth-of-type(2) {
+  /* -----------------------------image */
+  .sub_rooms>div>div:nth-of-type(2) {
     width: 100%;
   }
-  .sub_rooms > div > div:nth-of-type(2) > img {
+  .sub_rooms>div>div:nth-of-type(2)>img {
     max-width: 100%;
     height: auto;
   }
-  .sub_rooms > div > div:nth-of-type(2) > div {
+  .sub_rooms>div>div:nth-of-type(2)>div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -224,30 +222,30 @@ a {
     color: #a68c5d;
     font-size: 2rem;
   }
-  /* ----------------------------------article */
-  .sub_rooms > div > article:nth-of-type(1) {
+  /* ---------------------------article */
+  .sub_rooms>div>article:nth-of-type(1) {
     padding: 25px 10px 30px 10px;
   }
-  .sub_rooms > div > article > h3 {
+  .sub_rooms>div>article>h3 {
     color: #bebebe;
     font-size: 1.3rem;
     font-weight: 300;
   }
-  .sub_rooms > div > article > h2 {
+  .sub_rooms>div>article>h2 {
     padding-bottom: 30px;
     font-size: 2rem;
     font-weight: 400;
   }
-  .sub_rooms > div > article > p {
+  .sub_rooms>div>article>p {
     height: 120px;
     color: #5e5e5e;
     font-size: 1rem;
     font-weight: 400;
   }
-  .sub_rooms > div > article:nth-of-type(1) > div {
+  .sub_rooms>div>article:nth-of-type(1)>div {
     text-align: center;
   }
-  .sub_rooms > div > article > div > a {
+  .sub_rooms>div>article>div>a {
     display: inline-block;
     background-color: #a68c5d;
     width: 204px;
@@ -259,94 +257,100 @@ a {
     text-align: center;
     letter-spacing: -1px;
   }
-  .sub_rooms > div > article > div > a:hover {
+  .sub_rooms>div>article>div>a:hover {
     background-color: white;
     height: 35px;
     border: 1px solid #a68c5d;
     padding-top: 13px;
     color: #a68c5d;
   }
-  /* ------------------------------box */
-  .sub_rooms > div > article.box {
+  /* -------------------------------box */
+  .sub_rooms>div>article.box {
     margin: 0 10px 40px 10px;
     border: 1px solid #e1e1e1;
     padding: 20px;
   }
-  .sub_rooms > div > article.box > div {
+  .sub_rooms>div>article.box>div {
     padding: 10px 0 10px 0;
   }
-  .sub_rooms > div > article.box > div > h4 {
+  .sub_rooms>div>article.box>div>h4 {
     color: #a68c5d;
     font-size: 1.1rem;
     font-weight: 500;
   }
-  .sub_rooms > div > article.box > div > ul > li {
+  .sub_rooms>div>article.box>div>ul>li {
     color: #5e5e5e;
   }
-  .sub_rooms > div > article.box > div > ul > li::before {
+  .sub_rooms>div>article.box>div>ul>li::before {
     content: "·";
     padding: 0 10px 0 10px;
   }
-  .sub_rooms > div > article.box > div:nth-of-type(1) > ul > li > div {
+  .sub_rooms>div>article.box>div:nth-of-type(1)>ul>li>div {
     display: inline-block;
     width: 100px;
   }
-  /* sub_rooms end---------------------- */
+  /* sub_rooms_end--------------------- */
 
-  /* sub_about start-------------------- */
-  /* ------------------------------title */
+  /* sub_offers_start------------------ */
+  /* sub_offers_end-------------------- */
+  
+  /* sub_dining_start------------------ */
+  /* sub_dining_end-------------------- */
+  
+  /* sub_about_start------------------- */
+  /* -----------------------------title */
   .sub_about .title {
     width: 100%;
     height: 90px;
     box-sizing: border-box;
     padding: 30px 10px 18px 10px;
   }
-  .sub_about .title > h2 {
+  .sub_about .title>h2 {
     padding-bottom: 10px;
     color: #a68c5d;
     font-size: 1.6rem;
     font-weight: 500;
     letter-spacing: -1px;
   }
-  /* ------------------------------------image */
-  .sub_about > div > div:nth-of-type(2) {
+  /* -----------------------------image */
+  .sub_about>div>div:nth-of-type(2) {
     width: 100%;
   }
-  .sub_about > div > div:nth-of-type(2) > img {
+  .sub_about>div>div:nth-of-type(2)>img {
     max-width: 100%;
     height: auto;
   }
-  /* ----------------------------------article */
-  .sub_about > div > article:nth-of-type(1) {
+  /* ---------------------------article */
+  .sub_about>div>article:nth-of-type(1) {
     padding: 25px 20px 30px 20px;
   }
-  .sub_about > div > article > h3 {
+  .sub_about>div>article>h3 {
     color: #a68c5d;
     font-size: 1.3rem;
     font-weight: 300;
   }
-  .sub_about > div > article > h2 {
+  .sub_about>div>article>h2 {
     padding-bottom: 30px;
     font-size: 2rem;
     font-weight: 400;
   }
-  .sub_about > div > article > div {
+  .sub_about>div>article>div {
     background-color: #bfbfbf;
     width: 100%;
     height: 1px;
     margin-bottom: 40px;
   }
-  .sub_about > div > article > p {
+  .sub_about>div>article>p {
     padding-bottom: 30px;
     color: #5e5e5e;
   }
-  .sub_about > div > article > p:nth-of-type(1) {
+  .sub_about>div>article>p:nth-of-type(1) {
     font-size: 1.2rem;
   }
-  /* sub_about end-------------------- */
+  /* sub_about_end--------------------- */
   
-  /* sub_login start------------------ */
-  /* ----------------------------title */
+  /* sub_login_start------------------- */
+  /* -----------------------------title */
   .sub_login>.title{
     text-align: center;
     font-size: 1.4rem;
@@ -358,7 +362,7 @@ a {
     color: #a68c5d;
     letter-spacing: -1px;
   }
-  /* -----------------------------form */
+  /* ------------------------------form */
   .sub_login>.container>form>input{
     display: block;
     box-sizing: border-box;
@@ -377,7 +381,7 @@ a {
     padding-left: 0;
     color: white;
   }
-  .sub_login>.container>div:last-of-type{
+  .sub_login:first-of-type>.container>div:last-of-type{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -394,7 +398,7 @@ a {
   .sub_login>.container>div:last-of-type>a:hover {
     text-decoration: underline;
   }
-  /* -----------------------membership */
+  /* ------------------------membership */
   .sub_login:nth-of-type(2){
     background-color: #f5f5f5;
   }
@@ -415,12 +419,17 @@ a {
   }
   .sub_login:nth-of-type(2)>.container{
     background-color: white;
-    margin: 10px;
-    /* margin: 0 auto; 
-    pc는 가운데 정렬 */
+    margin: 10px 10px 50px 10px;
     padding: 20px;
   }
+  .sub_login:nth-of-type(2)>.container>div{
+    padding-bottom: 30px;
+  }
+  .sub_login:nth-of-type(2)>.container>div:last-of-type{
+    padding-bottom: 0;
+  }
   .sub_login:nth-of-type(2)>.container>div>.serif_kr{
+    padding-left: 10px;
     font-size: 1.5rem;
     font-weight: 500;
   }
@@ -431,38 +440,43 @@ a {
     height: 1px;
   }
   .sub_login:nth-of-type(2)>.container>div>ul>li{
-    padding: 10px 0 10px 20px;
+    padding: 0 0 20px 25px;
   }
   .sub_login:nth-of-type(2)>.container>div>ul>li>p:first-of-type{
-    font-size: 1.1rem;
+    padding-bottom: 3px;
+    font-size: 1rem;
     font-weight: 600;
-    padding-bottom: 5px;
   }
   .sub_login:nth-of-type(2)>.container>div>ul>li>p:nth-of-type(2){
     padding-left: 20px;
+    color: #434343;
+    font-size: 0.9rem;
   }
   .sub_login:nth-of-type(2)>.container>div>ul>li:last-of-type>p{
-    color: #727272;
-    font-size: 0.8rem;
+    color: #999999;
+    font-size: 0.7rem;
+    font-weight: 300;
   }
-  /* sub_login end-------------------- */
+  /* sub_login_end--------------------- */
 
-/* mobile_end------------------------- */
+  /* sub_reservation_start------------- */
+  /* sub_reservation_end--------------- */
+/* mobile_end-------------------------- */
 
 @media screen and (min-width: 768px) and (max-width: 1199px)
 {
-  /* ------------------------------------footer */
-  footer > .container {
+  /* ----------------------------footer */
+  footer>.container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
   }
-  footer > .container > div.left {
+  footer>.container>div.left {
     order: 1;
     width: 60%;
     padding-top: 20px;
   }
-  footer > .container > div.right {
+  footer>.container>div.right {
     order: 2;
     width: 24%;
     padding-top: 20px;
@@ -471,52 +485,52 @@ a {
 
 @media screen and (min-width: 1200px)
 {
-  /* ------------------------container */
+  /* -------------------------container */
   .container {
     width: 1200px;
     margin: 0 auto;
   }
-  /* ---------------------------logo */
-  .logo > .box {
+  /* ------------------------------logo */
+  .logo>.box {
     width: 250px;
     padding: 33px 0 17px 0;
   }
-  .logo > .box > a > p:first-child {
+  .logo>.box>a>p:first-child {
     font-size: 1.9rem;
   }
-  .logo > .box > a > p > span {
+  .logo>.box>a>p>span {
     font-size: 2.2rem;
   }
-  .logo > .box > a > p:last-child {
+  .logo>.box>a>p:last-child {
     font-size: 0.8rem;
   }
-  /* --------------------------header */
+  /* ----------------------------header */
   header {
     height: 153px;
   }
-  header > .container:first-child {
+  header>.container:first-child {
     box-sizing: border-box;
     height: 112px;
   }
   /* menu,book */
-  header > .container > .menu {
+  header>.container>.menu {
     display: none;
   }
-  header > .container > .book {
+  header>.container>.book {
     display: none;
   }
-  /* --------------------------header_nav */
-  header > div:nth-of-type(3) {
+  /* ------------------------header_nav */
+  header>div:nth-of-type(3) {
     display: block;
 
     height: 40px;
     box-sizing: border-box;
   }
-  header > div:nth-of-type(3) > nav > ul {
+  header>div:nth-of-type(3)>nav>ul {
     display: flex;
     flex-flow: row wrap;
   }
-  header > div:nth-of-type(3) > nav > ul > li {
+  header>div:nth-of-type(3)>nav>ul>li {
     height: 100%;
     width: 16.6%;
     padding-top: 11px;
@@ -526,12 +540,12 @@ a {
     font-size: 0.9rem;
     text-align: center;
   }
-  header > div:nth-of-type(3) > nav > ul > li:last-child {
+  header>div:nth-of-type(3)>nav>ul>li:last-child {
     width: 17%;
     background-color: #a68c5d;
     color: white;
   }
-  header > div:nth-of-type(3) > nav > ul > li:hover {
+  header>div:nth-of-type(3)>nav>ul>li:hover {
     background-color: #212121;
     color: white;
     box-sizing: border-box;
@@ -539,8 +553,8 @@ a {
     padding-top: 10px;
     height: 40px;
   }
-  /* --------------------------header_nav */
-  header > div:nth-of-type(3) > nav {
+  /* ------------------------header_nav */
+  header>div:nth-of-type(3)>nav {
     /* jquery menu 안보일때 미디어 PC에서
         display: none으로 nav가 안보여서 강제 우선순위를 줌 */
     display: block !important;
@@ -548,11 +562,11 @@ a {
     height: 40px;
     box-sizing: border-box;
   }
-  header > div:nth-of-type(3) > nav > ul {
+  header>div:nth-of-type(3)>nav>ul {
     display: flex;
     flex-flow: row wrap;
   }
-  header > div:nth-of-type(3) > nav > ul > li {
+  header>div:nth-of-type(3)>nav>ul>li {
     height: 100%;
     width: 16.6%;
     padding-top: 11px;
@@ -562,13 +576,13 @@ a {
     font-size: 0.9rem;
     text-align: center;
   }
-  header > div:nth-of-type(3) > nav > ul > li:last-child {
+  header>div:nth-of-type(3)>nav>ul>li:last-child {
     display: inline-block;
     width: 17%;
     background-color: #a68c5d;
     color: white;
   }
-  header > div:nth-of-type(3) > nav > ul > li:hover {
+  header>div:nth-of-type(3)>nav>ul>li:hover {
     background-color: #212121;
     color: white;
     box-sizing: border-box;
@@ -576,89 +590,100 @@ a {
     padding-top: 10px;
     height: 40px;
   }
-  /* -------------------------footer */
+  /* ----------------------------footer */
   footer { 
     height: 180px;
   }
-  footer > .container {
+  footer>.container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  footer > .container > div.left {
+  footer>.container>div.left {
     order: 1;
     padding-top: 50px;
   }
-  footer > .container > div.right {
+  footer>.container>div.right {
     order: 2;
     padding-right: 61px;
   }
 
-
-  /* sub_rooms start-------------------- */
-  /* ------------------------------title */
+  /* sub_rooms_start------------------- */
+  /* -----------------------------title */
   .sub_rooms .title {
     height: 230px;
     padding: 46px 0 24px 0;
   }
-  .sub_rooms .title > h2 {
+  .sub_rooms .title>h2 {
     padding-bottom: 10px;
     font-size: 2.2rem;
   }
-  .sub_rooms .title > p {
+  .sub_rooms .title>p {
     font-size: 1rem;
   }
-  .sub_rooms .title > nav > ul > li {
+  .sub_rooms .title>nav>ul>li {
     font-size: 1.2rem;
   }
-  /* ------------------------------box */
-  .sub_rooms > div > article.box {
+  /* -------------------------------box */
+  .sub_rooms>div>article.box {
     display: flex;
     flex-flow: row wrap;
   }
-  .sub_rooms > div > article.box > div {
+  .sub_rooms>div>article.box>div {
     box-sizing: border-box;
     width: 33.3%;
     padding: 10px;
   }
-  .sub_rooms > div > article.box > div > h4 {
+  .sub_rooms>div>article.box>div>h4 {
     padding-bottom: 10px;
     font-size: 1.2rem;
     font-weight: 400;
   }
-  /* sub_rooms end--------------------- */
+  /* sub_rooms_end--------------------- */
 
+  /* sub_offers_start------------------ */
+  /* sub_offers_end-------------------- */
 
+  /* sub_dining_start------------------ */
+  /* sub_dining_end-------------------- */
 
-  /* sub_about start------------------- */
+  /* sub_about_start------------------- */
   /* -----------------------------title */
   .sub_about .title {
     height: 140px;
     padding: 46px 0 24px 0;
   }
-  .sub_about .title > h2 {
+  .sub_about .title>h2 {
     padding-bottom: 10px;
     font-size: 2.2rem;
   }
-  .sub_about .title > p {
+  .sub_about .title>p {
     font-size: 1rem;
   }
-  .sub_about .title > nav > ul > li {
+  .sub_about .title>nav>ul>li {
     font-size: 1.2rem;
   }
-  /* ----------------------------------article */
-  .sub_about > div > article:nth-of-type(1) {
+  /* ---------------------------article */
+  .sub_about>div>article:nth-of-type(1) {
     padding: 46px 10px 30px 10px;
   }
-  .sub_about > div > article > h3 {
+  .sub_about>div>article>h3 {
     font-size: 1.5rem;
   }
-  .sub_about > div > article > h2 {
+  .sub_about>div>article>h2 {
     font-size: 2.4rem;
   }
-  .sub_about > div > article > p:nth-of-type(1) {
+  .sub_about>div>article>p:nth-of-type(1) {
     font-size: 1.3rem;
   }
-  /* sub_about end------------------- */
+  /* sub_about_end--------------------- */
 
+  /* sub_login_start------------------- */
+  .sub_login:nth-of-type(2)>.container{
+    margin: 0 auto;
+  }
+  /* sub_login_end--------------------- */
+
+  /* sub_reservation_start------------- */
+  /* sub_reservation_end--------------- */
 }
