@@ -222,6 +222,21 @@ a {
     color: #a68c5d;
     font-size: 2rem;
   }
+  /* image 슬라이드 할 예정------------- */
+  .sub_rooms>div>div:nth-of-type(2)>div>img{
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .sub_rooms>div>div:nth-of-type(2)>div>div{
+    display: flex;
+  }
+  .sub_rooms>div>div:nth-of-type(2)>div>div>img{
+    
+    padding-top: 17px;
+    width: 15px;
+    height: 15px;
+  }
   /* ---------------------------article */
   .sub_rooms>div>article:nth-of-type(1) {
     padding: 25px 10px 30px 10px;
@@ -483,6 +498,11 @@ a {
     padding-left: 0;
     color: white;
   }
+  .sub_login>.container>form>input:last-of-type:hover{
+    background-color: white;
+    border: 1px solid #a68c5d;
+    color: #a68c5d;
+  }
   .sub_login:first-of-type>.container>div:last-of-type{
     display: flex;
     flex-flow: row wrap;
@@ -601,7 +621,6 @@ a {
     text-align: center;
   }
   .sub_reservation>div>.container>form>ul>li>* {
-    /* float: left; */
     background-color: rgba(255, 255, 255, 0);
     border: none;
     padding: 13px 0;
@@ -627,28 +646,6 @@ a {
   .sub_reservation>div>.container>form>ul>li:last-of-type{
     width: 100%;
   }
-  /* ------------------------------------ */
-  /* .sub_reservation>div>.container>form>ul>li>p {
-    width: 5%;
-  }
-  .sub_reservation>div>.container>form>ul>li:first-child>p {
-    width: 8%;
-    box-sizing: border-box;
-    border-right: 1px solid #bebebe;
-  }
-  .sub_reservation>div>.container>form>ul>li>input[type="date"] {
-    width: 15%;
-  }
-  .sub_reservation>div>.container>form>ul>li>input[type="number"] {
-    width: 5%;
-  }
-  .sub_reservation>div>.container>form>ul>li>label {
-    width: 5%;
-  } */
-  /* .sub_reservation>div>.container>form>ul>li:nth-child(6)>label {
-    box-sizing: border-box;
-    border-right: 1px solid #bebebe;
-  } */
   .sub_reservation>div>.container>form>ul>li>input[type="submit"] {
     padding: 14px 0;
 
