@@ -619,6 +619,8 @@ a {
   .sub_reservation>div>.container>form>ul>li{
     width: 25%;
     text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dddddd;
   }
   .sub_reservation>div>.container>form>ul>li>* {
     background-color: rgba(255, 255, 255, 0);
@@ -633,12 +635,27 @@ a {
   }
   .sub_reservation>div>.container>form>ul>li:first-of-type{
     width: 20%;
+    border-right: 1px solid #dddddd;
+  }
+  .sub_reservation>div>.container>form>ul>li.date{
+    width: 35%;
+    box-sizing: border-box;
+    padding: 0 25px;
   }
   .sub_reservation>div>.container>form>ul>li:nth-of-type(3){
     width: 10%;
   }
-  .sub_reservation>div>.container>form>ul>li.date{
-    width: 35%;
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(5) {
+    padding-left: 20px;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(6) {
+    padding-right: 10px;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(7) {
+    border-left: 1px solid #dddddd;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(11) {
+    border-left: 1px solid #dddddd;
   }
   .sub_reservation>div>.container>form>ul>li>label>p{
     margin: 13px 0;
@@ -1065,6 +1082,7 @@ a {
   }
   .sub_reservation>div>.container>form>ul>li{
     width: 100%;
+    border-bottom: none;
   }
   .sub_reservation>div>.container>form>ul>li>* {
     float: left;
