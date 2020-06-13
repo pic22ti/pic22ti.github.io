@@ -1110,6 +1110,7 @@ a {
   }
   .sub_reservation>div>.container>form>ul>li.date{
     width: 100%;
+    padding: 0;
   }
   .sub_reservation>div>.container>form>ul>li>input[type="date"] {
     width: 15%;
