@@ -26,6 +26,7 @@
   align-items: center;
 }
 button {
+  display: inline-block;
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -243,7 +244,6 @@ h2, h3, h4 {
   top: 40%;
   left: 25%;
 }
-
 .coffee .content4 .img{
   background-image: url('../images/coffee-2.jpg');
 }
@@ -259,6 +259,85 @@ h2, h3, h4 {
   padding-bottom: 10px;
 }
 /* coffee end */
+
+/* menu start */
+.menu .title {
+  width: 100%;
+  order: 1;
+}
+.menu .title .flex {
+  height: 60px;
+  justify-content: flex-start;
+}
+.menu .title h3 {
+  padding-right: 15px;
+  /* 51line padding-bottom을 0으로 변경 */
+  padding-bottom: 0;
+}
+.menu .btn {
+  width: 100%;
+  height: 100px;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+}
+.menu .btn .button {
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  border-top: 1px solid #dcdcdc;
+}
+.menu .btn .button:nth-of-type(2n+1) {
+  border-right: 1px solid #dcdcdc;
+}
+.button.click {
+  /* 클릭했을때 색상 미리보기 */
+  background-color: black;
+  color: white;
+}
+.menu .content .flex {
+  width: 100%;
+  height: 360px;
+}
+.menu .content .item {
+  width: 50%;
+  height: 180px;
+  text-align: center;
+}
+.menu .content .item .img {
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+  background-image: url('../images/101.jpg');
+}
+.menu .page {
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+}
+.menu .page p {
+  display: inline-block;
+}
+/* menu end */
+
+/* news start */
+.news .btn {
+  height: 50px;
+}
+.news .btn .button {
+  width: 50%;
+  height: 100%;
+}
+.news ul {
+  /* 높이는 임시로 지정 */
+  height: 60px;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+}
+.news ul .flex {
+  justify-content: space-around;
+}
+/* news end */
 
 /* footer start */
 .footer {
