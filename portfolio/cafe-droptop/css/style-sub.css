@@ -1,0 +1,251 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
+
+/* all start */
+
+.wrap {
+  /* 모바일 최소 너비 */
+  /* width: 360px; */
+  width: 100%;
+
+  /* 임시 */
+  /* background-color: #eee;  */
+}
+.container { 
+  height: 100%;
+  /* 좌우 여백 */
+  margin: 0 18px;
+}
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.pacifico {
+  font-family: 'Pacifico', cursive;
+}
+h2 {
+  font-size: 26pt;
+}
+h3 {
+  font-size: 20pt;
+}
+h2, h3, h4 {
+  padding-bottom: 20px;
+}
+.strong {
+  font-size: 15pt;
+  font-weight: bold;
+  line-height: 20pt;
+  padding-bottom: 10px;
+}
+.text {
+  font-size: 11pt;
+  line-height: 15pt;
+}
+/* all end */
+
+/* mobile start */
+/* header start */
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+.bar .fa-times {
+  /* 초기값: 숨김 */
+  display: none;
+}
+.logo {
+  font-size: 17pt;
+}
+.nav {
+  /* 초기값: 숨김 */
+  display: none;
+  position: absolute;
+  top: 50px;
+
+  background-color: white;
+  /* 모바일 최소 너비 */
+  /* width: 360px; */
+  width: 100%;
+  height: 450px;
+}
+.nav .flex {
+  display: block;
+}
+.line {
+  background-color: black;
+  width: 100%;
+  height: 1px;
+}
+.nav .container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 35px 45px;
+}
+.header .list {
+  padding-bottom: 20px;
+  font-size: 20pt;
+  font-weight: bold;
+}
+/* header end */
+
+/* brand strat */
+/* scroll */
+.scroll {
+  /* 숨겨놓고 작업중 */
+  display: none;
+  position: relative;
+}
+.scroll i {
+  position: absolute;
+  top: 90vh;
+  left: 50%;
+}
+/* box start */
+.box1 {
+  width: 100%;
+  height: 450px;
+}
+.box2 {
+  width: 100%;
+  height: 225px;
+}
+.main {
+  width: 100%;
+  height: 225px;
+}
+.box0:nth-of-type(1) {
+  width: 100%;
+  height: 225px;
+}
+.box0:nth-of-type(2) {
+  width: 100%;
+  height: 450px;
+}
+/* box end */
+
+/* content start */
+.content1 .flex {
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.content1 .text {
+  padding-bottom: 30px;
+}
+.content2 .img{
+  background-image: url('../images/brand-1.jpg');
+}
+.content2 .flex {
+  justify-content: center;
+}
+.content2 .strong {
+  color: white;
+  text-align: center;
+}
+.content3 .flex{
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.content4 .img {
+  background-image: url('../images/brand-2.jpg');
+}
+.content5 {
+  height: 225px;
+}
+.content5 .flex {
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+}
+.content6 .img {
+  background-image: url('../images/brand-3.jpg');
+}
+.content6 .flex {
+  color: white;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.content6 ul {
+  padding-bottom: 20px;
+}
+.content6 .list {
+  padding-bottom: 15px;
+}
+.content7 .img {
+  background-image: url('../images/brand-4.jpg');
+}
+.box0 {
+  background-color: #1a2e42;
+  color: white;
+}
+.content8 {
+  /* 왜 width:100%을 줘야 하는지 모르겠음 */
+  /* content9는 안해도 100%인데 */
+  /* 박스 사이징때문에 그런건가? */
+  width: 100%;
+  height: 225px;
+  box-sizing: border-box;
+  padding-top: 60px;
+}
+.content9 {
+  height: 450px;
+  padding-bottom: 40px;
+}
+/* content end */
+/* brand end */
+
+/* footer start */
+.footer {
+  background-color: black;
+  width: 100%;
+  /* 열리면 높이 225px */
+  /* height: 225px; */
+  height: 150px;
+  color: white;
+}
+.footer .flex {
+  height: 60px;
+  justify-content: center;
+}
+.footer .icon {
+  padding: 0 10px;
+  font-size: 15pt;
+}
+.footer .container {
+  height: 90px;
+  font-size: 10pt;
+  text-align: center;
+}
+.footer .text {
+  padding-bottom: 7px;
+  line-height: 13pt;
+}
+.footer .text:nth-of-type(2) {
+  /* 초기값: 숨김 */
+  color: #6e6e6e;
+  display: none;
+}
+/* footer end */
+/* mobile end */
