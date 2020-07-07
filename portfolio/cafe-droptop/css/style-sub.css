@@ -118,13 +118,20 @@ a {
 /* scroll */
 .scroll {
   /* 숨겨놓고 작업중 */
-  display: none;
-  position: relative;
+  /* display: none; */
+  /* position: relative; */
+  text-align: center;
 }
 .scroll i {
-  position: absolute;
-  top: 90vh;
-  left: 50%;
+  /* 애니메이션 효과주기 */
+  /* 맨 밑으로 가면 뒤집어서 go to top */
+  position: fixed;
+  /* 이상하니까 다른 방안 생각해보기 */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  bottom: 50px;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0.5;
 }
 /* box start */
 .box1 {
@@ -225,9 +232,9 @@ a {
 .coffee .content2 .img{
   background-image: url('../images/coffee-1.jpg');
 }
-
 .coffee .content3 {
   position: relative;
+  overflow: hidden;
 }
 .left, .right {
   color: #ddd;
