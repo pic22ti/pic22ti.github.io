@@ -39,6 +39,10 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
 }
+a {
+  text-decoration: none;
+  color: currentColor;
+}
 /* all end */
 
 /* mobile start */
@@ -94,9 +98,10 @@ button {
   position: relative;
 }
 .main .img {
-  /* 초기값: 숨김 */
+  /* 나머지 슬라이드 초기값: 숨김 */
   display: none;
   height: 100%;
+  width: 100%;
   background-image: url('../images/main-m.jpg');
 }
 .main .img:nth-of-type(1) {
