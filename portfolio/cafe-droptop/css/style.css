@@ -1,8 +1,11 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 
-/* all start */
-p {
+/* ================  ================ */
+/* ----------------  ---------------- */
+
+/* ================ all start ================ */
+.sans {
   font-family: 'Noto Sans KR', sans-serif;
 }
 .pacifico {
@@ -12,9 +15,6 @@ p {
   /* 모바일 최소 너비 */
   /* width: 360px; */
   width: 100%;
-
-  /* 임시 */
-  /* background-color: #eee;  */
 }
 .container { 
   height: 100%;
@@ -43,35 +43,51 @@ a {
   text-decoration: none;
   color: currentColor;
 }
-/* all end */
+/* ================ all end ================ */
 
-/* mobile start */
-/* header start */
+/* ================ mobile start ================ */
+/* ---------------- header start ---------------- */
 .header {
   width: 100%;
   height: 50px;
   background-color: white;
 }
+.header>div {
+  height: 100%;
+}
+.bar {
+  width: 50px;
+  height: 50px;
+
+  padding: 18px 0 0 18px;
+  box-sizing: border-box;
+}
 .bar .fa-times {
   /* 초기값: 숨김 */
   display: none;
+  font-size: 15pt;
 }
-.logo {
-  font-size: 17pt;
+.bar:hover .nav {
+  display: block;
+}
+.bar:hover .fa-bars {
+  display: none;
+}
+.bar:hover .fa-times {
+  display: block;
 }
 .nav {
   /* 초기값: 숨김 */
   display: none;
   position: absolute;
   top: 50px;
+  left: 0;
 
   background-color: white;
-  /* 모바일 최소 너비 */
-  /* width: 360px; */
   width: 100%;
   height: 450px;
 }
-.nav .flex {
+.nav ul {
   display: block;
 }
 .line {
@@ -89,27 +105,41 @@ a {
   font-size: 20pt;
   font-weight: bold;
 }
-/* header end */
+.list .sub-tab {
+  display: none;
+  padding: 13px 0 0 13px;
+  font-size: 12pt;
+}
+.list:hover a {
+  display: block;
+}
+.list a:hover {
+  text-decoration: underline;
+}
+.logo {
+  font-size: 15pt;
+}
+.location {
+  width: 50px;
+  height: 50px;
 
-/* main start */
+  padding: 18px 0 0 18px;
+  box-sizing: border-box;
+}
+/* ---------------- header end ---------------- */
+
+/* ---------------- main start ---------------- */
 .main {
   width: 100%;
   height: 450px;
-  position: relative;
 }
 .main .img {
-  /* 나머지 슬라이드 초기값: 숨김 */
-  display: none;
   height: 100%;
   width: 100%;
-  background-image: url('../images/main-m.jpg');
-}
-.main .img:nth-of-type(1) {
-  display: block;
+  background-image: url('../images/main-1.jpg');
+  background-size: cover;
 }
 .main .flex {
-  position: absolute;
-  top: 0;
   align-items: flex-end;
   justify-content: center;
   font-size: 7pt;
@@ -118,9 +148,9 @@ a {
   margin-bottom: 10px;
   padding: 2px;
 }
-/* main end */
+/* ---------------- main end ---------------- */
 
-/* best start */
+/* ---------------- best start ---------------- */
 .best {
   background-color: white;
   width: 100%;
@@ -128,10 +158,10 @@ a {
 }
 .title {
   height: 65px;
-  font-size: 17pt;
+  font-size: 15pt;
 }
 .title button {
-  font-size: 17pt;
+  font-size: 15pt;
 }
 .title .flex {
   justify-content: space-around;
@@ -170,21 +200,24 @@ a {
   color: white;
   font-size: 12pt;
 }
-/* best end */
+.best .box:hover {
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+/* ---------------- best end ---------------- */
 
-/* content start */
+/* ---------------- content start ---------------- */
 .content {
   display: none;
 }
-/* content end */
+/* ---------------- content end ---------------- */
 
-/* footer start */
+/* ---------------- footer start ---------------- */
 .footer {
   background-color: black;
   width: 100%;
-  /* 열리면 높이 225px */
-  /* height: 225px; */
-  height: 150px;
   color: white;
 }
 .footer .flex {
@@ -196,18 +229,24 @@ a {
   font-size: 15pt;
 }
 .footer .container {
-  height: 90px;
+  background-color: black;
   font-size: 10pt;
   text-align: center;
 }
+.footer .hover {
+  padding-bottom: 20px;
+}
 .footer .text {
-  padding-bottom: 7px;
+  padding-bottom: 17px;
   line-height: 13pt;
 }
-.footer .text:nth-of-type(2) {
+.footer .hide {
   /* 초기값: 숨김 */
-  color: #6e6e6e;
   display: none;
+  color: #6e6e6e;
 }
-/* footer end */
-/* mobile end */
+.hover:hover .hide {
+  display: block;
+}
+/* ---------------- footer end ---------------- */
+/* ================ mobile end ================ */

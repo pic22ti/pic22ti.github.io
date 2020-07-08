@@ -11,52 +11,56 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <div class="container">
+      <div>
         <div class="flex">
           <div class="bar">
             <!-- 클릭, nav 열림 -->
-            <!-- nav열리면 숨김 -->
             <i class="fas fa-bars"></i>
-            <!-- nav열리면 보임 -->
             <i class="fas fa-times"></i>
+            <div class="nav">
+              <ul class="flex">
+                <div class="line"></div>
+                <div class="container">
+                  <li class="list">
+                      <a href="brand.html" class="sans tab">브랜드</a>
+                      <a href="brand.html" class="sans sub-tab">드롭탑 이야기</a>
+                      <a href="brand.html" class="sans sub-tab">커피 이야기</a>
+                  </li>
+                  <!-- menu안에 각 탭으로 이동해야함 -->
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">신제품</a>
+                  </li>
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">커피</a>
+                  </li>
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">음료</a>
+                  </li>
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">푸드</a>
+                  </li>
+                  <li class="list">
+                      <a href="news.html" class="sans tab">뉴스</a>
+                      <a href="news.html" class="sans sub-tab">이벤트</a>
+                      <a href="news.html" class="sans sub-tab">뉴스</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
           <div class="logo pacifico">
-            <p><a href="index.html">Drop Top.</a></p>
+            <a href="index.html">Drop Top.</a>
           </div>
           <div class="location">
-            <a href="index.html"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="index.html">
+              <i class="fas fa-map-marker-alt"></i>
+            </a>
           </div>
         </div>
       </div>
-      <div class="nav">
-        <!-- 클릭, 각 메뉴로 이동 -->
-        <ul class="flex">
-          <div class="line"></div>
-          <div class="container sans">
-            <li class="list">
-              <p><a href="brand.html">브랜드</a></p>
-            </li>
-            <!-- menu안에 각 탭으로 이동해야함 -->
-            <li class="list">
-              <p><a href="menu.html">신제품</a></p>
-            </li>
-            <li class="list">
-              <p><a href="menu.html">커피</a></p>
-            </li>
-            <li class="list">
-              <p><a href="menu.html">음료</a></p>
-            </li>
-            <li class="list">
-              <p><a href="menu.html">푸드</a></p>
-            </li>
-            <li class="list">
-              <p><a href="news.html">뉴스</a></p>
-            </li>
-          </div>
-        </ul>
-      </div>
+
     </header>
-    <div class="scroll">
+    <div class="scroll flex">
       <!-- 화면에 하단에 고정 -->
       <i class="fas fa-chevron-down"></i>
     </div>
@@ -88,7 +92,7 @@
         <div class="box2 content3">
           <p class="pacifico left">Blend</p>
           <p class="pacifico right">925</p>
-          <h3 class="pacifico center">Blend925</h3>
+          <h3 class="pacifico center">Blend 925</h3>
         </div>
         <div class="box2 content4">
           <div class="img"></div>
@@ -96,23 +100,23 @@
         <div class="box0 content5">
           <div class="container">
             <h2 class="pacifico">Blend 925 coffee</h2>
-            <ul>
+            <ol class="sans">
               <li class="list">
-                <p class="text sans">1. 925 블렌드는 925번의 로스팅과 
+                <p class="text sans">925 블렌드는 925번의 로스팅과 
                   블렌딩 테스트를 통해 만들어진 완벽한 블렌드입니다.</p>
               </li>
               <li class="list">
-                <p class="text sans">2. 한 잔에 20g의 원두를 사용합니다.</p>
+                <p class="text sans">한 잔에 20g의 원두를 사용합니다.</p>
               </li>
               <li class="list">
-                <p class="text sans">3. 로스팅한지 14일 이내, 개봉한지 2일 이내 원두 사용을 원칙으로
+                <p class="text sans">로스팅한지 14일 이내, 개봉한지 2일 이내 원두 사용을 원칙으로
                   최상의 아로마와 바디감을 유지한 원두를 사용합니다.</p>
               </li>
               <li class="list">
-                <p class="text sans">4. 주문받은 후 바로 분쇄한 원두 사용을 원칙으로  
+                <p class="text sans">주문받은 후 바로 분쇄한 원두 사용을 원칙으로  
                   원두 고유의 맛을 잃어버리지 않게 제조합니다.</p>
               </li>
-            </ul>
+            </ol>
           </div>
         </div>
       </div>
@@ -120,16 +124,32 @@
     <footer class="footer">
       <div class="flex">
         <div class="icon">
-          <i class="fab fa-facebook-f"></i>
+          <a href="index.html">
+            <i class="fab fa-facebook-f"></i>
+          </a>
         </div>
-        <div class="icon"><i class="fab fa-instagram"></i></div>
-        <div class="icon"><div class="icon">b</div></div>
-        <div class="icon"><i class="fab fa-twitter"></i></div>
+        <div class="icon">
+          <a href="index.html">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="index.html">
+            <div class="icon">b</div>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="index.html">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
       <div class="container">
-        <p class="text">(주)다도글로벌/카페드롭탑 사업자 정보 ▼</p>
-        <p class="text">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
-        <p class="text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
+        <div class="hover">
+          <p class="sans text">(주)다도글로벌/카페드롭탑 사업자 정보 ▼</p>
+          <p class="sans text hide">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
+          <p class="sans text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
+        </div>
       </div>
     </footer>
   </div>

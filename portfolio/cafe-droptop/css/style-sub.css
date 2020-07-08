@@ -69,32 +69,48 @@ a {
 /* all end */
 
 /* mobile start */
-/* header start */
+/* ---------------- header start ---------------- */
 .header {
   width: 100%;
   height: 50px;
   background-color: white;
 }
+.header>div {
+  height: 100%;
+}
+.bar {
+  width: 50px;
+  height: 50px;
+
+  padding: 18px 0 0 18px;
+  box-sizing: border-box;
+}
 .bar .fa-times {
   /* 초기값: 숨김 */
   display: none;
+  font-size: 15pt;
 }
-.logo {
-  font-size: 17pt;
+.bar:hover .nav {
+  display: block;
+}
+.bar:hover .fa-bars {
+  display: none;
+}
+.bar:hover .fa-times {
+  display: block;
 }
 .nav {
   /* 초기값: 숨김 */
   display: none;
   position: absolute;
   top: 50px;
+  left: 0;
 
   background-color: white;
-  /* 모바일 최소 너비 */
-  /* width: 360px; */
   width: 100%;
   height: 450px;
 }
-.nav .flex {
+.nav ul {
   display: block;
 }
 .line {
@@ -112,24 +128,44 @@ a {
   font-size: 20pt;
   font-weight: bold;
 }
-/* header end */
+.header .list .sub-tab {
+  display: none;
+  padding: 13px 0 0 13px;
+  font-size: 12pt;
+}
+.header .list:hover a {
+  display: block;
+}
+.header .list a:hover {
+  text-decoration: underline;
+}
+.logo {
+  font-size: 15pt;
+}
+.location {
+  width: 50px;
+  height: 50px;
+
+  padding: 18px 0 0 18px;
+  box-sizing: border-box;
+}
+/* ---------------- header end ---------------- */
 
 /* brand strat */
 /* scroll */
-.scroll {
+.scroll.flex {
   /* 숨겨놓고 작업중 */
   /* display: none; */
-  /* position: relative; */
-  text-align: center;
+
+  justify-content: center;
+  align-items: center;
 }
 .scroll i {
   /* 애니메이션 효과주기 */
   /* 맨 밑으로 가면 뒤집어서 go to top */
   position: fixed;
-  /* 이상하니까 다른 방안 생각해보기 */
-  /* background-color: rgba(255, 255, 255, 0.5); */
+  
   bottom: 50px;
-  text-align: center;
   font-size: 2rem;
   opacity: 0.5;
 }
@@ -199,8 +235,10 @@ a {
   justify-content: flex-end;
   align-items: flex-start;
 }
-.content6 ul {
+.content6 ol {
   padding-bottom: 20px;
+  padding-left: 18px;
+  list-style: decimal;
 }
 .content6 .list {
   padding-bottom: 15px;
@@ -252,8 +290,8 @@ a {
 }
 .center {
   position: absolute;
-  top: 40%;
-  left: 25%;
+  top: 30%;
+  left: 60%;
 }
 .coffee .content4 .img{
   background-image: url('../images/coffee-2.jpg');
@@ -265,6 +303,10 @@ a {
   height: 337.5px;
   padding-top: 60px;
   color: black;
+}
+.coffee .content5 ol {
+  padding-left: 18px;
+  list-style: decimal;
 }
 .coffee .content5 .list {
   padding-bottom: 10px;
@@ -397,16 +439,12 @@ a {
 }
 /* news end */
 
-/* footer start */
+/* ---------------- footer start ---------------- */
 .footer {
-  /* index 제외 전부 숨김 */
+  /* 모바일은 숨김 */
   display: none;
-
   background-color: black;
   width: 100%;
-  /* 열리면 높이 225px */
-  /* height: 225px; */
-  height: 150px;
   color: white;
 }
 .footer .flex {
@@ -418,18 +456,24 @@ a {
   font-size: 15pt;
 }
 .footer .container {
-  height: 90px;
+  background-color: black;
   font-size: 10pt;
   text-align: center;
 }
+.footer .hover {
+  padding-bottom: 20px;
+}
 .footer .text {
-  padding-bottom: 7px;
+  padding-bottom: 17px;
   line-height: 13pt;
 }
-.footer .text:nth-of-type(2) {
+.footer .hide {
   /* 초기값: 숨김 */
-  color: #6e6e6e;
   display: none;
+  color: #6e6e6e;
 }
-/* footer end */
+.hover:hover .hide {
+  display: block;
+}
+/* ---------------- footer end ---------------- */
 /* mobile end */

@@ -11,55 +11,55 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <div class="container">
+      <div>
         <div class="flex">
           <div class="bar">
             <!-- 클릭, nav 열림 -->
-            <!-- nav열리면 숨김 -->
             <i class="fas fa-bars"></i>
-            <!-- nav열리면 보임 -->
             <i class="fas fa-times"></i>
+            <div class="nav">
+              <ul class="flex">
+                <div class="line"></div>
+                <div class="container">
+                  <li class="list">
+                      <a href="brand.html" class="sans tab">브랜드</a>
+                      <a href="brand.html" class="sans sub-tab">드롭탑 이야기</a>
+                      <a href="brand.html" class="sans sub-tab">커피 이야기</a>
+                  </li>
+                  <!-- menu안에 각 탭으로 이동해야함 -->
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">신제품</a>
+                  </li>
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">커피</a>
+                  </li>
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">음료</a>
+                  </li>
+                  <li class="list">
+                    <a href="menu.html" class="sans tab">푸드</a>
+                  </li>
+                  <li class="list">
+                      <a href="news.html" class="sans tab">뉴스</a>
+                      <a href="news.html" class="sans sub-tab">이벤트</a>
+                      <a href="news.html" class="sans sub-tab">뉴스</a>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
           <div class="logo pacifico">
-            <p><a href="index.html">Drop Top.</a></p>
+            <a href="index.html">Drop Top.</a>
           </div>
           <div class="location">
-            <a href="index.html"><i class="fas fa-map-marker-alt"></i></a>
+            <a href="index.html">
+              <i class="fas fa-map-marker-alt"></i>
+            </a>
           </div>
         </div>
       </div>
-      <div class="nav">
-        <!-- 클릭, 각 메뉴로 이동 -->
-        <ul class="flex">
-          <div class="line"></div>
-          <div class="container sans">
-            <li class="list">
-              <p><a href="brand.html">브랜드</a></p>
-            </li>
-            <!-- menu안에 각 탭으로 이동해야함 -->
-            <li class="list">
-              <p><a href="menu.html">신제품</a></p>
-            </li>
-            <li class="list">
-              <p><a href="menu.html">커피</a></p>
-            </li>
-            <li class="list">
-              <p><a href="menu.html">음료</a></p>
-            </li>
-            <li class="list">
-              <p><a href="menu.html">푸드</a></p>
-            </li>
-            <li class="list">
-              <p><a href="news.html">뉴스</a></p>
-            </li>
-          </div>
-        </ul>
-      </div>
+
     </header>
-    <div class="scroll">
-      <!-- 화면에 하단에 고정 -->
-      <i class="fas fa-chevron-down"></i>
-    </div>
     <section class="menu news content">
       <div class="flex">
         <div class="title">
@@ -188,22 +188,35 @@
         </div>
       </div>
     </section>
-
-
-
     <footer class="footer">
       <div class="flex">
         <div class="icon">
-          <i class="fab fa-facebook-f"></i>
+          <a href="index.html">
+            <i class="fab fa-facebook-f"></i>
+          </a>
         </div>
-        <div class="icon"><i class="fab fa-instagram"></i></div>
-        <div class="icon"><div class="icon">b</div></div>
-        <div class="icon"><i class="fab fa-twitter"></i></div>
+        <div class="icon">
+          <a href="index.html">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="index.html">
+            <div class="icon">b</div>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="index.html">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
       <div class="container">
-        <p class="text">(주)다도글로벌/카페드롭탑 사업자 정보 ▼</p>
-        <p class="text">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
-        <p class="text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
+        <div class="hover">
+          <p class="sans text">(주)다도글로벌/카페드롭탑 사업자 정보 ▼</p>
+          <p class="sans text hide">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
+          <p class="sans text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
+        </div>
       </div>
     </footer>
   </div>
