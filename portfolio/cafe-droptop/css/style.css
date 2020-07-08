@@ -78,7 +78,6 @@ a {
   position: relative;
   width: 17px; 
   height: 12px; 
-  
 }
 .bar>.gnb>.gnb-box>.gnb-bar {
   background-color: black;
@@ -98,17 +97,17 @@ a {
   top: 100%;
 }
 
-.bar:hover .nav {
+.bar:active .nav {
   display: block;
 }
-.bar:hover .gnb>.gnb-box>.gnb-bar.top {
+.bar:active .gnb>.gnb-box>.gnb-bar.top {
   top: 50%;
   transform: rotate(45deg);
 }
-.bar:hover .gnb>.gnb-box>.gnb-bar.mid {
+.bar:active .gnb>.gnb-box>.gnb-bar.mid {
   opacity: 0;
 }
-.bar:hover .gnb>.gnb-box>.gnb-bar.bot {
+.bar:active .gnb>.gnb-box>.gnb-bar.bot {
   top: 50%;
   transform: rotate(-45deg);
 }
