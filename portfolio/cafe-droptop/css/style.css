@@ -55,27 +55,85 @@ a {
 .header>div {
   height: 100%;
 }
+
+
+
+#checkbox {
+  position: absolute;
+  top: -500px;
+}
 .bar {
   width: 50px;
   height: 50px;
-
-  padding: 18px 0 0 18px;
+}
+.bar>.gnb {
+  display: block;
+  width: 50px;
+  height: 50px;
+  
   box-sizing: border-box;
+  padding: 18px 0 0 18px;
 }
-.bar .fa-times {
-  /* 초기값: 숨김 */
-  display: none;
-  font-size: 15pt;
+.bar>.gnb>.gnb-box {
+  position: relative;
+  width: 17px; 
+  height: 12px; 
+  
 }
+.bar>.gnb>.gnb-box>.gnb-bar {
+  background-color: black;
+  position: absolute;
+  width: 17px;
+  height: 2px;
+
+  transition: 0.5s;
+}
+.bar>.gnb>.gnb-box>.gnb-bar.top {
+  top: 0%;
+}
+.bar>.gnb>.gnb-box>.gnb-bar.mid {
+  top: 50%;
+}
+.bar>.gnb>.gnb-box>.gnb-bar.bot {
+  top: 100%;
+}
+
 .bar:hover .nav {
   display: block;
 }
-.bar:hover .fa-bars {
-  display: none;
+.bar:hover .gnb>.gnb-box>.gnb-bar.top {
+  top: 50%;
+  transform: rotate(45deg);
 }
-.bar:hover .fa-times {
+.bar:hover .gnb>.gnb-box>.gnb-bar.mid {
+  opacity: 0;
+}
+.bar:hover .gnb>.gnb-box>.gnb-bar.bot {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+
+#checkbox:checked + .bar>.nav {
   display: block;
 }
+#checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.top {
+  top: 50%;
+  transform: rotate(45deg);
+}
+#checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.mid {
+  opacity: 0;
+}
+#checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.bot {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
 .nav {
   /* 초기값: 숨김 */
   display: none;
@@ -93,7 +151,7 @@ a {
 .line {
   background-color: black;
   width: 100%;
-  height: 1px;
+  height: 2px;
 }
 .nav .container {
   box-sizing: border-box;
