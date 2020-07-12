@@ -201,16 +201,23 @@ a {
 
 /* ---------------- main start ---------------- */
 .main {
+  position: relative;
+  /* overflow: hidden; */
+
   width: 100%;
   height: 450px;
 }
-.main .img {
+.main .main-img {
   height: 100%;
   width: 100%;
-  background-image: url('../images/main-1.jpg');
   background-size: cover;
+  background-position: center;
+  background-image: url('../images/main-1.jpg');
 }
 .main .flex {
+  position: absolute;
+  top: 0;
+
   align-items: flex-end;
   justify-content: center;
 }
@@ -219,6 +226,9 @@ a {
   padding: 2px;
   /* 피씨는 7pt로 하기 */
   font-size: 8pt;
+}
+.main p:hover {
+  cursor: pointer;
 }
 /* ---------------- main end ---------------- */
 
