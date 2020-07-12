@@ -132,7 +132,7 @@ a {
   top: 50px;
   left: 0;
 
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 450px;
 }
@@ -151,15 +151,19 @@ a {
   margin: 0;
   padding: 35px 45px;
 }
-.list {
+.nav .list {
   padding-bottom: 20px;
   font-size: 20pt;
   font-weight: bold;
 }
-.list .sub-tab {
+.nav .list>.sub-tab {
   display: none;
-  padding: 13px 0 0 13px;
+  padding: 6px 0 0 13px;
   font-size: 12pt;
+}
+.nav .list>.sub-tab>a.sub-tab {
+  display: inline-block;
+  padding: 5px 0;
 }
 /* .list:hover a {
   display: block;
@@ -214,7 +218,7 @@ a {
   margin-bottom: 10px;
   padding: 2px;
   /* 피씨는 7pt로 하기 */
-  font-size: 10pt;
+  font-size: 8pt;
 }
 /* ---------------- main end ---------------- */
 
