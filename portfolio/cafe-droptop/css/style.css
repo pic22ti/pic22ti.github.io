@@ -58,7 +58,7 @@ a {
 
 #gnb_checkbox {
   position: absolute;
-  left: -500px;
+  top: -500px;
 }
 .bar {
   width: 50px;
@@ -306,7 +306,7 @@ a {
 }
 .footer #footer_checkbox {
   position: absolute;
-  left: -500px;
+  top: -1000px;
 }
 .footer .hover {
   padding-bottom: 20px;
