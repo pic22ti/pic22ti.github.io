@@ -182,19 +182,16 @@ a {
   display: block;
 }
 
-
-
-
-
 .logo {
   font-size: 15pt;
 }
 .location {
   width: 50px;
   height: 50px;
-
-  padding: 18px 0 0 18px;
+  padding: 16px 0 0 18px;
   box-sizing: border-box;
+
+  font-size: 1.1rem;
 }
 /* ---------------- header end ---------------- */
 
@@ -212,11 +209,12 @@ a {
 .main .flex {
   align-items: flex-end;
   justify-content: center;
-  font-size: 7pt;
 }
 .main p {
   margin-bottom: 10px;
   padding: 2px;
+  /* 피씨는 7pt로 하기 */
+  font-size: 10pt;
 }
 /* ---------------- main end ---------------- */
 
@@ -316,8 +314,6 @@ a {
 .footer .twit .img {
   background-image: url('../images/twitter.png');
 }
-
-
 .footer .container {
   position: relative;
 
