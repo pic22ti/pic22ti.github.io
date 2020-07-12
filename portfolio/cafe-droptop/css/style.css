@@ -145,6 +145,8 @@ a {
   height: 2px;
 }
 .nav .container {
+  position: relative;
+
   box-sizing: border-box;
   margin: 0;
   padding: 35px 45px;
@@ -159,12 +161,31 @@ a {
   padding: 13px 0 0 13px;
   font-size: 12pt;
 }
-.list:hover a {
+/* .list:hover a {
   display: block;
 }
 .list a:hover {
   text-decoration: underline;
+} */
+.nav .container>#brand_checkbox {
+  position: absolute;
+  top: -500px;
 }
+.nav .container>#brand_checkbox:checked + .list>.sub-tab {
+  display: block;
+}
+.nav .container>#news_checkbox {
+  position: absolute;
+  top: -500px;
+}
+.nav .container>#news_checkbox:checked + .list>.sub-tab {
+  display: block;
+}
+
+
+
+
+
 .logo {
   font-size: 15pt;
 }
