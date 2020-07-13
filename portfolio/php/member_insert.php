@@ -5,6 +5,7 @@
 	$email = $_POST["email"];
 
 	// 현재의 년-월-일-시-분을 저장
+	date_default_timezone_set('Asia/Seoul');
 	$regist_day = date('Y-m-d (H:i)');
 
 	$con = mysqli_connect('localhost', 'user1', '12345', 'newdb');

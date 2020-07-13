@@ -8,6 +8,7 @@
 
 	$subject = htmlspecialchars($subject, ENT_QUOTES);
 	$content = htmlspecialchars($content, ENT_QUOTES);
+	date_default_timezone_set('Asia/Seoul');
 	$regist_day = date("Y-m-d (H:i)");
 
 	$con = mysqli_connect('localhost', 'user1', '12345', 'newdb');

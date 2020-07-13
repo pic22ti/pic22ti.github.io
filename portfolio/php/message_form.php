@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>index</title>
+	<title>쪽지 보내기</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

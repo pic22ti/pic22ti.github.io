@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>회원가입</title>
+	<title>Join</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -16,8 +16,10 @@
 					<h2>Join</h2>
 					<div class="id flex">
 						<!-- value=""가 생략되어있음 -->
-						<input type="text" name="id" placeholder="아이디">
+						<input type="text" id="chk_id1" name="id" placeholder="아이디">
 						<input class="check" type="button" value="중복확인" onclick="check_id()">
+						<!-- hidden chk_id2 -->
+						<input type="hidden" id="chk_id2" name="chk_id2" value="0">
 					</div>
 					<div>
 						<input type="password" name="pass" placeholder="비밀번호">
@@ -42,35 +44,38 @@
 			<?php include "footer.php"; ?>
 		</footer>
 	</div>
+
+	<iframe src="" id="ifrm1" scrolling="no" frameborder="no" width="0" height="0" name="ifrm1"></iframe>
+
 	<script type="text/javascript">
 		function check_input() {
 			if( !document.member_form.id.value ) {
-				alert( "아이디를 입력하세요" );
+				alert( "아이디를 입력하세요." );
 				document.member_form.id.focus();
 				return;
 			}
 			if( !document.member_form.pass.value ) {
-				alert( "비밀번호를 입력하세요" );
+				alert( "비밀번호를 입력하세요." );
 				document.member_form.pass.focus();
 				return;
 			}
 			if( !document.member_form.pass_confirm.value ) {
-				alert( "비밀번호 확인을 입력하세요" );
+				alert( "비밀번호 확인을 입력하세요." );
 				document.member_form.pass_confirm.focus();
 				return;
 			}
 			if( !document.member_form.name.value ) {
-				alert( "이름을 입력하세요" );
+				alert( "이름을 입력하세요." );
 				document.member_form.name.focus();
 				return;
 			}
 			if( !document.member_form.email.value ) {
-				alert( "이메일 입력하세요" );
+				alert( "이메일 입력하세요." );
 				document.member_form.email.focus();
 				return;
 			}
 			if( document.member_form.pass.value != document.member_form.pass_confirm.value ) {
-				alert( "비밀번호가 일치하지 않습니다" );
+				alert( "비밀번호가 일치하지 않습니다." );
 				document.member_form.pass.focus();
 				document.member_form.pass.select();
 				return;
@@ -87,7 +92,14 @@
 			return;
 		}
 		function check_id() {
-			window.open( "member_check_id.php?id="+document.member_form.id.value, "IDcheck", "left=200, top=200, width=350, height=250, scrollbars=no, resizable=yes" );
+			document.getElementById("chk_id2").value = 0;
+			let id = document.getElementById("chk_id1").value;
+
+			if( id == "" ){
+				alert("아이디를 입력해주세요.");
+				return;
+			}
+			ifrm1.location.href = "member_check_id.php?id="+document.member_form.id.value;
 		}
 	</script>
 </body>

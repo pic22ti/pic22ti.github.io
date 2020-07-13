@@ -266,13 +266,13 @@ input.reset:hover {
 .message_view {
 	width: 600px;
 }
-.message_view>.flex {
+.message_view .flex {
 	height: 40px;
 	/* text-align: left */
 	justify-content: left;
 	border-bottom: 1px solid lightgray;
 }
-.message_view>.flex>p {
+.message_view .flex>p {
 	width: 90px;
 	height: 40px;
 	padding-left: 10px;
@@ -285,23 +285,23 @@ input.reset:hover {
 	line-height: 40px;
 
 }
-.message_view>.flex>p:nth-of-type(2n+1) {
+.message_view .flex>p:nth-of-type(2n+1) {
 	color: #7c88ef;
 }
-.message_view>.flex>p:last-of-type {
+.message_view .flex>p:last-of-type {
 	width: 150px;
 }
-.message_view>.flex>p.text {
+.message_view .flex>p.text {
 	width: 510px;
 	
 	overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.message_view>.flex.content {
+.message_view .flex.content {
 	height: 150px;
 }
-.message_view>.flex.content>.scroll {
+.message_view .flex.content>.scroll {
 	box-sizing: border-box;
 	margin: 5px 0;
 	width: 500px;
@@ -310,11 +310,124 @@ input.reset:hover {
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
-.message_view>.btn>.button {
+.message_view .btn>.button {
 	margin: 10px 5px;
 }
+.message_view .flex>p.file_text {
+	width: 468px;
 
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
+/* board_form */
+/*.board_form {
+	 aside 있을 경우 35 
+	 aside 없을 경우 0 
+	padding-right: 0 !important;
+}*/
+.board_form .board_id {
+	margin-left: 10px;
+}
+.board_form input.subject {
+	width: 500px;
+	height: 34px;
+	margin: 3px 0;
+}
+.board_form textarea {
+	box-sizing: border-box;
+	width: 500px;
+	height: 144px;
+	padding: 10px;
+	margin: 3px 0;
+	border: 1px solid lightgray;
+}
+.board_form input[type=file] {
+	height: 30px;
+	padding: 0;
+	border: none;
+	margin: 0;
+}
+
+/* board_list */
+.board_list {
+	width: 600px;
+}
+.board_list>.ul li.flex {
+	justify-content: left;
+
+	padding: 10px 0;
+	border-bottom: 1px solid lightgray;
+}
+.board_list>.ul li.tit {
+	border-bottom: 1px solid #7c88ef;
+}
+.board_list>.ul li.hover {
+	position: relative;
+}
+.board_list>.ul li.hover>p:nth-of-type(1)::before {
+	content: "";
+	display: inline-block;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	background-color: #7c88ef;
+	width: 0;
+	height: 40px;
+}
+.board_list>.ul li.hover:hover {
+	background-color: rgb(245, 245, 245);
+}
+.board_list>.ul li.hover:hover p:nth-of-type(1)::before {
+	width: 5px;
+}
+.board_list>.ul li.flex>p {
+	padding: 0;
+	text-align: center;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.board_list>.ul li.flex>p:nth-of-type(1) {
+	width: 50px;
+}
+.board_list>.ul li.flex>p:nth-of-type(2) {
+	width: 290px;
+}
+.board_list>.ul li.flex>p:nth-of-type(3) {
+	width: 50px;
+}
+.board_list>.ul li.flex>p:nth-of-type(4) {
+	width: 70px;
+}
+.board_list>.ul li.flex>p:nth-of-type(5) {
+	width: 90px;
+}
+.board_list>.ul li.flex>p:nth-of-type(6) {
+	width: 50px;
+}
+.board_list>.ul li.hover>p:nth-of-type(2) {
+	box-sizing: border-box;
+	padding: 0 10px;
+	text-align: left;
+}
+.board_list>.page.flex {
+	height: 50px;
+	padding: 20px 0;
+	justify-content: center;
+}
+
+.attach_file .btn_save {
+	width: 40px;
+	height: 20px;
+	padding-top: 3px;
+	border: 1px solid lightgray;
+	margin-top: 7px;
+	font-size: 0.8rem;
+}
 
 
 /* footer */

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>LOGIN</title>
+	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -34,12 +34,12 @@
 	<script type="text/javascript">
 		function check_input() {
 			if( !document.login_form.id.value ) {
-				alert("아이디를 입력하세요!");
+				alert("아이디를 입력하세요.");
 				document.login_form.id.focus();
 				return;
 			}
 			if( !document.login_form.pass.value ) {
-				alert("비밀번호를 입력하세요!");
+				alert("비밀번호를 입력하세요.");
 				document.login_form.pass.focus();
 				return;
 			}

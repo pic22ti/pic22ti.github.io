@@ -21,10 +21,14 @@
         </aside>
         <div class="form modify message_list">
           <?php
+          // page로 넘어온게 있는지 확인
+          // 처음에는 버튼 클릭해서 오면 mode만 넘어오고 page는 넘어온게 없음
             if( isset($_GET["page"]) ) {
+              // 넘어온게 있으면 해당 페이지
               $page = $_GET["page"];
             }
             else {
+              // 넘어온게 없으면 1페이지에서 시작
               $page = 1;
             }
 
@@ -33,7 +37,7 @@
               echo "<h2>보낸 쪽지함</h2>";
             }
             else {
-              echo "<h2>받은 쪽지함</h2>"; 
+              echo "<h2>받은 쪽지함</h2>";
             }
           ?>
           <!-- <h2>보낸 쪽지함</h2> -->
@@ -77,9 +81,12 @@
               $total_record = mysqli_num_rows($result);
               $scale = 5;
 
+              // 글 수가 5의 배수일때
+              // floor()함수 : 소수점은 버리는 함수
               if( $total_record%$scale == 0 ) {
                 $total_page = floor( $total_record/$scale );
               }
+              // 글 수가 5의 배수일때는 +1 페이지
               else {
                 $total_page = floor( $total_record/$scale)+1;
               }
