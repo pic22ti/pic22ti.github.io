@@ -76,14 +76,48 @@
           <div class="flex">
             <!-- pc는 마우스 올렸을때, 색상변경 -->
             <!-- 클릭, 색상 변경하고  해당 메뉴로 이동 -->
-            <button class="button sans">신제품</button>
+            <button class="button sans click">신제품</button>
             <button class="button sans">커피</button>
             <button class="button sans">음료</button>
             <button class="button sans">푸드</button>
           </div>
         </div>
       </div>
-      <ul class="content newitem">
+      <div class="modal">
+        <span class="close">&times;</span>
+        <img src="../images/101.jpg" alt="">
+      </div>
+      <ul class="content newitem show">
+        <div class="flex">
+          <li class="item">
+            <img src="../images/101.jpg" alt="">
+            <p class="text sans">신제품</p>
+            <p class="text sans">Espresso</p>
+          </li>
+          <li class="item">
+            <img src="../images/102.jpg" alt="">
+            <p class="text sans">신제품</p>
+            <p class="text sans">Espresso</p>
+          </li>
+          <li class="item">
+            <img src="../images/103.jpg" alt="">
+            <p class="text sans">신제품</p>
+            <p class="text sans">Espresso</p>
+          </li>
+          <li class="item">
+            <img src="../images/104.jpg" alt="">
+            <p class="text sans">신제품</p>
+            <p class="text sans">Espresso</p>
+          </li>
+        </div>
+      </ul>
+
+
+
+
+
+
+      <ul class="content coffeeitem">
         <div class="flex">
           <!-- hover, click, 약간 확대 -->
           <li class="item">
@@ -108,27 +142,52 @@
           </li>
         </div>
       </ul>
-      <ul class="content coffeeitem">
+      <ul class="content beverageitem">
         <div class="flex">
           <!-- hover, click, 약간 확대 -->
           <li class="item">
             <div class="img"></div>
-            <p class="text sans">에스프레소</p>
+            <p class="text sans">음료</p>
             <p class="text sans">Espresso</p>
           </li>
           <li class="item">
             <div class="img"></div>
-            <p class="text sans">에스프레소</p>
+            <p class="text sans">음료</p>
             <p class="text sans">Espresso</p>
           </li>
           <li class="item">
             <div class="img"></div>
-            <p class="text sans">에스프레소</p>
+            <p class="text sans">음료</p>
             <p class="text sans">Espresso</p>
           </li>
           <li class="item">
             <div class="img"></div>
-            <p class="text sans">에스프레소</p>
+            <p class="text sans">음료</p>
+            <p class="text sans">Espresso</p>
+          </li>
+        </div>
+      </ul>
+      <ul class="content fooditem">
+        <div class="flex">
+          <!-- hover, click, 약간 확대 -->
+          <li class="item">
+            <div class="img"></div>
+            <p class="text sans">푸드</p>
+            <p class="text sans">Espresso</p>
+          </li>
+          <li class="item">
+            <div class="img"></div>
+            <p class="text sans">푸드</p>
+            <p class="text sans">Espresso</p>
+          </li>
+          <li class="item">
+            <div class="img"></div>
+            <p class="text sans">푸드</p>
+            <p class="text sans">Espresso</p>
+          </li>
+          <li class="item">
+            <div class="img"></div>
+            <p class="text sans">푸드</p>
             <p class="text sans">Espresso</p>
           </li>
         </div>
@@ -172,5 +231,6 @@
       </div>
     </footer>
   </div>
+  <script src="../js/script.js"></script>
 </body>
 </html>
