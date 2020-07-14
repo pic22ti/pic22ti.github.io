@@ -13,29 +13,18 @@
     <header class="header">
       <div>
         <div class="flex">
-          <input type="checkbox" id="gnb_checkbox">
           <div class="bar">
-            <label class="gnb" for="gnb_checkbox">
-              <div class="gnb-box">
-                <div class="gnb-bar top"></div>
-                <div class="gnb-bar mid"></div>
-                <div class="gnb-bar bot"></div>
-              </div>
-            </label>
+            <!-- 클릭, nav 열림 -->
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
             <div class="nav">
               <ul class="flex">
                 <div class="line"></div>
                 <div class="container">
-                  <input type="checkbox" id="brand_checkbox">
                   <li class="list">
-                    <a href="#" class="sans tab">
-                      <label for="brand_checkbox">브랜드</label>
-                    </a>
-                    <div class="sub-tab">
+                      <a href="brand.html" class="sans tab">브랜드</a>
                       <a href="brand.html" class="sans sub-tab">드롭탑 이야기</a>
-                      <br>
-                      <a href="coffee.html" class="sans sub-tab">커피 이야기</a>
-                    </div>
+                      <a href="brand.html" class="sans sub-tab">커피 이야기</a>
                   </li>
                   <!-- menu안에 각 탭으로 이동해야함 -->
                   <li class="list">
@@ -50,16 +39,10 @@
                   <li class="list">
                     <a href="menu.html" class="sans tab">푸드</a>
                   </li>
-                  <input type="checkbox" id="news_checkbox">
                   <li class="list">
-                    <a href="#" class="sans tab">
-                      <label for="news_checkbox">뉴스</label>
-                    </a>
-                    <div class="sub-tab">
+                      <a href="news.html" class="sans tab">뉴스</a>
                       <a href="news.html" class="sans sub-tab">이벤트</a>
-                      <br>
                       <a href="news.html" class="sans sub-tab">뉴스</a>
-                    </div>
                   </li>
                 </div>
               </ul>
@@ -75,6 +58,7 @@
           </div>
         </div>
       </div>
+
     </header>
     <section class="menu content">
       <div class="flex">
@@ -92,7 +76,7 @@
           <div class="flex">
             <!-- pc는 마우스 올렸을때, 색상변경 -->
             <!-- 클릭, 색상 변경하고  해당 메뉴로 이동 -->
-            <button class="button sans click">신제품</button>
+            <button class="button sans">신제품</button>
             <button class="button sans">커피</button>
             <button class="button sans">음료</button>
             <button class="button sans">푸드</button>

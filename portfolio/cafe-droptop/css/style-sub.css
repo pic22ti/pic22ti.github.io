@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 
 /* all start */
+/* #1a2e42 */
 
 .wrap {
   /* 모바일 최소 너비 */
@@ -78,76 +79,27 @@ a {
 .header>div {
   height: 100%;
 }
-
-#gnb_checkbox {
-  position: absolute;
-  top: -500px;
-}
 .bar {
   width: 50px;
   height: 50px;
-}
-.bar>.gnb {
-  display: block;
-  width: 50px;
-  height: 50px;
-  
-  box-sizing: border-box;
+
   padding: 18px 0 0 18px;
+  box-sizing: border-box;
 }
-.bar>.gnb>.gnb-box {
-  position: relative;
-  width: 17px; 
-  height: 12px; 
+.bar .fa-times {
+  /* 초기값: 숨김 */
+  display: none;
+  font-size: 15pt;
 }
-.bar>.gnb>.gnb-box>.gnb-bar {
-  background-color: black;
-  position: absolute;
-  width: 17px;
-  height: 2px;
-
-  transition: 0.5s;
-}
-.bar>.gnb>.gnb-box>.gnb-bar.top {
-  top: 0%;
-}
-.bar>.gnb>.gnb-box>.gnb-bar.mid {
-  top: 50%;
-}
-.bar>.gnb>.gnb-box>.gnb-bar.bot {
-  top: 100%;
-}
-/* 
-.bar:active .nav {
+.bar:hover .nav {
   display: block;
 }
-.bar:active .gnb>.gnb-box>.gnb-bar.top {
-  top: 50%;
-  transform: rotate(45deg);
+.bar:hover .fa-bars {
+  display: none;
 }
-.bar:active .gnb>.gnb-box>.gnb-bar.mid {
-  opacity: 0;
-}
-.bar:active .gnb>.gnb-box>.gnb-bar.bot {
-  top: 50%;
-  transform: rotate(-45deg);
-} */
-
-#gnb_checkbox:checked + .bar>.nav {
+.bar:hover .fa-times {
   display: block;
 }
-#gnb_checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.top {
-  top: 50%;
-  transform: rotate(45deg);
-}
-#gnb_checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.mid {
-  opacity: 0;
-}
-#gnb_checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.bot {
-  top: 50%;
-  transform: rotate(-45deg);
-}
-
 .nav {
   /* 초기값: 숨김 */
   display: none;
@@ -155,7 +107,7 @@ a {
   top: 50px;
   left: 0;
 
-  background-color: rgba(255, 255, 255, 1);
+  background-color: white;
   width: 100%;
   height: 450px;
 }
@@ -165,60 +117,38 @@ a {
 .line {
   background-color: black;
   width: 100%;
-  height: 2px;
+  height: 1px;
 }
 .nav .container {
-  position: relative;
-
   box-sizing: border-box;
   margin: 0;
   padding: 35px 45px;
 }
-.nav .list {
+.header .list {
   padding-bottom: 20px;
   font-size: 20pt;
   font-weight: bold;
 }
-.nav .list>.sub-tab {
+.header .list .sub-tab {
   display: none;
-  padding: 6px 0 0 13px;
+  padding: 13px 0 0 13px;
   font-size: 12pt;
 }
-.nav .list>.sub-tab>a.sub-tab {
-  display: inline-block;
-  padding: 5px 0;
-}
-/* .list:hover a {
+.header .list:hover a {
   display: block;
 }
-.list a:hover {
+.header .list a:hover {
   text-decoration: underline;
-} */
-.nav .container>#brand_checkbox {
-  position: absolute;
-  top: -500px;
 }
-.nav .container>#brand_checkbox:checked + .list>.sub-tab {
-  display: block;
-}
-.nav .container>#news_checkbox {
-  position: absolute;
-  top: -500px;
-}
-.nav .container>#news_checkbox:checked + .list>.sub-tab {
-  display: block;
-}
-
 .logo {
   font-size: 15pt;
 }
 .location {
   width: 50px;
   height: 50px;
-  padding: 16px 0 0 18px;
-  box-sizing: border-box;
 
-  font-size: 1.1rem;
+  padding: 18px 0 0 18px;
+  box-sizing: border-box;
 }
 /* ---------------- header end ---------------- */
 
@@ -334,9 +264,6 @@ a {
   height: 450px;
   padding-bottom: 40px;
 }
-.content9 .text {
-  padding-left: 15px;
-}
 /* content end */
 /* brand end */
 
@@ -393,7 +320,7 @@ a {
   order: 1;
 }
 .menu .title .flex {
-  height: 70px;
+  height: 60px;
   justify-content: flex-start;
 }
 .menu .title h3 {
@@ -414,13 +341,12 @@ a {
   box-sizing: border-box;
   border-top: 1px solid #dcdcdc;
 }
-.menu .btn .button:nth-of-type(2n+1) {
-  border-right: 1px solid #dcdcdc;
-}
-.button.click {
-  /* 클릭했을때 색상 미리보기 */
+.menu .btn .button:hover {
   background-color: black;
   color: white;
+}
+.menu .btn .button:nth-of-type(2n+1) {
+  border-right: 1px solid #dcdcdc;
 }
 .menu .content {
   /* 일단 다 숨기고
@@ -430,16 +356,14 @@ a {
 .menu .content:nth-of-type(1) {
   /* 초기값으로 첫번째 탭 보여주고 */
   display: block;
-  /* background-color: rosybrown; */
 }
 .menu .content .flex {
   width: 100%;
+  height: 360px;
 }
 .menu .content .item {
   width: 50%;
   height: 180px;
-  padding: 10px;
-  box-sizing: border-box;
   text-align: center;
 }
 .menu .content .item .img {
@@ -449,7 +373,6 @@ a {
   background-image: url('../images/101.jpg');
 }
 .menu .page {
-  margin-top: 10px;
   height: 70px;
   text-align: center;
   line-height: 70px;
@@ -466,12 +389,6 @@ a {
 .news .btn .button {
   width: 50%;
   height: 100%;
-}
-.news .title .flex {
-  height: 70px;
-}
-.news>.container {
-  padding-top: 20px;
 }
 .news ul {
   /* 높이는 임시로 지정 */
@@ -503,6 +420,9 @@ a {
   padding-right: 20px;
   box-sizing: border-box;
 }
+.news .title .flex {
+  height: 80px;
+}
 .news p {
   /* 글 줄바꿈 안되고 ...으로 생략 */
   white-space: nowrap;
@@ -515,6 +435,7 @@ a {
 .news .page {
   box-sizing: border-box;
   padding-top: 4px;
+  /* height: 70px; */
 }
 /* news end */
 

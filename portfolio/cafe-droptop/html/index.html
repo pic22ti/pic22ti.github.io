@@ -13,9 +13,9 @@
     <header class="header">
       <div>
         <div class="flex">
-          <input type="checkbox" id="gnb_checkbox">
+          <input type="checkbox" id="checkbox">
           <div class="bar">
-            <label class="gnb" for="gnb_checkbox">
+            <label class="gnb" for="checkbox">
               <div class="gnb-box">
                 <div class="gnb-bar top"></div>
                 <div class="gnb-bar mid"></div>
@@ -75,17 +75,40 @@
           </div>
         </div>
       </div>
+
     </header>
     <section class="main">
-      <!-- 클릭, 해당 메뉴로 이동 -->
-      <div class="main-img"></div>
-      <!-- 슬라이드, 투명도 변경 -->
+      <input type="radio" name="main-radio" id="main-dot1" checked="checked">
+      <input type="radio" name="main-radio" id="main-dot2">
+      <input type="radio" name="main-radio" id="main-dot3">
+      <div class="ab">
+        <div class="main-img"></div>
+        <div class="main-img"></div>
+        <div class="main-img"></div>
+      </div>
       <div class="flex">
-        <p class="main-1">●</p>
-        <p class="main-2">●</p>
-        <p class="main-3">●</p>
+        <label for="main-dot1"></label>
+        <label for="main-dot2"></label>
+        <label for="main-dot3"></label>
       </div>
     </section>
+    <!-- <section class="main">
+      <input type="radio" name="main-radio" id="main-dot1" checked="checked">
+      <input type="radio" name="main-radio" id="main-dot2">
+      <input type="radio" name="main-radio" id="main-dot3">
+      <div class="ab">
+        <div class="re">
+          <div class="main-img"></div>
+          <div class="main-img"></div>
+          <div class="main-img"></div>
+        </div>
+      </div>
+          <div class="flex">
+            <label for="main-dot1"><p class="main-1">●</p></label>
+            <label for="main-dot2"><p class="main-2">●</p></label>
+            <label for="main-dot3"><p class="main-3">●</p></label>
+          </div>
+    </section> -->
     <section class="best">
       <div class="title">
         <div class="flex">
@@ -128,7 +151,7 @@
       </div>
       <div class="container">
         <!-- 클릭, 메뉴로 이동 -->
-        <a href="menu.html"><button class="sans box">메뉴 전체보기</button></a>
+        <a href="menu.html" class="all-menu"><button class="sans box">메뉴 전체보기</button></a>
       </div>
     </section>
     <section class="content">
@@ -214,6 +237,5 @@
       </div>
     </footer>
   </div>
-  <script src="../js/script.js"></script>
 </body>
 </html>

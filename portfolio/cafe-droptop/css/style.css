@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 
+/* #1a2e42 */
 /* ================  ================ */
 /* ----------------  ---------------- */
 
@@ -56,7 +57,9 @@ a {
   height: 100%;
 }
 
-#gnb_checkbox {
+
+
+#checkbox {
   position: absolute;
   top: -500px;
 }
@@ -76,6 +79,7 @@ a {
   position: relative;
   width: 17px; 
   height: 12px; 
+  
 }
 .bar>.gnb>.gnb-box>.gnb-bar {
   background-color: black;
@@ -94,36 +98,42 @@ a {
 .bar>.gnb>.gnb-box>.gnb-bar.bot {
   top: 100%;
 }
-/* 
-.bar:active .nav {
+
+/* .bar:hover .nav {
   display: block;
 }
-.bar:active .gnb>.gnb-box>.gnb-bar.top {
+.bar:hover .gnb>.gnb-box>.gnb-bar.top {
   top: 50%;
   transform: rotate(45deg);
 }
-.bar:active .gnb>.gnb-box>.gnb-bar.mid {
+.bar:hover .gnb>.gnb-box>.gnb-bar.mid {
   opacity: 0;
 }
-.bar:active .gnb>.gnb-box>.gnb-bar.bot {
+.bar:hover .gnb>.gnb-box>.gnb-bar.bot {
   top: 50%;
   transform: rotate(-45deg);
 } */
 
-#gnb_checkbox:checked + .bar>.nav {
+
+#checkbox:checked + .bar>.nav {
   display: block;
 }
-#gnb_checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.top {
+#checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.top {
   top: 50%;
   transform: rotate(45deg);
 }
-#gnb_checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.mid {
+#checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.mid {
   opacity: 0;
 }
-#gnb_checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.bot {
+#checkbox:checked + .bar>.gnb>.gnb-box>.gnb-bar.bot {
   top: 50%;
   transform: rotate(-45deg);
 }
+
+
+
+
+
 
 .nav {
   /* 초기값: 숨김 */
@@ -132,9 +142,11 @@ a {
   top: 50px;
   left: 0;
 
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   width: 100%;
   height: 450px;
+
+  z-index: 100;
 }
 .nav ul {
   display: block;
@@ -185,7 +197,39 @@ a {
 .nav .container>#news_checkbox:checked + .list>.sub-tab {
   display: block;
 }
+/* 언더라인.... */
+.nav a {
+  position: relative;
+}
+.nav a.tab::before {
+  content: "";
+  display: inline-block;
+  background-color: gold;
+  
+  width: 0;
+  height: 2px;
 
+  position: absolute;
+  top: 35px;
+  left: 0;
+  transition: 0.5s;
+}
+.nav a.sub-tab::before {
+  content: "";
+  display: inline-block;
+  background-color: gold;
+  
+  width: 0;
+  height: 2px;
+
+  position: absolute;
+  top: 23px;
+  left: 0;
+  transition: 0.5s;
+}
+.nav a:hover::before {
+  width: 100%;
+}
 .logo {
   font-size: 15pt;
 }
@@ -196,24 +240,185 @@ a {
   box-sizing: border-box;
 
   font-size: 1.1rem;
+  position: relative;
+}
+.location::before {
+  content: "";
+  display: inline-block;
+
+  background-color: gold;
+  width: 34px;
+  height: 34px;
+  border-radius: 30px;
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  transform: rotateX(270deg);
+  transition: 0.5s;
+}
+.location:hover::before {
+  /* height: 34px; */
+  transform: rotateX(0);
+  /* transform: rotateY(360deg); */
+}
+.location:hover i {
+  color: white;
+}
+.location i {
+  position: relative;
+  transition: 0.5s;
 }
 /* ---------------- header end ---------------- */
+
+
+
+
+
+
+
 
 /* ---------------- main start ---------------- */
 .main {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 
   width: 100%;
   height: 450px;
 }
+input[type=radio] {
+  display: none;
+}
+.main>.ab {
+  /* 절대기준이 아닌 현재자리에서 왼쪽으로 가면 되기 때문에 relative 가능  */
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  transition: 1.5s;
+}
 .main .main-img {
+  position: absolute;
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url('../images/main-1.jpg');
 }
+.main .main-img:nth-of-type(1) {
+  background-image: url('../images/main-1.jpg');
+  top: 0;
+  left: 0;
+}
+.main .main-img:nth-of-type(2) {
+  background-image: url('../images/main-2.jpg');
+  top: 0;
+  left: 100%;
+}
+.main .main-img:nth-of-type(3) {
+  background-image: url('../images/main-3.jpg');
+  top: 0;
+  left: 200%;
+}
+.main>#main-dot1:checked ~ .ab {
+  left: 0;
+}
+.main>#main-dot2:checked ~ .ab {
+  left: -100%;
+}
+.main>#main-dot3:checked ~ .ab {
+  left: -200%;
+}
+.main>input[id="main-dot1"]:checked ~ .flex>label[for="main-dot1"], 
+.main>input[id="main-dot2"]:checked ~ .flex>label[for="main-dot2"],
+.main>input[id="main-dot3"]:checked ~ .flex>label[for="main-dot3"]
+{
+  background-color: rgba(0, 0, 0, 1);
+}
+/* .main {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 450px;
+}
+input[type=radio] {
+  display: none;
+}
+input[type=radio]:nth-of-type(1) {
+  left: 20px;
+}
+input[type=radio]:nth-of-type(2) {
+  left: 40px;
+}
+input[type=radio]:nth-of-type(3) {
+  left: 60px;
+}
+.main>.ab {
+  background-color: palegoldenrod;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  transition: 2s;
+}
+.main>.ab>.re {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: paleturquoise;
+}
+.main .main-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: palegreen;
+  background-size: cover;
+  background-position: center;
+}
+.main .main-img:nth-of-type(1) {
+  background-image: url('../images/main-1.jpg');
+  top: 0;
+  left: 0;
+}
+.main .main-img:nth-of-type(2) {
+  background-image: url('../images/main-2.jpg');
+  top: 0;
+  left: 100%;
+}
+.main .main-img:nth-of-type(3) {
+  background-image: url('../images/main-3.jpg');
+  top: 0;
+  left: 200%;
+}
+
+.main>#main-dot1:checked ~ .ab {
+  left: 0;
+}
+.main>#main-dot2:checked ~ .ab {
+  left: -100%;
+}
+.main>#main-dot3:checked ~ .ab {
+  left: -200%;
+}
+
+.main>input[id="main-dot1"]:checked ~ .flex>label[for="main-dot1"], 
+.main>input[id="main-dot2"]:checked ~ .flex>label[for="main-dot2"],
+.main>input[id="main-dot3"]:checked ~ .flex>label[for="main-dot3"]
+{
+  background-color: rgba(0, 0, 0, 1);
+} */
+
+
+
+
+
+
+
 .main .flex {
   position: absolute;
   top: 0;
@@ -221,13 +426,14 @@ a {
   align-items: flex-end;
   justify-content: center;
 }
-.main p {
-  margin-bottom: 10px;
-  padding: 2px;
-  /* 피씨는 7pt로 하기 */
-  font-size: 8pt;
+.main .flex>label {
+  width: 20px;
+  height: 8px;
+  border-radius: 10px;
+  margin: 0 3px 10px 3px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.main p:hover {
+.main .flex>label:hover {
   cursor: pointer;
 }
 /* ---------------- main end ---------------- */
@@ -243,12 +449,13 @@ a {
   font-size: 15pt;
 }
 .title button {
+  display: none;
   font-size: 15pt;
 }
 .title .flex {
   justify-content: space-around;
 }
-.best>.container {
+.best>.container:nth-of-type(2) {
   height: 167px;
 }
 .best .item {
@@ -264,6 +471,11 @@ a {
   height: 108px;
   /* 임시 이미지주소 */
   background-image: url('../images/101.jpg');
+
+  transition: 0.3s;
+}
+.best .img:hover {
+  transform: scale(1.2);
 }
 .best .text {
   padding-top: 15px;
@@ -273,6 +485,12 @@ a {
   /* 모바일은 3개씩 노출 */
   /* 나머지는 슬라이드 */
   display: none;
+}
+
+
+
+.best>.container:nth-of-type(3) {
+  height: 50px;
 }
 .best .box {
   background-color: black;
@@ -288,6 +506,30 @@ a {
   background-color: white;
   color: black;
 }
+/* 버튼 체인지 효과 안해 */
+/* .best .all-menu {
+  position: relative;
+  overflow: hidden;
+}
+.best .all-menu::before {
+  content: "";
+  display: inline-block;
+
+  background-color: white;
+  width: 0;
+  height: 50px;
+  border: 1px solid black;
+  box-sizing: border-box;
+
+  position: absolute;
+  transition: 0.3s;
+}
+.best .all-menu:hover::before {
+  width: 100%;
+}
+.best .box>span {
+  position: relative;
+} */
 /* ---------------- best end ---------------- */
 
 /* ---------------- content start ---------------- */
@@ -303,18 +545,18 @@ a {
   color: white;
 }
 .footer .flex {
-  height: 60px;
+  height: 70px;
   justify-content: center;
 }
 .footer .icon {
-  margin: 0 10px;
+  margin: 0 15px;
 
   background-size: contain;
   background-repeat: no-repeat;
 }
 .footer .img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 .footer .face .img {
   background-image: url('../images/facebook.png');
@@ -328,6 +570,33 @@ a {
 .footer .twit .img {
   background-image: url('../images/twitter.png');
 }
+
+/* 아이콘 체인지 */
+.footer .icon>a {
+  position: relative;
+}
+.footer .icon>a::before {
+  content: "";
+  display: inline-block;
+
+  background-color: gold;
+  width: 38px;
+  height: 0;
+  border-radius: 20px;
+
+  position: absolute;
+  top: -7px;
+  left: -7px;
+}
+.footer .icon>a:hover::before {
+  height: 38px;
+}
+.footer .icon>a:hover .img {
+  transition: 0.5s;
+  transform: rotateY(369deg);
+  filter: brightness(0%);
+}
+
 .footer .container {
   position: relative;
 
