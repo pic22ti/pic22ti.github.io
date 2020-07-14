@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-sub.css">
   <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
   <title>Drop Top. Menu</title>
@@ -13,18 +14,29 @@
     <header class="header">
       <div>
         <div class="flex">
+          <input type="checkbox" id="checkbox">
           <div class="bar">
-            <!-- 클릭, nav 열림 -->
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
+            <label class="gnb" for="checkbox">
+              <div class="gnb-box">
+                <div class="gnb-bar top"></div>
+                <div class="gnb-bar mid"></div>
+                <div class="gnb-bar bot"></div>
+              </div>
+            </label>
             <div class="nav">
               <ul class="flex">
                 <div class="line"></div>
                 <div class="container">
+                  <input type="checkbox" id="brand_checkbox">
                   <li class="list">
-                      <a href="brand.html" class="sans tab">브랜드</a>
+                    <a href="#" class="sans tab">
+                      <label for="brand_checkbox">브랜드</label>
+                    </a>
+                    <div class="sub-tab">
                       <a href="brand.html" class="sans sub-tab">드롭탑 이야기</a>
-                      <a href="brand.html" class="sans sub-tab">커피 이야기</a>
+                      <br>
+                      <a href="coffee.html" class="sans sub-tab">커피 이야기</a>
+                    </div>
                   </li>
                   <!-- menu안에 각 탭으로 이동해야함 -->
                   <li class="list">
@@ -39,10 +51,16 @@
                   <li class="list">
                     <a href="menu.html" class="sans tab">푸드</a>
                   </li>
+                  <input type="checkbox" id="news_checkbox">
                   <li class="list">
-                      <a href="news.html" class="sans tab">뉴스</a>
+                    <a href="#" class="sans tab">
+                      <label for="news_checkbox">뉴스</label>
+                    </a>
+                    <div class="sub-tab">
                       <a href="news.html" class="sans sub-tab">이벤트</a>
+                      <br>
                       <a href="news.html" class="sans sub-tab">뉴스</a>
+                    </div>
                   </li>
                 </div>
               </ul>
@@ -67,19 +85,17 @@
             <div class="container">
               <div class="flex">
                 <h3 class="pacifico">Menu</h3>
-                <p class="sans">메뉴&nbsp;&nbsp;&gt;&nbsp;&nbsp;신제품</p>
+                <p class="sans">메뉴&nbsp;&gt;&nbsp;신제품</p>
               </div>
             </div>
           </div>
         </div>
         <div class="btn">
           <div class="flex">
-            <!-- pc는 마우스 올렸을때, 색상변경 -->
-            <!-- 클릭, 색상 변경하고  해당 메뉴로 이동 -->
-            <button class="button sans click">신제품</button>
-            <button class="button sans">커피</button>
-            <button class="button sans">음료</button>
-            <button class="button sans">푸드</button>
+            <button class="button sans click" value="newitem">신제품</button>
+            <button class="button sans" value="coffeeitem">커피</button>
+            <button class="button sans" value="beverageitem">음료</button>
+            <button class="button sans" value="fooditem">푸드</button>
           </div>
         </div>
       </div>
@@ -87,117 +103,346 @@
         <span class="close">&times;</span>
         <img src="../images/101.jpg" alt="">
       </div>
+
       <ul class="content newitem show">
-        <div class="flex">
-          <li class="item">
-            <img src="../images/101.jpg" alt="">
-            <p class="text sans">신제품</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <img src="../images/102.jpg" alt="">
-            <p class="text sans">신제품</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <img src="../images/103.jpg" alt="">
-            <p class="text sans">신제품</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <img src="../images/104.jpg" alt="">
-            <p class="text sans">신제품</p>
-            <p class="text sans">Espresso</p>
-          </li>
+        <input type="radio" name="newitem" id="new1" checked="checked">
+        <input type="radio" name="newitem" id="new2">
+        <input type="radio" name="newitem" id="new3">
+        <div class="slide">
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">신제품</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">신제품</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">신제품</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">신제품</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">신제품2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">신제품2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">신제품2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">신제품2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans"></p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">신제품3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">신제품3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="" alt="">
+              <p class="text sans"></p>
+              <p class="text sans"></p>
+            </li>
+          </div>
+        </div>
+        <div class="page">
+          <label for="new1"><p class="text sans">1</p></label>
+          <label for="new2"><p class="text sans">2</p></label>
+          <label for="new3"><p class="text sans">3</p></label>
         </div>
       </ul>
-
-
-
-
-
-
       <ul class="content coffeeitem">
-        <div class="flex">
-          <!-- hover, click, 약간 확대 -->
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">에스프레소</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">에스프레소</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">에스프레소</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">에스프레소</p>
-            <p class="text sans">Espresso</p>
-          </li>
+        <input type="radio" name="coffeeitem" id="coffee1" checked="checked">
+        <input type="radio" name="coffeeitem" id="coffee2">
+        <input type="radio" name="coffeeitem" id="coffee3">
+        <div class="slide">
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">에스프레소</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">에스프레소</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">에스프레소</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">에스프레소</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">에스프레소2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">에스프레소2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">에스프레소2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">에스프레소2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">에스프레소3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">에스프레소3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">에스프레소3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">에스프레소3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+        </div>
+        <div class="page">
+          <label for="coffee1"><p class="text sans">1</p></label>
+          <label for="coffee2"><p class="text sans">2</p></label>
+          <label for="coffee3"><p class="text sans">3</p></label>
         </div>
       </ul>
       <ul class="content beverageitem">
-        <div class="flex">
-          <!-- hover, click, 약간 확대 -->
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">음료</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">음료</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">음료</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">음료</p>
-            <p class="text sans">Espresso</p>
-          </li>
+        <input type="radio" name="beverageitem" id="beverage1" checked="checked">
+        <input type="radio" name="beverageitem" id="beverage2">
+        <input type="radio" name="beverageitem" id="beverage3">
+        <div class="slide">
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">음료</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">음료</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">음료</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">음료</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">음료2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">음료2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">음료2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">음료2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">음료3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">음료3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">음료3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">음료3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+        </div>
+        <div class="page">
+          <label for="beverage1"><p class="text sans">1</p></label>
+          <label for="beverage2"><p class="text sans">2</p></label>
+          <label for="beverage3"><p class="text sans">3</p></label>
         </div>
       </ul>
       <ul class="content fooditem">
-        <div class="flex">
-          <!-- hover, click, 약간 확대 -->
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">푸드</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">푸드</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">푸드</p>
-            <p class="text sans">Espresso</p>
-          </li>
-          <li class="item">
-            <div class="img"></div>
-            <p class="text sans">푸드</p>
-            <p class="text sans">Espresso</p>
-          </li>
+        <input type="radio" name="fooditem" id="food1" checked="checked">
+        <input type="radio" name="fooditem" id="food2">
+        <input type="radio" name="fooditem" id="food3">
+        <input type="radio" name="fooditem" id="food4">
+        <div class="slide">
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">푸드</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">푸드</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">푸드</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">푸드</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">푸드2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">푸드2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">푸드2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">푸드2</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">푸드3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">푸드3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">푸드3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">푸드3</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+          <div class="flex">
+            <li class="item">
+              <img src="../images/101.jpg" alt="">
+              <p class="text sans">푸드4</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/102.jpg" alt="">
+              <p class="text sans">푸드4</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/103.jpg" alt="">
+              <p class="text sans">푸드4</p>
+              <p class="text sans">Espresso</p>
+            </li>
+            <li class="item">
+              <img src="../images/104.jpg" alt="">
+              <p class="text sans">푸드4</p>
+              <p class="text sans">Espresso</p>
+            </li>
+          </div>
+        </div>
+        <div class="page">
+          <label for="food1"><p class="text sans">1</p></label>
+          <label for="food2"><p class="text sans">2</p></label>
+          <label for="food3"><p class="text sans">3</p></label>
+          <label for="food4"><p class="text sans">4</p></label>
         </div>
       </ul>
-      <div class="page">
-        <p class="text sans">1</p>
-        <p class="text sans">2</p>
-        <p class="text sans">3</p>
-        <p class="text sans">4</p>
-      </div>
+
+
+
     </section>
     <footer class="footer">
       <div class="flex">

@@ -1,41 +1,75 @@
-// // modal
-// const imgItem = document.querySelector('.newitem>.flex')
-// const modalTag = document.querySelector('.modal');
-// const closeBtn = modalTag.children[0];
+// modal
+const imgItem = document.querySelectorAll('.menu ul.content>.slide>.flex')
+console.log(imgItem);
+const modalTag = document.querySelector('.modal');
+const closeBtn = modalTag.children[0];
 
-// imgItem.addEventListener('click', function(e){
-//   let target = e.target;
-//   let src = target.getAttribute('src');
-//   if( src === null ) {
-//     return;
-//   }
-//   modalTag.style.display = "block";
-//   modalTag.children[1].src = src;
-// });
-
-// closeBtn.addEventListener('click', function(e){
-//   modalTag.style.display = "none";
-// });
-
-
-
-
-
-
-// button
-let btnMenu = document.querySelector('.btn>.flex');
-let btnMenuChild = btnMenu.children;
-let showMenu = document.querySelectorAll('ul.content');
-let i;
-let preTarget = null;
-
-// for문 사용
-for( i=0; i<btnMenuChild.length; i++ ){    
-  btnMenuChild[i].addEventListener('click', function(e){
+for( let i=0; i<imgItem.length; i++ ) {
+  imgItem[i].addEventListener('click', function(e){
+    console.log(imgItem);
     let target = e.target;
-    for( let j=0 ; j<btnMenuChild.length ; j++ ){
-      btnMenuChild[j].classList.remove('click');
+    console.log(target);
+    let src = target.getAttribute('src');
+    if( src === null ) {
+      return;
     }
-    this.classList.add('click');    
+    modalTag.style.display = "block";
+    modalTag.children[1].src = src;
   });
 }
+
+closeBtn.addEventListener('click', function(e){
+  modalTag.style.display = "none";
+});
+
+
+
+
+
+
+// button 
+let btnMenu = document.querySelector('.btn>.flex');
+let btnMenuChild = btnMenu.children;
+let ulItem = document.querySelectorAll('.menu ul.content');
+let tabName = document.querySelector('.menu .title p');
+
+btnMenu.addEventListener('click', function(e){
+  let t = e.target;
+  
+  let value = t.getAttribute('value');
+  let showItem = document.getElementsByClassName(value);
+  let changeText = t.textContent;
+  
+  for( let j=0; j<btnMenuChild.length; j++ ){
+    ulItem[j].classList.remove('show');
+    btnMenuChild[j].classList.remove('click');
+  }
+  
+  tabName.textContent = `메뉴\n>\n${changeText}`;
+  showItem[0].classList.add('show');
+  t.classList.add('click');    
+});
+
+// for문 사용
+// let i;
+
+// for( i=0; i<btnMenuChild.length; i++ ){    
+//   btnMenuChild[i].addEventListener('click', function(e){
+//     let t = e.target;
+
+//     let value = t.getAttribute('value');
+//     let showItem = document.getElementsByClassName(value);
+
+//     let btnName = t.textContent;
+
+//     for( let j=0; j<btnMenuChild.length; j++ ){
+//       showMenu[j].classList.remove('show');
+//       btnMenuChild[j].classList.remove('click');
+//     }
+
+//     tabName.textContent = `메뉴\n>\n${btnName}`;
+//     console.log(tabName);
+//     showItem[0].classList.add('show');
+//     t.classList.add('click');    
+//   });
+// }

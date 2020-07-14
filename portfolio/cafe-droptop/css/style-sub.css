@@ -1,48 +1,9 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 
-/* all start */
-/* #1a2e42 */
-
-.wrap {
-  /* 모바일 최소 너비 */
-  /* width: 360px; */
-  width: 100%;
-
-  /* 임시 */
-  /* background-color: #eee;  */
-}
-.container { 
-  height: 100%;
-  /* 좌우 여백 */
-  margin: 0 18px;
-}
-.flex {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /* 수직 가운데 정렬 */
-  align-items: center;
-}
 button {
   display: inline-block;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
 }
 .img {
-  width: 100%;
-  height: 100%;
-  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-}
-.sans {
-  font-family: 'Noto Sans KR', sans-serif;
-}
-.pacifico {
-  font-family: 'Pacifico', cursive;
 }
 h2 {
   font-size: 26pt;
@@ -63,95 +24,10 @@ h2, h3, h4 {
   font-size: 11pt;
   line-height: 15pt;
 }
-a {
-  text-decoration: none;
-  color: currentColor;
-}
+
 /* all end */
 
 /* mobile start */
-/* ---------------- header start ---------------- */
-.header {
-  width: 100%;
-  height: 50px;
-  background-color: white;
-}
-.header>div {
-  height: 100%;
-}
-.bar {
-  width: 50px;
-  height: 50px;
-
-  padding: 18px 0 0 18px;
-  box-sizing: border-box;
-}
-.bar .fa-times {
-  /* 초기값: 숨김 */
-  display: none;
-  font-size: 15pt;
-}
-.bar:hover .nav {
-  display: block;
-}
-.bar:hover .fa-bars {
-  display: none;
-}
-.bar:hover .fa-times {
-  display: block;
-}
-.nav {
-  /* 초기값: 숨김 */
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 0;
-
-  background-color: white;
-  width: 100%;
-  height: 450px;
-}
-.nav ul {
-  display: block;
-}
-.line {
-  background-color: black;
-  width: 100%;
-  height: 1px;
-}
-.nav .container {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 35px 45px;
-}
-.header .list {
-  padding-bottom: 20px;
-  font-size: 20pt;
-  font-weight: bold;
-}
-.header .list .sub-tab {
-  display: none;
-  padding: 13px 0 0 13px;
-  font-size: 12pt;
-}
-.header .list:hover a {
-  display: block;
-}
-.header .list a:hover {
-  text-decoration: underline;
-}
-.logo {
-  font-size: 15pt;
-}
-.location {
-  width: 50px;
-  height: 50px;
-
-  padding: 18px 0 0 18px;
-  box-sizing: border-box;
-}
-/* ---------------- header end ---------------- */
-
 /* brand strat */
 /* scroll */
 .scroll.flex {
@@ -328,6 +204,9 @@ a {
   /* 51line padding-bottom을 0으로 변경 */
   padding-bottom: 0;
 }
+.menu .title p {
+  font-size: 1rem;
+}
 .menu .btn {
   width: 100%;
   height: 100px;
@@ -378,6 +257,8 @@ a {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 100;
 }
 .modal>.close {
   /* 부모가 fixed라 relative 안줘도됨 */
@@ -426,23 +307,125 @@ a {
 }
 
 
+/* 페이지 나눔 */
+.menu .content {
+  overflow: hidden;
+}
+.menu .content .slide {
+  width: 100%;
+  height: 360px;
+
+  position: relative;
+  transition: 0.5s;
+}
+.menu .content .slide .flex:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu .content .slide .flex:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.menu .content .slide .flex:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 200%;
+}
+.menu .content .slide .flex:nth-of-type(4) {
+  position: absolute;
+  top: 0;
+  left: 300%;
+}
+
+/* newitem */
+input[id="new1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="new2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="new3"]:checked ~ .slide {
+  left: -200%;
+}
+input[id="new1"]:checked ~ .page>label[for="new1"],
+input[id="new2"]:checked ~ .page>label[for="new2"],
+input[id="new3"]:checked ~ .page>label[for="new3"] 
+{
+  font-weight: bold;
+}
+/* coffeeitem */
+input[id="coffee1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="coffee2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="coffee3"]:checked ~ .slide {
+  left: -200%;
+}
+input[id="coffee1"]:checked ~ .page>label[for="coffee1"],
+input[id="coffee2"]:checked ~ .page>label[for="coffee2"],
+input[id="coffee3"]:checked ~ .page>label[for="coffee3"] 
+{
+  font-weight: bold;
+}
+/* beverageitem */
+input[id="beverage1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="beverage2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="beverage3"]:checked ~ .slide {
+  left: -200%;
+}
+input[id="beverage1"]:checked ~ .page>label[for="beverage1"],
+input[id="beverage2"]:checked ~ .page>label[for="beverage2"],
+input[id="beverage3"]:checked ~ .page>label[for="beverage3"] 
+{
+  font-weight: bold;
+}
+/* fooditem */
+input[id="food1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="food2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="food3"]:checked ~ .slide {
+  left: -200%;
+}
+input[id="food4"]:checked ~ .slide {
+  left: -300%;
+}
+input[id="food1"]:checked ~ .page>label[for="food1"],
+input[id="food2"]:checked ~ .page>label[for="food2"],
+input[id="food3"]:checked ~ .page>label[for="food3"], 
+input[id="food4"]:checked ~ .page>label[for="food4"] 
+{
+  font-weight: bold;
+}
 
 
 
 
 
-.menu .content .item .img {
+/* .menu .content .item .img {
   margin: 0 auto;
   width: 130px;
   height: 130px;
-}
+} */
 .menu .page {
   height: 70px;
   text-align: center;
   line-height: 70px;
 }
 .menu .page p {
+  cursor: pointer;
   display: inline-block;
+  padding: 0 5px;
 }
 /* menu end */
 
@@ -507,37 +490,6 @@ a {
 .footer {
   /* 모바일은 숨김 */
   display: none;
-  background-color: black;
-  width: 100%;
-  color: white;
-}
-.footer .flex {
-  height: 60px;
-  justify-content: center;
-}
-.footer .icon {
-  padding: 0 10px;
-  font-size: 15pt;
-}
-.footer .container {
-  background-color: black;
-  font-size: 10pt;
-  text-align: center;
-}
-.footer .hover {
-  padding-bottom: 20px;
-}
-.footer .text {
-  padding-bottom: 17px;
-  line-height: 13pt;
-}
-.footer .hide {
-  /* 초기값: 숨김 */
-  display: none;
-  color: #6e6e6e;
-}
-.hover:hover .hide {
-  display: block;
 }
 /* ---------------- footer end ---------------- */
 /* mobile end */
