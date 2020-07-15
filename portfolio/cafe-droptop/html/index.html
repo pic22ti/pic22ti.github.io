@@ -39,16 +39,16 @@
                   </li>
                   <!-- menu안에 각 탭으로 이동해야함 -->
                   <li class="list">
-                    <a href="menu.html" class="sans tab">신제품</a>
+                    <a href="menu.html" class="sans tab menuname" onclick="gomenu();">신제품</a>
                   </li>
                   <li class="list">
-                    <a href="menu.html" class="sans tab">커피</a>
+                    <a href="menu.html" class="sans tab menuname" onclick="gomenu()">커피</a>
                   </li>
                   <li class="list">
-                    <a href="menu.html" class="sans tab">음료</a>
+                    <a href="menu.html" class="sans tab menuname" onclick="gomenu()">음료</a>
                   </li>
                   <li class="list">
-                    <a href="menu.html" class="sans tab">푸드</a>
+                    <a href="menu.html" class="sans tab menuname" onclick="gomenu()">푸드</a>
                   </li>
                   <input type="checkbox" id="news_checkbox">
                   <li class="list">
@@ -82,9 +82,17 @@
       <input type="radio" name="main-radio" id="main-dot2">
       <input type="radio" name="main-radio" id="main-dot3">
       <div class="ab">
-        <div class="main-img"></div>
-        <div class="main-img"></div>
-        <div class="main-img"></div>
+        <div class="main-img">
+          <div class="main-img-title"></div>
+          <p class="sans text">상큼한 과일로 시원한 청량함을 안겨줄<br
+            새로운 음료를 만나보세요!</p>
+        </div>
+        <div class="main-img">
+          <h2 class="pacifico">Cookie&Cream</h2>
+        </div>
+        <div class="main-img">
+          <h2 class="pacifico">Real Melon Juice</h2>
+        </div>
       </div>
       <div class="flex">
         <label for="main-dot1"></label>
@@ -92,23 +100,7 @@
         <label for="main-dot3"></label>
       </div>
     </section>
-    <!-- <section class="main">
-      <input type="radio" name="main-radio" id="main-dot1" checked="checked">
-      <input type="radio" name="main-radio" id="main-dot2">
-      <input type="radio" name="main-radio" id="main-dot3">
-      <div class="ab">
-        <div class="re">
-          <div class="main-img"></div>
-          <div class="main-img"></div>
-          <div class="main-img"></div>
-        </div>
-      </div>
-          <div class="flex">
-            <label for="main-dot1"><p class="main-1">●</p></label>
-            <label for="main-dot2"><p class="main-2">●</p></label>
-            <label for="main-dot3"><p class="main-3">●</p></label>
-          </div>
-    </section> -->
+
     <section class="best">
       <div class="title">
         <div class="flex">
@@ -121,29 +113,27 @@
       <div class="container">
         <div class="flex">
           <!-- 모바일은 3개씩 노출 -->
-          <!-- 나머지는 슬라이드 -->
-          <!-- 클릭, 해당 메뉴로 이동 -->
           <div class="item">
             <a href="menu.html">
-              <div class="img"></div>
-              <p class="sans text">아메리카노</p>
+              <img src="../images/222.jpg" alt="">
+              <p class="sans text">자몽블랙 티에이드</p>
             </a>
           </div>
           <div class="item">
             <a href="menu.html">
-              <div class="img"></div>
-              <p class="sans text">아메리카노</p>
+              <img src="../images/304.jpg" alt="">
+              <p class="sans text">925커피&쿠키 아이스탑</p>
             </a>
           </div>
           <div class="item">
             <a href="menu.html">
-              <div class="img"></div>
-              <p class="sans text">아메리카노</p>
+              <img src="../images/107.jpg" alt="">
+              <p class="sans text">콜드브루</p>
             </a>
           </div>
           <div class="item">
             <a href="menu.html">
-              <div class="img"></div>
+              <img src="../images/101.jpg" alt="">
               <p class="sans text">아메리카노</p>
             </a>
           </div>
@@ -203,22 +193,22 @@
     <footer class="footer">
       <div class="flex">
         <div class="icon face">
-          <a href="index.html">
+          <a href="https://ko-kr.facebook.com/" target="blank">
             <div class="img"></div>
           </a>
         </div>
         <div class="icon insta">
-          <a href="index.html">
+          <a href="https://www.instagram.com/?hl=ko" target="blank">
             <div class="img"></div>
           </a>
         </div>
         <div class="icon blog">
-          <a href="index.html">
+          <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="blank">
             <div class="img"></div>
           </a>
         </div>
         <div class="icon twit">
-          <a href="index.html">
+          <a href="https://twitter.com/" target="blank">
             <div class="img"></div>
           </a>
         </div>
@@ -237,5 +227,6 @@
       </div>
     </footer>
   </div>
+  <script src="../js/script-index.js"></script>
 </body>
 </html>

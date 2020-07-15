@@ -30,15 +30,30 @@ h2, h3, h4 {
 /* brand strat */
 /* scroll */
 .scroll.flex {
-  /* 숨겨놓고 작업중 */
-  /* display: none; */
-
   justify-content: center;
   align-items: center;
 }
-.scroll i {
-  /* 애니메이션 효과주기 */
-  /* 맨 밑으로 가면 뒤집어서 go to top */
+.scroll.flex>.back {
+  position: fixed;
+  bottom: 50px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  /* opacity: 0.8; */
+  border-radius: 30px;
+  padding: 5px 7px 4px 7px;
+
+  font-size: 2rem;
+
+  animation-name: move;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  z-index: 50;
+}
+
+
+/* .scroll i {
   position: fixed;
   
   bottom: 50px;
@@ -50,8 +65,8 @@ h2, h3, h4 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 
-  z-index: 100;
-}
+  z-index: 50;
+} */
 
 
 @keyframes move {
@@ -327,6 +342,7 @@ h2, h3, h4 {
 }
 
 
+
 /* 페이지 나눔 */
 .menu .content {
   overflow: hidden;
@@ -495,11 +511,17 @@ input[id="food4"]:checked ~ .page>label[for="food4"]
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
+  
 }
 .news .title .flex {
   height: 80px;
 }
-
+.news .table .subject {
+  text-align: center;
+}
+.news .slide .subject {
+  text-align: left;
+}
 
 
 
@@ -573,6 +595,11 @@ input[id="event2"]:checked ~ .page>label[for="event2"]
 .news ul.data .title {
   text-align: left;
 }
+.news ul.data:hover {
+  background-color: #1a2e42;
+  color: white;
+}
+
 .news .page {
   box-sizing: border-box;
   padding-top: 4px;
