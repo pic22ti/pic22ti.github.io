@@ -85,23 +85,29 @@
             <div class="container">
               <div class="flex">
                 <h3 class="pacifico">News</h3>
-                <p class="sans">뉴스&nbsp;&nbsp;&gt;&nbsp;&nbsp;이벤트</p>
+                <p class="sans">뉴스&nbsp;&gt;&nbsp;이벤트</p>
               </div>
             </div>
           </div>
         </div>
         <div class="btn">
           <div class="flex">
-            <!-- pc는 마우스 올렸을때, 색상변경 -->
-            <!-- 클릭, 색상 변경하고  해당 메뉴로 이동 -->
-            <button class="button sans click">뉴스</button>
-            <button class="button sans">이벤트</button>
+            <button class="button sans click" value="newsboard">뉴스</button>
+            <button class="button sans" value="eventboard">이벤트</button>
           </div>
         </div>
       </div>
-    </section>
-    <section class="menu news content">
-      <div class="container">
+
+      <!-- 안쓰는데 js때문에 넣어둠 -->
+      <div class="modal">
+        <span class="close">&times;</span>
+        <img src="../images/101.jpg" alt="">
+      </div>
+
+      <div class="container newsboard show">
+        <input type="radio" name="newsboard" id="news1" checked="checked">
+        <input type="radio" name="newsboard" id="news2">
+        
         <ul class="table">
           <div class="flex">
             <li class="list number">
@@ -118,93 +124,378 @@
             </li>
           </div>
         </ul>
-        <ul class="data">
-          <div class="flex">
-            <li class="list number">
-              <p class="sans text">1</p>
-            </li>
-            <li class="list subject">
-              <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li class="list date">
-              <p class="sans text">2020-07-01</p>
-            </li>
-            <li class="list views">
-              <p class="sans text">100</p>
-            </li>
+
+        <div class="slide">
+          <div class="div-page1">
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">1</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">1</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">1</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">1</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">1</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
           </div>
-        </ul>
-        <ul class="data">
-          <div class="flex">
-            <li class="list number">
-              <p class="sans text">1</p>
-            </li>
-            <li class="list subject">
-              <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li class="list date">
-              <p class="sans text">2020-07-01</p>
-            </li>
-            <li class="list views">
-              <p class="sans text">100</p>
-            </li>
+          <div class="div-page2">
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">2</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">2</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">2</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">2</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">2</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
           </div>
-        </ul>
-        <ul class="data">
-          <div class="flex">
-            <li class="list number">
-              <p class="sans text">1</p>
-            </li>
-            <li class="list subject">
-              <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li class="list date">
-              <p class="sans text">2020-07-01</p>
-            </li>
-            <li class="list views">
-              <p class="sans text">100</p>
-            </li>
-          </div>
-        </ul>
-        <ul class="data">
-          <div class="flex">
-            <li class="list number">
-              <p class="sans text">1</p>
-            </li>
-            <li class="list subject">
-              <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li class="list date">
-              <p class="sans text">2020-07-01</p>
-            </li>
-            <li class="list views">
-              <p class="sans text">100</p>
-            </li>
-          </div>
-        </ul>
-        <ul class="data">
-          <div class="flex">
-            <li class="list number">
-              <p class="sans text">1</p>
-            </li>
-            <li class="list subject">
-              <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li class="list date">
-              <p class="sans text">2020-07-01</p>
-            </li>
-            <li class="list views">
-              <p class="sans text">100</p>
-            </li>
-          </div>
-        </ul>
+        </div>
+
         <div class="page">
-          <p class="text sans">1</p>
-          <p class="text sans">2</p>
-          <p class="text sans">3</p>
-          <p class="text sans">4</p>
+          <label for="news1"><p class="text sans">1</p></label>
+          <label for="news2"><p class="text sans">2</p></label>
         </div>
       </div>
+
+      <div class="container eventboard">
+        <input type="radio" name="eventboard" id="event1" checked="checked">
+        <input type="radio" name="eventboard" id="event2">
+        
+        <ul class="table">
+          <div class="flex">
+            <li class="list number">
+              <p class="sans text">번호</p>
+            </li>
+            <li class="list subject">
+              <p class="sans text">제목</p>
+            </li>
+            <li class="list date">
+              <p class="sans text">등록일</p>
+            </li>
+            <li class="list views">
+              <p class="sans text">조회수</p>
+            </li>
+          </div>
+        </ul>
+
+        <div class="slide">
+          <div class="div-page1">
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">10</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">10</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">10</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">10</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">10</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="div-page2">
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">20</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">20</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">20</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">20</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+            <ul class="data">
+              <div class="flex">
+                <li class="list number">
+                  <p class="sans text">20</p>
+                </li>
+                <li class="list subject">
+                  <p class="sans text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li>
+                <li class="list date">
+                  <p class="sans text">2020-07-01</p>
+                </li>
+                <li class="list views">
+                  <p class="sans text">100</p>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="page">
+          <label for="event1"><p class="text sans">1</p></label>
+          <label for="event2"><p class="text sans">2</p></label>
+        </div>
+
+      </div>
+
+
+
+
+      
     </section>
     <footer class="footer">
       <div class="flex">
@@ -238,5 +529,6 @@
       </div>
     </footer>
   </div>
+  <script src="../js/script.js"></script>
 </body>
 </html>
