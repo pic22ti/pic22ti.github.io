@@ -1,4 +1,4 @@
-
+/* sub end */
 button {
   display: inline-block;
 }
@@ -24,8 +24,7 @@ h2, h3, h4 {
   font-size: 11pt;
   line-height: 15pt;
 }
-
-/* all end */
+/* sub end */
 
 /* mobile start */
 /* brand strat */
@@ -44,8 +43,27 @@ h2, h3, h4 {
   
   bottom: 50px;
   font-size: 2rem;
-  opacity: 0.5;
+  opacity: 0.7;
+
+  animation-name: move;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
+
+@keyframes move {
+  0% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 65px;
+  }
+}
+
+
+
+
 /* box start */
 .box1 {
   width: 100%;
@@ -264,8 +282,8 @@ h2, h3, h4 {
   /* 부모가 fixed라 relative 안줘도됨 */
   /* 그럼 픽시드도 가능? 상속? */
   position: absolute;
-  top: 0px;
-  right: 12px;
+  top: 10px;
+  right: 10px;
   color: white;
   font-size: 2.5rem;
 
@@ -275,7 +293,7 @@ h2, h3, h4 {
   display: block;
   width: 50%;
   max-width: 400px;
-  margin: 30% auto;
+  margin: 100px auto 0 auto;
   background-image: url('../images/101.jpg');
   background-size: contain;
 
