@@ -5,9 +5,6 @@
 })(); 
 */
 
-console.log( "-----------menu.js-------------");
-console.log( strMenuName );
-
 
 (function(){
 
@@ -37,22 +34,58 @@ closeBtn.addEventListener('click', function(e){
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
 // menu button 
 let btnMenu = document.querySelector('.menu .btn>.flex');
 
 let btnMenuChild = btnMenu.children;
 let ulItem = document.querySelectorAll('.menu ul.content');
 let tabName = document.querySelector('.menu .title p');
-let index = 0;
+
+
+
+
+
+
+
+console.log("-----------------menu.js--------------");
+console.log(window.location.href);
+
+function getMenuIdx(strURL)
+{
+  temp = location.href.split("?");
+  data = temp[1].split(":");
+  console.log("index="+data[1]);
+  return parseInt(data[1]);
+}
+
+goTabMenu(btnMenuChild[getMenuIdx(window.location.href)]);
+
+
+
+
 
 
 
 btnMenu.addEventListener('click', function(e){    
-  goTab(e.target);
+  goTabMenu(e.target);
 });
 
-function goTab(t){  // t=e.target;
-  if( t == null ) return;
+function goTabMenu(t) // t=e.target;
+{  
+  if( t == null ) {
+    return;
+  }
   let value = t.getAttribute('value');
   let showItem = document.getElementsByClassName(value);
   let changeText = t.textContent;

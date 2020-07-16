@@ -15,9 +15,36 @@ let boardItem = document.querySelectorAll('.news>div.container');
 let tabNameNews = document.querySelector('.news .title p');
 
 
+
+
+console.log("-----------------news.js--------------");
+console.log(window.location.href);
+
+function getNewsIdx(strURL)
+{
+  temp = location.href.split("?");
+  data = temp[1].split(":");
+  console.log("index="+data[1]);
+  return parseInt(data[1]);
+}
+
+goTabNews(btnNewsChild[getNewsIdx(window.location.href)]);
+
+
+
+
+
+
+
 btnNews.addEventListener('click', function(e){
-  let t = e.target;
-  
+  goTabNews(e.target);
+});
+
+function goTabNews(t) // t=e.target;
+{
+  if( t == null ) {
+    return;
+  }
   let value = t.getAttribute('value');
   let showItem = document.getElementsByClassName(value);
   let changeText = t.textContent;
@@ -29,9 +56,8 @@ btnNews.addEventListener('click', function(e){
   
   tabNameNews.textContent = `뉴스\n>\n${changeText}`;
   showItem[0].classList.add('show');
-  t.classList.add('click');    
-});
-
+  t.classList.add('click');  
+}
 
 
 
