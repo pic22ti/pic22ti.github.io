@@ -161,12 +161,12 @@ a {
 }
 .nav .list>.sub-tab {
   display: none;
-  padding: 8px 0 0 18px;
+  padding: 10px 0 0 18px;
   font-size: 12pt;
 }
 .nav .list>.sub-tab>a.sub-tab {
   display: inline-block;
-  padding: 5px 0;
+  padding: 10px 0 5px 0;
 }
 /* .list:hover a {
   display: block;
@@ -201,7 +201,7 @@ a {
   height: 2px;
 
   position: absolute;
-  top: 35px;
+  top: 37px;
   left: 0;
   transition: 0.5s;
 }
@@ -214,7 +214,7 @@ a {
   height: 2px;
 
   position: absolute;
-  top: 23px;
+  top: 30px;
   left: 0;
   transition: 0.5s;
 }
