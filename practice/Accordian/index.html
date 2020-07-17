@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordian</title>
+  <style>
+    /* 버튼 스타일 */
+    .accordian {
+      cursor: pointer;
+
+      background-color: #eee;
+      width: 100%;
+      padding: 18px;
+      border: none;
+      outline: none;
+
+      color: #444;
+      text-align: left;
+
+      transition: 0.4s;
+    }
+
+    /* 가상 선택자로 아이콘 추가 */
+    .accordian:after {
+      content: '\02795';
+
+      float: right;
+      color: #777;
+      font-size: 13px;
+    }
+    .active:after {
+      content: '\2796';
+    }
+    
+    /* 버튼 hover, click 했을때 색상
+        .active 클래스는 js */
+    .active, .accordian:hover {
+      background-color: #ccc;
+    }
+
+    /* 패널 스타일
+        디폴트 : hidden */
+    .panel {
+      /* display: none; */
+
+      background-color: white;
+      padding: 0 18px;
+      overflow: hidden;
+      
+      /* 슬라이드 다운
+          디폴트 : 
+          max-height: 0; */
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <button class="accordian">Section 1</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quisquam rerum ullam similique eos. Accusamus, quod! Qui laboriosam ut esse quos perferendis dolores. Recusandae quisquam veniam adipisci ipsam illum aperiam?</p>
+  </div>
+  <button class="accordian">Section 2</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quisquam rerum ullam similique eos. Accusamus, quod! Qui laboriosam ut esse quos perferendis dolores. Recusandae quisquam veniam adipisci ipsam illum aperiam?</p>
+  </div>
+  <button class="accordian">Section 3</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quisquam rerum ullam similique eos. Accusamus, quod! Qui laboriosam ut esse quos perferendis dolores. Recusandae quisquam veniam adipisci ipsam illum aperiam?</p>
+  </div>
+  <script>
+    let acc = document.getElementsByClassName('accordian');
+    let i;
+
+    for(i = 0; i<acc.length; i++) {
+      acc[i].addEventListener('click', function(){
+        /* 토글 active class */
+        this.classList.toggle('active');
+
+        /* 토글 display */
+        let panel = this.nextElementSibling;
+
+        // 다운 슬라이드 효과
+        if(panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        }
+        else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      })
+    }
+  </script>
+</body>
+</html>

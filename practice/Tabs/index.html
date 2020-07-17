@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tabs</title>
+</head>
+<body>
+  <!-- 탭 링크 -->
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Seoul')" id="defaultOpen">Seoul</button>
+    <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  </div>
+
+  <!-- 탭 컨텐츠 -->
+  <div id="Seoul" class="tabcontent">
+    <h3>Seoul</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, non accusantium. Suscipit ipsa dolore ut perferendis magnam eaque in obcaecati aperiam illum magni necessitatibus, laborum, facilis aliquam provident minima cum.</p>
+    <span onclick="this.parentElement.style.display='none'">&times;</span>
+  </div>
+
+  <div id="London" class="tabcontent">
+    <h3>London</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque unde quae nesciunt, culpa perspiciatis aliquid error voluptatem ut! Asperiores commodi magni voluptatum blanditiis eius quasi vero quae aliquam, sint sit.</p>
+    <span onclick="this.parentElement.style.display='none'">&times;</span>
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit a consequuntur obcaecati, dolore eos iusto. Hic sapiente amet architecto corporis optio nobis labore laboriosam eligendi. Exercitationem dolorem autem eaque et?</p>
+    <span onclick="this.parentElement.style.display='none'">&times;</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

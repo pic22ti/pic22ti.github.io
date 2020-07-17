@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clickable Dropdown</title>
+  <style>
+    /* 드롭다운 버튼 */
+    .dropbtn {
+      cursor: pointer;
+
+      background-color: #3498db;
+      padding: 16px;
+      border: none;
+
+      color: white;
+      font-size: 16px;
+    }
+
+    /* 드롭다운 버튼 hover & focus */
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: #2980b9;
+    }
+
+    /* 드롭다운 컨테이너
+        포지션 : relative */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* 드롭다운 컨텐츠
+        디폴트 : hidden */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* 드롭다운 컨텐츠 안에 링크 */
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+
+      color: black;
+      text-decoration: none;
+    }
+
+    /* 드롭다운 컨텐츠 링크 hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* 드롭다운 메뉴 show 클래스
+        JS를 사용하여 드롭다운 버튼을 클릭하면 
+        드롭다운 컨텐츠에 show 클래스를 추가 */
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+
+    <!-- 드롭다운 버튼 -->
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+
+    <!-- 버튼 누르면 드롭다운되는 컨텐츠 -->
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  <script>
+    /* 드롭다운 버튼을 클릭하면,
+        드롭다운 컨텐츠 토글 */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    /* 드롭다운 컨텐츠 밖 여백을 클릭하면 
+        드롭다운 컨텐츠를 닫음 */
+    window.onclick = function(e) {
+      if(!e.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        console.log(e.target);
+        for( i = 0; i < dropdowns.length; i++ ) {
+          let openDropdown = dropdowns[i];
+          if( openDropdown.classList.contains('show') ) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

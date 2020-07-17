@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Side Navigation</title>
+</head>
+<body>
+  <!-- 사이드 내비게이션 -->
+  <div id="mySidenav" class="sidenav">
+
+    <!-- 사이드 내비 닫기 버튼 -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- 내비 메뉴 링크 -->
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- 사이드 내비 열기 버튼 -->
+  <span onclick="openNav()">open</span>
+
+  <!-- 만약에 사이드 내비가 페이지 컨텐츠를 오른쪽으로 밀고 싶다면
+      모든 페이지 컨텐츠를 여기 안에 넣는다. 
+      안 밀어낼거라면 사이드 내비를 페이지 컨텐츠 맨 위에 넣는다.-->
+  <div id="main">
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
