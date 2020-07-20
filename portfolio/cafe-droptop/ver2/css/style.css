@@ -1,0 +1,283 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
+
+
+/* ================ 모바일 시작 ================ */
+/* ---------------- 모든 페이지 공통 ---------------- */
+
+/* 컬러칩
+   화이트 : white
+   블랙 : black
+   옐로우 : gold
+   네이비 : #1a2e42
+*/
+
+/* 텍스트 설정
+   기본은 한글, 영문은 noto sans
+   포인트 영문은 pacifico */
+.sans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+/* a태그를 밑줄없음, 현재 색상으로 설정 */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* 컨테이터 여백을 좌우 18px로 설정 */
+.container {
+  margin: 0 18px;
+}
+
+/* 가로로 배치하기 위한 flex 클래스
+   **************수정예정
+   */
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* img 태그와 클래스 img
+   default: 
+   포지션 중앙, 사이즈 세로맞춤, 반복없음 */
+img, .img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 버튼 스타일 */
+button {
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+/* 라벨에 커서 포인터 */
+label {
+  cursor: pointer;
+}
+
+/* input 체크박스는 안보이게 숨김 */
+input[type=checkbox] {
+  display: none;
+}
+
+/* ---------------- 헤더 시작 ---------------- */
+
+/* 헤더 사이즈, 배경색 설정 */
+#header {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+}
+
+/* gnb-menu 체크박스가 체크되면 헤더가 고정되어 헤더 밖의 부분은 보이지 않음 (스크롤바는 움직이지만 밖은 안보임)
+   모바일에서는 어차피 스크롤바가 안보임 */
+#gnb-menu:checked ~ #header {
+  position: fixed;
+  z-index: 1;
+}
+
+/* gnb-menu 체크박스가 체크됐을 때
+   내비를 노출 */
+#gnb-menu:checked ~ #header>.nav {
+  display: block;
+}
+
+/* gnb-menu 체크박스가 체크되면
+   햄버거 모양이 X 모양으로 변경됨 */
+#gnb-menu:checked ~ #header .gnb-shape.top {
+  top: 50%;
+  transform: rotate(45deg);
+}
+#gnb-menu:checked ~ #header .gnb-shape.mid {
+  opacity: 0;
+}
+#gnb-menu:checked ~ #header .gnb-shape.bot {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+/* gnb-menu라벨을 클릭하면 내비를 열고 닫음 */
+.gnb-menu {
+  width: 53px;
+  height: 50px;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* gnb-box 스타일
+   gnb-shape에 absulte를 설정하기 위해
+   relative 설정  */
+.gnb-box {
+  position: relative;
+  width: 17px; 
+  height: 12px; 
+}
+
+/* gnb-shape 스타일 (삼선 햄버거 모양)
+   check했을때 위치를 변경하기 위해 absolute 설정하고
+   top으로 위치를 잡아줌 */
+.gnb-shape {
+  position: absolute;
+  background-color: black;
+  width: 17px;
+  height: 2px;
+
+  transition: 0.7s;
+}
+.gnb-shape.top {
+  top: 0%;
+}
+.gnb-shape.mid {
+  top: 50%;
+}
+.gnb-shape.bot {
+  top: 100%;
+}
+
+/* 브랜드 로고 사이즈 */
+.logo {
+  font-size: 15pt;
+}
+
+/* 매장찾기 로고 스타일 */
+.location {
+  width: 50px;
+  height: 50px;
+  padding: 16px 0 0 18px;
+  box-sizing: border-box;
+
+  font-size: 1.1rem;
+  transition: 0.7s;
+}
+
+/* 매장찾기 로고 hover하면 360도 y축으로 회전 */
+.location:hover {
+  transform: rotateY(360deg);
+}
+
+/* 내비 스타일
+   높이는 전체에서 헤더 50px을 뺀 화면높이
+   default : 숨김 */
+.nav {
+  display: none;
+  background-color: white;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+/* 내비 안에 여백을 줌 */
+.nav>.container {
+  position: relative;
+
+  box-sizing: border-box;
+  padding: 35px 45px;
+  margin: 0;
+}
+
+/* 가상 선택자::before를 사용해 
+   내비 위에 헤더와 구분을 하기 위한
+   라인을 그려줌 */
+.nav>.container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: black;
+  width: 100%;
+  height: 2px;
+}
+
+/* 내비 리스트 하단에 여백을 줌 */
+.nav .list {
+  padding-bottom: 20px;
+}
+
+/* 메인탭 폰트 설정 */
+.nav a.main-tab {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+/* 메인탭 체크박스가 체크되면 서브탭 묶음이 노출 */
+.nav #brand-tab:checked ~ div.sub-tabs {
+  display: block;
+}
+.nav #board-tab:checked ~ div.sub-tabs {
+  display: block;
+}
+
+/* 서브탭 묶음
+   메인탭을 클릭하면 오픈된다
+   defalt : 숨김 */
+.nav div.sub-tabs {
+  display: none;
+  padding-left: 18px;
+}
+
+/* 서브탭 폰트 설정
+   패딩값을 주고 가상선택자를 이용한 언더라인 효과를 위해
+   display : inline-block으로 설정함 */
+.nav a.sub-tab {
+  display: inline-block;
+  padding-top: 12px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+/* 내비리스트 a태그에 가상선택자::before를 사용하고
+   position: absolute를 사용해 위치를 잡아줌
+   default: width: 0 */
+.nav a {
+  position: relative;
+}
+/* 텍스트가 위로 올라오게 하기위해
+   span 태그로 감싸 position: relative로 설정 */
+.nav a span {
+  position: relative;
+}
+.nav a::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: -6px;
+  background-color: gold;
+
+  width: 0;
+  height: 7px;
+  transform: skew(-30deg);
+  transition: 0.7s;
+}
+.nav a.sub-tab::before {
+  top: 17px;
+}
+/* 내비 리스트 a태그에 hover하거나,
+   메인탭이 체크되면
+   width: 100%로 언더라인이 그려지는 효과
+   위치를 left: -6px로 주었기때문에
+   너비에 12px을 더함 */
+.nav a:hover::before {
+  width: calc(100% + 12px);
+}
+.nav #brand-tab:checked + a::before {
+  width: calc(100% + 12px);
+}
+.nav #board-tab:checked + a::before {
+  width: calc(100% + 12px);
+}
+/* ---------------- 헤더 끝 ---------------- */
