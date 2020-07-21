@@ -102,6 +102,7 @@ perspective: 2000px;
    텍스트 색상이 바뀜 */
 .main-menu p:hover {
   color: gray;
+  transform: scale(0.95);
 }
 
 /* 컨텐츠 컨테이너 레이아웃 */
@@ -121,10 +122,10 @@ perspective: 2000px;
   transition-timing-function: ease-in-out;
 }
 
-.container.showContents {
+.container.faceContents {
   transform: rotateY(0deg);
 }
-.contents.show {
+.contents.showContents {
   opacity: 1;
 }
 
@@ -135,7 +136,7 @@ perspective: 2000px;
 
   width: 100%;
   height: 100%;
-  /* opacity: 0; */
+  opacity: 0;
 
   font-size: 50px;
   text-align: center;
