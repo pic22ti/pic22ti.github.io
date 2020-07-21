@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Michroma&family=Montserrat&family=Russo+One&display=swap');
+
+font-family: 'Anton', sans-serif;
+font-family: 'Michroma', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Russo One', sans-serif;
+
+[gnb]
+#ffffff
+Mercedes
+Ferrari
+McLaren
+-Russo One
+
+[mer]
+#00aca4
+Qualifying
+-Michroma
+
+#7d7d7d
+It's lights out!
+And away we go!
+-Montserrat
+
+#000000
+Pitstop
+-Anton
+
+[fer]
+#000000
+WORLD
+CHAMPIONSHIP
+RACE
+-Michroma
+
+#a0a0a0
+SF1000
+-Michroma
+
+[mcl]
+#ff950e
+MCL35
+-Montserrat
+
+#b5b5b5
+RACING
+-Russo One
+
+#0357ca
+1000th
+Grand Prix
+-Michroma
+
+#000000
+Things you
+might have
+missed
+-Anton

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid example</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      display: grid;
+      background-color: #eee;
+      width: 100vw;
+      height: 100vh;
+      font-size: 30px;
+      text-align: center;
+
+
+
+      /* 너비 100px의 열을 3개를 만듬
+         모자란 부분은 비워짐 */
+      /* grid-template-columns: 100px 100px 100px; */
+
+      /* 너비가 600px이니까 100%는 각각 600px이 됨 */
+      /* grid-template-columns: 100% 100% 100%; */
+
+      /* fr: fraction 1배율씩 나눠가짐 */
+      /* grid-template-columns: 1fr 1fr 1fr; */
+
+      /* 고정과 반응형을 함께 사용할 수 있음
+         100px은 고정 나머지는 알아서 나눠짐 */
+      /* grid-template-columns: 100px 1fr; */
+
+      /* repeat(수량, 크기)함수를 사용 */
+      grid-template-columns: repeat(4, 1fr);
+
+
+
+      
+      /* 높이 100px의 행을 2개 만듬
+         남는 애들은 적용되지 않음 */
+      /* grid-template-rows: 100px 100px; */
+
+      /* fr: fraction 1배율씩 나눠가짐 */
+      /* grid-template-rows: 1fr 1fr 1fr; */
+
+      /* repeat(수량, 크기)함수를 사용 */
+      grid-template-rows: repeat(3, 1fr);
+
+
+
+
+      /* 여백주기 gap */
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      /* grid-gap: 10px; */
+
+      /* 컨텐츠 내용이 더 클때 min-max 함수 사용
+         사용할 일이 많지는 않음 */
+      /* grid-auto-rows: min-max(200px, auto); */
+    }
+    .item {
+      border: 4px solid palevioletred;
+      background-color: papayawhip;
+    }
+    .item:nth-child(odd) {
+      background-color: paleturquoise;
+    }
+    .item:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+    .item:nth-child(2) {
+      grid-row: 1 / span 2;
+      grid-column: 3 / span 2;
+
+      /* grid-area를 사용해서 한번에 쓸 수 있음 */
+      /* grid-area: 1 / 3 / span 2 / 4; */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+</body>
+</html>

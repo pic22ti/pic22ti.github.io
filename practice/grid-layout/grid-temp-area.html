@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Template Area</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+
+
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: 
+        /* 공간을 만들어 이름을 만든거뿐임
+           매칭을 시켜줘야함
+           ""안에는 하나의 열에 대해 들어감 */
+        "header header header"
+        "main main aside"
+        ". footer footer";
+    }
+    .item:nth-child(1) {
+      /* 공간을 만든거를 매칭시켜줌 */
+      grid-area: header;
+    }
+    .item:nth-child(2) {
+      grid-area: main;
+    }
+    .item:nth-child(3) {
+      grid-area: aside;
+    }
+    .item:nth-child(4) {
+      grid-area: footer;
+    }
+    .item {
+      border: 3px solid powderblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Header</div>
+    <div class="item">Main</div>
+    <div class="item">Aside</div>
+    <div class="item">Footer</div>
+  </div>
+</body>
+</html>
