@@ -3,23 +3,29 @@
 
 
 /* ================ 모바일 시작 ================ */
-/* ---------------- 모든 페이지 공통 ---------------- */
+/* ---------------- 모든 페이지 공통 시작 ---------------- */
 
 /* 컬러칩
    화이트 : white
    블랙 : black
    옐로우 : gold
    네이비 : #1a2e42
+   베이지 : #d1c0a5
 */
 
-/* 텍스트 설정
-   기본은 한글, 영문은 noto sans
-   포인트 영문은 pacifico */
-.sans {
-  font-family: 'Noto Sans KR', sans-serif;
+/* 폰트 사이즈 */
+h2 {
+  font-size: 26pt;
 }
-.pacifico {
-  font-family: 'Pacifico', cursive;
+h3 {
+  font-size: 20pt;
+}
+.strong {
+  font-size: 15pt;
+  font-weight: bold;
+}
+.text {
+  font-size: 11pt;
 }
 
 /* a태그를 밑줄없음, 현재 색상으로 설정 */
@@ -28,8 +34,46 @@ a {
   color: currentColor;
 }
 
+/* 버튼 스타일 */
+button {
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
+/* 라벨에 커서 포인터 */
+label {
+  cursor: pointer;
+}
+
+/* input 체크박스와 라디오는 안보이게 숨김 */
+input[type=checkbox],
+input[type=radio]
+{
+  display: none;
+}
+
+/* img 태그와 클래스 img
+   default: 
+   포지션 중앙, 사이즈 세로맞춤, 반복없음 */
+img, .img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 전체를 감싸는 wrap */
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
 /* 컨테이터 여백을 좌우 18px로 설정 */
 .container {
+  box-sizing: border-box;
   margin: 0 18px;
 }
 
@@ -41,37 +85,49 @@ a {
   height: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between;
+  align-items: center; */
 }
 
-/* img 태그와 클래스 img
-   default: 
-   포지션 중앙, 사이즈 세로맞춤, 반복없음 */
-img, .img {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+/* 텍스트 설정
+   기본은 한글, 영문은 noto sans
+   포인트 영문은 pacifico */
+.sans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.pacifico {
+  font-family: 'Pacifico', cursive;
 }
 
-/* 버튼 스타일 */
-button {
-  cursor: pointer;
-  background-color: black;
-  border: none;
-  color: white;
+/* 모바일 스크롤 표시 아이콘 화면 중앙 하단에 픽스
+   위아래로 움직이는 애니메이션 scrollMove */
+#mobile-scroll {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 6px 7px 3px 7px;
+
+  font-size: 2rem;
+
+  animation-name: scrollMove;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  z-index: 1;
 }
 
-/* 라벨에 커서 포인터 */
-label {
-  cursor: pointer;
-}
-
-/* input 체크박스는 안보이게 숨김 */
-input[type=checkbox] {
-  display: none;
+@keyframes scrollMove {
+  0% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 65px;
+  }
 }
 
 /* ---------------- 헤더 시작 ---------------- */
@@ -87,7 +143,7 @@ input[type=checkbox] {
    모바일에서는 어차피 스크롤바가 안보임 */
 #gnb-menu:checked ~ #header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* gnb-menu 체크박스가 체크됐을 때
@@ -110,8 +166,14 @@ input[type=checkbox] {
   transform: rotate(-45deg);
 }
 
+/* 헤더를 가로로 배치하고 수직 정렬 */
+#header .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* gnb-menu라벨을 클릭하면 내비를 열고 닫음 */
-.gnb-menu {
+#header .gnb-menu {
   width: 53px;
   height: 50px;
   padding: 18px;
@@ -121,7 +183,7 @@ input[type=checkbox] {
 /* gnb-box 스타일
    gnb-shape에 absulte를 설정하기 위해
    relative 설정  */
-.gnb-box {
+#header .gnb-box {
   position: relative;
   width: 17px; 
   height: 12px; 
@@ -130,7 +192,7 @@ input[type=checkbox] {
 /* gnb-shape 스타일 (삼선 햄버거 모양)
    check했을때 위치를 변경하기 위해 absolute 설정하고
    top으로 위치를 잡아줌 */
-.gnb-shape {
+#header .gnb-shape {
   position: absolute;
   background-color: black;
   width: 17px;
@@ -138,41 +200,42 @@ input[type=checkbox] {
 
   transition: 0.7s;
 }
-.gnb-shape.top {
+#header .gnb-shape.top {
   top: 0%;
 }
-.gnb-shape.mid {
+#header .gnb-shape.mid {
   top: 50%;
 }
-.gnb-shape.bot {
+#header .gnb-shape.bot {
   top: 100%;
 }
 
 /* 브랜드 로고 사이즈 */
-.logo {
+#header .logo {
   font-size: 15pt;
 }
 
 /* 매장찾기 로고 스타일 */
-.location {
+#header .location {
   width: 50px;
   height: 50px;
   padding: 16px 0 0 18px;
   box-sizing: border-box;
 
   font-size: 1.1rem;
+  transform: rotateY(0deg);
   transition: 0.7s;
 }
 
 /* 매장찾기 로고 hover하면 360도 y축으로 회전 */
-.location:hover {
+#header .location:hover {
   transform: rotateY(360deg);
 }
 
 /* 내비 스타일
    높이는 전체에서 헤더 50px을 뺀 화면높이
    default : 숨김 */
-.nav {
+#header .nav {
   display: none;
   background-color: white;
   width: 100%;
@@ -180,7 +243,7 @@ input[type=checkbox] {
 }
 
 /* 내비 안에 여백을 줌 */
-.nav>.container {
+#header .nav>.container {
   position: relative;
 
   box-sizing: border-box;
@@ -191,7 +254,7 @@ input[type=checkbox] {
 /* 가상 선택자::before를 사용해 
    내비 위에 헤더와 구분을 하기 위한
    라인을 그려줌 */
-.nav>.container::before {
+#header .nav>.container::before {
   content: "";
   display: block;
   position: absolute;
@@ -204,28 +267,28 @@ input[type=checkbox] {
 }
 
 /* 내비 리스트 하단에 여백을 줌 */
-.nav .list {
+#header .nav .list {
   padding-bottom: 20px;
 }
 
 /* 메인탭 폰트 설정 */
-.nav a.main-tab {
+#header .nav a.main-tab {
   font-size: 20pt;
   font-weight: bold;
 }
 
 /* 메인탭 체크박스가 체크되면 서브탭 묶음이 노출 */
-.nav #brand-tab:checked ~ div.sub-tabs {
+#header .nav #brand-tab:checked ~ div.sub-tabs {
   display: block;
 }
-.nav #board-tab:checked ~ div.sub-tabs {
+#header .nav #board-tab:checked ~ div.sub-tabs {
   display: block;
 }
 
 /* 서브탭 묶음
    메인탭을 클릭하면 오픈된다
    defalt : 숨김 */
-.nav div.sub-tabs {
+#header .nav div.sub-tabs {
   display: none;
   padding-left: 18px;
 }
@@ -233,7 +296,7 @@ input[type=checkbox] {
 /* 서브탭 폰트 설정
    패딩값을 주고 가상선택자를 이용한 언더라인 효과를 위해
    display : inline-block으로 설정함 */
-.nav a.sub-tab {
+#header .nav a.sub-tab {
   display: inline-block;
   padding-top: 12px;
   font-size: 12pt;
@@ -243,15 +306,15 @@ input[type=checkbox] {
 /* 내비리스트 a태그에 가상선택자::before를 사용하고
    position: absolute를 사용해 위치를 잡아줌
    default: width: 0 */
-.nav a {
+#header .nav a {
   position: relative;
 }
 /* 텍스트가 위로 올라오게 하기위해
    span 태그로 감싸 position: relative로 설정 */
-.nav a span {
+#header .nav a span {
   position: relative;
 }
-.nav a::before {
+#header .nav a::before {
   content: "";
   position: absolute;
   top: 17px;
@@ -263,7 +326,7 @@ input[type=checkbox] {
   transform: skew(-30deg);
   transition: 0.7s;
 }
-.nav a.sub-tab::before {
+#header .nav a.sub-tab::before {
   top: 17px;
 }
 /* 내비 리스트 a태그에 hover하거나,
@@ -271,13 +334,15 @@ input[type=checkbox] {
    width: 100%로 언더라인이 그려지는 효과
    위치를 left: -6px로 주었기때문에
    너비에 12px을 더함 */
-.nav a:hover::before {
+#header .nav a:hover::before {
   width: calc(100% + 12px);
 }
-.nav #brand-tab:checked + a::before {
+#header .nav #brand-tab:checked + a::before {
   width: calc(100% + 12px);
 }
-.nav #board-tab:checked + a::before {
+#header .nav #board-tab:checked + a::before {
   width: calc(100% + 12px);
 }
 /* ---------------- 헤더 끝 ---------------- */
+/* ---------------- 모든 페이지 공통 끝 ---------------- */
+/* ================ 모바일 끝 ================ */

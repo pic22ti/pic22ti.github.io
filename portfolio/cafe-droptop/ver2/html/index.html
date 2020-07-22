@@ -123,17 +123,17 @@
         <!-- 메인 이미지 1 -->
         <div class="img main-img">
           <!-- 이미지 안에 요소들을 absolute로 담기위한 relative 컨테이너 -->
-          <div class="container">
-            <div class="main-img-title"></div>
+          <!-- <div class="container"> -->
+            <div class="img main-img-title"></div>
             <p class="sans text">6 / 1 출시</p>
             <p class="sans text">상큼한 과일로 시원한 청량함을 안겨줄<br>새로운 음료를 만나보세요!</p>
             <p class="sans text">파인 오렌지 요거트<br>Pine orange yogurt</p>
-          </div>
+          <!-- </div> -->
         </div>
 
         <!-- 메인 이미지 2 -->
         <div class="img main-img">
-          <h2 class="pacifico">Cookie&Cream</h2>
+          <h2 class="pacifico">Cookie & Cream</h2>
         </div>
 
         <!-- 메인 이미지 3 -->
@@ -143,9 +143,8 @@
       </div>
 
       <!-- 메인 슬라이드 탭
-            탭을 눌러 해당 메인 이미지를 슬라이드로 볼 수 있다
-            가로로 배치하기 위해 flex로 묶음 -->
-      <div class="flex">
+            탭을 눌러 해당 메인 이미지를 슬라이드로 볼 수 있다 -->
+      <div class="main-tabs">
         <label for="main-tab1"></label>
         <label for="main-tab2"></label>
         <label for="main-tab3"></label>
@@ -172,7 +171,7 @@
       </div>
 
       <!-- 베스트메뉴들을 담을 컨테이너 -->
-      <div class="container">
+      <div class="items container">
         <!-- 가로로 배치하기 위해 flex로 묶어줌 -->
         <div class="flex">
 
@@ -214,7 +213,7 @@
       <!-- 메뉴 전체보기 버튼 -->
       <!-- 좌우 여백을 주기위한 컨테이너 -->
       <div class="container">
-        <a href="menu.html?index:0" class="all-menu"><button class="sans box">메뉴 전체보기</button></a>
+        <a href="menu.html?index:0" class="all-menu"><button class="sans">메뉴 전체보기</button></a>
       </div>
     </section>
     <!-- 베스트메뉴 섹션 끝 -->
@@ -297,34 +296,34 @@
     <!-- 푸터 시작 -->
     <footer id="footer">
 
-      <!-- SNS 아이콘을 가로로 배치하기 위해 flex로 묶음 -->
-      <div class="flex">
+      <!-- SNS 아이콘 묶음 -->
+      <div class="sns-icon">
 
         <!-- 아이콘 페이스북 -->
         <div class="icon face">
           <a href="https://ko-kr.facebook.com/" target="blank">
-            <img src="" alt="">
+            <img src="../images/facebook.png" alt="facebook icon">
           </a>
         </div>
 
         <!-- 아이콘 인스타 -->
         <div class="icon insta">
           <a href="https://www.instagram.com/?hl=ko" target="blank">
-            <img src="" alt="">
+            <img src="../images/instagram.png" alt="instagram icon">
           </a>
         </div>
 
         <!-- 아이콘 네이버블로그 -->
         <div class="icon blog">
           <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="blank">
-            <img src="" alt="">
+            <img src="../images/naverblog.png" alt="naverblog icon">
           </a>
         </div>
 
         <!-- 아이콘 트위터 -->
         <div class="icon twit">
           <a href="https://twitter.com/" target="blank">
-            <img src="" alt="">
+            <img src="../images/twitter.png" alt="twitter icon">
           </a>
         </div>
       </div>
@@ -337,14 +336,14 @@
 
         <!-- 상세내용을 접었다 폈다 하기 위한 라벨 -->
         <p class="sans text">
-          <label for="footer_checkbox">
+          <label for="footer_fold">
             (주)다도글로벌/카페드롭탑 사업자 정보 ▼
           </label>
         </p>
 
         <!-- 상세내용
               default : 숨김 -->
-        <p class="sans text hide">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
+        <p class="sans text fold">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
 
         <p class="sans text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
       </div>

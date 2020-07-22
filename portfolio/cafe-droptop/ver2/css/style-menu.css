@@ -1,0 +1,279 @@
+/* ================ 모바일 시작 ================ */
+/* ---------------- 메뉴 시작 ---------------- */
+
+/* ---------------- 상단 ---------------- */
+/* 상단 타이틀
+   모바일: 버튼, 타이틀 순서
+   PC: 타이틀, 버튼 순서
+   order 속성으로 타이틀과 버튼의 순서를 바꾸기 위해 flex로 묶음  */
+#menu .title {
+  height: 60px;
+
+  order: 1;
+}
+
+/* 상단 타이틀을 가로로 배치하기 위해 inline-block 설정하고 여백을 주고, 수직 정렬 */
+#menu .title h3,
+#menu .title p
+{
+  display: inline-block;
+  padding-right: 15px;
+  line-height: 60px;
+}
+
+/* 상단 메뉴 버튼 탭
+   order 속성으로 타이틀과 버튼의 순서를 바꾸기 */
+#menu .btn {
+  width: 100%;
+  height: 100px;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+
+  order: 0;
+}
+
+/* 상단 버튼 탭
+   flex로 묶어준 뒤 4등분 해줌 */
+#menu .btn .flex button {
+  width: 50%;
+  height: 50%;
+
+  box-sizing: border-box;
+  border-top: 1px solid #dcdcdc;
+}
+#menu .btn .flex button:nth-of-type(2n+1) {
+  border-right: 1px solid #dcdcdc;
+}
+
+/* 선택된 버튼을 click, hover 했을때 색상을 변경 */
+#menu button:hover,
+#menu button.click
+{
+  background-color: black;
+  color: white;
+}
+
+/* 아이템 이미지를 클릭하면 열리는 모달창 */
+#menu .modal {
+  display: none;
+}
+
+/* ---------------- 모달 ---------------- */
+/* 
+.modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 100;
+}
+.modal>.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 2.5rem;
+
+  cursor: pointer;
+}
+.modal>img {
+  display: block;
+  width: 50%;
+  max-width: 400px;
+  margin: 100px auto 0 auto;
+  background-image: url('../images/101.jpg');
+  background-size: contain;
+
+  animation: zoom 0.5s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+/* ---------------- 메뉴 컨텐츠 ---------------- */
+/* 메뉴 컨텐츠
+   default: 숨김
+   버튼 탭을 클릭하면 show 클래스를 사용하여 해당 메뉴를 보여줌 (js 사용) */
+#menu .content {
+  display: none;
+  overflow: hidden;
+}
+#menu .content.show {
+  display: block;
+}
+
+/* 여러 페이지를 슬라이드로 보여줄 묶음
+   각 페이지의 위치를 absolute로 지정하기 위해
+   부모에 relative를 줌 */
+#menu .slide {
+  position: relative;
+  width: 100%;
+  height: 510px;
+
+  transition: 0.5s;
+}
+
+/* 메뉴 컨텐츠 1페이지 위치 설정
+   페이지를 선택하면 좌우로 슬라이드 하면서
+   한 페이지에는 ul.flex 1개를 보여준다 */
+#menu ul.flex:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#menu ul.flex:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+#menu ul.flex:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 200%;
+}
+
+/* 아이템 1개 사이즈 설정하고
+   이미지와 텍스트 중앙정렬 */
+#menu .item {
+  width: 50%;
+  height: 170px;
+  text-align: center;
+}
+
+/* 아이템 이미지 */
+#menu .item img {
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+}
+
+/* 아이템 텍스트 길면 ...로 말줄임
+   overflow: hidden때문에 텍스트가 아래도 짤려 보여서 height값을 지정해줌 */
+#menu .item p {
+  height: 16px;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 페이지 표시 가운데 정렬 */
+#menu .page {
+  height: 60px;
+  text-align: center;
+}
+
+/* 페이지 가로로 배치하기 위해 inline-block 설정하고 수직 정렬 */
+#menu .page label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  line-height: 30px;
+}
+
+/* ---------------- 페이지 클릭하면 좌우로 슬라이드 하면서 해당 페이지를 보여줌 ---------------- */
+
+/* 신메뉴 newitem */
+input[id="new1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="new2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="new1"]:checked ~ .page>label[for="new1"],
+input[id="new2"]:checked ~ .page>label[for="new2"]
+{
+  color: white;
+  background-color: #1a2e42;
+}
+
+/* 커피 coffeeitem */
+input[id="coffee1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="coffee2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="coffee1"]:checked ~ .page>label[for="coffee1"],
+input[id="coffee2"]:checked ~ .page>label[for="coffee2"]
+{
+  color: white;
+  background-color: #1a2e42;
+}
+
+/* 음료 beverageitem */
+input[id="beverage1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="beverage2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="beverage3"]:checked ~ .slide {
+  left: -200%;
+}
+input[id="beverage1"]:checked ~ .page>label[for="beverage1"],
+input[id="beverage2"]:checked ~ .page>label[for="beverage2"],
+input[id="beverage3"]:checked ~ .page>label[for="beverage3"]
+{
+  color: white;
+  background-color: #1a2e42;
+}
+
+/* 푸드 fooditem */
+input[id="food1"]:checked ~ .slide {
+  left: 0;
+}
+input[id="food2"]:checked ~ .slide {
+  left: -100%;
+}
+input[id="food3"]:checked ~ .slide {
+  left: -200%;
+}
+input[id="food1"]:checked ~ .page>label[for="food1"],
+input[id="food2"]:checked ~ .page>label[for="food2"],
+input[id="food3"]:checked ~ .page>label[for="food3"]
+{
+  color: white;
+  background-color: #1a2e42;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- 메뉴 끝 ---------------- */
+/* ================ 모바일 끝 ================ */
