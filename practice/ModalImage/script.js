@@ -1,3 +1,5 @@
+(function(){
+
 // 모달 가져오기
 let modal = document.getElementById('myModal');
 
@@ -20,3 +22,5 @@ let span = document.getElementsByClassName('close')[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
+
+}());

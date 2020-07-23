@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full screen overlay navigation</title>
+  <style>
+    /* 오버레이 배경 */
+    .overlay {
+      /* 높이와 너비는 나타나는 방향에 따라 디폴트가 달라질 수 있음 (오른쪽에서 등장으로 설정) (js 참고) */
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 100%;
+      width: 0%;
+
+      /* 가로 스크롤 숨김 */
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    /* 오버레이 안에 컨텐츠 포지션 */
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      
+      width: 100%;
+      /* 30px top margin to avoid conflict with the close button on smaller screens */
+      margin-top: 30px;
+
+      text-align: center;
+    }
+
+    /* 오버레이 컨텐츠 링크 스타일 */
+    .overlay a {
+      display: block;
+      padding: 8px;
+
+      color: #8C7561;
+      font-size: 36px;
+      text-decoration: none;
+
+      /* 스크린 크기가 변하거나, hover 일때 트랜지션 이펙트 */
+      transition: 0.5s;
+    }
+
+    /* 오버레이 컨텐츠 링크 hover할때 색상 변경 */
+    .overlay a:hover {
+      color: #A6978A;
+    }
+
+    /* 닫기 버튼 위치 설정 (오른쪽 상단) */
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+    }
+
+    /* 스크린 높이가 450px 이하일때, 폰트 사이즈와 컨텐츠 링크 위치가 겹치지않게 바꾼다 */
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px;
+      }
+      .overlay .closebtn {
+        font-size: 20px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- 오버레이 -->
+  <div id="myNav" class="overlay">
+
+    <!-- 오버레이 내비를 닫는 버튼 -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- 오버레이 컨텐츠 -->
+    <div class="overlay-content">
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </div>
+
+  <!-- 오버레이 내비를 열고 보여주는 요소 -->
+   <span onclick="openNav()">OPEN</span>
+
+   <!-- javascript -->
+   <script>
+    //  오픈 버튼을 클릭했을때 오버레이 열기
+    function openNav() {
+      document.querySelector('#myNav').style.width = "100%";
+    }
+
+    // 닫기 버튼을 클릭했을때 오버레이 닫기
+    function closeNav() {
+      document.querySelector('#myNav').style.width = "0%";
+    }
+
+
+
+
+   </script>
+</body>
+</html>
