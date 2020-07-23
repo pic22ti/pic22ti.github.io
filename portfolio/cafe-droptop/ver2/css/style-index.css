@@ -46,6 +46,7 @@
 /* 메인 이미지 1의 타이틀 이미지 */
 #main .main-img:nth-of-type(1) .main-img-title {
   background-image: url('../images/main-1-title.png');
+  background-size: contain;
   background-position: left;
   width: 70%;
   height: 50%;

@@ -1,0 +1,247 @@
+/* ================ 모바일 시작 ================ */
+/* ---------------- 게시판 시작 ---------------- */
+
+/* ---------------- 상단 ---------------- */
+/* 상단 타이틀
+   모바일: 버튼, 타이틀 순서
+   PC: 타이틀, 버튼 순서
+   order 속성으로 타이틀과 버튼의 순서를 바꾸기 위해 flex로 묶음  */
+#board .title {
+  height: 60px;
+
+  order: 1;
+}
+
+/* 상단 타이틀을 가로로 배치하기 위해 inline-block 설정하고 여백을 주고, 수직 정렬 */
+#board .title h3,
+#board .title p
+{
+  display: inline-block;
+  padding-right: 15px;
+  line-height: 60px;
+}
+
+/* 상단 메뉴 버튼 탭
+    order 속성으로 타이틀과 버튼의 순서를 바꾸기 */
+#board .btn {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+
+  order: 0;
+}
+
+/* 상단 버튼 탭
+    flex로 묶어준 뒤 4등분 해줌 */
+#board .btn .flex button {
+  width: 50%;
+  height: 100%;
+
+  box-sizing: border-box;
+  border-top: 1px solid #dcdcdc;
+}
+#board .btn .flex button:nth-of-type(2n+1) {
+  border-right: 1px solid #dcdcdc;
+}
+
+/* 선택된 버튼을 click, hover 했을때 색상을 변경 */
+#board button:hover,
+#board button.click
+{
+  background-color: black;
+  color: white;
+}
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+/* ---------------- 게시판 컨텐츠 ---------------- */
+  
+/* 게시판 컨텐츠
+  default: 숨김
+  버튼 탭을 클릭하면 show 클래스를 사용하여 해당 게시판을 보여줌 (js 사용) */
+#board .content {
+  display: none;
+  overflow: hidden;
+}
+#board .content.show {
+  display: block;
+}
+
+/* flex 클래스를 사용하여 게시판
+   가로로 번호, 제목, 등록일, 조회수 배치
+   텍스트는 수직 정렬, 가로 중앙 정렬 */
+#board ul.flex {
+  box-sizing: border-box;
+  height: 50px;
+  
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* ---------------- 게시판 타이틀 ---------------- */
+/* 게시판 타이틀 상단에 라인 */
+#board .board-title {
+  border-top: 2px solid #1a2e42;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+
+/* 게시판 타이틀 등록일과 조회수는 모바일에서는 숨기고 PC에서만 노출 */
+#board .date,
+#board .views {
+  display: none;
+}
+
+/* 가로 너비 지정 */
+#board .number {
+  width: 20%;
+}
+#board .subject {
+  width: 80%;
+}
+
+/* 게시판 리스트 제목만 왼쪽 정렬, 길면 ...말줄임 */
+#board .board-page .subject p {
+  /* box-sizing: border-box;
+  padding-right: 18px; */
+  text-align: left;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+/* ---------------- 게시판 페이지 선택하여 열기 ---------------- */
+
+/* 뉴스 newsboard */
+/* 페이지1 */
+input[id="news1"]:checked ~ .slide .board-page:nth-of-type(1) {
+  display: block;
+}
+input[id="news1"]:checked ~ .slide .board-page:nth-of-type(2) {
+  display: none;
+}
+/* 페이지2 */
+input[id="news2"]:checked ~ .slide .board-page:nth-of-type(1) {
+  display: none;
+}
+input[id="news2"]:checked ~ .slide .board-page:nth-of-type(2) {
+  display: block;
+}
+/* 페이지 표시 선택됐을 때 스타일 변경 */
+input[id="news1"]:checked ~ .slide>.page>label[for="news1"],
+input[id="news2"]:checked ~ .slide>.page>label[for="news2"]
+{
+  color: white;
+  background-color: #1a2e42;
+}
+
+/* 이벤트 eventboard */
+/* 페이지1 */
+input[id="event1"]:checked ~ .slide .board-page:nth-of-type(1) {
+  display: block;
+}
+input[id="event1"]:checked ~ .slide .board-page:nth-of-type(2) {
+  display: none;
+}
+/* 페이지2 */
+input[id="event2"]:checked ~ .slide .board-page:nth-of-type(1) {
+  display: none;
+}
+input[id="event2"]:checked ~ .slide .board-page:nth-of-type(2) {
+  display: block;
+}
+/* 페이지 표시 선택됐을 때 스타일 변경 */
+input[id="event1"]:checked ~ .slide>.page>label[for="event1"],
+input[id="event2"]:checked ~ .slide>.page>label[for="event2"]
+{
+  color: white;
+  background-color: #1a2e42;
+}
+
+
+
+
+
+
+
+
+/* ---------------- 게시판 리스트로 내용 열고 닫기 ---------------- */
+
+/* 게시판 리스트 hover, 선택했을때 스타일 */
+#board .board-page ul.flex:hover,
+#board .board-page ul.flex.open
+{
+  background-color: #1a2e42;
+  color: white;
+}
+
+/* 게시글 내용 스타일 설정
+   게시글 리스트를 클릭할 때마다 열고 닫음 (js 사용)
+   default : max-height: 0 */
+#board .board-page .contents {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+
+  border-bottom: 1px solid #dcdcdc;
+}
+#board .board-page .contents p {
+  padding: 20px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* 페이지 표시 가운데 정렬 */
+#board .page {
+  height: 60px;
+  text-align: center;
+}
+
+/* 페이지 가로로 배치하기 위해 inline-block 설정하고 수직 정렬 */
+#board .page label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------- 게시판 끝 ---------------- */
+/* ================ 모바일 끝 ================ */

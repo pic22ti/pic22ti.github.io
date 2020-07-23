@@ -75,7 +75,7 @@
           <!-- 메뉴의 메인탭들을 분리
                 index를 이용해 해당 탭으로 이동하게 만듬 -->
           <li class="list">
-            <a href="menu.html?index:0" class="sans main-tab"><span>신제품</span></a>
+            <a href="menu.html?index:0" class="sans main-tab"><span>신메뉴</span></a>
           </li>
           <li class="list">
             <a href="menu.html?index:1" class="sans main-tab"><span>커피</span></a>
@@ -98,9 +98,9 @@
 
             <!-- 메인탭 게시판의 서브탭 묶음 -->
             <div class="sub-tabs">
-              <a href="news.html?index:0" class="sans sub-tab"><span>뉴스</span></a>
+              <a href="board.html?index:0" class="sans sub-tab"><span>뉴스</span></a>
               <br>
-              <a href="news.html?index:1" class="sans sub-tab"><span>이벤트</span></a>
+              <a href="board.html?index:1" class="sans sub-tab"><span>이벤트</span></a>
             </div>
           </li>
         </ul>
@@ -120,7 +120,7 @@
         <div class="title img">
           <div class="container">
             <h3 class="pacifico">Menu</h3>
-            <p class="sans">메뉴&nbsp;&#10095;&nbsp;신제품</p>
+            <p class="sans">메뉴&nbsp;&#10095;&nbsp;신메뉴</p>
           </div>
         </div>
 
@@ -146,7 +146,7 @@
 
       <!-- 컨텐츠1 새로나온 메뉴
             첫번째로 보여주는 메뉴탭이라 show 클래스 추가함 -->
-      <div class="content newitem">
+      <div class="content newitem show">
 
         <!-- 하단 페이지를 누르면 해당 페이지를 보여주기 위한 라디오버튼 -->
         <input type="radio" name="newitem" id="new1" checked="checked">
@@ -431,7 +431,7 @@
         </div>
       </div>
       
-      <div class="content fooditem show">
+      <div class="content fooditem">
 
         <input type="radio" name="fooditem" id="food1" checked="checked">
         <input type="radio" name="fooditem" id="food2">
@@ -549,5 +549,6 @@
 
     </section>
   </div>
+  <script src="../js/script-menu.js"></script>
 </body>
 </html>

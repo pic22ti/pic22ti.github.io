@@ -54,16 +54,19 @@
   color: white;
 }
 
-/* 아이템 이미지를 클릭하면 열리는 모달창 */
+
+
+
+
+
+
+/* ---------------- 모달창 ---------------- */
+
+/* 아이템 이미지를 클릭하면 열리는 모달창
+   화면전체, 반투명, 맨위로
+   default: 숨김 */
 #menu .modal {
   display: none;
-}
-
-/* ---------------- 모달 ---------------- */
-/* 
-.modal {
-  display: none;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -74,34 +77,45 @@
 
   z-index: 100;
 }
-.modal>.close {
+
+/* 모달창 닫기 버튼은 오른쪽 상단에 위치 */
+#menu .modal .close {
+  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
+
   color: white;
   font-size: 2.5rem;
-
-  cursor: pointer;
 }
-.modal>img {
+
+/* 모달창 이미지 */
+#menu .modal img {
   display: block;
-  width: 50%;
-  max-width: 400px;
-  margin: 100px auto 0 auto;
   background-image: url('../images/101.jpg');
-  background-size: contain;
 
-  animation: zoom 0.5s;
+  width: 70%;
+  max-width: 330px;
+  height: auto;
+  margin: 100px auto 0 auto;
+
+  animation: modalZoom 0.5s;
 }
 
-@keyframes zoom {
+@keyframes modalZoom {
   0% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
   }
-} */
+}
+
+
+
+
+
+
 
 /* ---------------- 메뉴 컨텐츠 ---------------- */
 /* 메뉴 컨텐츠
@@ -186,6 +200,12 @@
   line-height: 30px;
 }
 
+
+
+
+
+
+
 /* ---------------- 페이지 클릭하면 좌우로 슬라이드 하면서 해당 페이지를 보여줌 ---------------- */
 
 /* 신메뉴 newitem */
@@ -251,24 +271,6 @@ input[id="food3"]:checked ~ .page>label[for="food3"]
   color: white;
   background-color: #1a2e42;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

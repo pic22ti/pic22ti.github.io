@@ -109,16 +109,28 @@ img, .img {
 
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 30px;
-  padding: 6px 7px 3px 7px;
-
+  
   font-size: 2rem;
-
+  
   animation-name: scrollMove;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-
+  
   z-index: 1;
+}
+
+#mobile-scroll i {
+  padding: 6px 7px 3px 7px;
+  transition: 0.5s;
+}
+
+/* 스크롤이 화면 맨 밑으로 가면 reverse 클래스가 추가되어
+   아이콘이 위를 향하는 방향으로 회전
+   클릭하면 맨 위로 올라감 */
+#mobile-scroll i.reverse {
+  cursor: pointer;
+  transform: rotateX(180deg);
 }
 
 @keyframes scrollMove {
