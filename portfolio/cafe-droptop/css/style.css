@@ -8,6 +8,7 @@
 
 /* 컬러칩
    화이트 : white
+   라이트 그레이 : #dcdcdc
    블랙 : black
    옐로우 : gold
    네이비 : #1a2e42
@@ -21,12 +22,12 @@ h2 {
 h3 {
   font-size: 20pt;
 }
+p {
+  font-size: 11pt;
+}
 .strong {
   font-size: 15pt;
   font-weight: bold;
-}
-.text {
-  font-size: 11pt;
 }
 
 /* a태그를 밑줄없음, 현재 색상으로 설정 */
@@ -378,6 +379,18 @@ img, .img {
 /* ================ PC 시작 ================ */
 @media screen and (min-width: 1280px)
 {
+
+/* 폰트 사이즈 변경 */
+h2 {
+  font-size: 46px;
+}
+h3 {
+  font-size: 28px;
+}
+.strong {
+  font-size: 20px;
+  font-weight: bold;
+}
 
 /* 전체를 감싸는 wrap
    최대 너비, 중앙 정렬 설정 */

@@ -396,10 +396,6 @@
   padding: 0 200px;
   font-size: 26pt;
 }
-/* 베스트 타이틀 */
-#best .title.flex h3 {
-  font-size: 28pt;
-}
 
 /* 베스트 타이틀의 좌우 버튼 노출 */
 #best .title.flex button {
@@ -509,7 +505,6 @@
 }
 #contents-box .content1 h2 {
   padding: 42px 0 0 22px;
-  font-size: 46px;
   line-height: 58px;
 }
 #contents-box .content1 p {
@@ -545,9 +540,9 @@
   
   text-align: center;
 }
-#contents-box .content3 h2 {
+#contents-box .content3 h3 {
   padding-top: 150px;
-  line-height: 48px;
+  line-height: 42px;
 }
 
 /* 컨텐츠6 */
@@ -556,7 +551,6 @@
   grid-row: 4 / 5;
   
   background-image: url('../images/content-6.jpg');
-  /* background-size: contain; */
   box-sizing: border-box;
   padding-top: 310px;
   

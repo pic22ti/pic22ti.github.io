@@ -162,6 +162,17 @@
   grid-row: 1 / 2;
   height: 800px;
 }
+#brand .content1 h2 {
+  padding-top: 210px;
+}
+#brand .content1 h4 {
+  padding-top: 40px;
+}
+#brand .content1 p {
+  padding-top: 40px;
+  font-size: 17px;
+  line-height: 26px;
+}
 
 /* 컨텐츠2 */
 #brand .content2 {
@@ -169,12 +180,24 @@
   grid-row: 1 / 2;
   height: 800px;
 }
+#brand .content2 p {
+  font-size: 30px;
+  line-height: 44px;
+}
 
 /* 컨텐츠3 */
 #brand .content3 {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   height: 400px;
+}
+#brand .content3 h3 {
+  padding-top: 150px;
+  font-size: 46px;
+}
+#brand .content3 p {
+  padding-top: 10px;
+  font-size: 20px;
 }
 
 /* 컨텐츠4 */
@@ -190,12 +213,29 @@
   grid-row: 3 / 4;
   height: 800px;
 }
+#brand .content5 .strong {
+  padding-top: 360px;
+  font-size: 36px;
+}
+#brand .content5 p {
+  padding-top: 30px;
+  font-size: 20px;
+}
 
 /* 컨텐츠6 */
 #brand .content6 {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   height: 800px;
+}
+#brand .content6 h3 {
+  padding-top: 320px;
+  padding-bottom: 20px;
+  font-size: 46px;
+}
+#brand .content6 p {
+  font-size: 17px;
+  line-height: 40px;
 }
 
 /* 컨텐츠7 */
@@ -210,6 +250,15 @@
   grid-column: 1 / 3;
   grid-row: 5 / 6;
   height: 300px;
+
+  background-color: #dcdcdc;
+  color: black;
+  text-align: center;
+}
+
+#brand .content8 p {
+  padding-top: 36px;
+  font-size: 20px;
 }
 
 /* 컨텐츠9 */
@@ -217,25 +266,18 @@
   grid-column: 1 / 3;
   grid-row: 6 / 7;
   height: 300px;
+  padding: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#brand .content9 .flex {
+  flex-flow: row nowrap;
+}
+#brand .content9 .list {
+  width: calc(100% / 3);
+  margin: 30px;
+}
+#brand .content9 p {
+  line-height: 24px;
+}
 
 
 
