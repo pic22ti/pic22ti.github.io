@@ -1,267 +1,249 @@
+/* ---------------- 모든 페이지 공통 시작 ---------------- */
+
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 
-/* #1a2e42 */
-/* ================  ================ */
-/* ----------------  ---------------- */
 
-/* ================ all start ================ */
+/* ================ 모바일 시작 ================ */
+
+/* 컬러칩
+   화이트 : white
+   블랙 : black
+   옐로우 : gold
+   네이비 : #1a2e42
+   베이지 : #d1c0a5
+*/
+
+/* 폰트 사이즈 */
+h2 {
+  font-size: 26pt;
+}
+h3 {
+  font-size: 20pt;
+}
+.strong {
+  font-size: 15pt;
+  font-weight: bold;
+}
+.text {
+  font-size: 11pt;
+}
+
+/* a태그를 밑줄없음, 현재 색상으로 설정 */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* 버튼 스타일 */
+button {
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
+/* 라벨에 커서 포인터 */
+label {
+  cursor: pointer;
+}
+
+/* input 체크박스와 라디오는 안보이게 숨김 */
+input[type=checkbox],
+input[type=radio]
+{
+  display: none;
+}
+
+/* img 태그와 클래스 img
+   default: 
+   포지션 중앙, 사이즈 세로맞춤, 반복없음 */
+img, .img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 전체를 감싸는 wrap */
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+/* 컨테이터 여백을 좌우 18px로 설정 */
+.container {
+  box-sizing: border-box;
+  margin: 0 18px;
+}
+
+/* 가로로 배치하기 위한 flex 클래스
+   **************수정예정
+   */
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: space-between;
+  align-items: center; */
+}
+
+/* 텍스트 설정
+   기본은 한글, 영문은 noto sans
+   포인트 영문은 pacifico */
 .sans {
   font-family: 'Noto Sans KR', sans-serif;
 }
 .pacifico {
   font-family: 'Pacifico', cursive;
 }
-.wrap {
-  /* 모바일 최소 너비 */
-  /* width: 360px; */
-  width: 100%;
-}
-.container { 
-  height: 100%;
-  /* 좌우 여백 */
-  margin: 0 18px;
-}
-.flex {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  /* 수직 가운데 정렬 */
-  align-items: center;
-}
-button {
-  display: inline-block;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-}
-.img {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-/* ================ all end ================ */
 
-/* ================ mobile start ================ */
-/* ---------------- header start ---------------- */
-.header {
-  width: 100%;
-  height: 50px;
-  background-color: white;
-}
-.header>div {
-  height: 100%;
-}
+/* 모바일 스크롤 표시 아이콘 화면 중앙 하단에 픽스
+   위아래로 움직이는 애니메이션 scrollMove */
+#mobile-scroll {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
 
-
-
-#checkbox {
-  position: absolute;
-  top: -500px;
-}
-.bar {
-  width: 50px;
-  height: 50px;
-}
-.bar>.gnb {
-  display: block;
-  width: 50px;
-  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
   
-  box-sizing: border-box;
-  padding: 18px 0 0 18px;
-}
-.bar>.gnb>.gnb-box {
-  position: relative;
-  width: 17px; 
-  height: 12px; 
+  font-size: 2rem;
   
+  animation-name: scrollMove;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+  z-index: 1;
 }
-.bar>.gnb>.gnb-box>.gnb-bar {
-  background-color: black;
-  position: absolute;
-  width: 17px;
-  height: 2px;
 
+#mobile-scroll i {
+  padding: 6px 7px 3px 7px;
   transition: 0.5s;
 }
-.bar>.gnb>.gnb-box>.gnb-bar.top {
-  top: 0%;
-}
-.bar>.gnb>.gnb-box>.gnb-bar.mid {
-  top: 50%;
-}
-.bar>.gnb>.gnb-box>.gnb-bar.bot {
-  top: 100%;
+
+/* 스크롤이 화면 맨 밑으로 가면 reverse 클래스가 추가되어
+   아이콘이 위를 향하는 방향으로 회전
+   클릭하면 맨 위로 올라감 */
+#mobile-scroll i.reverse {
+  cursor: pointer;
+  transform: rotateX(180deg);
 }
 
-#checkbox:checked ~ .header {
-  position: fixed;
-  z-index: 100;
+@keyframes scrollMove {
+  0% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 65px;
+  }
 }
-#checkbox:checked ~ .header .nav {
+
+/* ---------------- 헤더 시작 ---------------- */
+
+/* 헤더 사이즈, 배경색 설정 */
+#header {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+}
+
+/* gnb-menu 체크박스가 체크되면 헤더가 고정되어 헤더 밖의 부분은 보이지 않음 (스크롤바는 움직이지만 밖은 안보임)
+   모바일에서는 어차피 스크롤바가 안보임 */
+#gnb-menu:checked ~ #header {
+  position: fixed;
+  z-index: 2;
+}
+
+/* gnb-menu 체크박스가 체크됐을 때
+   내비를 노출 */
+#gnb-menu:checked ~ #header>.nav {
   display: block;
 }
-#checkbox:checked ~ .header .bar>.gnb>.gnb-box>.gnb-bar.top {
+
+/* gnb-menu 체크박스가 체크되면
+   햄버거 모양이 X 모양으로 변경됨 */
+#gnb-menu:checked ~ #header .gnb-shape.top {
   top: 50%;
   transform: rotate(45deg);
 }
-#checkbox:checked ~ .header .bar>.gnb>.gnb-box>.gnb-bar.mid {
+#gnb-menu:checked ~ #header .gnb-shape.mid {
   opacity: 0;
 }
-#checkbox:checked ~ .header .bar>.gnb>.gnb-box>.gnb-bar.bot {
+#gnb-menu:checked ~ #header .gnb-shape.bot {
   top: 50%;
   transform: rotate(-45deg);
 }
 
-
-
-
-
-
-.nav {
-  /* 초기값: 숨김 */
-  display: none;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-
-  background-color: white;
-  width: 100%;
-  height: calc(100vh - 50px);
-
-  z-index: 100;
+/* 헤더를 가로로 배치하고 수직 정렬 */
+#header .flex {
+  justify-content: space-between;
+  align-items: center;
 }
-.nav ul {
-  display: block;
-}
-.line {
-  background-color: black;
-  width: 100%;
-  height: 2px;
-}
-.nav .container {
-  position: relative;
 
+/* gnb-menu라벨을 클릭하면 내비를 열고 닫음 */
+#header .gnb-menu {
+  width: 53px;
+  height: 50px;
+  padding: 18px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 35px 45px;
 }
-.nav .list {
-  padding-bottom: 30px;
-  font-size: 20pt;
-  font-weight: bold;
-}
-.nav .list>.sub-tab {
-  display: none;
-  padding: 10px 0 0 18px;
-  font-size: 12pt;
-}
-.nav .list>.sub-tab>a.sub-tab {
-  display: inline-block;
-  padding: 10px 0 5px 0;
-}
-/* .list:hover a {
-  display: block;
-}
-.list a:hover {
-  text-decoration: underline;
-} */
-.nav .container>#brand_checkbox {
-  position: absolute;
-  top: -500px;
-}
-.nav .container>#brand_checkbox:checked + .list>.sub-tab {
-  display: block;
-}
-.nav .container>#news_checkbox {
-  position: absolute;
-  top: -500px;
-}
-.nav .container>#news_checkbox:checked + .list>.sub-tab {
-  display: block;
-}
-/* 언더라인.... */
-.nav a {
+
+/* gnb-box 스타일
+   gnb-shape에 absulte를 설정하기 위해
+   relative 설정  */
+#header .gnb-box {
   position: relative;
+  width: 17px; 
+  height: 12px; 
 }
-.nav a.tab::before {
-  content: "";
-  display: inline-block;
-  background-color: gold;
-  
-  width: 0;
+
+/* gnb-shape 스타일 (삼선 햄버거 모양)
+   check했을때 위치를 변경하기 위해 absolute 설정하고
+   top으로 위치를 잡아줌 */
+#header .gnb-shape {
+  position: absolute;
+  background-color: black;
+  width: 17px;
   height: 2px;
 
-  position: absolute;
-  top: 37px;
-  left: 0;
-  transition: 0.5s;
+  transition: 0.7s;
 }
-.nav a.sub-tab::before {
-  content: "";
-  display: inline-block;
-  background-color: gold;
-  
-  width: 0;
-  height: 2px;
+#header .gnb-shape.top {
+  top: 0%;
+}
+#header .gnb-shape.mid {
+  top: 50%;
+}
+#header .gnb-shape.bot {
+  top: 100%;
+}
 
-  position: absolute;
-  top: 30px;
-  left: 0;
-  transition: 0.5s;
-}
-.nav a:hover::before {
-  width: 100%;
-}
-.logo {
+/* 브랜드 로고 사이즈 */
+#header .logo {
   font-size: 15pt;
 }
-.location {
+
+/* 매장찾기 로고 스타일 */
+#header .location {
   width: 50px;
   height: 50px;
   padding: 16px 0 0 18px;
   box-sizing: border-box;
 
   font-size: 1.1rem;
-  position: relative;
+  transform: rotateY(0deg);
+  transition: 0.7s;
 }
-.location::before {
-  content: "";
-  display: inline-block;
 
-  background-color: gold;
-  width: 34px;
-  height: 34px;
-  border-radius: 30px;
-
-  position: absolute;
-  top: 8px;
-  left: 8px;
-
-  transform: rotateX(270deg);
-  transition: 0.5s;
+/* 매장찾기 로고 hover하면 360도 y축으로 회전 */
+#header .location:hover {
+  transform: rotateY(360deg);
 }
-.location:hover::before {
-  /* height: 34px; */
-  transform: rotateX(0);
-  /* transform: rotateY(360deg); */
-}
-.location:hover i {
-  color: white;
-}
-.location i {
-  position: relative;
-  transition: 0.5s;
-}
-/* ---------------- header end ---------------- */
 
 
 
@@ -270,323 +252,269 @@ a {
 
 
 
-/* ---------------- main start ---------------- */
-.main {
-  position: relative;
-  overflow: hidden;
 
-  width: 100%;
-  height: 450px;
-}
-input[type=radio] {
+/* 내비 스타일
+   높이는 전체에서 헤더 50px을 뺀 화면높이
+   default : 숨김 */
+#header .nav {
   display: none;
-}
-.main>.ab {
-  /* 절대기준이 아닌 현재자리에서 왼쪽으로 가면 되기 때문에 relative 가능  */
-  position: relative;
-  height: 100%;
+  background-color: white;
   width: 100%;
+  height: calc(100vh - 50px);
+}
+
+/* 내비 안에 여백을 줌 */
+#header .nav>.container {
+  position: relative;
+
+  box-sizing: border-box;
+  padding: 35px 45px;
+  margin: 0;
+}
+
+/* 가상 선택자::before를 사용해 
+   내비 위에 헤더와 구분을 하기 위한
+   라인을 그려줌 */
+#header .nav>.container::before {
+  content: "";
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
 
-  transition: 1.5s;
-}
-.main .main-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-.main .main-img .re {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.main .main-img h2 {
-  padding: 5%;
-  font-size: 2rem;
-}
-.main .main-img:nth-of-type(1) {
-  background-image: url('../images/main-1.jpg');
-  top: 0;
-  left: 0;
-  color: white;
-  font-size: 1rem;
-}
-.main .main-img-title {
-  margin: 3%;
-  width: 70%;
-  height: 50%;
-  background-image: url('../images/main-1-title.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.main .main-img:nth-of-type(1) p:nth-of-type(1) {
-  position: absolute;
-  right: 5%;
-  bottom: 120px;
-
-  background-color: #00a5bd;
-  padding: 10px 15px;
-  border-radius: 30px;
-}
-.main .main-img:nth-of-type(1) p:nth-of-type(2) {
-  position: absolute;
-  right: 5%;
-  bottom: 50px;
-
-  color: #00a5bd;
-  line-height: 23px;
-  text-align: right;
-}
-.main .main-img:nth-of-type(1) p:nth-of-type(3) {
-  position: absolute;
-  left: 12%;
-  top: 58%;
-
-  color: #444;
-  text-align: center;
-}
-.main .main-img:nth-of-type(2) {
-  background-image: url('../images/main-2.jpg');
-  top: 0;
-  left: 100%;
-  color: white;
-}
-.main .main-img:nth-of-type(3) {
-  background-image: url('../images/main-3.jpg');
-  top: 0;
-  left: 200%;
-}
-.main>#main-dot1:checked ~ .ab {
-  left: 0;
-}
-.main>#main-dot2:checked ~ .ab {
-  left: -100%;
-}
-.main>#main-dot3:checked ~ .ab {
-  left: -200%;
-}
-.main>input[id="main-dot1"]:checked ~ .flex>label[for="main-dot1"], 
-.main>input[id="main-dot2"]:checked ~ .flex>label[for="main-dot2"],
-.main>input[id="main-dot3"]:checked ~ .flex>label[for="main-dot3"]
-{
-  background-color: rgba(0, 0, 0, 1);
-}
-
-
-
-
-
-.main .flex {
-  position: absolute;
-  top: 0;
-
-  align-items: flex-end;
-  justify-content: center;
-}
-.main .flex>label {
-  width: 20px;
-  height: 8px;
-  border-radius: 10px;
-  margin: 0 3px 10px 3px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.main .flex>label:hover {
-  cursor: pointer;
-}
-/* ---------------- main end ---------------- */
-
-/* ---------------- best start ---------------- */
-.best {
-  background-color: white;
-  width: 100%;
-  height: 300px;
-}
-.title {
-  height: 65px;
-  font-size: 15pt;
-}
-.title button {
-  display: none;
-  font-size: 15pt;
-}
-.title .flex {
-  justify-content: space-around;
-}
-.best>.container:nth-of-type(2) {
-  height: 167px;
-}
-.best .item {
-  box-sizing: border-box;
-  width: calc(100% / 3);
-  height: 100%;
-  padding-top: 5px;
-
-  text-align: center;
-}
-.best img {
-  width: 108px;
-  height: 108px;
-  /* 임시 이미지주소 */
-  /* background-image: url('../images/101.jpg'); */
-  
-
-  transition: 0.3s;
-}
-.best img:hover {
-  transform: scale(1.2);
-}
-.best .text {
-  padding-top: 15px;
-  font-size: 10pt;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.best .item:nth-of-type(4) {
-  /* 모바일은 3개씩 노출 */
-  /* 나머지는 슬라이드 */
-  display: none;
-}
-
-
-
-.best>.container:nth-of-type(3) {
-  height: 50px;
-}
-.best .box {
   background-color: black;
   width: 100%;
-  height: 50px;
-
-  color: white;
-  font-size: 12pt;
-}
-.best .box:hover {
-  box-sizing: border-box;
-  border: 1px solid black;
-  background-color: white;
-  color: black;
-}
-/* 버튼 체인지 효과 안해 */
-/* .best .all-menu {
-  position: relative;
-  overflow: hidden;
-}
-.best .all-menu::before {
-  content: "";
-  display: inline-block;
-
-  background-color: white;
-  width: 0;
-  height: 50px;
-  border: 1px solid black;
-  box-sizing: border-box;
-
-  position: absolute;
-  transition: 0.3s;
-}
-.best .all-menu:hover::before {
-  width: 100%;
-}
-.best .box>span {
-  position: relative;
-} */
-/* ---------------- best end ---------------- */
-
-/* ---------------- content start ---------------- */
-.index-content {
-  display: none;
-}
-/* ---------------- content end ---------------- */
-
-/* ---------------- footer start ---------------- */
-.footer {
-  background-color: black;
-  width: 100%;
-  color: white;
-}
-.footer .flex {
-  height: 70px;
-  justify-content: center;
-}
-.footer .icon {
-  margin: 0 15px;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.footer .img {
-  width: 24px;
-  height: 24px;
-}
-.footer .face .img {
-  background-image: url('../images/facebook.png');
-}
-.footer .insta .img {
-  background-image: url('../images/instagram.png');
-}
-.footer .blog .img {
-  background-image: url('../images/naverblog.png');
-}
-.footer .twit .img {
-  background-image: url('../images/twitter.png');
+  height: 2px;
 }
 
-/* 아이콘 체인지 */
-.footer .icon>a {
-  position: relative;
-}
-.footer .icon>a::before {
-  content: "";
-  display: inline-block;
-
-  background-color: gold;
-  width: 38px;
-  height: 0;
-  border-radius: 20px;
-
-  position: absolute;
-  top: -7px;
-  left: -7px;
-}
-.footer .icon>a:hover::before {
-  height: 38px;
-}
-.footer .icon>a:hover .img {
-  transition: 0.5s;
-  transform: rotateY(369deg);
-  filter: brightness(0%);
-}
-
-.footer .container {
-  position: relative;
-
-  background-color: black;
-  font-size: 10pt;
-  text-align: center;
-}
-.footer #footer_checkbox {
-  position: absolute;
-  top: -1000px;
-}
-.footer .hover {
+/* 내비 리스트 하단에 여백을 줌 */
+#header .nav .list {
   padding-bottom: 20px;
 }
-.footer .text {
-  padding-bottom: 17px;
-  line-height: 13pt;
+
+/* 메인탭 폰트 설정 */
+#header .nav a.main-tab {
+  font-size: 20pt;
+  font-weight: bold;
 }
-.footer .hide {
-  /* 초기값: 숨김 */
-  display: none;
-  color: #6e6e6e;
-}
-#footer_checkbox:checked + .hover>.hide {
+
+/* 메인탭 체크박스가 체크되면 서브탭 묶음이 노출 */
+#header .nav #brand-tab:checked ~ div.sub-tabs {
   display: block;
 }
-/* ---------------- footer end ---------------- */
-/* ================ mobile end ================ */
+#header .nav #board-tab:checked ~ div.sub-tabs {
+  display: block;
+}
+
+/* 서브탭 묶음
+   메인탭을 클릭하면 오픈된다
+   defalt : 숨김 */
+#header .nav div.sub-tabs {
+  display: none;
+  padding-left: 18px;
+}
+
+/* 서브탭 폰트 설정
+   패딩값을 주고 가상선택자를 이용한 언더라인 효과를 위해
+   display : inline-block으로 설정함 */
+#header .nav a.sub-tab {
+  display: inline-block;
+  padding-top: 12px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+/* 내비리스트 a태그에 가상선택자::before를 사용하고
+   position: absolute를 사용해 위치를 잡아줌
+   default: width: 0 */
+#header .nav a {
+  position: relative;
+}
+/* 텍스트가 위로 올라오게 하기위해
+   span 태그로 감싸 position: relative로 설정 */
+#header .nav a span {
+  position: relative;
+}
+#header .nav a::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: -6px;
+  background-color: gold;
+
+  width: 0;
+  height: 7px;
+  transform: skew(-30deg);
+  transition: 0.7s;
+}
+#header .nav a.sub-tab::before {
+  top: 17px;
+}
+/* 내비 리스트 a태그에 hover하거나,
+   메인탭이 체크되면
+   width: 100%로 언더라인이 그려지는 효과
+   위치를 left: -6px로 주었기때문에
+   너비에 12px을 더함 */
+#header .nav a:hover::before {
+  width: calc(100% + 12px);
+}
+#header .nav #brand-tab:checked + a::before {
+  width: calc(100% + 12px);
+}
+#header .nav #board-tab:checked + a::before {
+  width: calc(100% + 12px);
+}
+/* ---------------- 헤더 끝 ---------------- */
+
+/* ================ 모바일 끝 ================ */
+
+
+
+
+
+
+
+
+/* ================ PC 시작 ================ */
+@media screen and (min-width: 1280px)
+{
+
+/* 전체를 감싸는 wrap
+   최대 너비, 중앙 정렬 설정 */
+.wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* 컨테이터 여백을 좌우 22px로 변경 */
+.container {
+  margin: 0 22px;
+}
+
+/* 모바일용 스크롤 표시 숨김 */
+#mobile-scroll {
+  display: none;
+}
+
+/* ---------------- 헤더 시작 ---------------- */
+
+/* 헤더 높이 변경 */
+#header {
+  position: relative;
+  height: 60px;
+}
+
+/* gnb 열고 닫는 버튼 숨김 */
+#header .gnb-menu {
+  display: none;
+}
+
+/* 브랜드 로고 왼쪽에 여백 주기 */
+#header .logo {
+  padding-left: 22px;
+}
+
+
+/* ********************************************왜 로고, 로케이션 호버, 클릭이 안되지 */
+
+
+
+
+
+
+
+/* 내비 항상 노출하고
+   위치와 스타일 변경, 수직 정렬 */
+#header .nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0);
+  height: 60px;
+  line-height: 60px;
+}
+
+/* 내비 안에 여백 변경 */
+#header .nav>.container {
+  /* position: relative; */
+  padding: 0;
+  text-align: center;
+}
+
+/* 가상 선택자::before를 사용해 그린 라인 숨김 */
+#header .nav>.container::before {
+  display: none;
+}
+
+/* 내비 리스트 
+   서브탭 absolute 위치 지정을 위해 부모에 relative를 줌
+   inline-block으로 가로로 배치, 여백 변경 */
+#header .nav .list {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* 메인탭 폰트 변경 */
+#header .nav a.main-tab {
+  display: inline-block;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+/* 메인탭 체크박스가 체크되면 서브탭 묶음이 노출 */
+#header .nav #brand-tab:checked ~ div.sub-tabs {
+  display: inline-block;
+}
+#header .nav #board-tab:checked ~ div.sub-tabs {
+  display: inline-block;
+}
+
+/* 서브탭 묶음
+   드롭 다운으로 만들기 위해 위치, 사이즈 변경 */
+#header .nav div.sub-tabs {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -65px;
+  z-index: 1;
+
+  background-color: rgba(255, 255, 255, 1);
+  width: 160px;
+
+  padding: 20px;
+  line-height: 40px;
+}
+
+/* 서브탭 여백 변경 */
+#header .nav a.sub-tab {
+  padding: 0;
+}
+
+/* 내비리스트 a태그에 가상선택자::before
+   언더라인 위치 조정 */
+#header .nav a::before {
+  top: 28px;
+}
+
+/* ---------------- 헤더 끝 ---------------- */
+
+
+
+
+
+
+
+/* 미디어 쿼리 끝 */
+}
+/* ================ PC 끝 ================ */
+
+/* ---------------- 모든 페이지 공통 끝 ---------------- */

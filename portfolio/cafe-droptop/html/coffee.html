@@ -5,172 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/style-sub.css">
+  <link rel="stylesheet" href="../css/style-coffee.css">
   <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-  <title>Drop Top. Coffee story</title>
+  <title>Coffee ver2</title>
 </head>
 <body>
+  <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
-    <input type="checkbox" id="checkbox">
-    <header class="header">
-      <div>
-        <div class="flex">
-          <div class="bar">
-            <label class="gnb" for="checkbox">
-              <div class="gnb-box">
-                <div class="gnb-bar top"></div>
-                <div class="gnb-bar mid"></div>
-                <div class="gnb-bar bot"></div>
-              </div>
-            </label>
 
+    <!-- gnb-menu와 연결되는 닫는 체크박스 -->
+    <input type="checkbox" id="gnb-menu">
+
+    <!-- 헤더 시작 -->
+    <header id="header">
+      
+      <!-- 의미없던 div 삭제함 -->
+      <!-- 가로로 배치하기 위해 flex로 묶음 -->
+      <div class="flex">
+
+        <!-- 의미없던 div.bar 삭제함 -->
+        <!-- 내비를 열고 닫는 gnb-menu 라벨 -->
+        <label for="gnb-menu" class="gnb-menu">
+          <div class="gnb-box">
+            <div class="gnb-shape top"></div>
+            <div class="gnb-shape mid"></div>
+            <div class="gnb-shape bot"></div>
           </div>
-          <div class="logo pacifico">
-            <a href="index.html">Drop Top.</a>
-          </div>
-          <div class="location">
-            <a href="index.html">
-              <i class="fas fa-map-marker-alt"></i>
+        </label>
+
+        <!-- 브랜드 로고 -->
+        <div class="logo pacifico">
+          <a href="index.html">Drop Top.</a>
+        </div>
+
+        <!-- 매장찾기 아이콘 -->
+        <div class="location">
+          <a href="index.html">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- gnb-menu로 열고 닫는 내비 -->
+      <nav class="nav">
+
+        <!-- 의미없는 ul을 삭제하고 50번으로 대체 -->
+        <!-- div.line을 container의 가상 선택자 ::before로 대체 -->
+
+        <!-- 내비 리스트를 담는 컨테이너 -->
+        <ul class="container">
+
+          <!-- 메인탭 브랜드 -->
+          <li class="list">
+
+            <!-- 메인탭 브랜드를 클릭하면 서브탭을 열기위해 만든 체크박스 -->
+            <input type="checkbox" id="brand-tab">
+            <a href="#" class="sans main-tab">
+              <label for="brand-tab"><span>브랜드</span></label>
             </a>
-          </div>
-          <div class="nav">
-            <ul class="flex">
-              <div class="line"></div>
-              <div class="container">
-                <input type="checkbox" id="brand_checkbox">
-                <li class="list">
-                  <a href="#" class="sans tab">
-                    <label for="brand_checkbox">브랜드</label>
-                  </a>
-                  <div class="sub-tab">
-                    <a href="brand.html" class="sans sub-tab">드롭탑 이야기</a>
-                    <br>
-                    <a href="coffee.html" class="sans sub-tab">커피 이야기</a>
-                  </div>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:0" class="sans tab">신제품</a>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:1" class="sans tab">커피</a>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:2" class="sans tab">음료</a>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:3" class="sans tab">푸드</a>
-                </li>
-                <input type="checkbox" id="news_checkbox">
-                <li class="list">
-                  <a href="#" class="sans tab">
-                    <label for="news_checkbox">뉴스</label>
-                  </a>
-                  <div class="sub-tab">
-                    <a href="news.html?index:0" class="sans sub-tab">뉴스</a>
-                    <br>
-                    <a href="news.html?index:1" class="sans sub-tab">이벤트</a>
-                  </div>
-                </li>
-              </div>
-            </ul>
-          </div>
+
+            <!-- 메인탭 브랜드의 서브탭 묶음 -->
+            <div class="sub-tabs">
+              <a href="brand.html" class="sans sub-tab"><span>드롭탑 이야기</span></a>
+              <br>
+              <a href="coffee.html" class="sans sub-tab"><span>커피 이야기</span></a>
+            </div>
+          </li>
+
+          <!-- 메뉴의 메인탭들을 분리
+                index를 이용해 해당 탭으로 이동하게 만듬 -->
+          <li class="list">
+            <a href="menu.html?index:0" class="sans main-tab"><span>신메뉴</span></a>
+          </li>
+          <li class="list">
+            <a href="menu.html?index:1" class="sans main-tab"><span>커피</span></a>
+          </li>
+          <li class="list">
+            <a href="menu.html?index:2" class="sans main-tab"><span>음료</span></a>
+          </li>
+          <li class="list">
+            <a href="menu.html?index:3" class="sans main-tab"><span>푸드</span></a>
+          </li>
+
+          <!-- 메인탭 게시판 -->
+          <li class="list">
+
+            <!-- 메인탭 게시판을 클릭하면 서브탭을 열기위해 만든 체크박스 -->
+            <input type="checkbox" id="board-tab">
+            <a href="#" class="sans main-tab">
+              <label for="board-tab"><span>뉴스</span></label>
+            </a>
+
+            <!-- 메인탭 게시판의 서브탭 묶음 -->
+            <div class="sub-tabs">
+              <a href="board.html?index:0" class="sans sub-tab"><span>뉴스</span></a>
+              <br>
+              <a href="board.html?index:1" class="sans sub-tab"><span>이벤트</span></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 헤더 끝 -->
+
+    <!-- 스크롤 표시 -->
+    <div id="mobile-scroll">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <!-- 컨텐츠 시작 -->
+    <section id="coffee">
+
+      <!-- 컨텐츠1 -->
+      <div class="content1 container">
+        <h2 class="pacifico">Coffee Story</h2>
+        <h4 class="strong sans">커피 이야기</h4>
+        <p class="text sans"> 
+          전문 Q그레이더가 925번 블렌딩 테스트를 하여 탄생한 걸작으로
+          입에 닿는 순간 새로운 세계를 경험하는 커피!
+          드롭탑 925블렌드를 소개합니다.
+          <br><br>
+          블렌딩이란, 
+          각기 다른 커피 생두를 섞어 조화로운 맛을 낼 수 있도록 
+          원두를 조합하는 방식입니다.
+          <br><br>
+          드롭탑에서는 사후블렌딩 기법을 통해 
+          각 생두에 가장 적합한 로스팅 포인트로 로스팅 후 
+          원두를 혼합하는 블렌딩을 진행하여 
+          각 생두의 풍미와 개성미가 가장 살아있는 커피입니다.
+        </p>
+      </div>
+
+      <!-- 컨텐츠2 -->
+      <div class="content2">
+        <div class="img"></div>
+      </div>
+
+      <!-- 컨텐츠3 -->
+      <div class="content3">
+        <p class="pacifico left">Blend</p>
+        <p class="pacifico right">925</p>
+        <h3 class="pacifico center">Blend 925</h3>
+      </div>
+
+      <!-- 컨텐츠4 -->
+      <div class="content4">
+        <div class="img"></div>
+      </div>
+
+      <!-- 컨텐츠5 -->
+      <div class="content5">
+        <div class="container">
+          <h2 class="pacifico">Blend 925 coffee</h2>
+          <ol class="sans">
+            <li class="list">
+              <p class="text sans">925 블렌드는 925번의 로스팅과 
+                블렌딩 테스트를 통해 만들어진 완벽한 블렌드입니다.</p>
+            </li>
+            <li class="list">
+              <p class="text sans">한 잔에 20g의 원두를 사용합니다.</p>
+            </li>
+            <li class="list">
+              <p class="text sans">로스팅한지 14일 이내, 개봉한지 2일 이내 원두 사용을 원칙으로 최상의 아로마와 바디감을 유지한 원두를 사용합니다.</p>
+            </li>
+            <li class="list">
+              <p class="text sans">주문받은 후 바로 분쇄한 원두 사용을 원칙으로 원두 고유의 맛을 잃어버리지 않게 제조합니다.</p>
+            </li>
+          </ol>
         </div>
       </div>
 
-    </header>
-    <div class="scroll flex">
-      <div class="back">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </div>
-    <section class="coffee content">
-      <div class="flex">
-        <div class="box1 container content1">
-          <div class="flex">
-            <h2 class="pacifico">Coffee Story</h2>
-            <h4 class="strong sans">커피 이야기</h4>
-            <p class="text sans"> 
-              전문 Q그레이더가 925번 블렌딩 테스트를 하여 탄생한 걸작으로
-              입에 닿는 순간 새로운 세계를 경험하는 커피!
-              드롭탑 925블렌드를 소개합니다.
-              <br><br>
-              블렌딩이란, 
-              각기 다른 커피 생두를 섞어 조화로운 맛을 낼 수 있도록 
-              원두를 조합하는 방식입니다.
-              <br><br>
-              드롭탑에서는 사후블렌딩 기법을 통해 
-              각 생두에 가장 적합한 로스팅 포인트로 로스팅 후 
-              원두를 혼합하는 블렌딩을 진행하여 
-              각 생두의 풍미와 개성미가 가장 살아있는 커피입니다.
-            </p>
-          </div>
-        </div>
-        <div class="box2 content2">
-          <div class="img"></div>
-        </div>
-        <div class="box2 content3">
-          <p class="pacifico left">Blend</p>
-          <p class="pacifico right">925</p>
-          <h3 class="pacifico center">Blend 925</h3>
-        </div>
-        <div class="box2 content4">
-          <div class="img"></div>
-        </div>
-        <div class="box0 content5">
-          <div class="container">
-            <h2 class="pacifico">Blend 925 coffee</h2>
-            <ol class="sans">
-              <li class="list">
-                <p class="text sans">925 블렌드는 925번의 로스팅과 
-                  블렌딩 테스트를 통해 만들어진 완벽한 블렌드입니다.</p>
-              </li>
-              <li class="list">
-                <p class="text sans">한 잔에 20g의 원두를 사용합니다.</p>
-              </li>
-              <li class="list">
-                <p class="text sans">로스팅한지 14일 이내, 개봉한지 2일 이내 원두 사용을 원칙으로
-                  최상의 아로마와 바디감을 유지한 원두를 사용합니다.</p>
-              </li>
-              <li class="list">
-                <p class="text sans">주문받은 후 바로 분쇄한 원두 사용을 원칙으로  
-                  원두 고유의 맛을 잃어버리지 않게 제조합니다.</p>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
     </section>
-    <footer class="footer">
-      <div class="flex">
-        <div class="icon">
-          <a href="index.html">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="index.html">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="index.html">
-            <div class="icon">b</div>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="index.html">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
-      <div class="container">
-        <div class="hover">
-          <p class="sans text">(주)다도글로벌/카페드롭탑 사업자 정보 ▼</p>
-          <p class="sans text hide">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
-          <p class="sans text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
-        </div>
-      </div>
-    </footer>
   </div>
+  <script src="../js/script-coffee.js"></script>
 </body>
 </html>

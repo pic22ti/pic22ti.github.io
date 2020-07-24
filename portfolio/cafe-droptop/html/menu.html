@@ -5,167 +5,216 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/style-sub.css">
+  <link rel="stylesheet" href="../css/style-menu.css">
   <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-  <title>Drop Top. Menu</title>
+  <title>Menu ver2</title>
 </head>
 <body>
+  <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
-    <input type="checkbox" id="checkbox">
-    <header class="header">
-      <div>
-        <div class="flex">
-          <div class="bar">
-            <label class="gnb" for="checkbox">
-              <div class="gnb-box">
-                <div class="gnb-bar top"></div>
-                <div class="gnb-bar mid"></div>
-                <div class="gnb-bar bot"></div>
-              </div>
-            </label>
 
+    <!-- gnb-menu와 연결되는 닫는 체크박스 -->
+    <input type="checkbox" id="gnb-menu">
+
+    <!-- 헤더 시작 -->
+    <header id="header">
+      
+      <!-- 의미없던 div 삭제함 -->
+      <!-- 가로로 배치하기 위해 flex로 묶음 -->
+      <div class="flex">
+
+        <!-- 의미없던 div.bar 삭제함 -->
+        <!-- 내비를 열고 닫는 gnb-menu 라벨 -->
+        <label for="gnb-menu" class="gnb-menu">
+          <div class="gnb-box">
+            <div class="gnb-shape top"></div>
+            <div class="gnb-shape mid"></div>
+            <div class="gnb-shape bot"></div>
           </div>
-          <div class="logo pacifico">
-            <a href="index.html">Drop Top.</a>
-          </div>
-          <div class="location">
-            <a href="index.html">
-              <i class="fas fa-map-marker-alt"></i>
-            </a>
-          </div>
-          <div class="nav">
-            <ul class="flex">
-              <div class="line"></div>
-              <div class="container">
-                <input type="checkbox" id="brand_checkbox">
-                <li class="list">
-                  <a href="#" class="sans tab">
-                    <label for="brand_checkbox">브랜드</label>
-                  </a>
-                  <div class="sub-tab">
-                    <a href="brand.html" class="sans sub-tab">드롭탑 이야기</a>
-                    <br>
-                    <a href="coffee.html" class="sans sub-tab">커피 이야기</a>
-                  </div>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:0" class="sans tab">신제품</a>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:1" class="sans tab">커피</a>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:2" class="sans tab">음료</a>
-                </li>
-                <li class="list">
-                  <a href="menu.html?index:3" class="sans tab">푸드</a>
-                </li>
-                <input type="checkbox" id="news_checkbox">
-                <li class="list">
-                  <a href="#" class="sans tab">
-                    <label for="news_checkbox">뉴스</label>
-                  </a>
-                  <div class="sub-tab">
-                    <a href="news.html?index:0" class="sans sub-tab">뉴스</a>
-                    <br>
-                    <a href="news.html?index:1" class="sans sub-tab">이벤트</a>
-                  </div>
-                </li>
-              </div>
-            </ul>
-          </div>
+        </label>
+
+        <!-- 브랜드 로고 -->
+        <div class="logo pacifico">
+          <a href="index.html">Drop Top.</a>
+        </div>
+
+        <!-- 매장찾기 아이콘 -->
+        <div class="location">
+          <a href="index.html">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
         </div>
       </div>
 
-    </header>
-    <section class="menu content">
-      <div class="flex">
-        <div class="title">
-          <div class="img">
-            <div class="container">
-              <div class="flex">
-                <h3 class="pacifico">Menu</h3>
-                <p class="sans">메뉴&nbsp;&gt;&nbsp;신제품</p>
-              </div>
+      <!-- gnb-menu로 열고 닫는 내비 -->
+      <nav class="nav">
+
+        <!-- 의미없는 ul을 삭제하고 50번으로 대체 -->
+        <!-- div.line을 container의 가상 선택자 ::before로 대체 -->
+
+        <!-- 내비 리스트를 담는 컨테이너 -->
+        <ul class="container">
+
+          <!-- 메인탭 브랜드 -->
+          <li class="list">
+
+            <!-- 메인탭 브랜드를 클릭하면 서브탭을 열기위해 만든 체크박스 -->
+            <input type="checkbox" id="brand-tab">
+            <a href="#" class="sans main-tab">
+              <label for="brand-tab"><span>브랜드</span></label>
+            </a>
+
+            <!-- 메인탭 브랜드의 서브탭 묶음 -->
+            <div class="sub-tabs">
+              <a href="brand.html" class="sans sub-tab"><span>드롭탑 이야기</span></a>
+              <br>
+              <a href="coffee.html" class="sans sub-tab"><span>커피 이야기</span></a>
             </div>
+          </li>
+
+          <!-- 메뉴의 메인탭들을 분리
+                index를 이용해 해당 탭으로 이동하게 만듬 -->
+          <li class="list">
+            <a href="menu.html?index:0" class="sans main-tab"><span>신메뉴</span></a>
+          </li>
+          <li class="list">
+            <a href="menu.html?index:1" class="sans main-tab"><span>커피</span></a>
+          </li>
+          <li class="list">
+            <a href="menu.html?index:2" class="sans main-tab"><span>음료</span></a>
+          </li>
+          <li class="list">
+            <a href="menu.html?index:3" class="sans main-tab"><span>푸드</span></a>
+          </li>
+
+          <!-- 메인탭 게시판 -->
+          <li class="list">
+
+            <!-- 메인탭 게시판을 클릭하면 서브탭을 열기위해 만든 체크박스 -->
+            <input type="checkbox" id="board-tab">
+            <a href="#" class="sans main-tab">
+              <label for="board-tab"><span>뉴스</span></label>
+            </a>
+
+            <!-- 메인탭 게시판의 서브탭 묶음 -->
+            <div class="sub-tabs">
+              <a href="board.html?index:0" class="sans sub-tab"><span>뉴스</span></a>
+              <br>
+              <a href="board.html?index:1" class="sans sub-tab"><span>이벤트</span></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 헤더 끝 -->
+
+    <!-- 메뉴 섹션 시작 -->
+    <section id="menu">
+
+      <!-- 상단 타이틀과 버튼은
+           모바일과 PC에서 순서를 바꾸기 위해 flex로 묶음 -->
+      <div class="flex">
+
+        <!-- 상단 타이틀
+             PC는 배경 이미지가 추가됨 -->
+        <div class="title img">
+          <div class="container">
+            <h3 class="pacifico">Menu</h3>
+            <p class="sans">메뉴&nbsp;&#10095;&nbsp;신메뉴</p>
           </div>
         </div>
+
+        <!-- 상단 메뉴 버튼 탭
+             value값을 사용해 해당 아이템을 보여줌
+             첫번째로 보여줄 버튼 click 클래스 추가함 -->
         <div class="btn">
           <div class="flex">
-            <button class="button sans click" value="newitem">신제품</button>
-            <button class="button sans" value="coffeeitem">커피</button>
-            <button class="button sans" value="beverageitem">음료</button>
-            <button class="button sans" value="fooditem">푸드</button>
+            <button class="sans click" value="newitem">신메뉴</button>
+            <button class="sans" value="coffeeitem">커피</button>
+            <button class="sans" value="beverageitem">음료</button>
+            <button class="sans" value="fooditem">푸드</button>
           </div>
         </div>
       </div>
+      <!-- 상단 끝 -->
+
+      <!-- 아이템 이미지를 클릭하면 열리는 모달창 -->
       <div class="modal">
         <span class="close">&times;</span>
-        <img src="../images/101.jpg" alt="">
+        <img src="../images/101.jpg" alt="menu img">
       </div>
 
-      <ul class="content newitem show">
+      <!-- 컨텐츠1 새로나온 메뉴
+            첫번째로 보여주는 메뉴탭이라 show 클래스 추가함 -->
+      <div class="content newitem show">
+
+        <!-- 하단 페이지를 누르면 해당 페이지를 보여주기 위한 라디오버튼 -->
         <input type="radio" name="newitem" id="new1" checked="checked">
         <input type="radio" name="newitem" id="new2">
-        <input type="radio" name="newitem" id="new3">
+        <!-- <input type="radio" name="newitem" id="new3"> -->
+
+        <!-- 페이지를 누르면 슬라이드로 아이템 목록을 보여주는 부분
+             한 페이지는 ul.flex 1개를 보여준다 -->
         <div class="slide">
-          <div class="flex">
+
+          <!-- 페이지1 -->
+          <ul class="flex">
             <li class="item">
-              <img src="../images/304.jpg" alt="">
+              <img src="../images/304.jpg" alt="menu img">
               <p class="text sans">925커피&쿠키 아이스탑</p>
               <p class="text sans">925Coffee&Cookey Icetop</p>
             </li>
             <li class="item">
-              <img src="../images/305.jpg" alt="">
+              <img src="../images/305.jpg" alt="menu img">
               <p class="text sans">흑당달고나 아이스탑</p>
               <p class="text sans">Black Sugar Dalgona Icetop</p>
             </li>
             <li class="item">
-              <img src="../images/215.jpg" alt="">
+              <img src="../images/215.jpg" alt="menu img">
               <p class="text sans">망고패션 드롭치노</p>
               <p class="text sans">Mango Passion Dropccino</p>
             </li>
             <li class="item">
-              <img src="../images/216.jpg" alt="">
+              <img src="../images/216.jpg" alt="menu img">
               <p class="text sans">피치플럼 드롭치노</p>
               <p class="text sans">Peach Plum Dropccino</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
-              <img src="../images/313.jpg" alt="">
+              <img src="../images/313.jpg" alt="menu img">
               <p class="text sans">햄 에그 치아바타</p>
               <p class="text sans">Ham Egg Ciabatta</p>
             </li>
             <li class="item">
-              <img src="../images/314.jpg" alt="">
+              <img src="../images/314.jpg" alt="menu img">
               <p class="text sans">핫치킨 치아바타</p>
               <p class="text sans">Hotchicken Ciabatta</p>
             </li>
+          </ul>
+
+          <!-- 페이지2 -->
+          <ul class="flex">
             <li class="item">
-              <img src="../images/315.jpg" alt="">
+              <img src="../images/315.jpg" alt="menu img">
               <p class="text sans">베이컨 치킨 랜치 파니니</p>
               <p class="text sans">Bacon Chicken Ranch Panini</p>
             </li>
             <li class="item">
-              <img src="../images/316.jpg" alt="">
+              <img src="../images/316.jpg" alt="menu img">
               <p class="text sans">고르곤졸라 불고기 파니니</p>
               <p class="text sans">Gorgonzola Bulgogi Panini</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
-              <img src="../images/222.jpg" alt="">
+              <img src="../images/222.jpg" alt="menu img">
               <p class="text sans">자몽블랙 티에이드</p>
               <p class="text sans">Grapefruit Black Teaade</p>
             </li>
             <li class="item">
-              <img src="../images/223.jpg" alt="">
+              <img src="../images/223.jpg" alt="menu img">
               <p class="text sans">샤인망고 티에이드</p>
               <p class="text sans">Shine Mango Teaade</p>
             </li>
             <li class="item">
-              <img src="../images/224.jpg" alt="">
+              <img src="../images/224.jpg" alt="menu img">
               <p class="text sans">피치플럼 티에이드</p>
               <p class="text sans">Peach Plum Tea ade</p>
             </li>
@@ -174,20 +223,25 @@
               <p class="text sans"></p>
               <p class="text sans"></p>
             </li>
-          </div>
+          </ul>
         </div>
+
+        <!-- 페이지 표시 -->
         <div class="page">
           <label for="new1"><p class="text sans">1</p></label>
           <label for="new2"><p class="text sans">2</p></label>
-          <label for="new3"><p class="text sans">3</p></label>
+          <!-- <label for="new3"><p class="text sans">3</p></label> -->
         </div>
-      </ul>
-      <ul class="content coffeeitem">
+      </div>
+
+      <div class="content coffeeitem">
+
         <input type="radio" name="coffeeitem" id="coffee1" checked="checked">
         <input type="radio" name="coffeeitem" id="coffee2">
-        <input type="radio" name="coffeeitem" id="coffee3">
+        
         <div class="slide">
-          <div class="flex">
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/100.jpg" alt="">
               <p class="text sans">에스프레소</p>
@@ -208,8 +262,6 @@
               <p class="text sans">카푸치노</p>
               <p class="text sans">Cappuccino</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
               <img src="../images/104.jpg" alt="">
               <p class="text sans">바닐라라떼</p>
@@ -220,6 +272,9 @@
               <p class="text sans">카라멜마끼아또</p>
               <p class="text sans">Caramel Macchiato</p>
             </li>
+          </ul>
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/106.jpg" alt="">
               <p class="text sans">카페모카</p>
@@ -231,8 +286,6 @@
               <p class="text sans">Mocha Dropccino
               </p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
               <img src="../images/107.jpg" alt="">
               <p class="text sans">콜드브루</p>
@@ -253,20 +306,25 @@
               <p class="text sans">925 아인슈페너 라떼</p>
               <p class="text sans">925 Einspanner Latte</p>
             </li>
-          </div>
+          </ul>
+
         </div>
+
         <div class="page">
           <label for="coffee1"><p class="text sans">1</p></label>
           <label for="coffee2"><p class="text sans">2</p></label>
-          <label for="coffee3"><p class="text sans">3</p></label>
         </div>
-      </ul>
-      <ul class="content beverageitem">
+      </div>
+
+      <div class="content beverageitem">
+
         <input type="radio" name="beverageitem" id="beverage1" checked="checked">
         <input type="radio" name="beverageitem" id="beverage2">
         <input type="radio" name="beverageitem" id="beverage3">
+
         <div class="slide">
-          <div class="flex">
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/203.jpg" alt="">
               <p class="text sans">레몬에이드</p>
@@ -287,8 +345,6 @@
               <p class="text sans">피치플럼 드롭치노</p>
               <p class="text sans">Peach Plum Dropccino</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
               <img src="../images/205.jpg" alt="">
               <p class="text sans">토마토 주스</p>
@@ -299,6 +355,9 @@
               <p class="text sans">그린키위주스</p>
               <p class="text sans">Green Kiwi Juice</p>
             </li>
+          </ul>
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/211.jpg" alt="">
               <p class="text sans">초콜릿 드롭치노</p>
@@ -309,8 +368,6 @@
               <p class="text sans">그린티 드롭치노</p>
               <p class="text sans">Green Tea Dropccino</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
               <img src="../images/210.jpg" alt="">
               <p class="text sans">블랙 슈가 얼그레이 밀크티</p>
@@ -331,21 +388,58 @@
               <p class="text sans">녹차라떼</p>
               <p class="text sans">Green Tea Latte</p>
             </li>
-          </div>
+          </ul>
+
+          <ul class="flex">
+            <li class="item">
+              <img src="../images/217.jpg" alt="">
+              <p class="text sans">제주 한라 녹차</p>
+              <p class="text sans">Jeju Halla Green Tea</p>
+            </li>
+            <li class="item">
+              <img src="../images/218.jpg" alt="">
+              <p class="text sans">허브차 페퍼민트</p>
+              <p class="text sans">Herb Tea Peppermint</p>
+            </li>
+            <li class="item">
+              <img src="../images/219.jpg" alt="">
+              <p class="text sans">허브차 캐모마일</p>
+              <p class="text sans">Herb Tea Chamomile</p>
+            </li>
+            <li class="item">
+              <img src="../images/220.jpg" alt="">
+              <p class="text sans">홍차 얼그레이</p>
+              <p class="text sans">Black Tea Earl Grey</p>
+            </li>
+            <li class="item">
+              <img src="../images/222.jpg" alt="">
+              <p class="text sans">자몽블랙 티에이드</p>
+              <p class="text sans">Grapefruit Black Teaade</p>
+            </li>
+            <li class="item">
+              <img src="../images/223.jpg" alt="">
+              <p class="text sans">샤인망고 티에이드</p>
+              <p class="text sans">Shine Mango Teaade</p>
+            </li>
+          </ul>
         </div>
+        
         <div class="page">
           <label for="beverage1"><p class="text sans">1</p></label>
           <label for="beverage2"><p class="text sans">2</p></label>
           <label for="beverage3"><p class="text sans">3</p></label>
         </div>
-      </ul>
-      <ul class="content fooditem">
+      </div>
+      
+      <div class="content fooditem">
+
         <input type="radio" name="fooditem" id="food1" checked="checked">
         <input type="radio" name="fooditem" id="food2">
         <input type="radio" name="fooditem" id="food3">
-        <input type="radio" name="fooditem" id="food4">
+
         <div class="slide">
-          <div class="flex">
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/300.jpg" alt="">
               <p class="text sans">통단팥 아이스탑</p>
@@ -366,8 +460,6 @@
               <p class="text sans">흑당달고나 아이스탑</p>
               <p class="text sans">Black Sugar Dalgona Icetop</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
               <img src="../images/306.jpg" alt="">
               <p class="text sans">쿠앤크 마카롱</p>
@@ -378,6 +470,9 @@
               <p class="text sans">얼그레이 뚱카롱</p>
               <p class="text sans">Earlgrey Ddungcaron</p>
             </li>
+          </ul>
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/308.jpg" alt="">
               <p class="text sans">말차초코 뚱카롱</p>
@@ -388,8 +483,6 @@
               <p class="text sans">햄 에그 치아바타</p>
               <p class="text sans">Ham Egg Ciabatta</p>
             </li>
-          </div>
-          <div class="flex">
             <li class="item">
               <img src="../images/314.jpg" alt="">
               <p class="text sans">핫치킨 치아바타</p>
@@ -410,8 +503,9 @@
               <p class="text sans">프로마쥬클래식케이크</p>
               <p class="text sans">Fromage Classic Cake</p>
             </li>
-          </div>
-          <div class="flex">
+          </ul>
+
+          <ul class="flex">
             <li class="item">
               <img src="../images/318.jpg" alt="">
               <p class="text sans">다크초콜릿케이크</p>
@@ -432,54 +526,29 @@
               <p class="text sans">녹차 쉬폰 케익</p>
               <p class="text sans">Green Tea Chiffon Cake</p>
             </li>
-          </div>
+            <li class="item">
+              <img src="#" alt="">
+              <p class="text sans"></p>
+              <p class="text sans"></p>
+            </li>
+            <li class="item">
+              <img src="#" alt="">
+              <p class="text sans"></p>
+              <p class="text sans"></p>
+            </li>
+          </ul>
+
         </div>
+
         <div class="page">
           <label for="food1"><p class="text sans">1</p></label>
           <label for="food2"><p class="text sans">2</p></label>
           <label for="food3"><p class="text sans">3</p></label>
-          <label for="food4"><p class="text sans">4</p></label>
         </div>
-      </ul>
-
-
-
-      
+      </div>
 
     </section>
-    <footer class="footer">
-      <div class="flex">
-        <div class="icon">
-          <a href="index.html">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="index.html">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="index.html">
-            <div class="icon">b</div>
-          </a>
-        </div>
-        <div class="icon">
-          <a href="index.html">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
-      <div class="container">
-        <div class="hover">
-          <p class="sans text">(주)다도글로벌/카페드롭탑 사업자 정보 ▼</p>
-          <p class="sans text hide">서울특별시 서초구 강남대로 601 (잠원동 21-2) 8층  |  T.(02)547-7800 | 사업자등록번호 : 211-88-47165  | 대표이사 : 임문수 | 개인정보관리책임자 : 강봉주  | 통신판매업번호 : 2019-서울서초-1518</p>
-          <p class="sans text">회사소개 | 개인정보취급방침 | 이용약관 | 채용공고 | 시공업체등록 | 사이트맵</p>
-        </div>
-      </div>
-    </footer>
   </div>
-  <!-- <script src="../js/script-index.js"></script> -->
   <script src="../js/script-menu.js"></script>
 </body>
 </html>
