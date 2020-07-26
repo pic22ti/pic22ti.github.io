@@ -80,6 +80,7 @@
    가로로 번호, 제목, 등록일, 조회수 배치
    텍스트는 수직 정렬, 가로 중앙 정렬 */
 #board ul.flex {
+  cursor: pointer;
   box-sizing: border-box;
   height: 50px;
   
@@ -256,23 +257,36 @@ input[id="event2"]:checked ~ .slide>.page>label[for="event2"]
 
   order: 0;
 }
-
+/* 상단 타이틀 이미지 추가 */
 #board .title.img {
   background-image: url('../images/board-title.jpg');
 }
+/* 상단 타이틀 위치 폰트 사이즈 변경 */
+#board .title h3 {
+  padding-top: 260px;
+  padding-left: 10px;
+  font-size: 46px;
+}
+#board .title p {
+  font-size: 20px;
+}
 
 /* 상단 메뉴 버튼 탭 영역 */
-   #board .btn {
-    height: 50px;
-  
-    order: 1;
-  }
+#board .btn {
+  height: 50px;
+
+  order: 1;
+}
 
 /* 상단 버튼 탭 사이즈변경 */
-   #board .btn .flex button {
-    width: 50%;
-    height: 100%;
-  }
+#board .btn .flex button {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #dcdcdc;
+}
+#board .btn .flex button:nth-of-type(1) {
+  border-left: 1px solid #dcdcdc;
+}
 
 
 
@@ -288,22 +302,27 @@ input[id="event2"]:checked ~ .slide>.page>label[for="event2"]
   margin: 60px auto;
 }
 
+/* 게시판 타이틀 등록일과 조회수는 모바일에서는 숨기고 PC에서만 노출
+   가로 너비 변경 */
+#board .number {
+  width: 10%;
+}
+#board .subject {
+  width: 65%;
+}
+#board .date {
+  display: block;
+  width: 15%;
+}
+#board .views {
+  display: block;
+  width: 10%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 게시글 내용 여백 변경 */
+#board .board-page .contents p {
+  padding: 20px 103px;
+}
 
 
 

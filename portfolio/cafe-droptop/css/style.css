@@ -404,10 +404,10 @@ h3 {
   margin: 0 22px;
 }
 
-/* 모바일용 스크롤 표시 숨김 */
-#mobile-scroll {
+/* 모바일용 스크롤 표시 숨길지 말지 고민중 */
+/* #mobile-scroll {
   display: none;
-}
+} */
 
 /* ---------------- 헤더 시작 ---------------- */
 
@@ -428,8 +428,6 @@ h3 {
 }
 
 
-/* ********************************************왜 로고, 로케이션 호버, 클릭이 안되지 */
-
 
 
 
@@ -437,14 +435,16 @@ h3 {
 
 
 /* 내비 항상 노출하고
-   위치와 스타일 변경, 수직 정렬 */
+   위치와 스타일 변경, 수직 정렬
+   width를 100%로 하면 로고와 로케이션이 가려져서 width를 줄이고 left로 가운데로 이동 */
 #header .nav {
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 120px;
 
   background-color: rgba(0, 0, 0, 0);
+  width: 1040px;
   height: 60px;
   line-height: 60px;
 }
