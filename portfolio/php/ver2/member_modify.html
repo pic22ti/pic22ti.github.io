@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-all.css">
+  <title>회원 정보 수정</title>
+</head>
+<body>
+  <!-- 전체를 감싸는 wrap -->
+  <div class="wrap">
+
+    <!-- 헤더 -->
+    <header class="header">
+      <!-- <?php include "header.php"; ?> -->
+		</header>
+
+
+
+
+
+
+    <!-- 회원 정보 수정 섹선 -->
+    <section id="member_form" class="short_form">
+
+      <!-- 회원 정보 db 불러오기 -->
+      <!-- <?php
+        $con = mysqli_connect('localhost', 'user1', '12345', 'newdb');
+        $sql = "select * from member where id='$userid'";
+        $result = mysqli_query($con, $sql);
+        $row = mysqli_fetch_array($result);
+
+        $pass = $row["pass"];
+        $name = $row["name"];
+        $email = $row["email"];
+
+        mysqli_close($con);
+      ?> -->
+
+
+
+
+
+
+
+
+      <!-- 타이틀 -->
+      <h2>회원 정보 수정</h2>
+
+      <!-- 회원 정보 수정 폼 -->
+      <!-- <form method="post" name="member_form" action="member_modify.php?id=<?=$userid?>"> -->
+      <form method="post" name="member_form" action="member_modify.php">
+        
+        <!-- 아이디 불러오기 -->
+        <div class="id">
+          <!-- <p><?=$userid?></p> -->
+          <p>아이디 불러오기</p>
+        </div>
+
+        <!-- 비밀번호 수정 -->
+        <!-- <input type="password" name="pass" value="<?=$pass?>"> -->
+        <input type="password" name="pass" value="비밀번호"">
+
+        <!-- 비밀번호 확인 수정 -->
+        <!-- <input type="password" name="pass_confirm" value="<?=$pass?>"> -->
+        <input type="password" name="pass_confirm" value="비밀번호">
+
+        <!-- 이름 수정 -->
+        <!-- <input type="text" name="name" value="<?=$name?>"> -->
+        <input type="text" name="name" value="이름">
+
+        <!-- 이메일 수정 -->
+        <!-- <input type="text" name="email" value="<?=$email?>"> -->
+        <input type="text" name="email" value="이메일">
+
+
+        
+
+        <div class="btn">
+
+          <!-- 수정 저장 버튼 -->
+          <input type="button" value="저장하기" onclick="check_input()">
+
+          <!-- 취소 버튼 -->
+          <input type="button" class="reset" value="취소하기" onclick="reset_form()">
+
+          <!-- 회원탈퇴 버튼 -->
+          <input type="button" value="회원탈퇴" onclick="delete_id()">
+        </div>
+
+      </form>
+
+    </section>
+      
+      
+
+
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <!-- <?php include "footer.php"; ?> -->
+    </footer>
+  </div>
+
+
+
+
+
+  <!-- 자바스크립트 -->
+	<script type="text/javascript">
+		function check_input() {
+			if( !document.member_form.pass.value ) {
+				alert( "비밀번호를 입력하세요" );
+				document.member_form.pass.focus();
+				return;
+			}
+			if( !document.member_form.pass_confirm.value ) {
+				alert( "비밀번호 확인을 입력하세요" );
+				document.member_form.pass_confirm.focus();
+				return;
+			}
+			if( !document.member_form.name.value ) {
+				alert( "이름을 입력하세요" );
+				document.member_form.name.focus();
+				return;
+			}
+			if( !document.member_form.email.value ) {
+				alert( "이메일 입력하세요" );
+				document.member_form.email.focus();
+				return;
+			}
+			if( document.member_form.pass.value != document.member_form.pass_confirm.value ) {
+				alert( "비밀번호가 일치하지 않습니다" );
+				document.member_form.pass.focus();
+				document.member_form.pass.select();
+				return;
+			}
+			document.member_form.submit();
+		}
+		function reset_form() {
+			document.member_form.pass.value = "";
+			document.member_form.pass_confirm.value = "";
+			document.member_form.name.value = "";
+			document.member_form.email.value = "";
+			document.member_form.id.focus();
+			return;
+		}
+		
+		function delete_id() {
+			if( confirm( "정말로 탈퇴하시겠습니까?" ) == true ){
+				document.location.href = 'delete.php';
+			}
+			else {
+				return;
+			}
+		}
+	</script>
+</body>
+</html>

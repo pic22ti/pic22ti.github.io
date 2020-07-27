@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style-all.css">
+  <title>답장 메세지 보내기</title>
+</head>
+<body>
+  <!-- 전체를 감싸는 wrap -->
+  <div class="wrap">
+
+    <!-- 헤더 -->
+    <header class="header">
+      <!-- <?php include "header.php"; ?> -->
+		</header>
+
+
+
+
+    <!-- 메세지 사이드 -->
+    <aside id="message_side">
+
+      <!-- 받은 메세지 버튼 -->
+      <input type="button" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      
+      <!-- 보낸 메세지 버튼 -->
+      <input type="button" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+
+
+      <!-- 메세지 보내기 버튼 -->
+      <!-- <?php
+        if($userid) {
+      ?> -->
+      <input type="button" value="메세지 보내기" onclick="location.href='message_form.php'">
+      <!-- <?php
+        }
+        else {
+      ?>
+      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="메세지 보내기"></a>
+      <?php
+        }
+      ?> -->
+    </aside>
+
+
+
+
+
+    <!-- 답장 메세지 보내기 섹선 -->
+    <section id="message_response_form" class="view_form">
+
+      <!-- 타이틀 -->
+      <h2>답장 메세지 보내기</h2>
+
+      <!-- <?php
+        $num = $_GET["num"];
+
+        $con = mysqli_connect('localhost', 'user1', '12345', 'newdb');
+        $sql = "select * from messagebox where num=$num";
+        $result = mysqli_query($con, $sql);
+
+        $row = mysqli_fetch_array($result);
+
+        $send_id = $row["send_id"];
+        $rv_id = $row["rv_id"];
+        $subject = $row["subject"];
+        $content = $row["content"];
+
+        $subject = "RE : ".$subject;
+        $content = "> ".$content;
+        $content = str_replace("\n", "\n>", $content);
+        $content = "\n\n\n\n---------------------------------\n".$content;
+
+        $result2 = mysqli_query($con, "select name from member where id='$send_id'");
+        $record = mysqli_fetch_array($result2);
+        $send_name = $record["name"];
+      ?> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 답장 메세지 폼 -->
+      <!-- <form class="message_form" name="message_form" method="post" action="message_insert.php?send_id=<?=$userid?>"> -->
+      <form class="message_form" name="message_form" method="post" action="message_insert.php">
+
+        <!-- 받는 사람 value값을 보내기 위해 숨긴 input -->
+        <input type="hidden" name="rv_id" value="<?=$send_id?>">
+
+        <div class="send_id">
+          <p>보내는 사람</p>
+          <!-- <p><?=$userid?></p> -->
+          <p>보내는 사람 아이디</p>
+        </div>
+
+        <div class="rv_id">
+          <p>받는 사람</p>
+          <!-- <p><?=$send_id?></p> -->
+          <p>받는 사람 아이디</p>
+        </div>
+
+        <div class="subject">
+          <p>제목</p>
+          <p>제목 출력
+            <!-- <input type="text" name="subject" value="<?=$subject?>">  -->
+          </p>
+        </div>
+
+        <div class="content">
+          <p>내용</p>
+          <p>내용 출력
+            <!-- <textarea name="content"><?=$content?></textarea> -->
+          </p>
+        </div>
+
+        <div class="btn">
+
+          <!-- 메세지 보내기 버튼 -->
+          <input type="button" value="보내기" onclick="check_input()">
+
+          <!-- 다시쓰기 버튼 -->
+          <input type="button" class="reset" value="다시쓰기" onclick="reset_form()">
+        </div>
+      
+      </form>
+    </section>
+      
+      
+
+
+
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <!-- <?php include "footer.php"; ?> -->
+    </footer>
+  </div>
+
+
+
+
+
+  <!-- 자바스크립트 -->
+  <script>
+    function check_input() {
+      if( !document.message_form.subject.value ) {
+        alert( "제목을 입력하세요." );
+        document.message_form.subject.focus();
+        return;
+      }
+      if( !document.message_form.content.value ) {
+        alert( "내용을 입력하세요." );
+        document.message_form.content.focus();
+        return;
+      }
+      document.message_form.submit();
+    }
+    function reset_form() {
+      document.message_form.subject.value = "";
+      document.message_form.content.value = "";
+      document.message_form.subject.focus();
+      return;
+    }
+  </script>
+</body>
+</html>
