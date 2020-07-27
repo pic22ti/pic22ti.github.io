@@ -173,8 +173,15 @@
   grid-row: 4 / 5;
   height: 400px;
 }
-
-
+#coffee .content5 h2 {
+  padding-left: 50px;
+}
+#coffee .content5 ol {
+  padding-left: 75px;
+}
+#coffee .content5 .list {
+  line-height: 30px;
+}
 
 
 

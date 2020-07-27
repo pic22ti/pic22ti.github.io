@@ -175,10 +175,11 @@
 }
 
 /* 아이템 텍스트 길면 ...로 말줄임
-   overflow: hidden때문에 텍스트가 아래도 짤려 보여서 height값을 지정해줌 */
+   overflow: hidden때문에 텍스트가 아래도 짤려 보여서 height값과 좌우 패팅을 지정해줌 */
 #menu .item p {
-  height: 16px;
-  
+  height: 20px;
+  padding: 0 10px;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -292,61 +293,89 @@ input[id="food3"]:checked ~ .page>label[for="food3"]
 /* 상단 타이틀 높이와 순서 변경 */
 #menu .title {
   height: 350px;
-
   order: 0;
 }
-
+/* 상단 타이틀 이미지 추가 */
 #menu .title.img {
   background-image: url('../images/menu-title.jpg');
 }
+/* 상단 타이틀 위치 폰트 사이즈 변경 */
+#menu .title h3 {
+  padding-top: 260px;
+  padding-left: 10px;
+  font-size: 46px;
+}
+#menu .title p {
+  font-size: 20px;
+}
 
-/* 상단 메뉴 버튼 탭 영역 */
-   #menu .btn {
-    height: 50px;
-  
-    order: 1;
-  }
+
+
+/* 상단 메뉴 버튼 탭 영역 순서와 사이즈 변경 */
+#menu .btn {
+  height: 50px;
+
+  order: 1;
+}
 
 /* 상단 버튼 탭 사이즈변경 */
-   #menu .btn .flex button {
-    width: 25%;
-    height: 100%;
-  }
+#menu .btn .flex button {
+  width: 25%;
+  height: 100%;
 
+  border-right: 1px solid #dcdcdc;
+}
+#menu .btn .flex button:nth-of-type(1) {
+  border-left: 1px solid #dcdcdc;
+}
 
 
 
 
 
 /* ---------------- 메뉴 컨텐츠 ---------------- */
+
 /* 메뉴 컨텐츠 너비 변경*/
-   #menu .content {
-    width: 1200px;
-    margin: 0 auto;
-  }
-/* 여러 페이지를 슬라이드로 보여줄 묶음 높이 변경*/
-   #menu .slide {
-    height: 800px;
-  }
-
-/* 아이템 1개 사이즈 변경 */
-   #menu .item {
-    width: calc(100% / 3);
-    height: 400px;
-    text-align: center;
-  }
-
-/* 아이템 이미지 */
-#menu .item img {
-  cursor: pointer;
-  width: 300px;
-  height: 300px;
+#menu .content {
+  width: 1200px;
+  margin: 0 auto;
 }
 
+/* 여러 페이지를 슬라이드로 보여줄 묶음 높이 변경*/
+#menu .slide {
+  height: 800px;
+}
 
+/* 아이템 1개 사이즈 변경 */
+#menu .item {
+  width: calc(100% / 3);
+  height: 400px;
 
+  /* 임시 보더 */
+  /* background-color: paleturquoise;
+  box-sizing: border-box;
+  border: 1px solid palevioletred; */
 
+}
 
+/* 아이템 이미지 사이즈 변경 */
+#menu .item img {
+  width: 280px;
+  height: 280px;
+  margin: 20px 0;
+
+  transition: 0.5s;
+}
+
+/* 아이템 이미지 hover 일때 스케일 변경 */
+#menu .item img:hover {
+  transform: scale(1.1);
+}
+
+/* 바닥에 여백 주기 */
+#menu .page {
+  margin-bottom: 50px;
+}
 
 
 
