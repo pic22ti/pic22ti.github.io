@@ -85,6 +85,8 @@ function getMenuIdx(strURL)
   let temp = location.href.split('?')[1];
   let data = temp.split(':')[1];
 
+  
+
   /* parseInt는 Number와 같이 문자열을 숫자로 바꿔주는 함수
      return을 사용해서 얻은 숫자를 함수를 호출한 곳에 값으로 보낸다. */
   return parseInt(data);
