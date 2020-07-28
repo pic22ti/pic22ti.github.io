@@ -10,49 +10,49 @@ font-family: 'Russo One', sans-serif;
 Mercedes
 Ferrari
 McLaren
--Russo One
+font-family: 'Russo One', sans-serif;
 
 [mer]
 #00aca4
 Qualifying
--Michroma
+font-family: 'Michroma', sans-serif;
 
 #7d7d7d
 It's lights out!
 And away we go!
--Montserrat
+font-family: 'Montserrat', sans-serif;
 
 #000000
 Pitstop
--Anton
+font-family: 'Anton', sans-serif;
 
 [fer]
 #000000
 WORLD
 CHAMPIONSHIP
 RACE
--Michroma
+font-family: 'Michroma', sans-serif;
 
 #a0a0a0
 SF1000
--Michroma
+font-family: 'Russo One', sans-serif;
 
 [mcl]
 #ff950e
 MCL35
--Montserrat
+font-family: 'Montserrat', sans-serif;
 
 #b5b5b5
 RACING
--Russo One
+font-family: 'Russo One', sans-serif;
 
 #0357ca
 1000th
 Grand Prix
--Michroma
+font-family: 'Michroma', sans-serif;
 
 #000000
 Things you
 might have
 missed
--Anton
+font-family: 'Anton', sans-serif;
