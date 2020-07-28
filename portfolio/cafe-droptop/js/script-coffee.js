@@ -27,7 +27,7 @@ function goToTop() {
 window.onscroll = function(e) {
 
   /* 각 값이 스크롤 위에 출력되게 해서 확인하기 교재 548p */
-  document.querySelector('#scrolltest').textContent = window.innerHeight+"+"+document.documentElement.scrollTop+">="+document.body.offsetHeight;
+  document.querySelector('#scrolltest').textContent = window.innerHeight+document.documentElement.scrollTop+">="+document.body.offsetHeight;
 
   
   // 스크롤이 화면 맨 밑에 있다면
