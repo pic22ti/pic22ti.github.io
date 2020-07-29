@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header div {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.header p {
+  display: inline-block;
+}
+.header .nav.login {
+  display: none;
+}

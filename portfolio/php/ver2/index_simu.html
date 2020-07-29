@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style-flex.css">
+	<link rel="stylesheet" href="style-header.css">
+	<link rel="stylesheet" href="style-section.css">
+	<title>Home</title>
+</head>
+<body>
+	  <!-- 전체를 감싸는 wrap -->
+	<div class="wrap">
+
+		<!-- 헤더 -->
+    <header class="header">
+
+      <!-- 세션 시작 -->
+      <!-- <?php
+        session_start();
+    
+        if(isset($_SESSION["userid"])) {
+          $userid = $_SESSION["userid"];
+        }
+        else {
+          $userid = "";
+        }
+        if(isset($_SESSION["username"])) {
+          $username = $_SESSION["username"];
+        }
+        else {
+          $username = "";
+        }
+        if(isset($_SESSION["userlevel"])) {
+          $userlevel = $_SESSION["userlevel"];
+        }
+        else {
+          $userlevel = "";
+        }
+        if(isset($_SESSION["userpoint"])) {
+          $userpoint = $_SESSION["userpoint"];
+        }
+        else {
+          $userpoint = "";
+        }
+      ?> -->
+
+
+
+
+
+
+
+
+      
+      <!-- 왼쪽에 HOME으로 가는 버튼/로고 -->
+      <div class="logo">
+        <p><a href="index.php">HOME</a></p>
+      </div>
+
+      <!-- 로그아웃 상태일때 보임 -->
+      <!-- <?php 
+        if( !$userid ) {
+      ?> -->
+      <div class="nav login">
+        <p><a href="member_form.php">Join</a></p>
+        <p><a href="login_form.php">Login</a></p>
+      </div>
+
+
+
+
+
+
+      <!-- 로그인 상태일때 보임 -->
+      <!-- <?php
+        } // if문 끝
+        
+        else { 
+          $logged = $username."님 [ 레벨".$userlevel." / ".$userpoint."p ]";
+      ?> -->
+
+      <div class="nav logout">
+        <!-- <p><?=$logged?></p> -->
+        <!-- <p>이름님 [ 레벨9 / 10p ]</p> -->
+        <p><a href="message_box.php?mode=rv">쪽지</a></p>
+        <p><a href="board_list.php">게시판</a></p>
+        <p><a href="member_modify_form.php">정보수정</a></p>
+        <p><a href="logout.php">Logout</a></p>
+
+        <!-- 레벨 1일때 관리자 모드 보임 -->
+        <!-- <?php
+            if( $userlevel == 1) {
+        ?>	 -->
+
+        <p><a href="admin_member.php">관리자 모드</a></p>
+        
+        <!-- <?php
+            } //if문 끝
+          } // else문 끝
+        ?> -->
+      </div>
+
+
+
+		</header>
+
+		<!-- 사이드 -->
+		<!-- <aside class="aside">
+			<div>aside</div>
+		</aside> -->
+		
+		<!-- 메인 -->
+		<section class="section">
+    <!-- <?php
+      $num = $_GET["num"];
+      $page = $_GET["page"];
+
+      $con = mysqli_connect('localhost', 'user1', '12345', 'newdb');
+      $sql = "select * from board where num=$num";
+      $result = mysqli_query($con, $sql);
+
+      $row = mysqli_fetch_array($result);
+
+      $id = $row["id"];
+      $name = $row["name"];
+      $regist_day = $row["regist_day"];
+      $subject = $row["subject"];
+      $content = $row["content"];
+      $file_name = $row["file_name"];
+      $file_type = $row["file_type"];
+      $file_copied = $row["file_copied"];
+      $hit = $row["hit"];
+
+      $content = str_replace(" ", "&nbsp;", $content);
+      $content = str_replace("\n", "<br>", $content);
+
+      $new_hit = $hit+1;
+      $sql = "update board set hit=$new_hit where num=$num";
+      mysqli_query($con, $sql);
+    ?> -->
+
+
+
+
+
+    <!-- 게시판 사이드 -->
+    <aside id="board_side">
+
+      <!-- 게시판 목록 버튼 -->
+      <input type="button" value="게시판 목록" onclick="location.href='board_list.php'">
+
+      <!-- 게시글 쓰기 버튼 -->
+      <!-- <?php
+        if($userid) {
+      ?> -->
+      <input type="button" value="글쓰기" onclick="location.href='board_form.php'">
+      <!-- <?php
+        }
+        else {
+      ?>
+      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="글쓰기"></a>
+      <?php
+        }
+      ?> -->
+    </aside>
+
+
+
+
+
+    <!-- 게시글 보기 섹선 -->
+    <section id="board_view" class="view_form">
+
+      <!-- 타이틀 -->
+      <h2>게시글 보기</h2>
+
+			<!-- ****************** -->
+			<div class="box">
+
+
+      <!-- 글보기 -->
+        <div class="id">
+          <p>작성자</p>
+          <!-- <p><?=$userid?></p> -->
+          <p>작성자 아이디</p>
+        </div>
+
+        <div class="date">
+          <p>등록일</p>
+          <!-- <p><?=$regist_day?></p> -->
+          <p>등록일</p>
+        </div>
+
+        <div class="subject">
+          <p>제목</p>
+          <p>
+            글 제목
+            <!-- <?=$subject?> -->
+          </p>
+        </div>
+
+        <div class="content">
+          <p>내용</p>
+          <p>
+            글 내용
+            <!-- <?=$content?> -->
+          </p>
+        </div>
+
+        <div class="file">
+          <p>첨부 파일</p>
+          <!-- <?php
+            if( $file_name ) {
+              $real_name = $file_copied;
+              $file_path = "./data/".$real_name;
+              $file_size = filesize($file_path);
+              echo ("
+                <a href='board_download.php?num=$num&real_name=$real_name&file_name=$file_name&file_type=$file_type' class='btn_save'>저장</a>
+                <p class='file_text'>$file_name ($file_size Byte)</p>
+              ");
+            }
+            else {
+              echo ("
+                <p class='file_text'>(첨부된 파일이 없습니다.)</p>
+              ");
+            }
+          ?> -->
+
+          <a href='#'>저장</a>
+          <p>$file_name ($file_size Byte)</p>
+				</div>
+				
+			<!-- ****************** -->
+			</div>
+      
+        <div class="btn">
+
+          <!-- 게시글 수정 버튼 -->
+          <input type="button" value="수정" onclick="location.href='board_modify_form.php?num=<?=$num?>&page=<?=$page?>'">
+
+          <!-- 게시글 삭제 버튼 -->
+            <input type="button" class="reset" value="삭제" onclick="delete_board()">
+        </div>
+      
+    </section>
+		</section>
+		
+		<!-- 푸터 -->
+		<footer class="footer">
+			<!-- <?php include "footer.php"; ?> -->
+			<div>footer</div>
+		</footer>
+	</div>
+</body>
+</html>
