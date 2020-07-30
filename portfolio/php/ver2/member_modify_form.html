@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-short_form.css">
   <title>회원 정보 수정</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -54,12 +56,12 @@
         <!-- 아이디 불러오기 -->
         <div class="id">
           <!-- <p><?=$userid?></p> -->
-          <p>아이디 불러오기</p>
+          <p class="call_id">아이디 불러오기</p>
         </div>
 
         <!-- 비밀번호 수정 -->
         <!-- <input type="password" name="pass" value="<?=$pass?>"> -->
-        <input type="password" name="pass" value="비밀번호"">
+        <input type="password" name="pass" value="비밀번호">
 
         <!-- 비밀번호 확인 수정 -->
         <!-- <input type="password" name="pass_confirm" value="<?=$pass?>"> -->
@@ -79,13 +81,13 @@
         <div class="btn">
 
           <!-- 수정 저장 버튼 -->
-          <input type="button" value="저장하기" onclick="check_input()">
+          <input type="button" class="save_btn plus-btn" value="저장하기" onclick="check_input()">
 
           <!-- 취소 버튼 -->
-          <input type="button" class="reset" value="취소하기" onclick="reset_form()">
+          <input type="button" class="plus-btn" class="reset" value="취소하기" onclick="reset_form()">
 
           <!-- 회원탈퇴 버튼 -->
-          <input type="button" value="회원탈퇴" onclick="delete_id()">
+          <input type="button" class="plus-btn" value="회원탈퇴" onclick="delete_id()">
         </div>
 
       </form>
@@ -98,7 +100,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

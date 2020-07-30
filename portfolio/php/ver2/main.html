@@ -3,15 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-list_form.css">
   <title>Main</title>
+  <style>
+
+    section#main {
+      width: 100%;
+    }
+
+    .main-img {
+      background-color: cornflowerblue;
+      width: 100%;
+      height: calc(100% - 403px);
+    }
+
+    article {
+      float: left;
+      width: 50%;
+    }
+
+    article ul {
+      height: 303px;
+    }
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -30,7 +56,7 @@
       <article class="latest list_form">
 
         <!-- 타이틀 -->
-        <h2>최근 게시글</h2>
+        <h3>최근 게시글</h3>
 
         <ul class="latest_list">
 
@@ -53,7 +79,7 @@
 
 
 
-          <li class="list">
+          <li class="list sub plus-btn">
             <!-- <p class="subject"><?=$row["subject"]?></p>
             <p class="id"><?=$row["name"]?></p>
             <p class="date"><?=$regist_day?></p> -->
@@ -62,6 +88,11 @@
             <p class="date">등록일</p>
           </li>
 
+
+
+          <!-- *********** php 추가하기 ********** -->
+          <!-- 글이 없을 때 안내문구 -->
+          <p class='no-board'>작성된 게시글이 없습니다.</p>
 
 
 
@@ -83,7 +114,7 @@
       <article class="point_rank list_form">
 
         <!-- 타이틀 -->
-        <h2>포인트 랭킹</h2>
+        <h3>포인트 랭킹</h3>
 
         <ul class="point_rank_list">
 
@@ -109,7 +140,7 @@
 
 
 
-        <li class="list">
+        <li class="list sub plus-btn">
           <!-- <p class="rank"><?=$rank?></p>
           <p class="id"><?=$id?></p>
           <p class="name"><?=$name?></p>
@@ -120,6 +151,36 @@
           <p class="point">포인트</p>
         </li>
 
+        <li class="list">
+          <p class="rank">랭크</p>
+          <p class="id">아이디</p>
+          <p class="name">이*름</p>
+          <p class="point">포인트</p>
+        </li>
+        <li class="list">
+          <p class="rank">랭크</p>
+          <p class="id">아이디</p>
+          <p class="name">이*름</p>
+          <p class="point">포인트</p>
+        </li>
+        <li class="list">
+          <p class="rank">랭크</p>
+          <p class="id">아이디</p>
+          <p class="name">이*름</p>
+          <p class="point">포인트</p>
+        </li>
+        <li class="list">
+          <p class="rank">랭크</p>
+          <p class="id">아이디</p>
+          <p class="name">이*름</p>
+          <p class="point">포인트</p>
+        </li>
+        <li class="list">
+          <p class="rank">랭크</p>
+          <p class="id">아이디</p>
+          <p class="name">이*름</p>
+          <p class="point">포인트</p>
+        </li>
 
 
 
@@ -141,7 +202,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

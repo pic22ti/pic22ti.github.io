@@ -1,0 +1,51 @@
+/* 사이드가 없는 경우 섹션의 너비를 100%로 설정 */
+section {
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+/* 타이틀 */
+.short_form h2 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+/* 폼 스타일 */
+/* .short_form form {
+
+} */
+
+/* input 스타일 */
+.short_form .call_id,
+.short_form input[name=id],
+.short_form input[name=pass],
+.short_form input[name=pass_confirm],
+.short_form input[name=name],
+.short_form input[name=email]
+{
+  display: block;
+
+  background-color: white;
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin: 10px auto;
+
+  text-align: left;
+  font-size: 13px;
+  color: tomato;
+}
+
+.short_form .plus-btn {
+  width: 140px;
+  margin: 0 5px;
+}
+
+.short_form .check,
+.short_form .save_btn
+{
+  display: block;
+  width: 290px;
+  margin: 10px auto;
+}

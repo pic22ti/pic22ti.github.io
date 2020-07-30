@@ -3,15 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-list_form.css">
   <title>관리자 모드 - 회원 관리</title>
+  <style>
+
+
+    /* 목록 요소 각 너비 지정 */
+    .list_form .number {
+      width: 10%;
+    }
+    .list_form .regist_day {
+      width: 10%;
+    }
+    .list_form .id {
+      width: 15%;
+    }
+    .list_form .name {
+      width: 15%;
+    }
+    .list_form .level {
+      width: 15%;
+    }
+    .list_form .point {
+      width: 15%;
+    }
+    .list_form .update {
+      width: 10%;
+    }
+    .list_form .delete {
+      width: 10%;
+    }
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -22,10 +56,10 @@
     <aside id="board_side">
 
       <!-- 회원 관리 버튼 -->
-      <input type="button" value="회원 관리" onclick="location.href='board_list.php'">
+      <input type="button" class="plus-btn" value="회원 관리" onclick="location.href='board_list.php'">
 
       <!-- 게시판 관리 버튼 -->
-      <input type="button" value="게시판 관리" onclick="location.href='board_form.php'">
+      <input type="button" class="plus-btn" value="게시판 관리" onclick="location.href='board_form.php'">
       
     </aside>
 
@@ -45,13 +79,13 @@
         <ul class="member_list">
 
           <!-- 리스트 타이틀 -->
-          <li class="list sub">
+          <li class="list sub plus-btn">
             <p class="number">번호</p>
+            <p class="regist_day">가입일</p>
             <p class="id">아이디</p>
             <p class="name">이름</p>
             <p class="level">레벨</p>
             <p class="point">포인트</p>
-            <p class="regist_day">가입일</p>
             <p class="update">수정</p>
             <p class="delete">삭제</p>
           </li>
@@ -87,13 +121,13 @@
           <form method="post" action="admin_member_update.php">
             <li class="list">
               <p class="number">번호</p>
+              <p class="regist_day">가입일</p>
               <p class="id">아이디</p>
               <p class="name">이름</p>
               <!-- <p class="level"><input type="text" name="level" value="<?=$level?>"></p> -->
               <p class="level"><input type="text" name="level" value="레벨"></p>
               <!-- <p class="point"><input type="text" name="point" value="<?=$point?>"></p> -->
               <p class="point"><input type="text" name="point" value="포인트"></p>
-              <p class="regist_day">가입일</p>
 
               <!-- 회원 수정 버튼 -->
               <p class="update"><input type="button" value="수정" onclick="check_input()"></p>
@@ -127,7 +161,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

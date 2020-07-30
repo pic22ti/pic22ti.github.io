@@ -1,49 +1,41 @@
-@charset "utf-8";
 
-* {
-  padding: 0;
-  margin: 0;
-}
-a {
-  background-color: white;
-  padding: 15px;
-  border-radius: 25px;
-  
-  color: currentColor;
-  text-decoration: none;
+
+/* ----------- 페이지 공통 ----------- */
+
+/* 적용확인을 위한 텍스트 컬러와 기본 폰트 사이즈 설정 */
+div, p {
   font-size: 13px;
-  color: darkcyan;
+  color: tomato;
 }
-p {
-  font-size: 13px;
-  color: darkcyan;
-}
-input {
-  border: none;
-  
-  font-size: 13px;
-  color: darkcyan;
-}
-
-[type=button] {
-  background-color: white;
-  padding: 15px;
-  border-radius: 25px;
-}
-
-
-
-
-
-
-
-body {
+/* body {
   background-color: black;
+} */
+
+/* 폰트 사이즈 설정 */
+h2 {
+  font-size: 28px;
 }
+h3 {
+  font-size: 20px;
+}
+
+/* 공통 버튼 스타일 */
+.plus-btn {
+  background-color: white;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 13px;
+  color: tomato;
+}
+
+/* 전체를 감싸는 wrap 스타일  */
 .wrap {
   background-color: white;
   width: 100%;
   height: 100vh;
+  /* overflow: hidden; */
   
   box-sizing: border-box;
   padding: 20px;
@@ -52,24 +44,40 @@ body {
   display: flex;
   flex-flow: row wrap;
 }
-.header {
+
+/* 헤더 */
+#header {
   background-color: papayawhip;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   width: 100%;
   height: 80px;
 }
-/* .aside {
+
+/* 사이드 */
+aside {
   background-color: palevioletred;
 
   width: 300px;
   height: calc(100% - 80px);
-} */
-.section {
-  background-color: paleturquoise;
+}
+/* 사이드 버튼 사이즈와 중앙정렬 */
+aside [type=button] {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+}
 
-  /* width: calc(100% - 300px); */
-  width: 100%;
+/* 섹션 */
+section {
+  background-color: paleturquoise;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+
+  width: calc(100% - 300px);
+  /* width: 100%; */
   height: calc(100% - 80px);
 }
-.footer {
+
+/* 푸터는 아마 없을 예정이므로 숨겨둠 */
+#footer {
   display: none;
 }

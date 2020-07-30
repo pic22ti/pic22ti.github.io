@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-view_form.css">
   <title>게시글 수정</title>
+  <style>
+
+    /* 첫번째 요소에 너비 고정 */
+    .view_form .form_box div p:first-of-type {
+      width: 100px;
+    }
+
+    /* 각 요소 사이즈 */
+    .view_form .form_box .id {
+      width: 100%;
+    }
+    .view_form .form_box .subject {
+      width: 100%;
+    }
+    .view_form .form_box .content {
+      width: 100%;
+    }
+    .view_form .form_box .file {
+      width: 100%;
+    }
+
+
+
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -23,13 +52,13 @@
     <aside id="board_side">
 
       <!-- 게시판 목록 버튼 -->
-      <input type="button" value="게시판 목록" onclick="location.href='board_list.php'">
+      <input type="button" class="plus-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
       <!-- <?php
         if($userid) {
       ?> -->
-      <input type="button" value="글쓰기" onclick="location.href='board_form.php'">
+      <input type="button" class="plus-btn" value="글쓰기" onclick="location.href='board_form.php'">
       <!-- <?php
         }
         else {
@@ -78,47 +107,51 @@
       <!-- 글쓰기 폼 -->
       <!-- <form name="board_form" method="post" action="board_modify.php?num=<?=$num?>&page=<?=$page?>" enctype="multipart/form-data"> -->
       <form name="board_form" method="post" action="#">
+
+        <!-- 폼박스 -->
+        <div class="form_box">
         
-        <div class="id">
-          <p>아이디</p>
-          <!-- <p><?=$userid?></p> -->
-          <p>아이디 고정</p>
-        </div>
+          <div class="id">
+            <p>아이디</p>
+            <!-- <p><?=$userid?></p> -->
+            <p>아이디 고정</p>
+          </div>
 
-        <div class="subject">
-          <p>제목</p>
-          <p>
-            <!-- <input type="text" name="subject" value="<?=$subject?>">  -->
-            <input type="text" name="subject" value="제목 불러오기"> 
-          </p>
-        </div>
+          <div class="subject">
+            <p>제목</p>
+            <p>
+              <!-- <input type="text" name="subject" value="<?=$subject?>">  -->
+              <input type="text" name="subject" value="제목 불러오기"> 
+            </p>
+          </div>
 
-        <div class="content">
-          <p>내용</p>
-          <p>
-            <!-- <textarea name="content"><?=$content?></textarea> -->
-            <textarea name="content">내용 불러오기</textarea>
-          </p>
-        </div>
+          <div class="content">
+            <p>내용</p>
+            <p>
+              <!-- <textarea name="content"><?=$content?></textarea> -->
+              <textarea name="content">내용 불러오기</textarea>
+            </p>
+          </div>
 
-        <div class="file">
-          <p>첨부 파일</p>
-          <p>
-            <!-- <?=$file_name?> -->
-            <input type="file" name="upfile">
-          </p>
+          <div class="file">
+            <p>첨부 파일</p>
+            <p>
+              <!-- <?=$file_name?> -->
+              <input type="file" name="upfile">
+            </p>
+          </div>
         </div>
       
         <div class="btn">
 
           <!-- 게시글 수정 버튼 -->
-          <input type="button" value="수정" onclick="check_input()">
+          <input type="button" class="plus-btn" value="수정" onclick="check_input()">
 
           <!-- 취소 버튼 -->
-          <input type="button" class="reset" value="취소" onclick="history.go(-1)">
+          <input type="button" class="plus-btn" class="reset" value="취소" onclick="history.go(-1)">
 
           <!-- 게시글 삭제 버튼 -->
-          <input type="button" class="reset" value="삭제" onclick="delete_board()">
+          <input type="button" class="plus-btn" class="reset" value="삭제" onclick="delete_board()">
         </div>
       
       </form>
@@ -130,7 +163,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

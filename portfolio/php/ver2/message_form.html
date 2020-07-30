@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-view_form.css">
   <title>메세지 보내기</title>
+  <style>
+
+    
+    /* 첫번째 요소에 너비 고정 */
+    .view_form .form_box div p:first-of-type
+    {
+      width: 100px;
+    }
+
+    /* 각 요소 사이즈 */
+    .view_form .form_box .send_id {
+      width: 50%;
+    }
+    .view_form .form_box .rv_id {
+      width: 50%;
+    }
+    .view_form .form_box .subject {
+      width: 100%;
+    }
+    .view_form .form_box .content {
+      width: 100%;
+    }
+
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -22,17 +51,17 @@
     <aside id="message_side">
 
       <!-- 받은 메세지 버튼 -->
-      <input type="button" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
-      <input type="button" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
 
       <!-- 메세지 보내기 버튼 -->
       <!-- <?php
         if($userid) {
       ?> -->
-      <input type="button" value="메세지 보내기" onclick="location.href='message_form.php'">
+      <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
       <!-- <?php
         }
         else {
@@ -56,41 +85,45 @@
       <!-- 메세지 폼 -->
       <!-- <form class="message_form" name="message_form" method="post" action="message_insert.php?send_id=<?=$userid?>"> -->
       <form class="message_form" name="message_form" method="post" action="message_insert.php">
+
+        <!-- 폼박스 -->
+        <div class="form_box">
         
-        <div class="send_id">
-          <p>보내는 사람</p>
-          <!-- <p><?=$userid?></p> -->
-          <p>보내는 사람 아이디</p>
-        </div>
+          <div class="send_id">
+            <p>보내는 사람</p>
+            <!-- <p><?=$userid?></p> -->
+            <p>보내는 사람 아이디</p>
+          </div>
 
-        <div class="rv_id">
-          <p>받는 사람</p>
-          <p>
-            <input type="text" name="rv_id">
-          </p>
-        </div>
+          <div class="rv_id">
+            <p>받는 사람</p>
+            <p>
+              <input type="text" name="rv_id">
+            </p>
+          </div>
 
-        <div class="subject">
-          <p>제목</p>
-          <p>
-            <input type="text" name="subject"> 
-          </p>
-        </div>
+          <div class="subject">
+            <p>제목</p>
+            <p>
+              <input type="text" name="subject"> 
+            </p>
+          </div>
 
-        <div class="content">
-          <p>내용</p>
-          <p>
-            <textarea name="content"></textarea>
-          </p>
+          <div class="content">
+            <p>내용</p>
+            <p>
+              <textarea name="content"></textarea>
+            </p>
+          </div>
         </div>
 
         <div class="btn">
 
           <!-- 메세지 보내기 버튼 -->
-          <input type="button" value="보내기" onclick="check_input()">
+          <input type="button" class="plus-btn" value="보내기" onclick="check_input()">
 
           <!-- 다시쓰기 버튼 -->
-          <input type="button" class="reset" value="다시쓰기" onclick="reset_form()">
+          <input type="button" class="plus-btn" class="reset" value="다시쓰기" onclick="reset_form()">
         </div>
       
       </form>
@@ -102,7 +135,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

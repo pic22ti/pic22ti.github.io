@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-short_form.css">
   <title>로그인</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -38,10 +40,10 @@
         <div class="btn">
 
           <!-- 로그인 버튼 -->
-          <input type="button" value="로그인" onclick="check_input()">
+          <input type="button" class="plus-btn" value="로그인" onclick="check_input()">
 
           <!-- 회원가입 버튼 -->
-          <input type="button" class="reset" value="회원가입" onclick="signUp()">
+          <input type="button" class="plus-btn" class="reset" value="회원가입" onclick="signUp()">
         </div>
 
       </form>
@@ -54,7 +56,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

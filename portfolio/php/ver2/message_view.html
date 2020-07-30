@@ -3,15 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-view_form.css">
   <title>메세지 보기</title>
+  <style>
+
+    
+    /* 첫번째 요소에 너비 고정 */
+    .view_form .form_box .send_id p:first-of-type,
+    .view_form .form_box .rv_id p:first-of-type,
+    .view_form .form_box .date p:first-of-type
+    {
+      width: 100px;
+    }
+
+    /* 각 요소 사이즈 */
+    .view_form .form_box .send_id {
+      width: calc(100% / 3);
+    }
+    .view_form .form_box .rv_id {
+      width: calc(100% / 3);
+    }
+    .view_form .form_box .date {
+      width: calc(100% / 3);
+    }
+    .view_form .form_box .subject {
+      width: 100%;
+      font-weight: bold;
+    }
+    .view_form .form_box .content {
+      width: 100%;
+    }
+
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -24,17 +59,17 @@
     <aside id="message_side">
 
       <!-- 받은 메세지 버튼 -->
-      <input type="button" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
-      <input type="button" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
 
       <!-- 메세지 보내기 버튼 -->
       <!-- <?php
         if($userid) {
       ?> -->
-      <input type="button" value="메세지 보내기" onclick="location.href='message_form.php'">
+      <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
       <!-- <?php
         }
         else {
@@ -96,19 +131,20 @@
 
 
 
+      <!-- 폼박스 -->
+      <div class="form_box">
 
-
-      <!-- 메세지 내용 보기 -->
+        <!-- 메세지 내용 보기 -->
         <div class="send_id">
           <p>보낸 사람</p>
           <!-- <p><?=$send_id?></p> -->
-          <p>보낸 사람 아이디</p>
+          <p>아이디</p>
         </div>
 
         <div class="rv_id">
           <p>받은 사람</p>
           <!-- <p><?=$rv_id?></p> -->
-          <p>받은 사람 아이디</p>
+          <p>아이디</p>
         </div>
         
         <div class="date">
@@ -118,29 +154,30 @@
         </div>
 
         <div class="subject">
-          <p>제목</p>
+          <!-- <p>제목</p> -->
           <p>
-            메세지 제목
             <!-- <?=$subject?> -->
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
           </p>
         </div>
 
         <div class="content">
-          <p>내용</p>
+          <!-- <p>내용</p> -->
           <p>
-            메세지 내용
             <!-- <?=$content?> -->
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quos odio asperiores eveniet ut inventore doloribus. Similique inventore itaque possimus esse illum. Culpa odit facere, voluptatem quibusdam quo doloremque nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis suscipit obcaecati delectus sint veritatis cumque quia voluptatum commodi facere aspernatur porro adipisci error consectetur modi nisi deleniti veniam eos?
           </p>
         </div>
+      </div>
 
-        <div class="btn">
+      <div class="btn">
 
-          <!-- 답장 보내기 버튼 -->
-          <input type="button" value="답장 보내기" onclick="location.href='message_response_form.php?num=<?=$num?>'">
+        <!-- 답장 보내기 버튼 -->
+        <input type="button" class="plus-btn" value="답장 보내기" onclick="location.href='message_response_form.php?num=<?=$num?>'">
 
-          <!-- 메세지 삭제 버튼 -->
-          <input type="button" class="reset" value="메세지 삭제" onclick="delete_msg()">
-        </div>
+        <!-- 메세지 삭제 버튼 -->
+        <input type="button" class="plus-btn" class="reset" value="메세지 삭제" onclick="delete_msg()">
+      </div>
       
     </section>
       
@@ -150,7 +187,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

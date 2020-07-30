@@ -3,15 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-list_form.css">
   <title>게시판 목록</title>
+  <style>
+
+
+    /* 목록 요소 각 너비 지정 */
+    .list_form .number {
+      width: 5%;
+    }
+    .list_form .subject {
+      width: 60%;
+      text-align: left;
+    }
+    .list_form .file {
+      width: 10%;
+    }
+    .list_form .id {
+      width: 10%;
+    }
+    .list_form .regist_day {
+      width: 10%;
+    }
+    .list_form .views {
+      width: 5%;
+    }
+
+
+
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -23,13 +55,13 @@
     <aside id="board_side">
 
       <!-- 게시판 목록 버튼 -->
-      <input type="button" value="게시판 목록" onclick="location.href='board_list.php'">
+      <input type="button" class="plus-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
       <!-- <?php
         if($userid) {
       ?> -->
-      <input type="button" value="글쓰기" onclick="location.href='board_form.php'">
+      <input type="button" class="plus-btn" value="글쓰기" onclick="location.href='board_form.php'">
       <!-- <?php
         }
         else {
@@ -50,7 +82,7 @@
 
       <!-- 게시판 목록 -->
       <ul class="board_list">
-        <li class="list sub">
+        <li class="list sub plus-btn">
           <p class="number">번호</p>
           <p class="subject">제목</p>
           <p class="file">첨부 파일</p>
@@ -116,12 +148,12 @@
             <p class="regist_day"><?=$regist_day_short?></p>
             <p class="views"><?=$hit?></p> -->
 
-            <p class="number">번호</p>
-            <p class="subject">제목</p>
+            <p class="number">1</p>
+            <p class="subject">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p class="file">첨부 파일</p>
-            <p class="id">작성자</p>
-            <p class="regist_day">등록일</p>
-            <p class="views">조회</p>
+            <p class="id">아이디</p>
+            <p class="regist_day">2020-07-30</p>
+            <p class="views">999</p>
           </li>
         </a>
 
@@ -183,7 +215,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

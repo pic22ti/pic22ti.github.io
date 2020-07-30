@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-short_form.css">
   <title>회원가입</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -33,7 +35,7 @@
         <input type="text" id="chk_id1" name="id" placeholder="아이디">
 
         <!-- 아이디 중복 체크 버튼 -->
-        <input class="check" type="button" value="중복확인" onclick="check_id()">
+        <input type="button" class="check plus-btn" value="중복확인" onclick="check_id()">
 
         <!-- 아이디 중복 체크를 위한 보이지 않는 iframe -->
         <iframe src="" id="ifrm1" scrolling="no" frameborder="no" width="0" height="0" name="ifrm1"></iframe>
@@ -55,7 +57,7 @@
         <input type="text" name="name" placeholder="이름">
 
         <!-- 이메일 입력 -->
-        <input type="text" name="email" placeholder="이메일@주소">
+        <input type="text" name="email" placeholder="이메일">
 
 
         
@@ -63,10 +65,10 @@
         <div class="btn">
 
           <!-- 가입 버튼 -->
-          <input type="button" value="가입하기" onclick="check_input()">
+          <input type="button" class="plus-btn" value="가입하기" onclick="check_input()">
 
           <!-- 취소 버튼 -->
-          <input type="button" class="reset" value="취소하기" onclick="reset_form()">
+          <input type="button" class="plus-btn" class="reset" value="취소하기" onclick="reset_form()">
         </div>
 
       </form>
@@ -79,7 +81,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

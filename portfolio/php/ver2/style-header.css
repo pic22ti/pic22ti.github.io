@@ -1,16 +1,21 @@
-.header {
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header div {
+#header div {
   display: inline-block;
   box-sizing: border-box;
   padding: 0 20px;
 }
-.header p {
+#header p {
   display: inline-block;
 }
-.header .nav.login {
+
+/* 확인을 위해 숨기고 보이기 */
+#header .nav.login {
   display: none;
 }
+/* #header .nav.logout {
+  display: none;
+} */

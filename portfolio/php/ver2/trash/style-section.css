@@ -1,0 +1,74 @@
+.section {
+  background-color: pink;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+
+
+#board_side {
+  background-color: rgb(196, 245, 211);
+
+  width: 300px;
+  height: 100%;
+}
+#board_side input {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+}
+
+
+
+
+
+.view_form {
+  background-color: paleturquoise;
+
+  width: calc(100% - 300px);
+  height: 100%;
+  box-sizing: border-box;
+  padding: 60px;
+}
+.view_form h2 {
+  padding-bottom: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.view_form .box {
+  background-color: lavenderblush;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+.view_form .box>div:nth-of-type(2n) {
+  background-color: lavender;
+}
+.view_form .id {
+  width: 50%;
+  height: 60px;
+}
+.view_form .date {
+  width: 50%;
+}
+.view_form .subject {
+  width: 100%;
+  height: 60px;
+}
+.view_form .content {
+  width: 100%;
+  height: 300px;
+}
+.view_form .file {
+  width: 100%;
+  height: 60px;
+}
+
+.view_form .btn {
+  text-align: right;
+  max-width: 1200px;
+  margin: 0 auto;
+}

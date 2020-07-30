@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-list_form.css">
   <title>메세지 박스</title>
+  <style>
+
+    /* 목록 요소 각 너비 지정 */
+    .list_form .number {
+      width: 5%;
+    }
+    .list_form .regist_day {
+      width: 10%;
+    }
+    .list_form .id {
+      width: 10%;
+    }
+    .list_form .subject {
+      width: 75%;
+      text-align: left;
+    }
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -23,17 +45,17 @@
     <aside id="message_side">
 
       <!-- 받은 메세지 버튼 -->
-      <input type="button" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
-      <input type="button" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
 
       <!-- 메세지 보내기 버튼 -->
       <!-- <?php
         if($userid) {
       ?> -->
-      <input type="button" value="메세지 보내기" onclick="location.href='message_form.php'">
+      <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
       <!-- <?php
         }
         else {
@@ -80,7 +102,7 @@
 
       <!-- 메세지 목록 -->
       <ul class="message_list">
-        <li class="list sub">
+        <li class="list sub plus-btn">
           <p class="number">번호</p>
 
           <!-- <?php
@@ -163,10 +185,16 @@
             <p class="id"><?=$msg_id?></p>
             <p class="subject"><?=$subject?></p> -->
 
-            <p class="number">번호</p>
-            <p class="regist_day">보낸 날짜</p>
-            <p class="id">보낸 사람</p>
-            <p class="subject">제목</p>
+            <p class="number">1</p>
+            <p class="regist_day">2020-07-30</p>
+            <p class="id">아이디</p>
+            <p class="subject">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li class="list">
+            <p class="number">1</p>
+            <p class="regist_day">2020-07-30</p>
+            <p class="id">아이디</p>
+            <p class="subject">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </li>
         </a>
 
@@ -229,8 +257,8 @@
           }
         ?> -->
         
-        <p><a href='#'>이전</a></p>
-        <p class='active'>1</p>
+        <p><a href='#' class='plus-btn'>이전</a></p>
+        <p class='active plus-btn'>1</p>
         <p><a href='#'>2</a></p>
         <p><a href='#'>다음</a></p>
       </div>
@@ -243,7 +271,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

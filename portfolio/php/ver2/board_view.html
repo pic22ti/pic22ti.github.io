@@ -3,15 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-view_form.css">
   <title>게시글 보기</title>
+  <style>
+
+    /* 첫번째 요소에 너비 고정 */
+    .view_form .form_box .id p:first-of-type,
+    .view_form .form_box .date p:first-of-type,
+    .view_form .form_box .file p:first-of-type
+    {
+      width: 100px;
+    }
+
+    /* 각 요소 사이즈 */
+    .view_form .form_box .id {
+      width: 50%;
+    }
+    .view_form .form_box .date {
+      width: 50%;
+    }
+    .view_form .form_box .subject {
+      width: 100%;
+      font-weight: bold;
+    }
+    .view_form .form_box .content {
+      width: 100%;
+    }
+    .view_form .form_box .file {
+      width: 100%;
+    }
+
+
+
+
+
+
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -54,13 +90,13 @@
     <aside id="board_side">
 
       <!-- 게시판 목록 버튼 -->
-      <input type="button" value="게시판 목록" onclick="location.href='board_list.php'">
+      <input type="button" class="plus-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
       <!-- <?php
         if($userid) {
       ?> -->
-      <input type="button" value="글쓰기" onclick="location.href='board_form.php'">
+      <input type="button" class="plus-btn" value="글쓰기" onclick="location.href='board_form.php'">
       <!-- <?php
         }
         else {
@@ -81,7 +117,10 @@
       <!-- 타이틀 -->
       <h2>게시글 보기</h2>
 
-      <!-- 글보기 -->
+      <!-- 폼박스 -->
+      <div class="form_box">
+
+        <!-- 글보기 -->
         <div class="id">
           <p>작성자</p>
           <!-- <p><?=$userid?></p> -->
@@ -95,18 +134,18 @@
         </div>
 
         <div class="subject">
-          <p>제목</p>
+          <!-- <p>제목</p> -->
           <p>
-            글 제목
             <!-- <?=$subject?> -->
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ea illum hic odio eveniet quo. 
           </p>
         </div>
 
         <div class="content">
-          <p>내용</p>
+          <!-- <p>내용</p> -->
           <p>
-            글 내용
             <!-- <?=$content?> -->
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates quisquam quam, consectetur porro possimus quae esse quas nihil eaque praesentium culpa eveniet dolor ut repellat voluptate minima! Explicabo, deserunt eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique numquam sit voluptatibus possimus hic, quasi tenetur aspernatur delectus molestiae nobis impedit odit repellat quaerat quam voluptatem eius architecto quia fugit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et officiis earum repellendus, at maxime debitis ipsam reiciendis quo tempore excepturi doloremque autem itaque dolor a nisi quia odit vitae similique.
           </p>
         </div>
 
@@ -132,15 +171,17 @@
           <a href='#'>저장</a>
           <p>$file_name ($file_size Byte)</p>
         </div>
+
+      </div>
       
-        <div class="btn">
+      <div class="btn">
 
-          <!-- 게시글 수정 버튼 -->
-          <input type="button" value="수정" onclick="location.href='board_modify_form.php?num=<?=$num?>&page=<?=$page?>'">
+        <!-- 게시글 수정 버튼 -->
+        <input type="button" class="plus-btn" value="수정" onclick="location.href='board_modify_form.php?num=<?=$num?>&page=<?=$page?>'">
 
-          <!-- 게시글 삭제 버튼 -->
-            <input type="button" class="reset" value="삭제" onclick="delete_board()">
-        </div>
+        <!-- 게시글 삭제 버튼 -->
+          <input type="button" class="plus-btn" class="reset" value="삭제" onclick="delete_board()">
+      </div>
       
     </section>
       
@@ -150,7 +191,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>
