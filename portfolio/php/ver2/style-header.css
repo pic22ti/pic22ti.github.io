@@ -1,21 +1,22 @@
+
+/* ----------- 임시 적용 ----------- */
+
+#header .nav.login {
+  display: none;
+}
+
+/* ----------- 헤더 ----------- */
+
+/* 가로로 배치하기 위해 flex */
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #header div {
-  display: inline-block;
   box-sizing: border-box;
   padding: 0 20px;
 }
 #header p {
   display: inline-block;
 }
-
-/* 확인을 위해 숨기고 보이기 */
-#header .nav.login {
-  display: none;
-}
-/* #header .nav.logout {
-  display: none;
-} */

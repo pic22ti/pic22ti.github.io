@@ -12,10 +12,10 @@
 
     /* 목록 요소 각 너비 지정 */
     .list_form .check {
-      width: 5%;
+      width: 10%;
     }
     .list_form .number {
-      width: 5%;
+      width: 10%;
     }
     .list_form .id {
       width: 10%;
@@ -24,7 +24,7 @@
       width: 10%;
     }
     .list_form .subject {
-      width: 50%;
+      width: 40%;
       text-align: left;
     }
     .list_form .file {
@@ -33,7 +33,6 @@
     .list_form .regist_day {
       width: 10%;
     }
-
 
 
 
@@ -133,7 +132,28 @@
               </p>
               <p class="regist_day"><?=$regist_day?></p> -->
 
-              <p class="check"><input type="checkbox" name="item[]"></p>
+              <p class="check">
+                <label>
+                  <input type="checkbox" name="item[]">
+                  <span class="checkmark"></span>
+                </label>
+              </p>
+              <p class="number">번호</p>
+              <p class="id">아이디</p>
+              <p class="id">아이디</p>
+              <p class="subject">제목</p>
+              <p class="file">첨부 파일</p>
+              <p class="regist_day">작성일</p>
+            </li>
+
+
+            <li class="list">
+              <p class="check">
+                <label>
+                  <input type="checkbox" name="item[]">
+                  <span class="checkmark"></span>
+                </label>
+              </p>
               <p class="number">번호</p>
               <p class="id">아이디</p>
               <p class="id">아이디</p>

@@ -1,15 +1,17 @@
 
+/* ----------- 임시 적용 ----------- */
+
+/* 푸터는 아마 없을 예정이므로 숨겨둠 */
+#footer {
+  display: none;
+}
 
 /* ----------- 페이지 공통 ----------- */
 
-/* 적용확인을 위한 텍스트 컬러와 기본 폰트 사이즈 설정 */
-div, p {
-  font-size: 13px;
+/* 텍스트 컬러 설정 */
+div, p, input {
   color: tomato;
 }
-/* body {
-  background-color: black;
-} */
 
 /* 폰트 사이즈 설정 */
 h2 {
@@ -18,16 +20,8 @@ h2 {
 h3 {
   font-size: 20px;
 }
-
-/* 공통 버튼 스타일 */
-.plus-btn {
-  background-color: white;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-  padding: 15px;
-  border: none;
-  border-radius: 25px;
+div, p, input {
   font-size: 13px;
-  color: tomato;
 }
 
 /* 전체를 감싸는 wrap 스타일  */
@@ -47,15 +41,17 @@ h3 {
 
 /* 헤더 */
 #header {
-  background-color: papayawhip;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border: 1px solid #ddd;
+
   width: 100%;
   height: 80px;
 }
 
 /* 사이드 */
 aside {
-  background-color: palevioletred;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border: 1px solid #ddd;
 
   width: 300px;
   height: calc(100% - 80px);
@@ -69,15 +65,98 @@ aside [type=button] {
 
 /* 섹션 */
 section {
-  background-color: paleturquoise;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border: 1px solid #ddd;
 
   width: calc(100% - 300px);
-  /* width: 100%; */
   height: calc(100% - 80px);
 }
 
-/* 푸터는 아마 없을 예정이므로 숨겨둠 */
-#footer {
+
+
+
+
+
+/* 공통 버튼 스타일 */
+.plus-btn {
+  background-color: white;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 13px;
+  color: tomato;
+
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+/* 체크박스 스타일 */
+
+/* 디폴트 체크박스와 새로 만든 체크박스를 감싸고 있는 라벨 */
+.check label {
+  display: inline-block;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* 브라우저의 디폴트 체크박스를 숨기기 */
+.check input {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* 새로운 체크박스 만들기 */
+.check .checkmark {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* 체크박스가 체크되면 배경색 변경 */
+.check input:checked ~ .checkmark {
+  background-color: tomato;
+}
+
+/* 체크 아이콘 만들기 (체크 안되어있을때는 숨김) */
+.check .checkmark:after {
+  content: "";
+  position: absolute;
   display: none;
 }
+
+/* 체크되면 체크 아이콘 노출 */
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* 체크 아이콘 스타일 */
+.check  .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+
+
