@@ -9,10 +9,7 @@
   <title>게시글 수정</title>
   <style>
 
-    /* 첫번째 요소에 너비 고정 */
-    .view_form .form_box div p:first-of-type {
-      width: 100px;
-    }
+
 
     /* 각 요소 사이즈 */
     .view_form .form_box .id {
@@ -27,9 +24,6 @@
     .view_form .form_box .file {
       width: 100%;
     }
-
-
-
 
 
 
@@ -109,7 +103,7 @@
       <form name="board_form" method="post" action="#">
 
         <!-- 폼박스 -->
-        <div class="form_box">
+        <div class="form_box minus-style">
         
           <div class="id">
             <p>아이디</p>
@@ -136,8 +130,10 @@
           <div class="file">
             <p>첨부 파일</p>
             <p>
+              <label for="upfile">파일 선택</label>
+              <input type="file" id="upfile" name="upfile">
               <!-- <?=$file_name?> -->
-              <input type="file" name="upfile">
+              파일이름
             </p>
           </div>
         </div>

@@ -49,7 +49,7 @@
 .list_form .list.sub {
   /* background-color: thistle; */
   border-bottom: none;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 
 
@@ -62,8 +62,8 @@
 
 
 /* input text 스타일 */
-.list_form input[type=text],
-.list_form input[type=button]
+.list_form .list input[type=text],
+.list_form .list input[type=button]
 {
   display: inline-block;
   background-color: white;
@@ -72,9 +72,11 @@
   padding: 5px;
   border: 1px solid #ddd;
   line-height: 13px;
+
+  text-align: center;
 }
 
-.list_form input[type=button] {
+.list_form .list input[type=button] {
   max-width: 60px;
 }
 

@@ -10,18 +10,13 @@
   <style>
 
     
-    /* 첫번째 요소에 너비 고정 */
-    .view_form .form_box div p:first-of-type
-    {
-      width: 100px;
-    }
 
     /* 각 요소 사이즈 */
     .view_form .form_box .send_id {
-      width: 50%;
+      width: 100%;
     }
     .view_form .form_box .rv_id {
-      width: 50%;
+      width: 100%;
     }
     .view_form .form_box .subject {
       width: 100%;
@@ -30,6 +25,11 @@
       width: 100%;
     }
 
+    /* 입력창 높이 조절 */
+    .view_form .form_box .rv_id p
+    {
+      padding: 0px;
+    }
 
 
 
@@ -87,7 +87,7 @@
       <form class="message_form" name="message_form" method="post" action="message_insert.php">
 
         <!-- 폼박스 -->
-        <div class="form_box">
+        <div class="form_box minus-style">
         
           <div class="send_id">
             <p>보내는 사람</p>

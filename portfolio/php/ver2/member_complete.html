@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-all.css">
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style-flex.css">
+  <link rel="stylesheet" href="style-short_form.css">
   <title>회원가입 완료</title>
+  <style>
+    h3 {
+      padding-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
   <div class="wrap">
 
     <!-- 헤더 -->
-    <header class="header">
+    <header id="header">
       <!-- <?php include "header.php"; ?> -->
 		</header>
 
@@ -29,10 +36,10 @@
       <div class="btn">
 
         <!-- 로그인 하기 버튼 -->
-        <input class="button" type="button" value="로그인 하기" onclick="check_input()">
+        <input type="button" class="plus-btn" value="로그인 하기" onclick="check_input()">
 
         <!-- 홈으로 가기 버튼 -->
-        <input class="button reset" type="button" value="홈으로 가기" onclick="go_home()">
+        <input type="button" class="plus-btn" value="홈으로 가기" onclick="go_home()">
       </div>
 
     </section>
@@ -43,7 +50,7 @@
 
 
     <!-- 푸터 -->
-    <footer class="footer">
+    <footer id="footer">
       <!-- <?php include "footer.php"; ?> -->
     </footer>
   </div>

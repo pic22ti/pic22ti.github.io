@@ -9,6 +9,10 @@
   <title>게시글 보기</title>
   <style>
 
+
+
+
+
     /* 첫번째 요소에 너비 고정 */
     .view_form .form_box .id p:first-of-type,
     .view_form .form_box .date p:first-of-type,
@@ -35,6 +39,25 @@
       width: 100%;
     }
 
+
+    /* 첨부파일 이름 너비 변경 */
+    .view_form .form_box div p.file_name {
+      width: calc(100% - 400px);
+    }
+    
+    /* 첨부파일 저장 버튼 스타일 */
+    .file a {
+      display: inline-block;
+
+      background-color: white;
+      width: 60px;
+      height: 25px;
+      padding: 5px;
+      border: 1px solid #ddd;
+
+      line-height: 13px;
+      text-align: center;
+    }
 
 
 
@@ -118,7 +141,7 @@
       <h2>게시글 보기</h2>
 
       <!-- 폼박스 -->
-      <div class="form_box">
+      <div class="form_box minus-style">
 
         <!-- 글보기 -->
         <div class="id">
@@ -168,8 +191,8 @@
             }
           ?> -->
 
-          <a href='#'>저장</a>
-          <p>$file_name ($file_size Byte)</p>
+          <a href='#' class="file_save_button">저장</a>
+          <p class="file_name">$file_name ($file_size Byte)</p>
         </div>
 
       </div>
