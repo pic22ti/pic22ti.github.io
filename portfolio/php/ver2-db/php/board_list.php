@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-list_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-list_form.css">
   <title>게시판 목록</title>
   <style>
 
@@ -139,7 +139,6 @@
 
 
         <a href="board_view.php?num=<?=$num?>&page=<?=$page?>">
-        <!-- <a href="board_view.php?"> -->
           <li class="list">
             <p class="number"><?=$number?></p>
             <p class="subject"><?=$subject?></p>
@@ -147,13 +146,6 @@
             <p class="id"><?=$id?></p>
             <p class="regist_day"><?=$regist_day_short?></p>
             <p class="views"><?=$hit?></p>
-
-            <!-- <p class="number">1</p>
-            <p class="subject">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="file">첨부 파일</p>
-            <p class="id">아이디</p>
-            <p class="regist_day">2020-07-30</p>
-            <p class="views">999</p> -->
           </li>
         </a>
 
@@ -202,11 +194,6 @@
             echo "&nbsp";
           }
         ?>
-        
-        <!-- <p><a href="#" class='plus-btn'>이전</a></p>
-        <p class="active plus-btn">1</p>
-        <p><a href="#">2</a></p>
-        <p><a href="#" class='plus-btn'>다음</a></p> -->
       </div>
 
     </section>
@@ -224,9 +211,5 @@
 
 
 
-
-
-  <!-- 자바스크립트 -->
-  <script></script>
 </body>
 </html>

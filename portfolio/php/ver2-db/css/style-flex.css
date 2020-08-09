@@ -6,11 +6,19 @@
   display: none;
 }
 
+
 /* ----------- 페이지 공통 ----------- */
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* background-color: white; */
+  /* background-color: rgb(245, 245, 245); */
+}
 
 /* 텍스트 컬러 설정 */
-div, p, input, textarea {
-  color: tomato;
+div, p, input, textarea, h2, h3 {
+  color: royalblue;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* 폰트 사이즈 설정 */
@@ -26,38 +34,43 @@ div, p, input, textarea {
 
 /* 전체를 감싸는 wrap 스타일  */
 .wrap {
-  background-color: white;
-  width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
+  width: 100%;
   
-  box-sizing: border-box;
-  padding: 20px;
-  margin: 0 auto;
-
   display: flex;
   flex-flow: row wrap;
 }
 
-/* 헤더 */
-#header {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-  
-  /* border: 1px solid #ddd; */
 
+
+/* ----------- 헤더 ----------- */
+
+/* 가로로 배치하기 위해 flex */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 80px;
 }
+#header div {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+#header p {
+  display: inline-block;
+}
+
 
 /* 사이드 */
 aside {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 4px 4px 6px 0 rgba(100, 100, 100, 0.2) inset, 2px 2px 8px 0 rgba(255, 255, 255, 0.5);
   border-radius: 25px;
   /* border: 1px solid #ddd; */
 
-  width: 300px;
-  height: calc(100% - 80px);
+  width: 280px;
+  height: calc(100% - 120px);
+  margin: 0 20px 40px 20px;
 }
 /* 사이드 버튼 사이즈와 중앙정렬 */
 aside [type=button] {
@@ -68,39 +81,54 @@ aside [type=button] {
 
 /* 섹션 */
 section {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   /* border: 1px solid #ddd; */
 
-  width: calc(100% - 300px);
+  width: calc(100% - 320px);
   height: calc(100% - 80px);
 }
 
+/* 메인 */
+section#main {
+  width: 100%;
+  height: calc(100vh - 80px);
+}
 
+section#main .main-img {
+  background-color: royalblue;
+  width: 100%;
+  height: calc(100% - 403px);
+}
 
+section#main article {
+  float: left;
+  width: 50%;
+}
 
-
+section#main article ul {
+  height: 303px;
+}
 
 /* 공통 버튼 스타일 */
 .plus-btn {
   cursor: pointer;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  /* background-color: rgb(249, 249, 249); */
+  box-shadow: -2px -2px 8px 0 rgba(255, 255, 255, 0.3) inset, -2px -2px 4px 0 rgba(255, 255, 255, 1), 4px 4px 6px 0 rgba(100, 100, 100, 0.2);
+  padding: 10px;
   border: none;
   border-radius: 25px;
   font-size: 13px;
-  color: tomato;
-
-  /* border: 1px solid #ddd; */
+  color: royalblue;
 }
 .plus-btn:hover {
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  /* background-color: rgb(247, 247, 247); */
+  box-shadow: -2px -2px 8px 0 rgba(255, 255, 255, 0) inset, -2px -2px 4px 0 rgba(255, 255, 255, 0.5), 4px 4px 6px 0 rgba(100, 100, 100, 0.1);
 }
 
 /* 음각 스타일 */
 .minus-style {
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 4px 4px 6px 0 rgba(100, 100, 100, 0.2) inset;
   padding: 15px;
   border: none;
   border-radius: 25px;

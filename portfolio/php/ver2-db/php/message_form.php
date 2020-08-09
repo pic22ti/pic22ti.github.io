@@ -3,26 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-view_form.css">
-  <title>답장 메세지 보내기</title>
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-view_form.css">
+  <title>메세지 보내기</title>
   <style>
 
-
-
-    /* 첫번째 요소에 너비 고정 */
-    .view_form .form_box div p:first-of-type
-    {
-      width: 100px;
-    }
+    
 
     /* 각 요소 사이즈 */
     .view_form .form_box .send_id {
-      width: 50%;
+      width: 100%;
     }
     .view_form .form_box .rv_id {
-      width: 50%;
+      width: 100%;
     }
     .view_form .form_box .subject {
       width: 100%;
@@ -31,6 +25,11 @@
       width: 100%;
     }
 
+    /* 입력창 높이 조절 */
+    .view_form .form_box .rv_id p
+    {
+      padding: 0px;
+    }
 
 
 
@@ -77,89 +76,43 @@
 
 
 
-    <!-- 답장 메세지 보내기 섹선 -->
-    <section id="message_response_form" class="view_form">
+    <!-- 메세지 보내기 섹선 -->
+    <section id="message_form" class="view_form">
 
       <!-- 타이틀 -->
-      <h2>답장 메세지 보내기</h2>
+      <h2>메세지 보내기</h2>
 
-      <?php
-        $num = $_GET["num"];
-
-        $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
-        $sql = "select * from messagebox where num=$num";
-        $result = mysqli_query($con, $sql);
-
-        $row = mysqli_fetch_array($result);
-
-        $send_id = $row["send_id"];
-        $rv_id = $row["rv_id"];
-        $subject = $row["subject"];
-        $content = $row["content"];
-
-        $subject = "RE : ".$subject;
-        $content = "> ".$content;
-        $content = str_replace("\n", "\n>", $content);
-        $content = "\n\n\n\n---------------------------------\n".$content;
-
-        $result2 = mysqli_query($con, "select name from member where id='$send_id'");
-        $record = mysqli_fetch_array($result2);
-        $send_name = $record["name"];
-      ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- 답장 메세지 폼 -->
+      <!-- 메세지 폼 -->
       <form class="message_form" name="message_form" method="post" action="message_insert.php?send_id=<?=$userid?>">
-      <!-- <form class="message_form" name="message_form" method="post" action="message_insert.php"> -->
 
         <!-- 폼박스 -->
         <div class="form_box minus-style">
-
-          <!-- 받는 사람 value값을 보내기 위해 숨긴 input -->
-          <input type="hidden" name="rv_id" value="<?=$send_id?>">
-
+        
           <div class="send_id">
             <p>보내는 사람</p>
             <p><?=$userid?></p>
-            <!-- <p>보내는 사람 아이디</p> -->
           </div>
 
           <div class="rv_id">
             <p>받는 사람</p>
-            <p><?=$send_id?></p>
-            <!-- <p>받는 사람 아이디</p> -->
+            <p>
+              <input type="text" name="rv_id">
+            </p>
           </div>
 
           <div class="subject">
             <p>제목</p>
             <p>
-              <!-- <input type="text" name="subject" value="제목 출력">  -->
-              <input type="text" name="subject" value="<?=$subject?>"> 
+              <input type="text" name="subject"> 
             </p>
           </div>
 
           <div class="content">
             <p>내용</p>
             <p>
-              <!-- <textarea name="content">내용 출력</textarea> -->
-              <textarea name="content"><?=$content?></textarea>
+              <textarea name="content"></textarea>
             </p>
           </div>
-
         </div>
 
         <div class="btn">
@@ -192,6 +145,11 @@
   <!-- 자바스크립트 -->
   <script>
     function check_input() {
+      if( !document.message_form.rv_id.value ) {
+        alert( "받는 사람을 입력하세요." );
+        document.message_form.rv_id.focus();
+        return;
+      }
       if( !document.message_form.subject.value ) {
         alert( "제목을 입력하세요." );
         document.message_form.subject.focus();
@@ -205,9 +163,10 @@
       document.message_form.submit();
     }
     function reset_form() {
+      document.message_form.rv_id.value = "";
       document.message_form.subject.value = "";
       document.message_form.content.value = "";
-      document.message_form.subject.focus();
+      document.message_form.rv_id.focus();
       return;
     }
   </script>

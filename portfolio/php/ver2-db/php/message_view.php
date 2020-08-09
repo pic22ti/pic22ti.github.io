@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-view_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-view_form.css">
   <title>메세지 보기</title>
   <style>
 
@@ -124,7 +124,6 @@
         }
       ?>
 
-      <!-- <h2>보낸 메세지 내용</h2> -->
 
 
 
@@ -138,34 +137,27 @@
         <div class="send_id">
           <p>보낸 사람</p>
           <p><?=$send_id?></p>
-          <!-- <p>아이디</p> -->
         </div>
 
         <div class="rv_id">
           <p>받은 사람</p>
           <p><?=$rv_id?></p>
-          <!-- <p>아이디</p> -->
         </div>
         
         <div class="date">
           <p>보낸 날짜</p>
           <p><?=$regist_day?></p>
-          <!-- <p>보낸 날짜</p> -->
         </div>
 
         <div class="subject">
-          <!-- <p>제목</p> -->
           <p>
             <?=$subject?>
-            <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit.  -->
           </p>
         </div>
 
         <div class="content">
-          <!-- <p>내용</p> -->
           <p>
             <?=$content?>
-            <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quos odio asperiores eveniet ut inventore doloribus. Similique inventore itaque possimus esse illum. Culpa odit facere, voluptatem quibusdam quo doloremque nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, perferendis suscipit obcaecati delectus sint veritatis cumque quia voluptatum commodi facere aspernatur porro adipisci error consectetur modi nisi deleniti veniam eos? -->
           </p>
         </div>
       </div>

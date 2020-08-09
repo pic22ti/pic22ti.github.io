@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-list_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-list_form.css">
   <title>관리자 모드 - 회원 관리</title>
   <style>
 
@@ -101,7 +101,7 @@
 
 
 
-
+          <!-- 회원 데이터 리스트 불러오기 -->
           <?php
             $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
             $sql = "select * from member order by num desc";
@@ -127,16 +127,13 @@
 
           <!-- 회원 데이터 리스트 -->
           <form name="admin_member_form" method="post" action="admin_member_update.php?num=<?=$num?>">
-          <!-- <form method="post" action="admin_member_update.php"> -->
             <li class="list">
               <p class="number"><?=$num?></p>
               <p class="regist_day"><?=$regist_day?></p>
               <p class="id"><?=$id?></p>
               <p class="name"><?=$name?></p>
               <p class="level"><input type="text" name="level" value="<?=$level?>"></p>
-              <!-- <p class="level"><input type="text" name="level" value="레벨"></p> -->
               <p class="point"><input type="text" name="point" value="<?=$point?>"></p>
-              <!-- <p class="point"><input type="text" name="point" value="포인트"></p> -->
 
               <!-- 회원 수정 버튼 -->
               <!-- <p class="update"><input type="button" value="수정" onclick="check_input()"></p> -->
@@ -152,7 +149,7 @@
 
 
 
-
+          <!-- sql 종료 -->
           <?php
               $number--;
             }

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-short_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-short_form.css">
   <title>회원 정보 수정</title>
 </head>
 <body>
@@ -51,29 +51,23 @@
 
       <!-- 회원 정보 수정 폼 -->
       <form method="post" name="member_form" action="member_modify.php?id=<?=$userid?>">
-      <!-- <form method="post" name="member_form" action="member_modify.php"> -->
         
         <!-- 아이디 불러오기 -->
         <div class="id">
           <p class="call_id"><?=$userid?></p>
-          <!-- <p class="call_id">아이디 불러오기</p> -->
         </div>
 
         <!-- 비밀번호 수정 -->
         <input type="password" name="pass" value="<?=$pass?>">
-        <!-- <input type="password" name="pass" value="비밀번호"> -->
 
         <!-- 비밀번호 확인 수정 -->
         <input type="password" name="pass_confirm" value="<?=$pass?>">
-        <!-- <input type="password" name="pass_confirm" value="비밀번호"> -->
 
         <!-- 이름 수정 -->
         <input type="text" name="name" value="<?=$name?>">
-        <!-- <input type="text" name="name" value="이름"> -->
 
         <!-- 이메일 수정 -->
         <input type="text" name="email" value="<?=$email?>">
-        <!-- <input type="text" name="email" value="이메일"> -->
 
 
         

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-view_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-view_form.css">
   <title>게시글 쓰기</title>
   <style>
 
@@ -142,7 +142,6 @@
           <div class="id">
             <p>작성자</p>
             <p><?=$userid?></p>
-            <!-- <p>작성자 아이디</p> -->
           </div>
 
           <div class="subject">
@@ -165,7 +164,6 @@
               <label for="upfile">파일 선택</label>
               <input type="file" id="upfile" name="upfile">
               <?=$file_name?>
-              <!-- 파일이름 -->
             </p>
           </div>
 

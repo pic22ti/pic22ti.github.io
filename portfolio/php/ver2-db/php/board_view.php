@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-view_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-view_form.css">
   <title>게시글 보기</title>
   <style>
 
@@ -147,28 +147,22 @@
         <div class="id">
           <p>작성자</p>
           <p><?=$userid?></p>
-          <!-- <p>작성자 아이디</p> -->
         </div>
 
         <div class="date">
           <p>등록일</p>
           <p><?=$regist_day?></p>
-          <!-- <p>등록일</p> -->
         </div>
 
         <div class="subject">
-          <!-- <p>제목</p> -->
           <p>
             <?=$subject?>
-            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ea illum hic odio eveniet quo.  -->
           </p>
         </div>
 
         <div class="content">
-          <!-- <p>내용</p> -->
           <p>
             <?=$content?>
-            <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates quisquam quam, consectetur porro possimus quae esse quas nihil eaque praesentium culpa eveniet dolor ut repellat voluptate minima! Explicabo, deserunt eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique numquam sit voluptatibus possimus hic, quasi tenetur aspernatur delectus molestiae nobis impedit odit repellat quaerat quam voluptatem eius architecto quia fugit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et officiis earum repellendus, at maxime debitis ipsam reiciendis quo tempore excepturi doloremque autem itaque dolor a nisi quia odit vitae similique. -->
           </p>
         </div>
 
@@ -191,8 +185,6 @@
             }
           ?>
 
-          <!-- <a href='#' class="file_save_button">저장</a>
-          <p class="file_name">$file_name ($file_size Byte)</p> -->
         </div>
 
       </div>

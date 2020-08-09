@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-list_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-list_form.css">
   <title>관리자 모드 - 게시판 관리</title>
   <style>
 
@@ -90,7 +90,7 @@
 
 
 
-
+          <!-- 게시판 데이터 리스트 불러오기 -->
           <?php
             $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
             $sql = "select * from board order by num desc";
@@ -108,9 +108,6 @@
               $regist_day = $row["regist_day"];
               $regist_day = substr($regist_day, 0, 10);
           ?>
-
-
-
 
 
 
@@ -137,36 +134,8 @@
                 ?>
               </p>
               <p class="regist_day"><?=$regist_day?></p>
-
-              <!-- <p class="check">
-                <label>
-                  <input type="checkbox" name="item[]">
-                  <span class="checkmark"></span>
-                </label>
-              </p>
-              <p class="number">번호</p>
-              <p class="id">아이디</p>
-              <p class="id">아이디</p>
-              <p class="subject">제목</p>
-              <p class="file">첨부 파일</p>
-              <p class="regist_day">작성일</p> -->
             </li>
 
-
-            <!-- <li class="list">
-              <p class="check">
-                <label>
-                  <input type="checkbox" name="item[]">
-                  <span class="checkmark"></span>
-                </label>
-              </p>
-              <p class="number">번호</p>
-              <p class="id">아이디</p>
-              <p class="id">아이디</p>
-              <p class="subject">제목</p>
-              <p class="file">첨부 파일</p>
-              <p class="regist_day">작성일</p>
-            </li> -->
 
             <!-- 게시글 삭제 버튼 -->
             <div class="btn">
@@ -179,7 +148,7 @@
 
 
 
-
+          <!-- sql 종료 -->
           <?php
               $number--;
             }

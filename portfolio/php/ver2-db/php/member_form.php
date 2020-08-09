@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-short_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-short_form.css">
   <title>회원가입</title>
 </head>
 <body>
-  <!-- 전체를 감싸는 wrap -->
-  <div class="wrap">
+
 
     <!-- 헤더 -->
     <header id="header">
@@ -80,11 +79,6 @@
 
 
 
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
-  </div>
 
 
 

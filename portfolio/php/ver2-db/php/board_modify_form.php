@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-view_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-view_form.css">
   <title>게시글 수정</title>
   <style>
 
@@ -100,7 +100,6 @@
 
       <!-- 글쓰기 폼 -->
       <form name="board_form" method="post" action="board_modify.php?num=<?=$num?>&page=<?=$page?>" enctype="multipart/form-data">
-      <!-- <form name="board_form" method="post" action="#"> -->
 
         <!-- 폼박스 -->
         <div class="form_box minus-style">
@@ -108,14 +107,12 @@
           <div class="id">
             <p>아이디</p>
             <p><?=$userid?></p>
-            <!-- <p>아이디 고정</p> -->
           </div>
 
           <div class="subject">
             <p>제목</p>
             <p>
               <input type="text" name="subject" value="<?=$subject?>"> 
-              <!-- <input type="text" name="subject" value="제목 불러오기">  -->
             </p>
           </div>
 
@@ -123,7 +120,6 @@
             <p>내용</p>
             <p>
               <textarea name="content"><?=$content?></textarea>
-              <!-- <textarea name="content">내용 불러오기</textarea> -->
             </p>
           </div>
 
@@ -133,7 +129,6 @@
               <label for="upfile">파일 선택</label>
               <input type="file" id="upfile" name="upfile">
               <?=$file_name?>
-              <!-- 파일이름 -->
             </p>
           </div>
         </div>

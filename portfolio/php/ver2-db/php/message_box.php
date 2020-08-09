@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style-reset.css">
-  <link rel="stylesheet" href="style-flex.css">
-  <link rel="stylesheet" href="style-list_form.css">
+  <link rel="stylesheet" href="../css/style-reset.css">
+  <link rel="stylesheet" href="../css/style-flex.css">
+  <link rel="stylesheet" href="../css/style-list_form.css">
   <title>메세지 박스</title>
   <style>
 
@@ -71,6 +71,11 @@
     <!-- 메세지 목록 섹선 -->
     <section id="message_box" class="list_form">
 
+
+
+
+
+
       <!-- 타이틀 -->
       <?php
         // page로 넘어온게 있는지 확인
@@ -92,7 +97,6 @@
           echo "<h2>받은 메세지</h2>";
         }
       ?>
-      <!-- <h2>보낸 메세지</h2> -->
 
 
 
@@ -113,7 +117,6 @@
               echo "<p class='regist_day'>보낸 날짜</p>";
             }
           ?>
-          <!-- <p class="regist_day">보낸 날짜</p> -->
 
           <?php
             if( $mode == "send" ) {
@@ -123,7 +126,6 @@
               echo "<p class='id'>보낸 사람</p>";
             }
           ?>
-          <!-- <p class="id">보낸 사람</p> -->
 
           <p class="subject">제목</p>
         </li>
@@ -178,24 +180,13 @@
 
 
         <a href="message_view.php?mode=<?=$mode?>&num=<?=$num?>">
-        <!-- <a href="message_view.php?"> -->
           <li class="list">
             <p class="number"><?=$number?></p>
             <p class="regist_day"><?=$regist_day?></p>
             <p class="id"><?=$msg_id?></p>
             <p class="subject"><?=$subject?></p>
 
-            <!-- <p class="number">1</p>
-            <p class="regist_day">2020-07-30</p>
-            <p class="id">아이디</p>
-            <p class="subject">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
           </li>
-          <!-- <li class="list">
-            <p class="number">1</p>
-            <p class="regist_day">2020-07-30</p>
-            <p class="id">아이디</p>
-            <p class="subject">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </li> -->
         </a>
 
 
@@ -255,11 +246,6 @@
             echo "&nbsp";
           }
         ?>
-        
-        <!-- <p><a href="#" class="plus-btn">이전</a></p>
-        <p class="active plus-btn">1</p>
-        <p><a href="#">2</a></p>
-        <p><a href="#" class="plus-btn">다음</a></p> -->
       </div>
 
     </section>
@@ -279,7 +265,5 @@
 
 
 
-  <!-- 자바스크립트 -->
-  <script></script>
 </body>
 </html>
