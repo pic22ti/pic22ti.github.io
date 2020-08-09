@@ -1,0 +1,25 @@
+
+/* ----------- 임시 적용 ----------- */
+
+/* #header .nav.login {
+  display: none;
+} */
+
+/* ----------- 헤더 ----------- */
+.wrap {
+  height: 80px;
+}
+/* 가로로 배치하기 위해 flex */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 80px; */
+}
+#header div {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+#header p {
+  display: inline-block;
+}
