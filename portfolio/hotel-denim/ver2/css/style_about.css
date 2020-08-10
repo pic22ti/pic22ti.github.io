@@ -1,0 +1,44 @@
+
+/* ================= mobile start ================= */
+
+/* 이미지 링크 */
+#about img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 서브 타이틀 스타일과 여백 설정 */
+#about .sub_tit {
+  padding: 25px 20px 30px 20px;
+}
+#about .sub_tit>.serif {
+  color: #a68c5d;
+  font-size: 19px;
+  font-weight: 300;
+}
+#about .sub_tit>.serif_kr {
+  font-size: 29px;
+  font-weight: 400;
+}
+
+/* 구분선 */
+#about .line {
+  background-color: #bfbfbf;
+  width: clac(100% - 40px);
+  height: 1px;
+  margin: 0 20px 40px 20px;
+}
+
+/* 텍스트 */
+#about .txt {
+  padding: 0 20px 30px 20px;
+  color: #5e5e5e;
+}
+#about .txt>p:first-of-type {
+  font-size: 19px;
+}
+#about .txt>p {
+  padding-bottom: 30px;
+}
+
+/* ================= mobile end ================= */

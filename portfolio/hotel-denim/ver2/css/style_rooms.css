@@ -1,0 +1,121 @@
+
+/* ================= mobile start ================= */
+
+#rooms .tit {
+  margin-bottom: 18px;
+}
+
+/* 탭 */
+#rooms .tab {
+  padding: 18px 20px 23px 20px;
+}
+#rooms .tab>p {
+  cursor: pointer;
+  display: inline-block;
+  padding-right: 10px;
+
+  color: #bebebe;
+  font-size: 18px;
+}
+/* 탭 호버 */
+#rooms .tab>p:hover {
+  text-decoration: underline;
+  color: #5e5e5e;
+}
+
+/* 이미지 슬라이드 영역 */
+#rooms .slide_img {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 이미지 사이즈 */
+#rooms .room_img {
+  width: 100%;
+  height: auto;
+}
+/* 화살표 아이콘 여백 */
+#rooms .arr {
+  cursor: pointer;
+  margin: 15px; 
+}
+
+/* 서브타이틀 */
+#rooms .sub_tit {
+  padding: 25px 20px 30px 20px;
+}
+#rooms .sub_tit>.serif {
+  color: #bebebe;
+  font-size: 20px;
+  font-weight: 300;
+}
+#rooms .sub_tit>.serif_kr {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* 텍스트 */
+#rooms .txt {
+  height: 150px;
+  padding: 0 20px;
+  color: #5e5e5e;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* 문의하기 버튼 */
+#rooms .btn {
+  display: block;
+  background-color: #a68c5d;
+  width: 204px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  margin: 0 auto;
+
+  color: white;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+/* 자세한 내용 box */
+#rooms .box {
+  margin: 20px 10px 40px 10px;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+#rooms .box>li {
+  padding: 10px 0 10px 0;
+}
+/* box 내 폰트 스타일 */
+#rooms .box h4 {
+  color: #a68c5d;
+  font-size: 18px;
+  font-weight: 500;
+}
+#rooms .box p {
+  color: #5e5e5e;
+}
+/* 리스트앞에 ·기호 추가 */
+#rooms .box p::before {
+  display: inline-block;
+  content: "·";
+  padding: 0 10px 0 10px;
+}
+/* 2열 배치 */
+#rooms .box .list_1 .col1 {
+  display: inline-block;
+  width: 120px;
+}
+
+
+
+
+
+
+
+/* 임시 */
+.business_room {
+  display: none;
+}
+/* ================= mobile end ================= */

@@ -1,0 +1,195 @@
+
+/* ================= mobile start ================= */
+
+/* ----------------- main start ----------------- */
+/* 메인 크기, 이미지 설정 */
+#main {
+  width: 100%;
+  height: calc(100% - 60px);
+  background-image: url("../images/00main_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 메인 텍스트 */
+#main .txt {
+  padding-top: 70vh;
+
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 0 10px #000000;
+}
+/* 객실 검색 폼 모바일에서는 숨김 */
+#main .room_search_form {
+  display: none;
+}
+/* ----------------- main end ----------------- */
+
+
+
+
+
+
+
+
+/* ----------------- section start ----------------- */
+
+/* ----------------- 섹션 공통 */
+/* pc에서만 노출되는 섹션 모바일에서 숨김 */
+#index_dining, #index_membership {
+  display: none;
+}
+
+/* 섹션 타이틀 */
+section .tit {
+  height: 120px;
+  padding: 30px 10px 0 10px;
+
+  text-align: center;
+}
+section .tit>h2 {
+  font-size: 24px;
+}
+section .tit>p {
+  padding-bottom: 0;
+}
+
+
+
+
+/* ----------------- index_offers 섹션 */
+/* article 크기 */
+#index_offers>article {
+  height: 320px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  margin: 0 10px 20px 10px;
+}
+/* 이미지 설정 */
+#index_offers>article .img {
+  height: 225px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 이미지 링크 */
+#index_offers>.article_1 .img {
+  background-image: url("../images/01offers_1.jpg");
+}
+#index_offers>.article_2 .img {
+  background-image: url("../images/01offers_2.jpg");
+}
+#index_offers>.article_3 .img {
+  background-image: url("../images/01offers_3.jpg");
+}
+/* 텍스트 사이즈, 여백 설정 */
+#index_offers>article .txt {
+  padding: 24px 30px 0 30px;
+  font-size: 16px;
+}
+#index_offers>article .txt>.serif {
+  color: #a68c5d;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+#index_offers>article .txt>.sans {
+  color: #5e5e5e;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+/* 모바일에서는 article 2개만 노출 (나머지는 숨김) */
+#index_offers>.article_3 {
+  display: none;
+}
+/* 날짜는 모바일에서 숨김 */
+#index_offers>article .txt>p:last-of-type {
+  display: none;
+}
+
+
+
+
+
+/* ----------------- index_rooms 섹션 */
+/* 섹션 배경색 */
+#index_rooms {
+  background-color: #f6f3ee;
+  height: 694px;
+}
+/* 이미지 */
+#index_rooms .img {
+  height: 320px;
+  background-image: url("../images/03rooms_1_1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 텍스트 여백과 스타일 */
+#index_rooms .txt {
+  padding: 24px 30px 0 30px;
+}
+#index_rooms .txt>.serif {
+  color: #a0a0a0;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+#index_rooms .txt>.serif_kr {
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+#index_rooms .txt>.sans {
+  box-sizing: border-box;
+  padding: 20px 0;
+
+  color: #5e5e5e;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: -1px;
+}
+
+/* 자세히보기 버튼 */
+#index_rooms .btn {
+  display: block;
+  background-color: #a68c5d;
+  width: 204px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  margin: 0 auto;
+
+  color: white;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+
+
+
+
+/* ----------------- index_location 섹션 */
+#index_location {
+  height: 440px;
+}
+#index_location .tit {
+  height: 90px;
+}
+#index_location>iframe {
+  width: 100%;
+  height: 320px;
+}
+/* ----------------- section end ----------------- */
+
+
+
+
+
+
+/* ================= mobile end ================= */

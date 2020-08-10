@@ -1,0 +1,267 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+
+/* ----------------- reset ----------------- */
+
+/* 컬러칩
+(다크그레이) #212121 : 
+헤더, 푸터 배경색 
+
+(그레이) #434343 :
+헤더 구분선
+
+(그레이) #5e5e5e :
+짧은 설명 텍스트
+
+(라이트그레이) #bebebe :
+선택안된 탭 색상
+
+(밝은 라이트그레이) #e5e5e5 :
+박스 테두리
+
+(오트밀) #a68c5d :
+버튼, 타이틀
+
+(밝은 오트밀) #f6f3ee :
+index_rooms 배경색
+
+
+
+
+*/
+
+/* 폰트 사이즈 변경
+  font-size: 1rem;
+  font-size: 16px;
+
+  font-size: 1.1rem;
+  font-size: 18px;
+
+  font-size: 1.2rem;
+  font-size: 19px;
+
+  font-size: 1.8rem;
+  font-size: 29px;
+
+  font-size: 2rem;
+  font-size: 32px;
+
+*/
+
+/* 전체 여백 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* 폰트 설정 */
+.serif {
+  font-family: 'Lora', serif;
+}
+.serif_kr {
+  font-family: 'Noto Serif KR', serif;
+}
+.sans {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+
+/* ================= mobile start ================= */
+
+/* ----------------- wrap ----------------- */
+#wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+/* 로고 크기와 여백 */
+.logo {
+  width: 130px;
+  box-sizing: border-box;
+  padding: 11px 0 8px 0;
+  /* margin: 0 auto; */
+
+  color: white;
+  text-align: center;
+}
+/* 로고 스타일 */
+.logo .serif:first-child {
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+.logo .serif:first-child span {
+  font-size: 20px;
+}
+.logo .serif:last-child {
+  font-size: 9px;
+  letter-spacing: 6px;
+}
+
+
+
+
+
+
+/* ----------------- header start ----------------- */
+/* 헤더 색상과 크기 */
+#header {
+  background-color: #212121;
+  width: 100%;
+  height: 60px;
+}
+
+/* 헤더 요소 가로 배치 */
+#header>.container {
+  height: 59px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/* gnb 메뉴 */
+#header .gnb {
+  cursor: pointer;
+  width: 59px;
+  height: 59px;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-left: 23px;
+}
+#header .gnb>div {
+  background-color: white;
+  width: 14px;
+  height: 1px;
+  margin-bottom: 4px;
+}
+
+/* book 버튼 */
+#header .btn_book {
+  background-color: #a68c5d;
+  width: 59px;
+  height: 59px;
+  box-sizing: border-box;
+  padding-top: 20px;
+
+  color: white;
+  text-align: center;
+}
+
+/* 헤더와 내비를 구분하는 선 */
+#header .line {
+  background-color: #434343;
+  width: 100%;
+  height: 1px;
+}
+
+/* gnb 클릭했을때 노출되는 내비게이션 (디폴트: 숨김) */
+#header .nav {
+  display: none;
+
+  background-color: #212121;
+  width: 100%;
+  height: 300px;
+
+  color: white;
+  text-align: center;
+}
+/* 내비 리스트 세로 배치, 여백 설정 */
+#header .nav>a {
+  display: block;
+  padding-top: 33px;
+}
+/* 모바일에서는 book 버튼을 밖으로 빼서 reservation 내비는 숨김 */
+#header .nav>.nav_reservation {
+  display: none;
+}
+/* ----------------- header end ----------------- */
+
+
+
+
+
+
+/* ----------------- section start ----------------- */
+section .tit {
+  width: 100%;
+  height: 90px;
+  box-sizing: border-box;
+  padding: 30px 20px 18px 20px;
+}
+section .tit>h2 {
+  padding-bottom: 6px;
+  
+  color: #a68c5d;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+section .tit>p {
+  padding-bottom: 26px;
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+/* ----------------- section end ----------------- */
+
+
+
+
+
+
+/* ----------------- footer start ----------------- */
+/* 푸터 배경색 */
+#footer {
+  background-color: #212121;
+  color: white;
+}
+/* SNS 아이콘 */
+#footer .ico {
+  padding-top: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+#footer .ico>a {
+  padding: 3px;
+}
+/* 로고 중앙 정렬 */
+#footer .logo {
+  margin: 0 auto;
+}
+
+/* 텍스트 여백, 스타일 */
+#footer .left {
+  padding: 10px 30px;
+}
+#footer .left>a,
+#footer .left>p
+{
+  display: inline-block;
+  margin-right: 10px;
+
+  font-size: 13px;
+}
+#footer .left>.txt {
+  color: #727272;
+  padding: 20px 0;
+}
+/* ----------------- footer end ----------------- */
+
+
+/* ================= mobile end ================= */

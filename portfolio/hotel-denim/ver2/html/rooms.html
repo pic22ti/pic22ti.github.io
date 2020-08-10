@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_rooms.css">
   <title>HOTEL DENIM SEOUL : ROOMS</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 
 
     <!-- 헤더 -->
-    <header id="haeder">
+    <header id="header">
 
       <!-- 중앙 정렬 컨테이너 -->
       <div class="container">
@@ -30,7 +31,7 @@
         <!-- 로고 -->
         <div class="logo">
           <a href="index.html">
-            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM.</p>
+            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
             <p class="serif">SEOUL</p>
           </a>
         </div>
@@ -77,11 +78,11 @@
         </div>
 
         <!-- 탭 -->
-        <div class="tab">
-          <p class="sans">디럭스 룸</p>
-          <p class="sans">비즈니스 룸</p>
-          <p class="sans">스위트 룸</p>
-          <p class="sans">데님 스위트 룸</p>
+        <div class="tab sans">
+          <p>디럭스 룸</p>
+          <p>비즈니스 룸</p>
+          <p>스위트 룸</p>
+          <p>데님 스위트 룸</p>
         </div>
 
         <!-- 디럭스 룸 -->
@@ -91,16 +92,18 @@
           <div class="slide_img">
 
             <!-- 이미지 -->
-            <img src="../images/03rooms_1_1.jpg" alt="room image">
+            <img src="../images/03rooms_1_1.jpg" alt="room image" class="room_img">
 
-            <!-- 좌우 화살표 버튼 -->
-            <img src="../images/arrow-l.png" alt="left">
-            <img src="../images/arrow-r.png" alt="right">
+            <!-- 좌우 화살표 버튼과 도트 -->
+            <img src="../images/arrow-l.png" alt="left" class="arr">
 
-            <!-- 슬라이드 도트 -->
-            <img src="../images/circle-icon-color.png">
-            <img src="../images/circle-icon-gray.png">
-            <img src="../images/circle-icon-gray.png">
+            <div class="dot">
+              <img src="../images/circle-icon-color.png">
+              <img src="../images/circle-icon-gray.png">
+              <img src="../images/circle-icon-gray.png">
+            </div>
+
+            <img src="../images/arrow-r.png" alt="right" class="arr">
           </div>
 
           <!-- 서브 타이틀 -->
@@ -110,7 +113,7 @@
           </div>
 
           <!-- 텍스트 -->
-          <p class="sans">
+          <p class="txt sans">
             객실의 느낌에서 데님을 연상시키며 안정감을 주는 컬러인 인디고 블루 타입이 스며들어 있는 공간이며, 젊은 감각의 비즈니스 고객과 여행객에게 색다른 분위기를 제공할 수 있는 객실입니다.
           </p>
 
@@ -121,34 +124,30 @@
           <ul class="box sans">
             <li class="list_1">
               <h4>상세 정보</h4>
-              <p class="col1">Check in</p>
-              <p class="col2">03:00 PM</p>
-              <p class="col1">Check out</p>
-              <p class="col2">11:00 AM</p>
-              <p class="col1">객실 크기</p>
-              <p class="col2">37㎡</p>
-              <p class="col1">침대 타입</p>
-              <p class="col2">Double or Twin</p>
+              <p><span class="col1">Check in</span>11:00 AM</p>
+              <p><span class="col1">Check out</span>03:00 PM</p>
+              <p><span class="col1">객실 크기</span>37㎡</p>
+              <p><span class="col1">침대 타입</span>Double or Twin</p>
             </li>
             <li class="list_2">
               <h4>편의 시설</h4>
-              <p class="col1">유 / 무선 인터넷</p>
-              <p class="col1">55인치 FULL HD TV</p>
-              <p class="col1">위성 TV 58개 채널</p>
-              <p class="col1">개인용 금고</p>
-              <p class="col1">커피, 녹차, 홍차(티백)</p>
-              <p class="col1">미네랄 워터 2병</p>
-              <p class="col1">커피포트</p>
+              <p>유 / 무선 인터넷</p>
+              <p>55인치 FULL HD TV</p>
+              <p>위성 TV 58개 채널</p>
+              <p>개인용 금고</p>
+              <p>커피, 녹차, 홍차(티백)</p>
+              <p>미네랄 워터 2병</p>
+              <p>커피포트</p>
             </li>
             <li class="list_3">
               <h4>어메니티</h4>
-              <p class="col1">배쓰 어메니티 5종</p>
-              <p class="col1">배쓰 타올</p>
-              <p class="col1">목욕용 가운</p>
-              <p class="col1">샤워캡</p>
-              <p class="col1">머리 빗</p>
-              <p class="col1">면봉</p>
-              <p class="col1">헤어드라이어</p>
+              <p>배쓰 어메니티 5종</p>
+              <p>배쓰 타올</p>
+              <p>목욕용 가운</p>
+              <p>샤워캡</p>
+              <p>머리 빗</p>
+              <p>면봉</p>
+              <p>헤어드라이어</p>
             </li>
           </ul>
         </article>
@@ -160,16 +159,18 @@
           <div class="slide_img">
 
             <!-- 이미지 -->
-            <img src="../images/03rooms_1_1.jpg" alt="room image">
+            <img src="../images/03rooms_1_1.jpg" alt="room image" class="room_img">
 
-            <!-- 좌우 화살표 버튼 -->
-            <img src="../images/arrow-l.png" alt="left">
-            <img src="../images/arrow-r.png" alt="right">
+            <!-- 좌우 화살표 버튼과 도트 -->
+            <img src="../images/arrow-l.png" alt="left" class="arr">
 
-            <!-- 슬라이드 도트 -->
-            <img src="../images/circle-icon-color.png">
-            <img src="../images/circle-icon-gray.png">
-            <img src="../images/circle-icon-gray.png">
+            <div class="dot">
+              <img src="../images/circle-icon-color.png">
+              <img src="../images/circle-icon-gray.png">
+              <img src="../images/circle-icon-gray.png">
+            </div>
+
+            <img src="../images/arrow-r.png" alt="right" class="arr">
           </div>
 
           <!-- 서브 타이틀 -->
@@ -179,7 +180,7 @@
           </div>
 
           <!-- 텍스트 -->
-          <p class="sans">
+          <p class="txt sans">
             객실의 느낌에서 데님을 연상시키며 안정감을 주는 컬러인 인디고 블루 타입이 스며들어 있는 공간이며, 젊은 감각의 비즈니스 고객과 여행객에게 색다른 분위기를 제공할 수 있는 객실입니다.
           </p>
 
@@ -190,34 +191,30 @@
           <ul class="box sans">
             <li class="list_1">
               <h4>상세 정보</h4>
-              <p class="col1">Check in</p>
-              <p class="col2">03:00 PM</p>
-              <p class="col1">Check out</p>
-              <p class="col2">11:00 AM</p>
-              <p class="col1">객실 크기</p>
-              <p class="col2">37㎡</p>
-              <p class="col1">침대 타입</p>
-              <p class="col2">Double or Twin</p>
+              <p><span class="col1">Check in</span>11:00 AM</p>
+              <p><span class="col1">Check out</span>03:00 PM</p>
+              <p><span class="col1">객실 크기</span>37㎡</p>
+              <p><span class="col1">침대 타입</span>Double or Twin</p>
             </li>
             <li class="list_2">
               <h4>편의 시설</h4>
-              <p class="col1">유 / 무선 인터넷</p>
-              <p class="col1">55인치 FULL HD TV</p>
-              <p class="col1">위성 TV 58개 채널</p>
-              <p class="col1">개인용 금고</p>
-              <p class="col1">커피, 녹차, 홍차(티백)</p>
-              <p class="col1">미네랄 워터 2병</p>
-              <p class="col1">커피포트</p>
+              <p>유 / 무선 인터넷</p>
+              <p>55인치 FULL HD TV</p>
+              <p>위성 TV 58개 채널</p>
+              <p>개인용 금고</p>
+              <p>커피, 녹차, 홍차(티백)</p>
+              <p>미네랄 워터 2병</p>
+              <p>커피포트</p>
             </li>
             <li class="list_3">
               <h4>어메니티</h4>
-              <p class="col1">배쓰 어메니티 5종</p>
-              <p class="col1">배쓰 타올</p>
-              <p class="col1">목욕용 가운</p>
-              <p class="col1">샤워캡</p>
-              <p class="col1">머리 빗</p>
-              <p class="col1">면봉</p>
-              <p class="col1">헤어드라이어</p>
+              <p>배쓰 어메니티 5종</p>
+              <p>배쓰 타올</p>
+              <p>목욕용 가운</p>
+              <p>샤워캡</p>
+              <p>머리 빗</p>
+              <p>면봉</p>
+              <p>헤어드라이어</p>
             </li>
           </ul>
         </article>
@@ -248,7 +245,7 @@
           <!-- 로고 -->
           <div class="logo">
             <a href="index.html">
-              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM.</p>
+              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
               <p class="serif">SEOUL</p>
             </a>
           </div>
