@@ -1,0 +1,143 @@
+
+/* ================= mobile start ================= */
+
+/* 탭이 있으므로 하단 여백 변경 */
+.layout_tab .tit {
+  padding: 30px 20px 0px 20px;
+}
+
+/* 탭 */
+.layout_tab .tab_container {
+  padding: 0 20px 23px 20px;
+}
+.layout_tab .tab {
+  cursor: pointer;
+  display: inline-block;
+  padding-right: 10px;
+
+  color: #bebebe;
+  font-size: 18px;
+}
+/* 탭 호버 */
+.layout_tab .tab:hover {
+  text-decoration: underline;
+  color: #5e5e5e;
+}
+/* 보여주고있는 탭 스타일변경 클래스 (js) */
+.layout_tab .tab.select {
+  text-decoration: underline;
+  color: #5e5e5e;
+}
+
+/* 이미지 슬라이드 영역 */
+.layout_tab .slide_img {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 이미지 사이즈 */
+.layout_tab .dining_img {
+  width: 100%;
+  height: auto;
+}
+/* 화살표 아이콘 여백 */
+.layout_tab .arr {
+  cursor: pointer;
+  margin: 15px; 
+}
+/* 슬라이드 도트 스타일 */
+.layout_tab .dot {
+  display: inline-block;
+  background-color: #bebebe;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+/* 선택된 도트는 색상 변경 클래스 (js) */
+.layout_tab .dot.select {
+  background-color: #a68c5d;
+}
+
+
+/* 서브타이틀 */
+.layout_tab .sub_tit {
+  padding: 25px 20px 30px 20px;
+}
+.layout_tab .sub_tit>.serif {
+  color: #bebebe;
+  font-size: 20px;
+  font-weight: 300;
+}
+.layout_tab .sub_tit>.serif_kr {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* 텍스트 */
+.layout_tab .txt {
+  height: 150px;
+  padding: 0 20px;
+  color: #5e5e5e;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* 문의하기 버튼 */
+.layout_tab .btn {
+  display: block;
+  background-color: #a68c5d;
+  width: 204px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  margin: 0 auto;
+
+  color: white;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+/* 자세한 내용 box */
+.layout_tab .box {
+  margin: 20px 10px 40px 10px;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+.layout_tab .box>li {
+  padding: 10px 0 10px 0;
+}
+/* box 내 폰트 스타일 */
+.layout_tab .box h4 {
+  color: #a68c5d;
+  font-size: 18px;
+  font-weight: 500;
+}
+.layout_tab .box p {
+  color: #5e5e5e;
+}
+/* 리스트앞에 ·기호 추가 */
+.layout_tab .box p::before {
+  display: inline-block;
+  content: "·";
+  padding: 0 10px 0 10px;
+}
+/* 2열 배치 */
+.layout_tab .box .list_1 .col1 {
+  display: inline-block;
+  width: 120px;
+}
+
+
+
+
+
+
+
+/* 임시 */
+.layout_tab .lounge {
+  display: none;
+}
+.layout_tab .business_room {
+  display: none;
+}
+/* ================= mobile end ================= */

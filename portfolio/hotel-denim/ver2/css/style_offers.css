@@ -1,0 +1,89 @@
+
+/* ================= mobile start ================= */
+
+/* 컨텐츠 스타일 */
+#offers article {
+  height: auto;
+  margin: 0 10px;
+}
+
+/* 이미지 */
+#offers .img {
+  height: 320px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#offers .promotion>.img {
+  background-image: url("../images/01offers_1.jpg");
+}
+#offers .exhibition>.img {
+  background-image: url("../images/01offers_2.jpg");
+}
+#offers .event>.img {
+  background-image: url("../images/01offers_3.jpg");
+}
+
+/* 내용 */
+#offers .txt {
+  border: 1px solid #dcdcdc;
+  padding: 30px 30px 10px 30px;
+  margin-bottom: 30px;
+}
+/* 텍스트 스타일 */
+#offers .txt>.serif {
+  color: #a68c5d;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+#offers .txt>.serif_kr {
+  color: #212121;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+#offers .txt>.sans {
+  box-sizing: border-box;
+  padding: 10px 0;
+
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 300;
+}
+#offers .txt>ol.sans {
+  padding-left: 16px;
+}
+
+/* 중앙 정렬 가격 스타일 */
+#offers .center {
+  text-align: center;
+  padding: 30px 0;
+}
+#offers .center>p {
+  display: inline-block;
+  padding: 0 5px;
+  font-weight: 400;
+}
+#offers .center>.price {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+/* 예약하기 버튼 스타일 */
+#offers .center>.btn {
+  display: block;
+  background-color: #a68c5d;
+  width: 204px;
+  height: 36px;
+  padding-top: 14px;
+  margin: 10px auto;
+
+  color: white;
+  letter-spacing: -1px;
+}
+
+
+
+
+
+/* ================= mobile end ================= */

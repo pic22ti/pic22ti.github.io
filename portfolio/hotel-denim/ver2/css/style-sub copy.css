@@ -69,6 +69,20 @@
 
   /* sub_rooms_end--------------------- */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* sub_offers_start------------------ */
   .sub_offers .title {
     width: 100%;
@@ -90,73 +104,23 @@
     font-weight: 400;
     letter-spacing: -1px;
   }
-  /* ---------------------------article */
-  .sub_offers>.container>article>div{
-    /* height: 320px; */
-    height: auto;
-    margin: 0 10px;
-  }
-  .sub_offers>.container>article>div>div.img {
-    height: 320px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .sub_offers>.container>article:nth-of-type(1)>div>div.img{
-    background-image: url("../images/01offers_1.jpg");
-  }
-  .sub_offers>.container>article:nth-of-type(2)>div>div.img{
-    background-image: url("../images/01offers_2.jpg");
-  }
-  .sub_offers>.container>article:nth-of-type(3)>div>div.img{
-    background-image: url("../images/01offers_3.jpg");
-  }
-  .sub_offers>.container>article>div:last-of-type {
-    border: 1px solid #dcdcdc;
-    margin-bottom: 30px;
-  }
-  .sub_offers>.container>article>div:last-of-type>div:nth-of-type(1) {
-    padding: 24px 30px 0 30px;
-  }
-  .sub_offers>.container>article>div:last-of-type>div>p.serif {
-    color: #a68c5d;
-    font-size: 1em;
-    letter-spacing: -1px;
-  }
-  .sub_offers>.container>article>div:last-of-type>div:nth-of-type(1)>p:nth-of-type(2) {
-    color: black;
-    font-size: 1.4em;
-    font-weight: 600;
-    letter-spacing: -1px;
-  }
-  .sub_offers>.container>article>div:last-of-type>div>p:nth-of-type(3) {
-    box-sizing: border-box;
-    padding: 20px 0;
 
-    color: #5e5e5e;
-    font-size: 1em;
-    font-weight: 300;
-  }
+
+
+
+
+
+
+  /* ---------------------------article */
+
+
   .sub_offers>.container>article>div:last-of-type>div>ol {
     color: #5e5e5e;
     font-size: 0.9rem;
     font-weight: 300;
   }
-  .sub_offers>.container>article>div>div:nth-of-type(2) {
-    text-align: center;
-    padding: 30px 0;
-  }
-  .sub_offers>.container>article>div>div:nth-of-type(2)>p {
-    display: inline-block;
-    padding: 12px 5px;
-    color: #5e5e5e;
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-  .sub_offers>.container>article>div>div:nth-of-type(2)>p:nth-of-type(2) {
-    font-size: 2rem;
-    letter-spacing: -1px;
-  }
+
+
   .sub_offers>.container>article>div>div:nth-of-type(2)>div>a {
     background-color: #a68c5d;
     display: inline-block;
@@ -212,10 +176,8 @@
   /* sub_login_start------------------- */
   /* -----------------------------title */
   .sub_login>.title{
-    text-align: center;
     font-size: 1.4rem;
     height: 90px;
-    padding: 50px 0 30px 0;
   }
   .sub_login>.title>.serif{
     font-weight: 400;
@@ -223,57 +185,30 @@
     letter-spacing: -1px;
   }
   /* ------------------------------form */
-  .sub_login>.container>form>input{
-    display: block;
-    box-sizing: border-box;
-    margin: 0 auto 32px auto;
-    border: 1px solid #a68c5d;
-    padding-left: 25px;
-    width: 300px;
-    height: 60px;
 
-    color: #bebebe;
-    font-size: 1rem;
-  }
-  .sub_login>.container>form>input:last-of-type{
-    background-color: #a68c5d;
-    border: none;
-    padding-left: 0;
-    color: white;
-  }
   .sub_login>.container>form>input:last-of-type:hover{
     background-color: white;
     border: 1px solid #a68c5d;
     color: #a68c5d;
   }
-  .sub_login:first-of-type>.container>div:last-of-type{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-bottom: 60px;
-    
-    font-size: 0.9rem;
-  }
-  .sub_login>.container>div:last-of-type>p{
-    padding: 0 20px 0 20px;
-  }
-  .sub_login>.container>div:last-of-type>a{
-    letter-spacing: -1px;
-  }
+
+
+
+
   .sub_login>.container>div:last-of-type>a:hover {
     text-decoration: underline;
   }
+
+
+
+
+
+  
   /* ------------------------membership */
-  .sub_login:nth-of-type(2){
-    background-color: #f5f5f5;
-  }
-  .sub_login:nth-of-type(2)>.title{
-    height: auto;
-  }
+
   .sub_login>.title>.serif_kr{
     font-weight: 400;
     letter-spacing: -1px;
-    padding-bottom: 30px;
   }
   .sub_login>.title>p{
     padding: 0 10px 0 10px;
@@ -282,47 +217,27 @@
     font-weight: 500;
     letter-spacing: -1px;
   }
-  .sub_login:nth-of-type(2)>.container{
-    background-color: white;
-    margin: 10px 10px 50px 10px;
-    padding: 20px;
-  }
-  .sub_login:nth-of-type(2)>.container>div{
-    padding-bottom: 30px;
-  }
-  .sub_login:nth-of-type(2)>.container>div:last-of-type{
-    padding-bottom: 0;
-  }
-  .sub_login:nth-of-type(2)>.container>div>.serif_kr{
-    padding-left: 10px;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  .sub_login:nth-of-type(2)>.container>div>.line{
-    background-color: #cccccc;
-    margin: 16px 0 16px 0;
-    width: 100%;
-    height: 1px;
-  }
-  .sub_login:nth-of-type(2)>.container>div>ul>li{
-    padding: 0 0 20px 25px;
-  }
-  .sub_login:nth-of-type(2)>.container>div>ul>li>p:first-of-type{
-    padding-bottom: 3px;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  .sub_login:nth-of-type(2)>.container>div>ul>li>p:nth-of-type(2){
-    padding-left: 20px;
-    color: #434343;
-    font-size: 0.9rem;
-  }
-  .sub_login:nth-of-type(2)>.container>div>ul>li:last-of-type>p{
-    color: #5e5e5e;
-    font-size: 0.7rem;
-    font-weight: 300;
-  }
+
+
   /* sub_login_end--------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* sub_reservation_start------------- */
   .sub_reservation{
