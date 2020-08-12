@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse event</title>
+  <style>
+
+    #box {
+      position: relative;
+      overflow: hidden;
+
+      width: 500px;
+      height: 500px;
+      border: 2px solid rosybrown;
+      margin: 0 auto;
+    }
+    #move {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+
+      background-color: palegreen;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div id="move"></div>
+  </div>
+  <p class="client">client(x,y) →</p>
+  <p class="offset">offset(x,y) →</p>
+
+  <!-- javascript -->
+  <!-- <script src="mouse_event.js"></script> -->
+  <!-- <script src="mouse_move.js"></script> -->
+  <script src="mouse_circle.js"></script>
+</body>
+</html>

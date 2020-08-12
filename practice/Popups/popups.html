@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 팝업 컨테이너 */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+
+      margin: 100px;
+    }
+
+    /* 위에 나타나는 팝업 */
+    .popup .popuptext {
+      visibility: hidden;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      z-index: 1;
+
+      background-color: #555;
+      width: 160px;
+      padding: 8px 0;
+      border-radius: 6px;
+      margin-left: -80px;
+
+      color: #fff;
+      text-align: center;
+    }
+
+    /* 팝업 화살표 모양 */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+
+      border-width: 5px;
+      border-style: solid;
+      /* transparent 투명으로 삼각형 만들기 */
+      border-color: #555 transparent transparent transparent; 
+      margin-left: -5px;
+    }
+
+    /* 토글로 클래스를 추가하고 삭제함(js) */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* 애니메이션 (fade popup) */
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="popup" onclick="myFunction()">
+    Click Me!
+    <span class="popuptext" id="myPopup">Popup text</span>
+  </div>
+
+  <!-- javascript -->
+  <script>
+    // 텍스트를 클릭하면 팝업창이 나타남
+    function myFunction() {
+      const popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

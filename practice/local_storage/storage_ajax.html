@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비동기식(A) Javascript XML</title>
+</head>
+<body>
+  <script>
+    let ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function(){
+      // console.log(this.readyState);
+      if( this.readyState == 4 && this.status == 200 ) {
+        alert( this.response );
+      }
+    };
+    // 0 open
+    ajax.open("GET", "https://chloe0122.github.io/data.txt");
+    // 1 send
+    ajax.send();
+    // 4 완료
+
+
+
+
+
+    
+  </script>
+</body>
+</html>
