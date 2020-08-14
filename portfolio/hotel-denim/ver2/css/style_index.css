@@ -13,7 +13,7 @@
 }
 /* 메인 텍스트 */
 #main .txt {
-  padding-top: 70vh;
+  padding-top: 15vh;
 
   color: white;
   font-size: 25px;
@@ -118,7 +118,8 @@ section .tit>p {
 /* 섹션 배경색 */
 #index_rooms {
   background-color: #f6f3ee;
-  height: 694px;
+  height: auto;
+  padding-bottom: 30px;
 }
 /* 이미지 */
 #index_rooms .img {

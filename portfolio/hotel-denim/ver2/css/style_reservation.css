@@ -1,0 +1,158 @@
+
+/* ================= mobile start ================= */
+
+#reservation {
+  margin-bottom: 50px;
+}
+
+/* 객실 검색 영역 스타일 */
+#reservation .room_search {
+  background-color: #e5e5e5;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* 폼 스타일 flex */
+#reservation .room_search_form {
+  /* background-color: white; */
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+/* label, input 공통 스타일 */
+#reservation .room_search_form>label {
+  background-color: white;
+  width: 25%;
+  height: 50px;
+
+  text-align: center;
+  line-height: 50px;
+}
+#reservation .room_search_form>input {
+  background-color: white;
+  width: 25%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+
+  text-align: center;
+}
+
+/* 1행 */
+#reservation .room_search_form>.period {
+  background-color: white;
+  width: 20%;
+  text-align: center;
+  line-height: 50px;
+}
+#reservation .room_search_form>input[type=date] {
+  width: 35%;
+}
+#reservation .room_search_form>.arr {
+  background-color: white;
+  width: 10%;
+
+  text-align: center;
+  line-height: 50px;
+}
+
+/* 구분선 하단 */
+#reservation .room_search_form>label,
+#reservation .room_search_form>input,
+#reservation .room_search_form>.period,
+#reservation .room_search_form>.arr
+{
+  box-sizing: border-box;
+  border-bottom: 1px solid #bebebe;
+}
+/* 구분선 오른쪽 */
+#reservation .room_search_form>.period,
+#reservation .room_search_form>label[for=night],
+#reservation .room_search_form>#adult
+{
+  box-sizing: border-box;
+  border-right: 1px solid #bebebe;
+}
+
+/* 검색 버튼 스타일 */
+#reservation .room_search_form>.btn_search {
+  cursor: pointer;
+  background-color: #212121;
+  width: 100%;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+/* 객실 목록 구분선 */
+#reservation article {
+  box-sizing: border-box;
+  padding: 30px 10px;
+  border-bottom: 1px solid #bebebe;
+}
+#reservation .room_1 {
+  border-top: 1px solid #bebebe;
+}
+
+/* 객실 이미지 */
+#reservation article>img {
+  width: 100%;
+  height: auto;
+}
+/* 객실 이름 스타일 */
+#reservation article>.txt {
+  padding: 10px;
+}
+#reservation article .serif {
+  color: #bebebe;
+  font-weight: 300;
+}
+#reservation article .serif_kr {
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+#reservation article .sans {
+  color: #5e5e5e;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* 가격 */
+#reservation article>.center {
+  text-align: center;
+}
+#reservation article>.center>p {
+  display: inline-block;
+  padding: 12px 3px;
+}
+#reservation article>.center>.price {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+/* 버튼 */
+#reservation article .btn {
+  display: block;
+  background-color: #a68c5d;
+  width: 204px;
+  height: 36px;
+  border: none;
+  padding-top: 14px;
+  margin: 0 auto;
+
+  color: white;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+/* ================= mobile end ================= */

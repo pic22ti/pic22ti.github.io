@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_reservation.css">
   <title>HOTEL DENIM SEOUL : RESERVATION</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 
 
     <!-- 헤더 -->
-    <header id="haeder">
+    <header id="header">
 
       <!-- 중앙 정렬 컨테이너 -->
       <div class="container">
@@ -30,7 +31,7 @@
         <!-- 로고 -->
         <div class="logo">
           <a href="index.html">
-            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM.</p>
+            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
             <p class="serif">SEOUL</p>
           </a>
         </div>
@@ -77,27 +78,33 @@
       </div>
 
       <!-- 객실 검색 영역 -->
-      <div class="room_search">
+      <div class="room_search sans">
 
         <!-- 객실 검색 폼 -->
         <form action="reservartion.html" class="room_search_form">
+
+          <!-- 1행 -->
           <p class="period">숙박기간</p>
           <input type="date" />
           <p class="arr">→</p>
           <input type="date" />
+          
+          <!-- 2행 -->
           <input type="number" id="night" value="1" />
           <label for="night">박</label>
           <label for="room">객실</label>
           <input type="number" id="room" value="1" />
+          
+          <!-- 3행 -->
           <label for="adult">어른</label>
           <input type="number" id="adult" value="2" />
           <label for="child">아이</label>
           <input type="number" id="child" value="0" />
 
-          <!-- 검색 버튼 -->
-          <input type="submit" value="검색" />
+          <input type="submit" class="btn_search" value="검색" />
         </form>
       </div>
+
 
 
 
@@ -123,7 +130,7 @@
           <!-- 가격과 자세히보기 버튼 -->
           <div class="center sans">
             <p>1박</p>
-            <p>192,000원 ~</p>
+            <p class="price">192,000원 ~</p>
             <a href="rooms.html" class="btn">자세히 보기</a>
           </div>
 
@@ -148,7 +155,7 @@
           <!-- 가격과 자세히보기 버튼 -->
           <div class="center sans">
             <p>1박</p>
-            <p>257,000원 ~</p>
+            <p class="price">257,000원 ~</p>
             <a href="rooms.html" class="btn">자세히 보기</a>
           </div>
 
@@ -173,7 +180,7 @@
           <!-- 가격과 자세히보기 버튼 -->
           <div class="center sans">
             <p>1박</p>
-            <p>1,370,000원 ~</p>
+            <p class="price">1,370,000원 ~</p>
             <a href="rooms.html" class="btn">자세히 보기</a>
           </div>
 
@@ -202,7 +209,7 @@
           <!-- 로고 -->
           <div class="logo">
             <a href="index.html">
-              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM.</p>
+              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
               <p class="serif">SEOUL</p>
             </a>
           </div>
