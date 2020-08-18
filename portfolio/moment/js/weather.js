@@ -52,6 +52,7 @@
       .then(function (myJson) {
         // 기본은 문자열로 출력
         // console.log(JSON.stringify(myJson));
+        console.log(myJson);
 
         const city = myJson.name;
         const cod = wDescEngToKor(myJson.cod);

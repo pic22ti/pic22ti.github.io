@@ -11,7 +11,7 @@
 #wrap {
   position: relative;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
 
   background-image: url('../images/1.jpg');
@@ -28,7 +28,7 @@
 
 /* 시계 */
 #view_clock .clock{
-  margin: 70px;
+  margin: 50px;
   font-size: 150px;
 }
 
@@ -58,3 +58,25 @@
   padding: 30px;
 }
 
+
+/* 할일 */
+#view_todoList input {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-top: 30px;
+  font-size: 30px;
+}
+#view_todoList input::placeholder,
+#view_todoList input:focus
+{
+  color: white;
+}
+#view_todoList .todo_list {
+  font-size: 30px;
+  list-style: none;
+}
+#view_todoList .todo_list>li>span:nth-of-type(1) {
+  cursor: pointer;
+}
