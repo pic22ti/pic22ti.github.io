@@ -1,0 +1,827 @@
+
+.clear {
+  clear: both;
+}
+
+/* mobile_start------------------------ */
+  
+
+  /* -----------------------sub_section */
+  section {
+    width: 100%;
+    /* 사실 왜 flex를 썼는지 기억이 안남...
+    레이아웃 틀어지면 살려보고 아니면 삭제 */
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: center; */
+  }
+
+  /* sub_rooms_start------------------- */
+  /* -----------------------------title */
+  .sub_rooms .title {
+    height: auto;
+  }
+
+  /* -----------------------------image */
+  .sub_rooms>div>div:nth-of-type(2) {
+    width: 100%;
+  }
+
+  .sub_rooms>div>div:nth-of-type(2)>div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+    color: #a68c5d;
+    font-size: 2rem;
+  }
+  /* image 슬라이드 할 예정------------- */
+  .sub_rooms>div>div:nth-of-type(2)>div>img{
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .sub_rooms>div>div:nth-of-type(2)>div>div{
+    display: flex;
+  }
+  .sub_rooms>div>div:nth-of-type(2)>div>div>img{
+    
+    padding-top: 17px;
+    width: 15px;
+    height: 15px;
+  }
+  /* ---------------------------article */
+
+
+  .sub_rooms>div>article:nth-of-type(1)>div {
+    text-align: center;
+  }
+
+  .sub_rooms>div>article>div>a:hover {
+    background-color: white;
+    height: 35px;
+    border: 1px solid #a68c5d;
+    padding-top: 13px;
+    color: #a68c5d;
+  }
+
+
+
+  /* sub_rooms_end--------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* sub_offers_start------------------ */
+  .sub_offers .title {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 30px 10px 18px 10px;
+  }
+  .sub_offers .title>h2 {
+    padding-bottom: 10px;
+    color: #a68c5d;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .sub_offers .title>p {
+    /* padding-bottom: 26px; */
+    color: #5e5e5e;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+  }
+
+
+
+
+
+
+
+  /* ---------------------------article */
+
+
+  .sub_offers>.container>article>div:last-of-type>div>ol {
+    color: #5e5e5e;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+
+  .sub_offers>.container>article>div>div:nth-of-type(2)>div>a {
+    background-color: #a68c5d;
+    display: inline-block;
+    width: 204px;
+    height: 36px;
+    padding-top: 14px;
+
+    color: white;
+    letter-spacing: -1px;
+  }
+  /* sub_offers_end-------------------- */
+  
+  /* sub_dining_start------------------ */
+  /* sub_rooms과 같아서 함께 사용함 */
+  /* sub_dining_end-------------------- */
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  /* sub_about_start------------------- */
+
+  /* -----------------------------image */
+  .sub_about>div>div:nth-of-type(2) {
+    width: 100%;
+  }
+
+  /* sub_about_end--------------------- */
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* sub_login_start------------------- */
+  /* -----------------------------title */
+  .sub_login>.title{
+    font-size: 1.4rem;
+    height: 90px;
+  }
+  .sub_login>.title>.serif{
+    font-weight: 400;
+    color: #a68c5d;
+    letter-spacing: -1px;
+  }
+  /* ------------------------------form */
+
+  .sub_login>.container>form>input:last-of-type:hover{
+    background-color: white;
+    border: 1px solid #a68c5d;
+    color: #a68c5d;
+  }
+
+
+
+
+  .sub_login>.container>div:last-of-type>a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+  
+  /* ------------------------membership */
+
+  .sub_login>.title>.serif_kr{
+    font-weight: 400;
+    letter-spacing: -1px;
+  }
+  .sub_login>.title>p{
+    padding: 0 10px 0 10px;
+    color: #5e5e5e;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+
+
+  /* sub_login_end--------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* sub_reservation_start------------- */
+  .sub_reservation{
+    width: 100%;
+    height: auto;
+  }
+  .sub_reservation .title {
+    width: 100%;
+    height: 90px;
+    box-sizing: border-box;
+    padding: 30px 10px 18px 10px;
+  }
+  .sub_reservation .title>h2 {
+    padding-bottom: 10px;
+    color: #a68c5d;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .sub_reservation>div:nth-of-type(2){
+    background-color: #f5f5f5;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+  /* ------------------------------form start */
+  .sub_reservation>div>.container>form {
+    background-color: white;
+    margin: 0 auto;
+    width: 96%;
+    height: auto;
+  }
+  .sub_reservation>div>.container>form>ul{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .sub_reservation>div>.container>form>ul>li{
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dddddd;
+  }
+  .sub_reservation>div>.container>form>ul>li>* {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 13px 0;
+    width: 100%;
+
+    text-align: center;
+    color: #5e5e5e;
+    font-size: 0.8rem;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .sub_reservation>div>.container>form>ul>li:first-of-type{
+    width: 20%;
+    border-right: 1px solid #dddddd;
+  }
+  .sub_reservation>div>.container>form>ul>li.date{
+    width: 35%;
+    box-sizing: border-box;
+    padding: 0 25px;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(3){
+    width: 10%;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(5) {
+    padding-left: 20px;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(6) {
+    padding-right: 10px;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(7) {
+    border-left: 1px solid #dddddd;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(11) {
+    border-left: 1px solid #dddddd;
+  }
+  .sub_reservation>div>.container>form>ul>li>label>p{
+    margin: 13px 0;
+  }
+  .sub_reservation>div>.container>form>ul>li:last-of-type{
+    width: 100%;
+  }
+  .sub_reservation>div>.container>form>ul>li>input[type="submit"] {
+    padding: 14px 0;
+
+    border: none;
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: #212121;
+  }
+  .sub_reservation>div>.container>form>ul>li>input[type="submit"]:hover {
+    background-color: #a68c5d;
+  }
+  /* ---------------form end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .sub_reservation>.container>article{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .sub_reservation>.container>article>div{
+    margin: 10px;
+    width: 280px;
+    height: 140px;
+  }
+
+
+
+
+  .sub_reservation>.container>article>div:last-of-type>div>a:hover {
+    background-color: white;
+    height: 35px;
+    border: 1px solid #a68c5d;
+    padding-top: 13px;
+    color: #a68c5d;
+  }
+  /* sub_reservation_end--------------- */
+/* mobile_end-------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px)
+{
+  /* ----------------------------footer */
+  footer>.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  footer>.container>div.left {
+    order: 1;
+    width: 60%;
+    padding-top: 20px;
+  }
+  footer>.container>div.right {
+    order: 2;
+    width: 24%;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px)
+{
+  /* -------------------------container */
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  /* ------------------------------logo */
+  .logo>.box {
+    width: 250px;
+    padding: 33px 0 17px 0;
+  }
+  .logo>.box>a>p:first-child {
+    font-size: 1.9rem;
+  }
+  .logo>.box>a>p>span {
+    font-size: 2.2rem;
+  }
+  .logo>.box>a>p:last-child {
+    font-size: 0.8rem;
+  }
+  /* ----------------------------header */
+  header {
+    height: 153px;
+  }
+  header>.container:first-child {
+    box-sizing: border-box;
+    height: 112px;
+  }
+  /* menu,book */
+  header>.container>.menu {
+    display: none;
+  }
+  header>.container>.book {
+    display: none;
+  }
+  /* ------------------------header_nav */
+  header>div:nth-of-type(3) {
+    display: block;
+
+    height: 40px;
+    box-sizing: border-box;
+  }
+  header>div:nth-of-type(3)>nav>ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  header>div:nth-of-type(3)>nav>ul>li {
+    height: 100%;
+    width: 16.6%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    color: #bebebe;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  header>div:nth-of-type(3)>nav>ul>li:last-child {
+    width: 17%;
+    background-color: #a68c5d;
+    color: white;
+  }
+  header>div:nth-of-type(3)>nav>ul>li:hover {
+    background-color: #212121;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #a68c5d;
+    padding-top: 10px;
+    height: 40px;
+  }
+  /* ------------------------header_nav */
+  header>div:nth-of-type(3)>nav {
+    /* jquery menu 안보일때 미디어 PC에서
+        display: none으로 nav가 안보여서 강제 우선순위를 줌 */
+    display: block !important;
+
+    height: 40px;
+    box-sizing: border-box;
+  }
+  header>div:nth-of-type(3)>nav>ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  header>div:nth-of-type(3)>nav>ul>li {
+    height: 100%;
+    width: 16.6%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    color: #bebebe;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  header>div:nth-of-type(3)>nav>ul>li:last-child {
+    display: inline-block;
+    width: 17%;
+    background-color: #a68c5d;
+    color: white;
+  }
+  header>div:nth-of-type(3)>nav>ul>li:hover {
+    background-color: #212121;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #a68c5d;
+    padding-top: 10px;
+    height: 40px;
+  }
+  /* ----------------------------footer */
+  footer { 
+    height: 180px;
+  }
+  footer>.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  footer>.container>div.left {
+    order: 1;
+    padding-top: 50px;
+  }
+  footer>.container>div.right {
+    order: 2;
+    padding-right: 61px;
+  }
+
+  /* sub_rooms_start------------------- */
+  /* -----------------------------title */
+  .sub_rooms .title {
+    height: 230px;
+    padding: 46px 0 24px 0;
+  }
+  .sub_rooms .title>h2 {
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+  }
+  .sub_rooms .title>p {
+    font-size: 1rem;
+  }
+  .sub_rooms .title>nav>ul>li {
+    font-size: 1.2rem;
+  }
+  /* -------------------------------box */
+  .sub_rooms>div>article.box {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .sub_rooms>div>article.box>div {
+    box-sizing: border-box;
+    width: 33.3%;
+    padding: 10px;
+  }
+  .sub_rooms>div>article.box>div>h4 {
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  /* sub_rooms_end--------------------- */
+
+  /* sub_offers_start------------------ */
+  .sub_offers .title {
+    height: 170px;
+    padding: 46px 0 24px 0;
+  }
+  .sub_offers .title>h2 {
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+  }
+  .sub_offers .title>p {
+    font-size: 1rem;
+  }
+  .sub_offers>.container>article{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .sub_offers>.container>article:last-of-type{
+    margin-bottom: 20px;
+  }
+  .sub_offers>.container>article>div{
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .sub_offers>.container>article>div>div.img{
+    height: 400px;
+  }
+  .sub_offers>.container>article>div:last-of-type{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .sub_offers>.container>article>div:last-of-type>div:first-of-type{
+    width: 60%;
+  }
+  .sub_offers>.container>article>div:last-of-type>div:last-of-type{
+    width: 40%;
+  }
+  .sub_offers>.container>article>div:last-of-type>div{
+    box-sizing: border-box;
+  }
+  .sub_offers>.container>article>div:last-of-type>div>p.serif {
+    font-size: 1.3em;
+  }
+  .sub_offers>.container>article>div:last-of-type>div:nth-of-type(1)>p:nth-of-type(2) {
+    font-size: 2em;
+    font-weight: 500;
+  }
+  .sub_offers>.container>article>div>div:nth-of-type(2){
+    padding-top: 260px;
+  }
+  .sub_offers>.container>article>div>div:nth-of-type(2)>div>a:hover{
+    background-color: white;
+    border: 1px solid #a68c5d;
+    height: 36px;
+    padding-top: 13px;
+
+    color: #a68c5d;
+  }
+  /* sub_offers_end-------------------- */
+
+  /* sub_dining_start------------------ */
+  /* sub_rooms과 같아서 함께 사용함 */
+  /* sub_dining_end-------------------- */
+
+  /* sub_about_start------------------- */
+  /* -----------------------------title */
+  .sub_about .title {
+    height: 140px;
+    padding: 46px 0 24px 0;
+  }
+  .sub_about .title>h2 {
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+  }
+  .sub_about .title>p {
+    font-size: 1rem;
+  }
+  .sub_about .title>nav>ul>li {
+    font-size: 1.2rem;
+  }
+  /* ---------------------------article */
+  .sub_about>div>article:nth-of-type(1) {
+    padding: 46px 10px 30px 10px;
+  }
+  .sub_about>div>article>h3 {
+    font-size: 1.5rem;
+  }
+  .sub_about>div>article>h2 {
+    font-size: 2.4rem;
+  }
+  .sub_about>div>article>p:nth-of-type(1) {
+    font-size: 1.3rem;
+  }
+  /* sub_about_end--------------------- */
+
+  /* sub_login_start------------------- */
+  .sub_login>.container>form>input{
+    width: 430px;
+    height: 70px;
+  }
+  .sub_login:nth-of-type(2)>.container{
+    box-sizing: border-box;
+    margin: 10px auto 50px auto;
+    padding: 70px 90px 70px 90px;
+  }
+  .sub_login:nth-of-type(2)>.container>div>.serif_kr{
+    padding-left: 20px;
+  }
+  .sub_login:nth-of-type(2)>.container>div>.line{
+    margin: 18px 0 33px 0;
+  }
+  .sub_login:nth-of-type(2)>.container>div>ul>li{
+    padding: 0 0 30px 165px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .sub_login:nth-of-type(2)>.container>div>ul>li>p:first-of-type{
+    width: 30%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .sub_login:nth-of-type(2)>.container>div>ul>li>p:nth-of-type(2){
+    width: 60%;
+    color: #5e5e5e;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .sub_login:nth-of-type(2)>.container>div>ul>li:last-of-type{
+    padding-top: 20px;
+    display: block;
+  }
+  .sub_login:nth-of-type(2)>.container>div>ul>li:last-of-type>p{
+    font-size: 0.8rem;
+  }
+  /* sub_login_end--------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* sub_reservation_start------------- */
+  .sub_reservation .title {
+    height: 140px;
+    padding: 46px 0 24px 0;
+  }
+  .sub_reservation .title>h2 {
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+  }
+  /* -------------------------form */
+  /* 나중에 다시 정리할 예정... */
+  .sub_reservation>div>.container>form {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+  }
+  .sub_reservation>div>.container>form>ul{
+    display: block;
+  }
+  .sub_reservation>div>.container>form>ul>li{
+    width: 100%;
+    border-bottom: none;
+  }
+  .sub_reservation>div>.container>form>ul>li>* {
+    float: left;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 13px 0;
+    text-align: center;
+    color: #5e5e5e;
+    font-size: 1rem;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .sub_reservation>div>.container>form>ul>li>p {
+    width: 5%;
+  }
+  .sub_reservation>div>.container>form>ul>li:first-of-type{
+    width: 100%;
+  }
+  .sub_reservation>div>.container>form>ul>li:first-child>p {
+    width: 8%;
+    box-sizing: border-box;
+    border-right: 1px solid #bebebe;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-of-type(3){
+    width: 100%;
+  }
+  .sub_reservation>div>.container>form>ul>li.date{
+    width: 100%;
+    padding: 0;
+  }
+  .sub_reservation>div>.container>form>ul>li>input[type="date"] {
+    width: 15%;
+  }
+  .sub_reservation>div>.container>form>ul>li>input[type="number"] {
+    width: 5%;
+  }
+  .sub_reservation>div>.container>form>ul>li>label {
+    width: 5%;
+  }
+  .sub_reservation>div>.container>form>ul>li>label>p{
+    margin: 0;
+  }
+  .sub_reservation>div>.container>form>ul>li:nth-child(6)>label {
+    box-sizing: border-box;
+    border-right: 1px solid #bebebe;
+  }
+  .sub_reservation>div>.container>form>ul>li>input[type="submit"] {
+    padding: 14px 0;
+
+    border: none;
+    color: white;
+    width: 17%;
+    height: 50px;
+    background-color: #212121;
+  }
+  .sub_reservation>div>.container>form>ul>li>input[type="submit"]:hover {
+    background-color: #a68c5d;
+  }
+  .sub_reservation>.container>article{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+  }
+  .sub_reservation>.container>article>div:nth-of-type(2){
+    width: 580px;
+  }
+  .sub_reservation>.container>article>div:nth-of-type(3){
+    height: 140px;
+  }
+  /* sub_reservation_end--------------- */
+}

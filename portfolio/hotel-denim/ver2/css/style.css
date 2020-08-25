@@ -6,7 +6,6 @@
 
 
 
-/* ----------------- reset ----------------- */
 
 /* 컬러칩
 (다크그레이) #212121 : 
@@ -30,15 +29,12 @@
 (밝은 오트밀) #f6f3ee :
 index_rooms 배경색
 
-
-
-
 */
 
 /* 폰트 사이즈 변경
 
   font-size: 0.7rem; 11px;
-
+  font-size: 0.8rem; 12px;
   font-size: 0.9rem; 14px;
   font-size: 1rem; 16px;
   font-size: 1.1rem; 18px;
@@ -47,12 +43,13 @@ index_rooms 배경색
   font-size: 1.5rem; 24px;
 
   font-size: 1.8rem; 29px;
-
+  font-size: 1.9rem; 30px;
   font-size: 2rem; 32px;
 
+  font-size: 2.2rem; 35px;
 */
 
-/* 전체 여백 리셋 */
+/* ----------------- reset ----------------- */
 * {
   margin: 0;
   padding: 0;
@@ -81,8 +78,7 @@ a {
 
 
 /* ================= mobile start ================= */
-
-/* ----------------- wrap ----------------- */
+/* ----------------- mobile wrap ----------------- */
 #wrap {
   width: 100%;
   height: 100vh;
@@ -116,7 +112,7 @@ a {
 
 
 
-/* ----------------- header start ----------------- */
+/* ----------------- mobile header start ----------------- */
 /* 헤더 색상과 크기 */
 #header {
   background-color: #212121;
@@ -188,14 +184,14 @@ a {
 #header .nav>.nav_reservation {
   display: none;
 }
-/* ----------------- header end ----------------- */
+/* ----------------- mobile header end ----------------- */
 
 
 
 
 
 
-/* ----------------- section start ----------------- */
+/* ----------------- mobile section start ----------------- */
 section .tit {
   width: 100%;
   height: auto;
@@ -217,14 +213,14 @@ section .tit>p {
   font-weight: 400;
   letter-spacing: -1px;
 }
-/* ----------------- section end ----------------- */
+/* ----------------- mobile section end ----------------- */
 
 
 
 
 
 
-/* ----------------- footer start ----------------- */
+/* ----------------- mobile footer start ----------------- */
 /* 푸터 배경색 */
 #footer {
   background-color: #212121;
@@ -260,7 +256,151 @@ section .tit>p {
   color: #727272;
   padding: 20px 0;
 }
-/* ----------------- footer end ----------------- */
-
-
+/* ----------------- mobile footer end ----------------- */
 /* ================= mobile end ================= */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= tablet end ================= */
+@media screen and (min-width: 768px)
+{
+/* ----------------- tablet footer start ----------------- */
+/* flex로 가로배치하고 여백 변경 */
+#footer>.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+#footer>.container>.right {
+  order: 2;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 20px 0 0 0;
+}
+#footer .ico {
+  padding: 0;
+}
+#footer>.container>.left {
+  order: 1;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 20px 0 0 20px;
+}
+/* ----------------- tablet footer end ----------------- */
+}
+/* ================= tablet end ================= */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= pc start ================= */
+@media screen and (min-width: 1200px)
+{
+/* ----------------- pc wrap ----------------- */
+/* 컨테이너 너비, 중앙정렬 설정 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* 로고 사이즈 변경 */
+.logo {
+  width: 250px;
+}
+.logo .serif:first-child {
+  font-size: 30px;
+}
+.logo .serif:first-child span {
+  font-size: 35px;
+}
+.logo .serif:last-child {
+  font-size: 12px;
+}
+
+
+
+
+
+/* ----------------- pc header start ----------------- */
+/* 헤더 높이 */
+#header {
+  height: 153px;
+}
+#header>.container.first {
+  height: 112px;
+  justify-content: center;
+  align-items: center;
+}
+/* gnb 메뉴, book 버튼 pc에서는 숨김 */
+#header .gnb,
+#header .btn_book
+{
+  display: none;
+}
+/* 내비, 내비 리스트 모두 항상 보임으로 변경 */
+#header .nav {
+  display: flex;
+  flex-flow: row wrap;
+  height: 40px;
+}
+
+/* 내비 리스트 */
+#header .nav>a {
+  width: 16.6%;
+  padding-top: 11px;
+  
+  color: #bebebe;
+  font-size: 14px;
+}
+#header .nav>.nav_reservation {
+  display: block;
+  width: 17%;
+  background-color: #a68c5d;
+  color: white;
+}
+
+/* 내비 리스트 hover 효과 */
+#header .nav>a:hover {
+  box-sizing: border-box;
+  padding-top: 10px;
+  border: 1px solid #a68c5d;
+
+  color: white;
+}
+#header .nav>.nav_reservation:hover {
+  background-color: #212121;
+}
+/* ----------------- pc header end ----------------- */
+
+
+
+
+
+
+
+
+/* ----------------- pc footer start ----------------- */
+#footer>.container>.right {
+  padding: 40px 0;
+}
+#footer>.container>.left {
+  padding-top: 60px;
+}
+/* ----------------- pc footer end ----------------- */
+}
+/* ================= pc end ================= */

@@ -1,0 +1,477 @@
+
+.clear {
+  clear: both;
+}
+
+/* mobile----------- */
+
+  /* ----------------------------wrap */
+  .wrap {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  /* ------------------------------header */
+
+  header > .container {
+    position: relative;
+  }
+  header > .container > .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  header > .container > .book {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* -------------------------------offers */
+  .offers {
+    width: 100%;
+  }
+  /* -----------------------------------rooms */
+  .rooms {
+    width: 100%;
+  }
+
+  /* ---------------------------------location */
+  .location {
+    width: 100%;
+  }
+  .location > article {
+    background-color: #f2ede7;
+  }
+
+  /* location_text */
+  .location > article > .container > div {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ------------------------------------footer */
+  footer {
+    width: 100%;
+  }
+
+/* mobile_end------------ */
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px)
+{
+
+  /* -----------------------------------main */
+
+  #main > .container > div.serif {
+    font-size: 1.6em;
+  }
+  /* -----------------------------------offers */
+  .offers {
+    height: 454px;
+    justify-content: space-evenly;
+  }
+  .offers > article {
+    margin: 0 0 25px 0;
+  }
+  /* -----------------------------------rooms */
+  .rooms > .container {
+    height: 454px;
+    justify-content: center;
+  }
+  .rooms > .container > article {
+    width: 46%;
+    margin: 0 0 25px 0;
+  }
+
+  .rooms > .container > article:last-of-type > div > p:nth-of-type(3) {
+    height: 160px;
+  }
+  /* ------------------------------------footer */
+  footer > .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  footer > .container > div.left {
+    order: 1;
+    width: 60%;
+    padding-top: 20px;
+  }
+  footer > .container > div.right {
+    order: 2;
+    width: 24%;
+    padding-top: 20px;
+  }
+
+}
+
+@media screen and (min-width: 1200px)
+{
+
+  /* ---------------------------logo */
+  .logo > .box {
+    padding: 33px 0 17px 0;
+  }
+
+  /* ------------------------------title */
+  .title {
+    padding: 46px 0 24px 0;
+    padding-bottom: 24px;
+  }
+  .title > h2 {
+    padding-bottom: 10px;
+  }
+
+  /* --------------------------header */
+
+  header > .container:first-child {
+    box-sizing: border-box;
+  }
+
+  /* --------------------------header_nav */
+  header > div:nth-of-type(3) > nav {
+    /* jquery menu 안보일때 미디어 PC에서
+        display: none으로 nav가 안보여서 강제 우선순위를 줌 */
+    display: block !important;
+
+    box-sizing: border-box;
+  }
+
+  header > div:nth-of-type(3) > nav > ul > li {
+    padding-bottom: 11px;
+  }
+
+  header > div:nth-of-type(3) > nav > ul > li:hover {
+    height: 40px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ---------------------main */
+  #main {
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #main > .container > div.serif {
+    padding-left: 0;
+    font-weight: 500;
+  }
+
+
+
+
+
+
+
+
+
+
+  /* -------------------------form */
+  /* 나중에 다시 정리할 예정... */
+
+  #main > .container > form > ul > li > * {
+    float: left;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+  #main > .container > form > ul > li > p {
+    width: 5%;
+  }
+  #main > .container > form > ul > li:first-child > p {
+    width: 8%;
+    box-sizing: border-box;
+    border-right: 1px solid #bebebe;
+  }
+  #main > .container > form > ul > li > input[type="date"] {
+    width: 15%;
+  }
+  #main > .container > form > ul > li > input[type="number"] {
+    width: 5%;
+  }
+  #main > .container > form > ul > li > label {
+    width: 5%;
+  }
+  #main > .container > form > ul > li:nth-child(6) > label {
+    box-sizing: border-box;
+    border-right: 1px solid #bebebe;
+  }
+  #main > .container > form > ul > li > input[type="submit"] {
+    padding: 14px 0;
+
+    border: none;
+    color: white;
+    width: 17%;
+    height: 50px;
+    background-color: #212121;
+  }
+  #main > .container > form > ul > li > input[type="submit"]:hover {
+    background-color: #a68c5d;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ------------------------offers */
+  .offers {
+    height: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .offers > article:hover {
+    transform: scale(1.02);
+    border: 1px solid #bebebe;
+  }
+
+  /* -----------------offers date */
+  .offers > article > a > div > p:last-child {
+    display: block;
+  }
+  .offers > article > a > div > p:last-child {
+    padding-top: 1rem;
+    font-weight: 300;
+    color: #5e5e5e;
+  }
+  /* -------------------offers third */
+  .offers > article:nth-of-type(3) {
+    display: block;
+  }
+  /* ---------------------------dining */
+  .dining {
+    display: block;
+
+    width: 100%;
+    height: 600px;
+    background-color: #f5f5f5;
+  }
+  .dining > .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .dining > .container > article {
+    background-color: white;
+    width: 48.25%;
+    height: 400px;
+
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+  }
+  .dining > .container > article:hover {
+    transform: scale(1.02);
+    border: 1px solid #bebebe;
+  }
+  .dining > .container > article > a > .img {
+    height: 258px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .dining > .container > article:nth-of-type(1) > a > .img {
+    background-image: url("../images/02dining_6.jpg");
+  }
+  .dining > .container > article:nth-of-type(2) > a > .img {
+    background-image: url("../images/02dining_7.jpg");
+  }
+  .dining > .container > article > a > div:nth-of-type(2) {
+    padding-top: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 1em;
+  }
+  .dining > .container > article > a > div > .serif {
+    color: #a68c5d;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .dining > .container > article > a > div > p:nth-of-type(2) {
+    color: #5e5e5e;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .dining > .container > article > a > div > p:last-child {
+    padding-top: 1rem;
+    font-weight: 300;
+    color: #5e5e5e;
+  }
+
+  /* ------------------------rooms */
+  .rooms {
+    background-color: white;
+  }
+  .rooms > .container {
+    display: flex;
+    flex-flow: row wrap;
+
+    height: 600px;
+  }
+  .rooms > .container > article {
+    background-color: #f6f3ee;
+    width: 50%;
+    height: 400px;
+    margin: 0 0 25px 0;
+  }
+  .rooms > .container > article > div.img {
+    height: 400px;
+  }
+  .rooms > .container > article:last-of-type > div:nth-of-type(1) {
+    padding: 50px 46px 0 46px;
+  }
+  .rooms > .container > article:last-of-type > div > p.serif {
+    font-size: 1.6rem;
+  }
+  .rooms > .container > article:last-of-type > div > p:nth-of-type(2) {
+    font-size: 2rem;
+  }
+  .rooms > .container > article:last-of-type > div > p:nth-of-type(3) {
+    height: 160px;
+  }
+  .rooms > .container > article > div:nth-of-type(2) > a:hover {
+    background-color: #f6f3ee;
+    border: 1px solid #a68c5d;
+    padding-top: 13px;
+    color: #a68c5d;
+  }
+
+  /* ---------------------membership */
+  .membership {
+    display: block;
+    width: 100%;
+    height: 340px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/04member_1.jpg');
+  }
+  .membership > article > .title > p {
+    color: #bebebe;
+    font-weight: 200;
+  }
+  .membership > article > div {
+    text-align: center;
+  }
+  .membership > article > div > a {
+    display: inline-block;
+    width: 202px;
+    height: 36px;
+
+    margin-top: 40px;
+    border: 1px solid #a68c5d;
+    padding-top: 12px;
+
+    color: white;
+    letter-spacing: -1px;
+  }
+  .membership > article > div > a:hover {
+    background-color: #a68c5d;
+  }
+
+  /* -----------------------location */
+  .location {
+    height: 520px;
+  }
+  .location > article {
+    height: 340px;
+  }
+
+  /* -------------------------footer */
+  footer { 
+    height: 180px;
+  }
+  footer > .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  footer > .container > div.left {
+    order: 1;
+    padding-top: 50px;
+  }
+  footer > .container > div.right {
+    order: 2;
+    padding-right: 61px;
+  }
+
+}
