@@ -1,132 +1,173 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/style-sub.css">
-    <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <title>HOTEL DENIM SEOUL : ABOUT</title>
-  </head>
-  <body>
-    <div class="wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_about.css">
+  <title>HOTEL DENIM SEOUL : ABOUT</title>
+</head>
+<body>
+  <!-- 전체를 감싸는 wrap -->
+  <div id="wrap">
 
-      <header>
-        <div class="container">
-          <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="logo serif">
-            <div class="box">
-              <a href="index.html">
-                <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                <p>SEOUL</p>
-              </a>
-            </div>
-          </div>
-          <a href="index.html" class="book serif">
-            <div class="menu">BOOK</div>
+
+
+
+    <!-- 헤더 -->
+    <header id="header">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container first">
+
+        <!-- 모바일 gnb 메뉴 -->
+        <div class="gnb">
+          <div class="top"></div>
+          <div class="mid"></div>
+          <div class="bot"></div>
+        </div>
+
+        <!-- 로고 -->
+        <div class="logo">
+          <a href="index.html">
+            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+            <p class="serif">SEOUL</p>
           </a>
         </div>
-        <div class="line"></div>
-        <div class="container">
-          <nav>
-            <ul class="serif">
-              <li><a href="rooms.html">ROOMS</a></li>
-              <li><a href="offers.html">OFFERS</a></li>
-              <li><a href="dining.html">DINING</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="login.html">LOGIN</a></li>
-              <li><a href="reservation.html">RESERVATION</a></li>
-            </ul>
-          </nav>
+        
+        <!-- 모바일 book 버튼 -->
+        <a href="reservation.html" class="btn_book">
+          <p class="serif">BOOK</p>
+        </a>
+      </div>
+
+      <!-- 구분선 -->
+      <div class="line"></div>
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container last">
+
+        <!-- 내비게이션 -->
+        <nav class="nav serif">
+          <a href="rooms.html">ROOMS</a>
+          <a href="offers.html">OFFERS</a>
+          <a href="dining.html">DINING</a>
+          <a href="about.html">ABOUT</a>
+          <a href="login.html">LOGIN</a>
+          <a href="reservation.html" class="nav_reservation">RESERVATION</a>
+        </nav>
+      </div>
+
+    </header>
+
+
+
+    <!-- about 섹션 -->
+    <section id="about">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container">
+        
+        <!-- 타이틀 -->
+        <div class="tit">
+          <h2 class="serif_kr">호텔 소개</h2>
         </div>
-      </header>
 
-      <section class="sub_about">
-        <div class="container">
-          <div class="title">
-            <h2 class="serif_kr">호텔 소개</h2>
-          </div>
-          <div>
-            <img src="../images/00main_1.jpg" alt="hotel images">
-          </div>
-          <article>
-            <h3 class="serif">HOTEL DENIM</h3>
-            <h2 class="serif_kr">데님 호텔</h2>
-            <div class="line"></div>
-            <p>
-              <span class="serif">Denim ages and suits better with time.</span>
-              <br>
-              <span class="serif_kr">“데님은 입을수록 편하고 시간이 흐를수록 맞는 멋이 더해진다.”</span>
-            </p>
-            <p class="sans">
-              데님호텔은 국내 유일의 데님소재를 집중적으로 사용한 비즈니스 & 디자인 호텔입니다.
-              <br>
-              양재천, 청계산, 대모산, 구룡산등 산책로와 등산코스들이 있어 피로에 지친 비즈니스 고객에게 편안한 휴식공간을 제공해 드리며, 한류의 중심인 서울 강남에 위치하여 여행객들에게도 최적의 장소입니다.
-              <br>
-              데님호텔은 고객들이 머무시는 동안 편안함과 즐거움을 제공해드릴 수 있도록 최선을 하겠습니다.
-              <br>
-              ‘Hotel Denim Seoul’의 모든 직원들은 기본에 충실한 고객서비스, 객실의 편안함과 안락함을 제공해 드릴 뿐만이 아니라 동시에 ‘Denim’만의 디자인과 세련미를 선사해 드릴 수 있도록 최선을 다하겠습니다.
-              <br>
-              감사합니다.
-            </p>
-            <p class="sans">
-              Denim Hotel is the only “ Business & Design Hotel “ characterized by unique architecture of the denim in Korea.
-              <br>
-              It is located in the finest business  district in Seoul, Korea, also with easy access to trails for walking and hiking, nearby Yangjaecheon, Cheonggyesan, Daemosan, and Guryongsan that provide fresh air and cozy place to tired and weary business customers.
-              <br>
-              In addition, the hotel is located in Gangnam of Seoul which is the center of hallyu makes you offer the best place to shopping and in the street of youth. We will always do our best. 
-              <br>
-              Thank you.
-            </p>
-          </article>
-        </div>  
-      </section>
+        <!-- 이미지 -->
+        <img src="../images/00main_1.jpg" alt="hotel image">
 
-      <footer>
-        <div class="container">
-          <div class="right">
-            <div>
-              <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- 서브 타이틀 -->
+        <div class="sub_tit">
+          <h3 class="serif">HOTEL DENIM</h3>
+          <h2 class="serif_kr">데님 호텔</h2>
+        </div>
+
+        <!-- 구분선 -->
+        <div class="line"></div>
+
+        <!-- 텍스트 -->
+        <div class="txt">
+          <p>
+            <span class="serif">Denim ages and suits better with time.</span>
+            <br>
+            <span class="serif_kr">“데님은 입을수록 편하고 시간이 흐를수록 맞는 멋이 더해진다.”</span>
+          </p>
+          <p class="sans">
+            데님호텔은 국내 유일의 데님소재를 집중적으로 사용한 비즈니스 & 디자인 호텔입니다.
+            <br>
+            양재천, 청계산, 대모산, 구룡산등 산책로와 등산코스들이 있어 피로에 지친 비즈니스 고객에게 편안한 휴식공간을 제공해 드리며, 한류의 중심인 서울 강남에 위치하여 여행객들에게도 최적의 장소입니다.
+            <br>
+            데님호텔은 고객들이 머무시는 동안 편안함과 즐거움을 제공해드릴 수 있도록 최선을 하겠습니다.
+            <br>
+            ‘Hotel Denim Seoul’의 모든 직원들은 기본에 충실한 고객서비스, 객실의 편안함과 안락함을 제공해 드릴 뿐만이 아니라 동시에 ‘Denim’만의 디자인과 세련미를 선사해 드릴 수 있도록 최선을 다하겠습니다.
+            <br>
+            감사합니다.
+          </p>
+          <p class="sans">
+            Denim Hotel is the only “ Business & Design Hotel “ characterized by unique architecture of the denim in Korea.
+            <br>
+            It is located in the finest business  district in Seoul, Korea, also with easy access to trails for walking and hiking, nearby Yangjaecheon, Cheonggyesan, Daemosan, and Guryongsan that provide fresh air and cozy place to tired and weary business customers.
+            <br>
+            In addition, the hotel is located in Gangnam of Seoul which is the center of hallyu makes you offer the best place to shopping and in the street of youth. We will always do our best. 
+            <br>
+            Thank you.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="container">
+
+        <!-- pc에서 오른쪽에 위치 -->
+        <div class="right">
+
+          <!-- SNS 아이콘 -->
+          <div class="ico">
+            <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d7654211-Reviews-Hotel_Denim-Seoul.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            </div>
-            <div class="logo serif">
-              <div class="box">
-                <a href="index.html">
-                  <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                  <p>SEOUL</p>
-                </a>
-              </div>
-            </div>
           </div>
-          <div class="left sans">
-            <ul>
-              <li><a href="index.html">오시는 길</a></li>
-              <li>|</li>
-              <li><a href="index.html">사이트 맵</a></li>
-              <li>|</li>
-              <li><a href="index.html">개인정보 처리 방침</a></li>
-              <li>|</li>
-              <li><a href="index.html">이용약관</a></li>
-            </ul>
-            <p class="sans">
-              Copyright © 2014 DENIM HOTEL . All right reserved.
-              <br />
-              사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
-              : 2015-서울강남-01638호 | (주)호텔데님
-            </p>
+
+          <!-- 로고 -->
+          <div class="logo">
+            <a href="index.html">
+              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+              <p class="serif">SEOUL</p>
+            </a>
           </div>
         </div>
-      </footer>
-    </div>
-    <script src="../js/javascript.js"></script>
-  </body>
+
+        <!-- pc에서 왼쪽에 위치 -->
+        <div class="left sans">
+          <a href="index.html">오시는 길</a>
+          <p>|</p>
+          <a href="index.html">사이트 맵</a>
+          <p>|</p>
+          <a href="index.html">개인정보 처리 방침</a>
+          <p>|</p>
+          <a href="index.html">이용약관</a>
+          <p class="txt">
+            Copyright © 2014 DENIM HOTEL . All right reserved.
+            <br>
+            사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
+            : 2015-서울강남-01638호 | (주)호텔데님
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+  </div>
+
+  <!-- JavaScript -->
+  <script></script>
+</body>
 </html>

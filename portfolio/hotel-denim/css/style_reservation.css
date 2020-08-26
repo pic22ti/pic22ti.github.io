@@ -1,4 +1,3 @@
-
 /* ================= mobile start ================= */
 
 #reservation {
@@ -18,7 +17,6 @@
 
 /* 폼 스타일 flex */
 #reservation .room_search_form {
-  /* background-color: white; */
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -33,6 +31,8 @@
   line-height: 50px;
 }
 #reservation .room_search_form>input {
+  cursor: pointer;
+
   background-color: white;
   width: 25%;
   height: 50px;
@@ -145,8 +145,9 @@
   display: block;
   background-color: #a68c5d;
   width: 204px;
-  height: 36px;
+  height: 50px;
   border: none;
+  box-sizing: border-box;
   padding-top: 14px;
   margin: 0 auto;
 
@@ -156,3 +157,107 @@
 }
 
 /* ================= mobile end ================= */
+
+
+
+
+
+
+
+/* ================= pc start ================= */
+@media screen and (min-width: 1200px)
+{
+/* 타이틀 */
+#reservation .tit {
+  height: 120px;
+}
+
+
+
+
+
+
+
+/* 폼 스타일 flex */
+#reservation .room_search_form {
+  width: 100%;
+  height: 50px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* label, input 공통 스타일 */
+#reservation .room_search_form>label {
+  width: 5%;
+}
+#reservation .room_search_form>input {
+  width: 5%;
+}
+#reservation .room_search_form>.period {
+  width: 8%;
+  height: 50px;
+}
+#reservation .room_search_form>input[type=date] {
+  width: 15%;
+}
+#reservation .room_search_form>.arr {
+  width: 5%;
+  height: 50px;
+}
+
+/* mobile 구분선 삭제 */
+#reservation .room_search_form>label,
+#reservation .room_search_form>input,
+#reservation .room_search_form>.period,
+#reservation .room_search_form>.arr,
+#reservation .room_search_form>#adult
+{
+  border: none;
+}
+
+/* oc 구분선 */
+#reservation .room_search_form>.period,
+#reservation .room_search_form>label[for=night]
+{
+  box-sizing: border-box;
+  border-right: 1px solid #e5e5e5;
+}
+
+/* 검색 버튼 스타일 */
+#reservation .room_search_form>.btn_search {
+  width: 17%;
+}
+#reservation .room_search_form>.btn_search:hover {
+  transition: 0.5s;
+  background-color: #a68c5d;
+}
+
+
+
+
+
+/* 객실 목록 스타일 */
+#reservation article {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+#reservation article>img,
+#reservation article>.txt,
+#reservation article>.center 
+{
+  width: calc(100% / 3);
+  box-sizing: border-box;
+}
+#reservation article>.txt {
+  padding-left: 50px;
+}
+#reservation article .btn:hover {
+  transition: 0.5s;
+  background-color: #ffffff;
+  border: 1px solid #a68c5d;
+  color: #a68c5d;
+}
+
+}
+/* ================= pc end ================= */

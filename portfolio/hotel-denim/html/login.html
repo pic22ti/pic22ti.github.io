@@ -1,76 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/style-sub.css">
-    <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <title>HOTEL DENIM SEOUL : LOGIN</title>
-  </head>
-  <body>
-    <div class="wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_login.css">
+  <title>HOTEL DENIM SEOUL : LOGIN</title>
+</head>
+<body>
+  <!-- 전체를 감싸는 wrap -->
+  <div id="wrap">
 
-      <header>
-        <div class="container">
-          <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="logo serif">
-            <div class="box">
-              <a href="index.html">
-                <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                <p>SEOUL</p>
-              </a>
-            </div>
-          </div>
-          <a href="reservation.html" class="book serif">
-            <div class="menu">BOOK</div>
+
+
+
+    <!-- 헤더 -->
+    <header id="header">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container first">
+
+        <!-- 모바일 gnb 메뉴 -->
+        <div class="gnb">
+          <div class="top"></div>
+          <div class="mid"></div>
+          <div class="bot"></div>
+        </div>
+
+        <!-- 로고 -->
+        <div class="logo">
+          <a href="index.html">
+            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+            <p class="serif">SEOUL</p>
           </a>
         </div>
-        <div class="line"></div>
-        <div class="container">
-          <nav>
-            <ul class="serif">
-              <li><a href="rooms.html">ROOMS</a></li>
-              <li><a href="offers.html">OFFERS</a></li>
-              <li><a href="dining.html">DINING</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="login.html">LOGIN</a></li>
-              <li><a href="reservation.html">RESERVATION</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+        
+        <!-- 모바일 book 버튼 -->
+        <a href="reservation.html" class="btn_book">
+          <p class="serif">BOOK</p>
+        </a>
+      </div>
 
-      <section class="sub_login">
-        <div class="title">
-          <h2 class="serif">LOGIN</h2>
-          <h2 class="serif_kr">로그인</h2>
-        </div>
-        <div class="container">
-          <form action="">
-            <input type="text" placeholder="아이디">
-            <input type="password" placeholder="비밀번호">
-            <input type="button" value="로그인">
-          </form>
-          <div>
-            <a href="#">아이디 찾기</a>
-            <p>|</p>
-            <a href="#">비밀번호 찾기</a>
-            <p>|</p>
-            <a href="#">회원가입</a>
-          </div>
-        </div>  
-      </section>
-      <section class="sub_login">
-        <div class="title">
+      <!-- 구분선 -->
+      <div class="line"></div>
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container last">
+
+        <!-- 내비게이션 -->
+        <nav class="nav serif">
+          <a href="rooms.html">ROOMS</a>
+          <a href="offers.html">OFFERS</a>
+          <a href="dining.html">DINING</a>
+          <a href="about.html">ABOUT</a>
+          <a href="login.html">LOGIN</a>
+          <a href="reservation.html" class="nav_reservation">RESERVATION</a>
+        </nav>
+      </div>
+
+    </header>
+
+
+
+    <!-- login 섹션 -->
+    <section id="login">
+      
+      <!-- 타이틀 -->
+      <div class="tit">
+        <h2 class="serif">LOGIN</h2>
+        <h2 class="serif_kr">로그인</h2>
+      </div>
+
+      <!-- 로그인 폼 -->
+      <form action="#" class="login_form">
+        <input type="text" placeholder="아이디">
+        <input type="password" placeholder="비밀번호">
+        <input type="submit" value="로그인">
+      </form>
+
+      <!-- 아이디 찾기 등 -->
+      <div class="forgot_id">
+        <a href="#">아이디 찾기</a>
+        <p>|</p>
+        <a href="#">비밀번호 찾기</a>
+        <p>|</p>
+        <a href="#">회원가입</a>
+      </div>
+      
+    </section>
+
+
+
+    <!-- membership 섹션 -->
+    <section id="membership">
+      <div class="container">
+
+        <!-- 타이틀 -->
+        <div class="tit">
           <h2 class="serif">MEMBERSHIP</h2>
           <h2 class="serif_kr">호텔 데님 리워즈</h2>
           <p>
@@ -81,140 +108,142 @@
             적립된 포인트는 데님 호텔 객실 및 레스토랑 & 바에서 현금처럼 사용하시거나 상품권 등으로 이용하실 수 있습니다.
           </p>
         </div>
-        <div class="container">
-          <div>
+
+        <!-- 내용 -->
+        <ul class="box">
+
+          <!-- 리스트_1 회원 특전 -->
+          <li class="list_1">
             <h3 class="serif_kr">회원 특전</h3>
-            <div class="line"></div>
-            <ul class="sans">
-              <li>
-                <p>포인트 적립</p>
-                <p>
+
+            <div class="txt sans">
+              <p class="row1">포인트 적립</p>
+              <p class="row2">
                 · 객실 이용금액 3% 적립<br>
                 · 식음료 이용금액 5% 적립
-                </p>
-              </li>
-              <li>
-                <p>체크아웃 시간 연장</p>
-                <p>
-                기존 11:00 am  →  연장 14:00 PM
-                </p>
-              </li>
-              <li>
-                <p>투숙 시 웰컴 어메니티 제공</p>
-              </li>
-              <li>
-                <p>RIVER VIEW 업그레이드</p>
-              </li>
-              <li>
-                <!-- 열고 닫는 <>꺽쇠기호는 
-                  <는 &lt; 
-                  >는 &gt; -->
-                <p>&lt;안내 사항&gt;</p>
-                <p>
-                  · 위 특전은 객실 상황에 따라 제한될 수 있습니다.<br>
-                  · 특전 제공 및 포인트 적립은 호텔 정규요금에 한하여 적용 가능 합니다. (약관 제 8조 6항 참조)<br>
-                  · 체크아웃 후, 24시간 이내 체크인 시 연박으로 간주됩니다.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="serif_kr">포인트 적립</h3>
-            <div class="line"></div>
-            <ul class="sans">
-              <li>
-                <p>객실 투숙 시 이용 요금의 3% 포인트 적립</p>
-                <p>
-                  · 회원 본인 투숙 및 결제 시 최대 3개의 객실까지 적립 가능합니다.<br>
-                  · 객실 패키지 이용 시에도 적립 가능 합니다.<br>
-                  · 호텔 정규요금에 한하여 적립이 가능 합니다.<br>
-                  · 객실 요금 외 추가 요금 적립은 제외 됩니다.<br>
-                  · 일부 특가상품, 여행사 요금, 학회 및 연회행사로 투숙한 경우 적립은 제외됩니다.
-                </p>
-              </li>
-              <li>
-                <p>레스토랑 & 라운지 이용 요금의 5% 포인트 적립</p>
-                <p>
-                  · 데님 호텔 레스토랑에서 적립 가능 합니다.<br>
-                  · 일부 프로모션은 적립 제외 됩니다.<br>
-                  · 상품권 구입, 룸서비스 이용 시 적립 제외 됩니다.<br>
-                  · 주문 포장 및 상차림 등 외부 아이템 이용 시 적립 제외 됩니다.
-                </p>
-              </li>
-              <li>
-                <p>&lt;안내 사항&gt;
-                </p>
-                <p>
-                  · 상기 영업장 외의 상품과 일부 프로모션은 포인트 적립에 제외됩니다.<br>
-                  · 포인트는 적립 시점으로 3년 경과 시, 월말에 자동으로 소멸 됩니다.<br>
-                  · 이용 요금(기타요금, 세금, 봉사료 제외) 기준으로 일정 금액이 적립 됩니다.<br>
-                  · 회원의 포인트 적립은 호텔에서 제공하는 어떠한 다른 멤버십 할인 혜택, 쿠폰 사용 및 제휴카드할인 혜택과 중복 제공되지 않습니다.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="serif_kr">포인트 사용</h3>
-            <div class="line"></div>
-            <ul class="sans">
-              <li>
-                <p>현금처럼 사용</p>
-                <p>
-                  · 1포인트는 1원(KRW)의 가치를 가집니다.<br>
-                  · 데님 호텔 객실, 레스토랑 & 라운지, 기타 영업장에서 현금과 동일하게 사용 가능합니다.
-                </p>
-              </li>
-              <li>
-                <p>&lt;안내 사항&gt;
-                </p>
-                <p>
-                  · 포인트 상품의 현금으로 반환 및 교환은 불가합니다.<br>
-                  · 보유 포인트가 교환 포인트보다 부족 시 부분 결제로 이용이 불가합니다.<br>
-                  · 차감 포인트는 호텔 사정에 의해 변경될 수 있습니다.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+              </p>
+              <p class="row1">체크아웃 시간 연장</p>
+              <p class="row2">기존 11:00 am  →  연장 14:00 PM</p>
+              <p class="row1 row_full">투숙 시 웰컴 어메니티 제공</p>
+              <p class="row1 row_full">RIVER VIEW 업그레이드</p>
 
-      <footer>
-        <div class="container">
-          <div class="right">
-            <div>
-              <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <p class="notice">&lt;안내 사항&gt;</p>
+              <p class="notice">
+                · 위 특전은 객실 상황에 따라 제한될 수 있습니다.<br>
+                · 특전 제공 및 포인트 적립은 호텔 정규요금에 한하여 적용 가능 합니다. (약관 제 8조 6항 참조)<br>
+                · 체크아웃 후, 24시간 이내 체크인 시 연박으로 간주됩니다.
+              </p>
+            </div>
+          </li>
+
+          <!-- 리스트_2 포인트 적립 -->
+          <li class="list_2">
+            <h3 class="serif_kr">포인트 적립</h3>
+
+            <div class="txt sans">
+
+              <p class="row1">객실 투숙 시 이용 요금의 3% 포인트 적립</p>
+              <p class="row2">
+                · 회원 본인 투숙 및 결제 시 최대 3개의 객실까지 적립 가능합니다.<br>
+                · 객실 패키지 이용 시에도 적립 가능 합니다.<br>
+                · 호텔 정규요금에 한하여 적립이 가능 합니다.<br>
+                · 객실 요금 외 추가 요금 적립은 제외 됩니다.<br>
+                · 일부 특가상품, 여행사 요금, 학회 및 연회행사로 투숙한 경우 적립은 제외됩니다.
+              </p>
+
+              <p class="row1">레스토랑 & 라운지 이용 요금의 5% 포인트 적립</p>
+              <p class="row2">
+                · 데님 호텔 레스토랑에서 적립 가능 합니다.<br>
+                · 일부 프로모션은 적립 제외 됩니다.<br>
+                · 상품권 구입, 룸서비스 이용 시 적립 제외 됩니다.<br>
+                · 주문 포장 및 상차림 등 외부 아이템 이용 시 적립 제외 됩니다.
+              </p>
+
+              <p class="notice">&lt;안내 사항&gt;</p>
+              <p class="notice">
+                · 상기 영업장 외의 상품과 일부 프로모션은 포인트 적립에 제외됩니다.<br>
+                · 포인트는 적립 시점으로 3년 경과 시, 월말에 자동으로 소멸 됩니다.<br>
+                · 이용 요금(기타요금, 세금, 봉사료 제외) 기준으로 일정 금액이 적립 됩니다.<br>
+                · 회원의 포인트 적립은 호텔에서 제공하는 어떠한 다른 멤버십 할인 혜택, 쿠폰 사용 및 제휴카드할인 혜택과 중복 제공되지 않습니다.
+              </p>
+            </div>
+          </li>
+
+          <!-- 리스트_3 포인트 사용 -->
+          <li class="list_3">
+            <h3 class="serif_kr">포인트 사용</h3>
+
+            <div class="txt sans">
+              <p class="row1">현금처럼 사용</p>
+              <p class="row2">
+                · 1포인트는 1원(KRW)의 가치를 가집니다.<br>
+                · 데님 호텔 객실, 레스토랑 & 라운지, 기타 영업장에서 현금과 동일하게 사용 가능합니다.
+              </p>
+
+              <p class="notice">&lt;안내 사항&gt;</p>
+              <p class="notice">
+                · 포인트 상품의 현금으로 반환 및 교환은 불가합니다.<br>
+                · 보유 포인트가 교환 포인트보다 부족 시 부분 결제로 이용이 불가합니다.<br>
+                · 차감 포인트는 호텔 사정에 의해 변경될 수 있습니다.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="container">
+
+        <!-- pc에서 오른쪽에 위치 -->
+        <div class="right">
+
+          <!-- SNS 아이콘 -->
+          <div class="ico">
+            <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d7654211-Reviews-Hotel_Denim-Seoul.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            </div>
-            <div class="logo serif">
-              <div class="box">
-                <a href="index.html">
-                  <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                  <p>SEOUL</p>
-                </a>
-              </div>
-            </div>
           </div>
-          <div class="left sans">
-            <ul>
-              <li><a href="index.html">오시는 길</a></li>
-              <li>|</li>
-              <li><a href="index.html">사이트 맵</a></li>
-              <li>|</li>
-              <li><a href="index.html">개인정보 처리 방침</a></li>
-              <li>|</li>
-              <li><a href="index.html">이용약관</a></li>
-            </ul>
-            <p class="sans">
-              Copyright © 2014 DENIM HOTEL . All right reserved.
-              <br />
-              사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
-              : 2015-서울강남-01638호 | (주)호텔데님
-            </p>
+
+          <!-- 로고 -->
+          <div class="logo">
+            <a href="index.html">
+              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+              <p class="serif">SEOUL</p>
+            </a>
           </div>
         </div>
-      </footer>
-    </div>
-    <script src="../js/javascript.js"></script>
-  </body>
+
+        <!-- pc에서 왼쪽에 위치 -->
+        <div class="left sans">
+          <a href="index.html">오시는 길</a>
+          <p>|</p>
+          <a href="index.html">사이트 맵</a>
+          <p>|</p>
+          <a href="index.html">개인정보 처리 방침</a>
+          <p>|</p>
+          <a href="index.html">이용약관</a>
+          <p class="txt">
+            Copyright © 2014 DENIM HOTEL . All right reserved.
+            <br>
+            사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
+            : 2015-서울강남-01638호 | (주)호텔데님
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+  </div>
+
+  <!-- JavaScript -->
+  <script></script>
+</body>
 </html>

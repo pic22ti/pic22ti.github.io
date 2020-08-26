@@ -1,153 +1,254 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/style-sub.css">
-    <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <title>HOTEL DENIM SEOUL : DINING</title>
-  </head>
-  <body>
-    <div class="wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_layout_tab.css">
+  <title>HOTEL DENIM SEOUL : DINING</title>
+</head>
+<body>
+  <!-- 전체를 감싸는 wrap -->
+  <div id="wrap">
 
-      <header>
-        <div class="container">
-          <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="logo serif">
-            <div class="box">
-              <a href="index.html">
-                <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                <p>SEOUL</p>
-              </a>
-            </div>
-          </div>
-          <a href="reservation.html" class="book serif">
-            <div class="menu">BOOK</div>
+
+
+
+    <!-- 헤더 -->
+    <header id="header">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container first">
+
+        <!-- 모바일 gnb 메뉴 -->
+        <div class="gnb">
+          <div class="top"></div>
+          <div class="mid"></div>
+          <div class="bot"></div>
+        </div>
+
+        <!-- 로고 -->
+        <div class="logo">
+          <a href="index.html">
+            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+            <p class="serif">SEOUL</p>
           </a>
         </div>
-        <div class="line"></div>
-        <div class="container">
-          <nav>
-            <ul class="serif">
-              <li><a href="rooms.html">ROOMS</a></li>
-              <li><a href="offers.html">OFFERS</a></li>
-              <li><a href="dining.html">DINING</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="login.html">LOGIN</a></li>
-              <li><a href="reservation.html">RESERVATION</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+        
+        <!-- 모바일 book 버튼 -->
+        <a href="reservation.html" class="btn_book">
+          <p class="serif">BOOK</p>
+        </a>
+      </div>
 
-      <section class="sub_rooms">
-        <div class="container">
-          <div class="title">
-            <h2 class="serif">DINING</h2>
-            <p class="sans">미슐랭 스타 레스토랑부터 트렌디한 라운지까지, 호텔 데님에서 펼쳐지는 미식의 세계로 초대합니다.</p>
-            <nav class="sans">
-              <ul>
-                <li><a href="">레스토랑</a></li>
-                <li><a href="">라운지</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-            <img src="../images/02dining_6.jpg" alt="restaurant images">
+      <!-- 구분선 -->
+      <div class="line"></div>
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container last">
+
+        <!-- 내비게이션 -->
+        <nav class="nav serif">
+          <a href="rooms.html">ROOMS</a>
+          <a href="offers.html">OFFERS</a>
+          <a href="dining.html">DINING</a>
+          <a href="about.html">ABOUT</a>
+          <a href="login.html">LOGIN</a>
+          <a href="reservation.html" class="nav_reservation">RESERVATION</a>
+        </nav>
+      </div>
+
+    </header>
+
+
+
+    <!-- dining 섹션 -->
+    <section id="dining" class="layout_tab">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container">
+        
+        <!-- 타이틀 -->
+        <div class="tit">
+          <h2 class="serif">DINING</h2>
+          <p class="sans">미슐랭 스타 레스토랑부터 트렌디한 라운지까지, 호텔 데님에서 펼쳐지는 미식의 세계로 초대합니다.</p>
+        </div>
+
+        <!-- 탭 -->
+        <div class="tab_container sans">
+          <p class="tab select" onclick="showArticle('restaurant')">레스토랑</p>
+          <p class="tab" onclick="showArticle('lounge')">라운지</p>
+        </div>
+
+        <!-- 레스토랑 -->
+        <article class="restaurant">
+
+          <!-- 슬라이드 이미지 영역 -->
+          <div class="slide_img">
+
+            <!-- 이미지 -->
+            <img src="../images/02dining_6.jpg" alt="restaurant image" class="dining_img">
+
+            <!-- 좌우 화살표 버튼과 도트 -->
+            <img src="../images/arrow-l.png" alt="left" class="arr">
+
             <div>
-              <img src="../images/arrow-l.png" alt="left">
-              <div>
-                <img src="../images/circle-icon-color.png" alt="circle">
-                <img src="../images/circle-icon-gray.png" alt="circle">
-                <img src="../images/circle-icon-gray.png" alt="circle">
-              </div>
-              <img src="../images/arrow-r.png" alt="right">
+              <div class="dot select"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
             </div>
+
+            <img src="../images/arrow-r.png" alt="right" class="arr">
           </div>
-          <article>
+
+          <!-- 서브 타이틀 -->
+          <div class="sub_tit">
             <h3 class="serif">Restaurant</h3>
             <h2 class="serif_kr">레스토랑</h2>
-            <p class="sans">
-              다섯개의 Station으로 구성된 프리미엄 뷔페 레스토랑에서는 신선하면서도 질 좋은 식재료를 선별하여 요리 하나하나가 최고의 맛을 자랑합니다.<br> 
-              다채로운 전채요리에서부터 화려한 디저트 코너까지 세계 각국 동·서양 음식을 한자리에서 만끽할 수 있습니다.
-            </p>
-            <div>
-              <a class="sans" href="#">문의하기</a>
-            </div>
-          </article>
-          <article class="box sans">
-            <div>
-              <h4>운영 시간</h4>
-              <ul>
-                <li><div>Open</div>월요일 ~ 일요일</li>
-                <li><div>Breakfast</div>07:00 ~ 10:00</li>
-                <li><div>Lunch</div>12:00 ~ 15:00</li>
-                <li><div>Dinner</div>18:00 ~ 22:00</li>
-              </ul>
-            </div>
-            <div>
-              <h4>좌석 수</h4>
-              <ul>
-                <li>80석</li>
-              </ul>
-            </div>
-            <div>
-              <h4>예약 및 문의</h4>
-              <ul>
-                <li><div>Tel</div>+82 02-2058-1178</li>
-                <li><div>Email</div>sales@hoteldenim.com</li>
-              </ul>
-            </div>
-          </article>
-        </div>  
-      </section>
+          </div>
 
-      <footer>
-        <div class="container">
-          <div class="right">
+          <!-- 텍스트 -->
+          <p class="txt sans">
+            다섯개의 Station으로 구성된 프리미엄 뷔페 레스토랑에서는 신선하면서도 질 좋은 식재료를 선별하여 요리 하나하나가 최고의 맛을 자랑합니다.<br> 
+            다채로운 전채요리에서부터 화려한 디저트 코너까지 세계 각국 동·서양 음식을 한자리에서 만끽할 수 있습니다.
+          </p>
+
+          <!-- 문의하기 버튼 -->
+          <a href="#" class="btn sans">문의하기</a>
+
+          <!-- 자세한 내용 -->
+          <ul class="box sans">
+            <li class="list_1">
+              <h4>운영 시간</h4>
+              <p><span class="col1">Open</span>월요일 ~ 일요일</p>
+              <p><span class="col1">Breakfast</span>07:00 ~ 10:00</p>
+              <p><span class="col1">Lunch</span>12:00 ~ 15:00</p>
+              <p><span class="col1">Dinner</span>18:00 ~ 22:00</p>
+            </li>
+            <li class="list_2">
+              <h4>좌석 수</h4>
+              <p>80석</p>
+            </li>
+            <li class="list_3">
+              <h4>예약 및 문의</h4>
+              <p><span class="col1">Tel</span>+82 02-2058-1178</p>
+              <p><span class="col1">Email</span>sales@hoteldenim.com</p>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 라운지 -->
+        <article class="lounge">
+
+          <!-- 슬라이드 이미지 영역 -->
+          <div class="slide_img">
+
+            <!-- 이미지 -->
+            <img src="../images/02dining_7.jpg" alt="lounge image" class="dining_img">
+
+            <!-- 좌우 화살표 버튼과 도트 -->
+            <img src="../images/arrow-l.png" alt="left" class="arr">
+
             <div>
-              <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <div class="dot select"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <img src="../images/arrow-r.png" alt="right" class="arr">
+          </div>
+
+          <!-- 서브 타이틀 -->
+          <div class="sub_tit">
+            <h3 class="serif">Lounge</h3>
+            <h2 class="serif_kr">라운지</h2>
+          </div>
+
+          <!-- 텍스트 -->
+          <p class="txt sans">
+            다섯개의 Station으로 구성된 프리미엄 뷔페 레스토랑에서는 신선하면서도 질 좋은 식재료를 선별하여 요리 하나하나가 최고의 맛을 자랑합니다.<br> 
+            다채로운 전채요리에서부터 화려한 디저트 코너까지 세계 각국 동·서양 음식을 한자리에서 만끽할 수 있습니다.
+          </p>
+
+          <!-- 문의하기 버튼 -->
+          <a href="#" class="btn sans">문의하기</a>
+
+          <!-- 자세한 내용 -->
+          <ul class="box sans">
+            <li class="list_1">
+              <h4>운영 시간</h4>
+              <p><span class="col1">Open</span>월요일 ~ 일요일</p>
+              <p><span class="col1">Breakfast</span>07:00 ~ 10:00</p>
+              <p><span class="col1">Lunch</span>12:00 ~ 15:00</p>
+              <p><span class="col1">Dinner</span>18:00 ~ 22:00</p>
+            </li>
+            <li class="list_2">
+              <h4>좌석 수</h4>
+              <p>80석</p>
+            </li>
+            <li class="list_3">
+              <h4>예약 및 문의</h4>
+              <p><span class="col1">Tel</span>+82 02-2058-1178</p>
+              <p><span class="col1">Email</span>sales@hoteldenim.com</p>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="container">
+
+        <!-- pc에서 오른쪽에 위치 -->
+        <div class="right">
+
+          <!-- SNS 아이콘 -->
+          <div class="ico">
+            <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d7654211-Reviews-Hotel_Denim-Seoul.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            </div>
-            <div class="logo serif">
-              <div class="box">
-                <a href="index.html">
-                  <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                  <p>SEOUL</p>
-                </a>
-              </div>
-            </div>
           </div>
-          <div class="left sans">
-            <ul>
-              <li><a href="index.html">오시는 길</a></li>
-              <li>|</li>
-              <li><a href="index.html">사이트 맵</a></li>
-              <li>|</li>
-              <li><a href="index.html">개인정보 처리 방침</a></li>
-              <li>|</li>
-              <li><a href="index.html">이용약관</a></li>
-            </ul>
-            <p class="sans">
-              Copyright © 2014 DENIM HOTEL . All right reserved.
-              <br />
-              사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
-              : 2015-서울강남-01638호 | (주)호텔데님
-            </p>
+
+          <!-- 로고 -->
+          <div class="logo">
+            <a href="index.html">
+              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+              <p class="serif">SEOUL</p>
+            </a>
           </div>
         </div>
-      </footer>
-    </div>
-    <script src="../js/javascript.js"></script>
-  </body>
+
+        <!-- pc에서 왼쪽에 위치 -->
+        <div class="left sans">
+          <a href="index.html">오시는 길</a>
+          <p>|</p>
+          <a href="index.html">사이트 맵</a>
+          <p>|</p>
+          <a href="index.html">개인정보 처리 방침</a>
+          <p>|</p>
+          <a href="index.html">이용약관</a>
+          <p class="txt">
+            Copyright © 2014 DENIM HOTEL . All right reserved.
+            <br>
+            사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
+            : 2015-서울강남-01638호 | (주)호텔데님
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../js/script_mobile.js"></script>
+  <script src="../js/script_layout_tab.js"></script>
+</body>
 </html>

@@ -1,186 +1,243 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="../css/style-sub.css">
-    <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <title>HOTEL DENIM SEOUL : RESERVATION</title>
-  </head>
-  <body>
-    <div class="wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/42e191d59c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_reservation.css">
+  <title>HOTEL DENIM SEOUL : RESERVATION</title>
+</head>
+<body>
+  <!-- 전체를 감싸는 wrap -->
+  <div id="wrap">
 
-      <header>
-        <div class="container">
-          <div class="menu">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="logo serif">
-            <div class="box">
-              <a href="index.html">
-                <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                <p>SEOUL</p>
-              </a>
-            </div>
-          </div>
-          <a href="reservation.html" class="book serif">
-            <div class="menu">BOOK</div>
+
+
+
+    <!-- 헤더 -->
+    <header id="header">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container first">
+
+        <!-- 모바일 gnb 메뉴 -->
+        <div class="gnb">
+          <div class="top"></div>
+          <div class="mid"></div>
+          <div class="bot"></div>
+        </div>
+
+        <!-- 로고 -->
+        <div class="logo">
+          <a href="index.html">
+            <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+            <p class="serif">SEOUL</p>
           </a>
         </div>
-        <div class="line"></div>
-        <div class="container">
-          <nav>
-            <ul class="serif">
-              <li><a href="rooms.html">ROOMS</a></li>
-              <li><a href="offers.html">OFFERS</a></li>
-              <li><a href="dining.html">DINING</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="login.html">LOGIN</a></li>
-              <li><a href="reservation.html">RESERVATION</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+        
+        <!-- 모바일 book 버튼 -->
+        <a href="reservation.html" class="btn_book">
+          <p class="serif">BOOK</p>
+        </a>
+      </div>
 
-      <section class="sub_reservation">
-        <div class="container">
-          <div class="title">
-            <h2 class="serif_kr">객실 선택</h2>
-          </div>
-        </div>
-        <div>
-          <div class="container">
-            <form action="reservation.html">
-              <ul>
-                <li><p>숙박기간</p></li>
-                <li class="date"><input type="date" /></li>
-                <li><p>→</p></li>
-                <li class="date"><input type="date" /></li>
-                <li><input type="number" id="night" value="1" /></li>
-                <li><label for="night"><p>박</p></label></li>
-                <li><label for="room"><p>객실</p></label></li>
-                <li><input type="number" id="room" value="1" /></li>
-                <li><label for="adult"><p>어른</p></label></li>
-                <li><input type="number" id="adult" value="2" /></li>
-                <li><label for="child"><p>아이</p></label></li>
-                <li><input type="number" id="child" value="0" /></li>
-                <li><input type="submit" value="검색" /></li>
-              </ul>
-            </form>
-          </div>
-        </div>
-        <div class="container">
-          <div class="line"></div>
-          <article>
-            <div>
-              <img src="../images/03rooms_1_1.jpg" alt="room images">
-            </div>
-            <div>
-              <h3 class="serif">Deluxe room</h3>
-              <h2 class="serif_kr">디럭스 룸</h2>
-              <p class="sans">
-                객실크기 : 36㎡<br>
-                침대타입 : 킹, 트윈
-              </p>
-            </div>
-            <div class="sans">
-              <p>1박</p>
-              <p>192,000원 ~</p>
-              <div>
-                <a class="sans" href="rooms.html">자세히 보기</a>
-              </div>
-            </div>
-          </article>
-          <div class="line"></div>
-          <article>
-            <div>
-              <img src="../images/03rooms_2_3.jpg" alt="room images">
-            </div>
-            <div>
-              <h3 class="serif">Business room</h3>
-              <h2 class="serif_kr">비즈니스 룸</h2>
-              <p class="sans">
-                객실크기 : 54㎡<br>
-                침대타입 : 킹, 트윈
-              </p>
-            </div>
-            <div class="sans">
-              <p>1박</p>
-              <p>257,000원 ~</p>
-              <div>
-                <a class="sans" href="rooms.html">자세히 보기</a>
-              </div>
-            </div>
-          </article>
-          <div class="line"></div>
-          <article>
-            <div>
-              <img src="../images/03rooms_3_1.jpg" alt="room images">
-            </div>
-            <div>
-              <h3 class="serif">Suite room</h3>
-              <h2 class="serif_kr">스위트 룸</h2>
-              <p class="sans">
-                객실크기 : 90㎡<br>
-                침대타입 : 킹, 트윈
-              </p>
-            </div>
-            <div class="sans">
-              <p>1박</p>
-              <p>1,370,000원 ~</p>
-              <div>
-                <a class="sans" href="rooms.html">자세히 보기</a>
-              </div>
-            </div>
-          </article>
-          <div class="line"></div>
-        </div>
-      </section>
+      <!-- 구분선 -->
+      <div class="line"></div>
 
-      <footer>
-        <div class="container">
-          <div class="right">
-            <div>
-              <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d7654211-Reviews-Hotel_Denim-Seoul.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            </div>
-            <div class="logo serif">
-              <div class="box">
-                <a href="index.html">
-                  <p><span>H</span>OTEL <span>D</span>ENIM.</p>
-                  <p>SEOUL</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="left sans">
-            <ul>
-              <li><a href="index.html">오시는 길</a></li>
-              <li>|</li>
-              <li><a href="index.html">사이트 맵</a></li>
-              <li>|</li>
-              <li><a href="index.html">개인정보 처리 방침</a></li>
-              <li>|</li>
-              <li><a href="index.html">이용약관</a></li>
-            </ul>
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container last">
+
+        <!-- 내비게이션 -->
+        <nav class="nav serif">
+          <a href="rooms.html">ROOMS</a>
+          <a href="offers.html">OFFERS</a>
+          <a href="dining.html">DINING</a>
+          <a href="about.html">ABOUT</a>
+          <a href="login.html">LOGIN</a>
+          <a href="reservation.html" class="nav_reservation">RESERVATION</a>
+        </nav>
+      </div>
+
+    </header>
+
+
+
+    <!-- reservation 섹션 -->
+    <section id="reservation">
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container">
+
+        <!-- 타이틀 -->
+        <div class="tit">
+          <h2 class="serif_kr">객실 선택</h2>
+        </div>
+      </div>
+
+      <!-- 객실 검색 영역 -->
+      <div class="room_search sans">
+
+        <!-- 객실 검색 폼 -->
+        <form action="reservartion.html" class="room_search_form">
+
+          <!-- 1행 -->
+          <p class="period">숙박기간</p>
+          <input type="date" />
+          <p class="arr">→</p>
+          <input type="date" />
+          
+          <!-- 2행 -->
+          <input type="number" id="night" value="1" />
+          <label for="night">박</label>
+          <label for="room">객실</label>
+          <input type="number" id="room" value="1" />
+          
+          <!-- 3행 -->
+          <label for="adult">어른</label>
+          <input type="number" id="adult" value="2" />
+          <label for="child">아이</label>
+          <input type="number" id="child" value="0" />
+
+          <input type="submit" class="btn_search" value="검색" />
+        </form>
+      </div>
+
+
+
+
+      <!-- 중앙 정렬 컨테이너 -->
+      <div class="container">
+
+        <!-- 객실_1 -->
+        <article class="room_1">
+
+          <!-- 이미지 -->
+          <img src="../images/03rooms_1_1.jpg" alt="room image">
+
+          <!-- 내용 -->
+          <div class="txt">
+            <h3 class="serif">Deluxe room</h3>
+            <h2 class="serif_kr">디럭스 룸</h2>
             <p class="sans">
-              Copyright © 2014 DENIM HOTEL . All right reserved.
-              <br />
-              사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
-              : 2015-서울강남-01638호 | (주)호텔데님
+              객실크기 : 36㎡<br>
+              침대타입 : 킹, 트윈
             </p>
           </div>
+
+          <!-- 가격과 자세히보기 버튼 -->
+          <div class="center sans">
+            <p>1박</p>
+            <p class="price">192,000원 ~</p>
+            <a href="rooms.html" class="btn">자세히 보기</a>
+          </div>
+
+        </article>
+                
+        <!-- 객실_2 -->
+        <article class="room_2">
+
+          <!-- 이미지 -->
+          <img src="../images/03rooms_2_3.jpg" alt="room image">
+
+          <!-- 내용 -->
+          <div class="txt">
+            <h3 class="serif">Business room</h3>
+            <h2 class="serif_kr">비즈니스 룸</h2>
+            <p class="sans">
+              객실크기 : 54㎡<br>
+              침대타입 : 킹, 트윈
+            </p>
+          </div>
+
+          <!-- 가격과 자세히보기 버튼 -->
+          <div class="center sans">
+            <p>1박</p>
+            <p class="price">257,000원 ~</p>
+            <a href="rooms.html" class="btn">자세히 보기</a>
+          </div>
+
+        </article>
+                
+        <!-- 객실_3 -->
+        <article class="room_3">
+
+          <!-- 이미지 -->
+          <img src="../images/03rooms_3_1.jpg" alt="room image">
+
+          <!-- 내용 -->
+          <div class="txt">
+            <h3 class="serif">Suite room</h3>
+            <h2 class="serif_kr">스위트 룸</h2>
+            <p class="sans">
+              객실크기 : 90㎡<br>
+              침대타입 : 킹, 트윈
+            </p>
+          </div>
+
+          <!-- 가격과 자세히보기 버튼 -->
+          <div class="center sans">
+            <p>1박</p>
+            <p class="price">1,370,000원 ~</p>
+            <a href="rooms.html" class="btn">자세히 보기</a>
+          </div>
+
+        </article>
+                
+      </div>
+
+    </section>
+
+
+
+    <!-- 푸터 -->
+    <footer id="footer">
+      <div class="container">
+
+        <!-- pc에서 오른쪽에 위치 -->
+        <div class="right">
+
+          <!-- SNS 아이콘 -->
+          <div class="ico">
+            <a href="https://www.instagram.com/denim_hotel/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d7654211-Reviews-Hotel_Denim-Seoul.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+
+          <!-- 로고 -->
+          <div class="logo">
+            <a href="index.html">
+              <p class="serif"><span>H</span>OTEL <span>D</span>ENIM</p>
+              <p class="serif">SEOUL</p>
+            </a>
+          </div>
         </div>
-      </footer>
-    </div>
-    <script src="../js/javascript.js"></script>
-  </body>
+
+        <!-- pc에서 왼쪽에 위치 -->
+        <div class="left sans">
+          <a href="index.html">오시는 길</a>
+          <p>|</p>
+          <a href="index.html">사이트 맵</a>
+          <p>|</p>
+          <a href="index.html">개인정보 처리 방침</a>
+          <p>|</p>
+          <a href="index.html">이용약관</a>
+          <p class="txt">
+            Copyright © 2014 DENIM HOTEL . All right reserved.
+            <br>
+            사업자등록번호 : 120-11-56518 | 대표이사 : 마광영 | 통신판매업신고
+            : 2015-서울강남-01638호 | (주)호텔데님
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+  </div>
+
+  <!-- JavaScript -->
+  <script></script>
+</body>
 </html>

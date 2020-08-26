@@ -1,4 +1,3 @@
-
 /* ================= mobile start ================= */
 
 /* 이미지 링크 */
@@ -42,3 +41,29 @@
 }
 
 /* ================= mobile end ================= */
+
+
+
+
+
+
+/* ================= pc start ================= */
+@media screen and (min-width: 1200px)
+{
+/* 타이틀 */
+#about .tit {
+  height: 120px;
+}
+
+/* 서브 타이틀 */
+#about .sub_tit {
+  padding: 46px 10px 30px 10px;
+}
+#about .sub_tit>.serif {
+  font-size: 24px;
+}
+#about .sub_tit>.serif_kr {
+  font-size: 35px;
+}
+}
+/* ================= pc end ================= */

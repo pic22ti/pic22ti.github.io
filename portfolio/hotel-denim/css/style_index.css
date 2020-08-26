@@ -297,48 +297,80 @@ section .tit>p {
   font-size: 42px;
 }
 
-/* 객실 검색 폼 pc에서는 노출 */
+
+
+/* 폼 스타일 flex */
 #main .room_search_form {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-
-  background-color: white;
   width: 100%;
   height: 50px;
-
-  color: #5e5e5e;
-  text-align: center;
+  
+  font-size: 14px;
+  font-weight: 300;
 }
-/* input 공통 */
+/* label, input 공통 스타일 */
+#main .room_search_form>label {
+  background-color: white;
+  width: 5%;
+  height: 50px;
+
+  text-align: center;
+  line-height: 50px;
+}
 #main .room_search_form>input {
-  height: 100%;
+  cursor: pointer;
+
+  background-color: white;
+  width: 5%;
+  height: 50px;
   box-sizing: border-box;
+  padding: 10px;
   border: none;
 
   text-align: center;
 }
-/* 각 영역 사이즈 설정 */
+
+/* 1행 */
 #main .room_search_form>.period {
+  background-color: white;
   width: 8%;
-}
-#main .room_search_form>.arr {
-  width: 5%;
+  height: 50px;
+  text-align: center;
+  line-height: 49px;
 }
 #main .room_search_form>input[type=date] {
-  width: 15%
+  width: 15%;
 }
-#main .room_search_form>input[type=number] {
+#main .room_search_form>.arr {
+  background-color: white;
   width: 5%;
+  height: 50px;
+
+  text-align: center;
+  line-height: 49px;
 }
-#main .room_search_form>label {
-  width: 5%;
+
+/* 구분선 */
+#main .room_search_form>.period,
+#main .room_search_form>label[for=night]
+{
+  box-sizing: border-box;
+  border-right: 1px solid #e5e5e5;
 }
-/* 검색 버튼 */
-#main .room_search_form>input[type=submit] {
+
+/* 검색 버튼 스타일 */
+#main .room_search_form>.btn_search {
+  cursor: pointer;
   background-color: #212121;
   width: 17%;
+
   color: white;
+  transition: 0.5s;
+}
+#main .room_search_form>.btn_search:hover {
+  background-color: #a68c5d;
 }
 
 /* ----------------- pc main end ----------------- */
@@ -368,21 +400,205 @@ section .tit>p {
 
 
 /* ----------------- index_offers 섹션 */
+#index_offers {
+  justify-content: space-between;
+}
 #index_offers>article {
-  width: calc(100% / 3);
+  width: 31%;
   height: 400px;
   margin: 0 0 42px 0;
+
+  transition: 0.5s;
+}
+/* hover 효과 */
+#index_offers>article:hover {
+  transform: scale(1.02);
+  border: 1px solid #bebebe;
 }
 #index_offers>article .img {
   height: 258px;
 }
 /* pc에서 노출 */
-#index_offers>.article_3,
-#index_offers>article .txt>p:last-of-type
-{
+#index_offers>.article_3 {
   display: inline-block;
 }
+#index_offers>article .txt>.sans:last-of-type {
+  display: inline-block;
+  padding-top: 14px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #5e5e5e;
+}
 
+
+
+
+
+/* ----------------- index_dining 섹션 */
+#index_dining {
+  display: block;
+  width: 100%;
+  height: 600px;
+  background-color: #f5f5f5;
+}
+#index_dining>.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+/* article 크기 설정 */
+#index_dining article {
+  background-color: #ffffff;
+  width: 48.25%;
+  height: 400px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+
+  transition: 0.5s;
+}
+/* hover 효과 */
+#index_dining article:hover {
+  transform: scale(1.02);
+  border: 1px solid #bebebe;
+}
+/* 이미지 설정 */
+#index_dining article .img {
+  height: 258px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 이미지 링크 */
+#index_dining .article_1 .img {
+  background-image: url("../images/02dining_6.jpg");
+}
+#index_dining .article_2 .img {
+  background-image: url("../images/02dining_7.jpg");
+}
+/* 텍스트 사이즈, 여백 설정 */
+#index_dining article .txt {
+  padding: 24px 30px 0 30px;
+  font-size: 16px;
+}
+#index_dining article .txt>.serif {
+  color: #a68c5d;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+#index_dining article .txt>.sans {
+  color: #5e5e5e;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+#index_dining article .txt>.sans:last-of-type {
+  display: inline-block;
+  padding-top: 14px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #5e5e5e;
+}
+
+
+
+
+
+/* ----------------- index_rooms 섹션 */
+#index_rooms {
+  background-color: #ffffff;
+}
+#index_rooms>.container {
+  height: 600px;
+}
+/* 내용 */
+#index_rooms .article {
+  background-color: #f6f3ee;
+  margin: 0 0 25px 0;
+}
+#index_rooms .img {
+  height: 400px;
+}
+/* 텍스트 */
+#index_rooms .txt {
+  height: 400px;
+  padding: 50px 46px 0 46px;
+}
+#index_rooms .txt>.serif {
+  font-size: 25px;
+}
+#index_rooms .txt>.serif_kr {
+  font-size: 32px;
+}
+#index_rooms .txt>.sans {
+  font-size: 16px;
+}
+#index_rooms .txt>.btn {
+  bottom: 40px;
+
+  transition: 0.5s;
+}
+#index_rooms .txt>.btn:hover {
+  background-color: #f6f3ee;
+  border: 1px solid #a68c5d;
+  color: #a68c5d;
+}
+
+
+
+
+
+/* ----------------- index_membership 섹션 */
+/* 노출, 높이, 이미지 설정 */
+#index_membership {
+  display: block;
+  height: 340px;
+
+  background-image: url('../images/04member_1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+/* 텍스트 설정 */
+#index_membership .tit>.sans {
+  color: #bebebe;
+  font-weight: 200;
+}
+/* 버튼 */
+#index_membership .btn {
+  display: inline-block;
+  width: 204px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  border: 1px solid #a68c5d;
+  margin: 80px;
+
+  color: white;
+  letter-spacing: -1px;
+  text-align: center;
+
+  transition: 0.5s;
+}
+#index_membership .btn:hover {
+  background-color: #a68c5d;
+}
+
+
+
+
+
+/* ----------------- index_location 섹션 */
+#index_location {
+  height: 520px;
+}
+#index_location .tit {
+  margin-bottom: 24px;
+}
+#index_location>iframe {
+  height: 340px;
+}
 
 
 
@@ -390,15 +606,5 @@ section .tit>p {
 
 
 /* ----------------- pc section end ----------------- */
-
-
-
-
-
-
-
-
-
-
 }
 /* ================= pc end ================= */
