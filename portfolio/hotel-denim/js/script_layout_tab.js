@@ -1,4 +1,6 @@
 
+
+
 // *********************** 이미지 슬라이드
 function slideImage(arr) {
 
@@ -6,26 +8,37 @@ function slideImage(arr) {
   const showImage = document.querySelector(".slide_img .show_img");
   let getUrl = showImage.getAttribute("src");
   let imgNumber = Number(getUrl.substring(20, 21));
+  let dotNumber = imgNumber-1;
 
   // 도트 객체 가져오기
-  // const dotElem = document.querySelectorAll(".slide_img .dot");
-  
+  const dotElem = document.querySelectorAll(".dot_container>.dot");
+
+  // 선택된 도트 스타일 일단 지움
+  function removeDotClass() {
+    for( let i = 0; i<dotElem.length; i++ ) {
+      dotElem[i].classList.remove("select");
+    }
+  }
+
   if( arr === "left" ) {
-    // console.log(imgNumber-1);
-    // console.log(dotElem[imgNumber-1]);
-    // dotElem[imgNumber].classList.add("select");
-    
+
+    // 처음 이미지면 리턴
     if( imgNumber === 1 ) return;
+
+    /***************************주소 부분 바꿔야함 다른 탭에서 안됨 */
     showImage.setAttribute("src", `../images/03rooms_1_${imgNumber-1}.jpg`);
-    
+    removeDotClass();
+    dotElem[dotNumber-1].classList.add("select");
   }
   
   if( arr === "right" ) {
-    // console.log(imgNumber+1);
-    // console.log(dotElem[imgNumber+1]);
 
+    // 마지막 이미지면 리턴
     if( imgNumber === 3 ) return;
+
     showImage.setAttribute("src", `../images/03rooms_1_${imgNumber+1}.jpg`);
+    removeDotClass();
+    dotElem[dotNumber+1].classList.add("select");
   }
 
 }
@@ -33,63 +46,23 @@ function slideImage(arr) {
 
 
 
-
-
-
-/* ********************인덱스 이용하는 거로 수정하기 */
-
-// const tabLiElem = document.querySelectorAll(".tab_container p");
-// const articleElems = document.querySelectorAll(".layout_tab article");
-// for( let i=0 ; i<tabLiElem.length ; i++ ){
-//   tabLiElem.addEventListener("click",function(){
-    
-//   });
-// }
-
-
-
-
-
-
-
-// *********************** 선택한 탭을 보여줌
-function showArticle(article_name) {
-
-  const articleElems = document.querySelectorAll(".layout_tab article");
-
-  for( let i = 0; i<articleElems.length; i++) {
-    if( articleElems[i].className == article_name ){
-      articleElems[i].style.display = "block";
-    }
-    else {
-      articleElems[i].style.display = "none";
-    }
-  }  
-}
 
 (function(){
 
-  // *********************** 선택한 탭 스타일 변경
-  const tabContainer = document.querySelector(".tab_container");
+// *********************** 선택한 탭 보여주기
+const tabElem = document.querySelectorAll(".layout_tab .tab");
+const articleElem = document.querySelectorAll(".layout_tab article");
+
+for( let i = 0; i<tabElem.length; i++ ) {
   
-  function selectStyle(e) {
+  tabElem[i].addEventListener("click", function showArticle(e) {
     
-    for( let i = 0; i<tabContainer.children.length; i++) {
-      tabContainer.children[i].classList.remove("select");
+    for( let j = 0; j<articleElem.length; j++ ) {
+      articleElem[j].style.display = "none";
     }
-
-    e.target.classList.add("select");
-  }
-
-  tabContainer.addEventListener("click", selectStyle);
-  
-
-
-
-
-  // const arrLeft = document.querySelector(".slide_img .left");
-  // const arrRight = document.querySelector(".slide_img .right");
-
-
+    
+    articleElem[i].style.display = "block";
+  });
+}
 
 })();
