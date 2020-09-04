@@ -1,6 +1,6 @@
 /* 스크롤 주기 */
 body {
-  height: 1600vw;
+  height: 1700vw;
 }
 
 /* 전체를 감싸는 wrapper fixed */
@@ -23,11 +23,24 @@ body {
   width: 200px;
   margin: 40px;
 }
+/* 스크롤 표시 */
+#wrapper .scroll {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  z-index: 100;
+
+  color: rgba(255, 255, 255, 1);
+  text-align: center;;
+}
 /* 메뉴 */
 #wrapper .nav {
-  position: absolute; 
+  position: absolute;
+  top: 50%;
+  left: 40px; 
+  transform: translateY(-50%);
   z-index: 100;
-  margin-left: 40px;
   
   color: white;
   font-size: 20px;
@@ -38,9 +51,12 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 6px;
   
   transition: 1s;
+}
+#wrapper .nav li:first-child {
+  font-size: 40px;
 }
 #wrapper .nav span {
   display: inline-block;
@@ -66,9 +82,9 @@ body {
 /* stage */
 #stage {
   transform-style: preserve-3d;
-  transform: translateZ(-300vw);
+  transform: translateZ(0vw);
 
-  transition: 1s;
+  transition: 0.5s;
 }
 
 /* stage box */
@@ -78,45 +94,48 @@ body {
   background-position: center;
 
   position: absolute;
-  top: 0;
-  left: 0;
-  /* background-color: rgba(255, 255, 255, 0.7); */
-  width: 100vw;
-  height: 100vh;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
 }
 
 /* 박스 이미지와 위치 설정 */
 #stage>.card_box_1 {
-  background-image: url('../images/0_sun_4.png');
-  transform: translateZ(300vw);
-}
-#stage>.card_box_2 {
-  background-image: url('../images/1_mercury_1.png');
-  transform: translateZ(100vw);
-}
-#stage>.card_box_3 {
-  background-image: url('../images/2_venus_5.png');
+  background-image: url('../images/0_sun.png');
   transform: translateZ(-100vw);
 }
-#stage>.card_box_4 {
-  background-image: url('../images/3_earth_3.png');
+#stage>.card_box_2 {
+  background-image: url('../images/1_mercury.png');
   transform: translateZ(-300vw);
 }
-#stage>.card_box_5 {
-  background-image: url('../images/4_mars_2.png');
+#stage>.card_box_3 {
+  background-image: url('../images/2_venus.png');
   transform: translateZ(-500vw);
 }
-#stage>.card_box_6 {
-  background-image: url('../images/5_jupiter_1.png');
+#stage>.card_box_4 {
+  background-image: url('../images/3_earth.png');
   transform: translateZ(-700vw);
 }
-#stage>.card_box_7 {
-  background-image: url('../images/6_saturn_1.png');
+#stage>.card_box_5 {
+  background-image: url('../images/4_mars.png');
   transform: translateZ(-900vw);
 }
-#stage>.card_box_8 {
-  background-image: url('../images/7_Uranus_1.png');
+#stage>.card_box_6 {
+  background-image: url('../images/5_jupiter.png');
   transform: translateZ(-1100vw);
+}
+#stage>.card_box_7 {
+  background-image: url('../images/6_saturn.png');
+  transform: translateZ(-1300vw);
+}
+#stage>.card_box_8 {
+  background-image: url('../images/7_uranus.png');
+  transform: translateZ(-1500vw);
+}
+#stage>.card_box_9 {
+  background-image: url('../images/8_neptune.png');
+  transform: translateZ(-1700vw);
 }
 
 /* 컨텐츠 중앙정렬, 폰트 사이즈 */
@@ -133,20 +152,24 @@ body {
 /* 컨텐츠 내용 */
 .card_title {
   position: absolute;
-  top: 50%;
-  left: 70%;
+  top: 120vh;
+  left: 130vw;
 
   font-size: 80px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  text-shadow: 0px 0px 30px black;
 }
 .card_text {
   position: absolute;
-  top: calc(50% + 110px);
-  left: 70%;
+  top: 140vh;
+  left: 130vw;
 
   width: 25vw;
   box-sizing: border-box;
   padding: 0 20px 20px 0;
   font-size: 15px;
   font-weight: 300;
+
+  text-shadow: 0px 0px 30px black;
 }

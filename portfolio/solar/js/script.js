@@ -5,37 +5,32 @@
   const navElem = document.querySelector(".nav");
   let maxScrollHeight = 0;
 
-
-
-
   // ***************** 내비게이션
   function goPlanet(e) {
 
     // 스테이지 위치
-    let scrollPos = 200*(e.target.getAttribute("value"))-500;
+    let scrollPos = 200*(e.target.getAttribute("value")-1);
     stageElem.style.transform = `translateZ(${scrollPos}vw)`;
     
     // 스크롤바 위치
-    let nowPos = maxScrollHeight / 1400 * (scrollPos + 300);
+    let nowPos = maxScrollHeight / 1700 * scrollPos;
     window.scrollTo(0,nowPos);
   }
   navElem.addEventListener("click", goPlanet);
-
-
-
 
   // ***************** 스크롤
   function onStageScroll() {
 
     // 스테이지 위치
     let scrollPer = pageYOffset / (document.body.offsetHeight - window.innerHeight);
-    let zMove = scrollPer * 1400 - 300;
+    let zMove = scrollPer * 1700;
     stageElem.style.transform = `translateZ(${zMove}vw)`;
     
     // 선택된 위치 폰트 스타일
-    let value = Math.floor( (zMove+520)/200 );
-    console.log(zMove, value);
-    for(let i=0; i<navElem.children.length; i++) {
+    let value = Math.floor( (zMove+25)/200 +1);
+    if( value <= 0 ) { value = 1; }
+
+    for( let i=0; i<navElem.children.length; i++ ) {
       if( navElem.children[i].getAttribute("value") == value ) {
         navElem.children[i].style.fontSize = "40px";
       }
@@ -46,18 +41,12 @@
   }
   window.addEventListener("scroll", onStageScroll);
 
-
-
-
   // ***************** 리사이즈
   function onWindowResize() {
     maxScrollHeight = document.body.offsetHeight - window.innerHeight;
   }
   window.addEventListener("resize", onWindowResize);
   onWindowResize();
-
-
-
 
   // ***************** 마우스무브
   let mousePos = {x:0,y:0};
@@ -72,6 +61,5 @@
     containerElem.style.transform = `rotateY(${mousePos.x*2}deg) rotateX(${mousePos.y*2}deg)`;
   }
   window.addEventListener("mousemove", onMouseMove);
-
 
 }());
