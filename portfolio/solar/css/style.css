@@ -150,9 +150,13 @@ body {
 }
 
 /* 컨텐츠 내용 */
+.card_title:hover ~ .card_text {
+  display: block;
+}
 .card_title {
+  cursor: pointer;
   position: absolute;
-  top: 120vh;
+  top: 100vh;
   left: 130vw;
 
   font-size: 80px;
@@ -161,15 +165,21 @@ body {
   text-shadow: 0px 0px 30px black;
 }
 .card_text {
+  display: none;
+  transition: 0.5s;
+
   position: absolute;
-  top: 140vh;
+  top: 115vh;
   left: 130vw;
 
-  width: 25vw;
+  width: 500px;
   box-sizing: border-box;
-  padding: 0 20px 20px 0;
-  font-size: 15px;
+  padding: 20px;
+  font-size: 20px;
   font-weight: 300;
 
-  text-shadow: 0px 0px 30px black;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.card_text li {
+  padding: 2px 0;
 }
