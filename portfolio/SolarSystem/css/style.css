@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400&family=Noto+Sans+KR:wght@300&family=Noto+Serif+KR:wght@200&display=swap');
+
+
+
 /* 스크롤 주기 */
 body {
   height: 1700vw;
@@ -44,7 +48,7 @@ body {
   
   color: white;
   font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Crimson Text', serif;
   list-style: none;
 }
 #wrapper .nav li {
@@ -84,7 +88,7 @@ body {
   transform-style: preserve-3d;
   transform: translateZ(0vw);
 
-  transition: 0.5s;
+  transition: 1.5s;
 }
 
 /* stage box */
@@ -160,9 +164,13 @@ body {
   left: 130vw;
 
   font-size: 80px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Crimson Text', serif;
   
   text-shadow: 0px 0px 30px black;
+}
+.card_title .kor {
+  font-size: 70px;
+  font-family: 'Noto Serif KR', serif;
 }
 .card_text {
   display: none;
@@ -182,4 +190,12 @@ body {
 }
 .card_text li {
   padding: 2px 0;
+  margin-left: 20px;
+  list-style-type: square;
+
+  font-family: 'Noto Sans KR', sans-serif;
 }
+.card_text li sup {
+  font-size:xx-small; vertical-align:super;
+}
+
