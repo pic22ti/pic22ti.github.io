@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-short_form.css">
   <title>로그인</title>
+  <style>
+
+
+
+
+
+
+  </style>
 </head>
 <body>
 
