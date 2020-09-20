@@ -138,12 +138,11 @@ section .tit {
   width: 430px;
 }
 /* 로그인 버튼 hover */
-#login .login_form>input[type=submit] {
-  transition: 0.5s;
-}
 #login .login_form>input[type=submit]:hover {
   background-color: #ffffff;
   color: #a68c5d;
+
+  transition: 0.5s;
 }
 
 

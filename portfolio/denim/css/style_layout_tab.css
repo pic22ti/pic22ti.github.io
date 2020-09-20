@@ -107,19 +107,15 @@
   height: 50px;
   box-sizing: border-box;
   padding-top: 12px;
+  border: 1px solid #a68c5d;
   margin: 0 auto;
 
   color: white;
   letter-spacing: -1px;
   text-align: center;
 
-  transition: 0.5s;
 }
-.layout_tab .btn:hover {
-  background-color: #ffffff;
-  border: 1px solid #a68c5d;
-  color: #a68c5d;
-}
+
 
 /* 자세한 내용 box */
 .layout_tab .box {
@@ -183,6 +179,13 @@
 /* 탭 */
 .layout_tab .tab_container {
   padding: 0 0 40px 0;
+}
+/* 문의하기 버튼 */
+.layout_tab .btn:hover {
+  background-color: #ffffff;
+  border: 1px solid #a68c5d;
+  color: #a68c5d;
+  transition: 0.5s;
 }
 /* 자세한 내용 box */
 .layout_tab .box {

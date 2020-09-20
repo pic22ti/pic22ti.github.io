@@ -228,8 +228,8 @@
   width: 17%;
 }
 #reservation .room_search_form>.btn_search:hover {
-  transition: 0.5s;
   background-color: #a68c5d;
+  transition: 0.5s;
 }
 
 
@@ -252,11 +252,14 @@
 #reservation article>.txt {
   padding-left: 50px;
 }
+#reservation article .btn {
+  border: 1px solid #a68c5d;
+}
 #reservation article .btn:hover {
-  transition: 0.5s;
   background-color: #ffffff;
   border: 1px solid #a68c5d;
   color: #a68c5d;
+  transition: 0.5s;
 }
 
 }

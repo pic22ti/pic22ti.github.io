@@ -367,10 +367,10 @@ section .tit>p {
   width: 17%;
 
   color: white;
-  transition: 0.5s;
 }
 #main .room_search_form>.btn_search:hover {
   background-color: #a68c5d;
+  transition: 0.5s;
 }
 
 /* ----------------- pc main end ----------------- */
@@ -407,13 +407,13 @@ section .tit>p {
   width: 31%;
   height: 400px;
   margin: 0 0 42px 0;
-
-  transition: 0.5s;
 }
 /* hover 효과 */
 #index_offers>article:hover {
   transform: scale(1.02);
   border: 1px solid #bebebe;
+  
+  transition: 0.5s;
 }
 #index_offers>article .img {
   height: 258px;
@@ -453,13 +453,13 @@ section .tit>p {
   height: 400px;
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
-
-  transition: 0.5s;
 }
 /* hover 효과 */
 #index_dining article:hover {
   transform: scale(1.02);
   border: 1px solid #bebebe;
+  
+  transition: 0.5s;
 }
 /* 이미지 설정 */
 #index_dining article .img {
@@ -534,13 +534,15 @@ section .tit>p {
 }
 #index_rooms .txt>.btn {
   bottom: 40px;
+  border: 1px solid #a68c5d;
 
-  transition: 0.5s;
 }
 #index_rooms .txt>.btn:hover {
   background-color: #f6f3ee;
   border: 1px solid #a68c5d;
   color: #a68c5d;
+
+  transition: 0.5s;
 }
 
 
@@ -578,10 +580,9 @@ section .tit>p {
   color: white;
   letter-spacing: -1px;
   text-align: center;
-
-  transition: 0.5s;
 }
 #index_membership .btn:hover {
+  transition: 0.5s;
   background-color: #a68c5d;
 }
 

@@ -6,12 +6,14 @@ function slideImage(arr) {
 
   // 현재 이미지 넘버 추출
   const showImage = document.querySelector(".slide_img .show_img");
+
+
   let getUrl = showImage.getAttribute("src");
   let imgNumber = Number(getUrl.substring(20, 21));
   let dotNumber = imgNumber-1;
 
   // 도트 객체 가져오기
-  const dotElem = document.querySelectorAll(".dot_container>.dot");
+  // const dotElem = document.querySelectorAll(".dot_container>.dot");
 
   // 선택된 도트 스타일 일단 지움
   function removeDotClass() {
@@ -27,8 +29,8 @@ function slideImage(arr) {
 
     /***************************주소 부분 바꿔야함 다른 탭에서 안됨 */
     showImage.setAttribute("src", `../images/03rooms_1_${imgNumber-1}.jpg`);
-    removeDotClass();
-    dotElem[dotNumber-1].classList.add("select");
+    // removeDotClass();
+    // dotElem[dotNumber-1].classList.add("select");
   }
   
   if( arr === "right" ) {
@@ -37,8 +39,8 @@ function slideImage(arr) {
     if( imgNumber === 3 ) return;
 
     showImage.setAttribute("src", `../images/03rooms_1_${imgNumber+1}.jpg`);
-    removeDotClass();
-    dotElem[dotNumber+1].classList.add("select");
+    // removeDotClass();
+    // dotElem[dotNumber+1].classList.add("select");
   }
 
 }
@@ -58,9 +60,11 @@ for( let i = 0; i<tabElem.length; i++ ) {
   tabElem[i].addEventListener("click", function showArticle(e) {
     
     for( let j = 0; j<articleElem.length; j++ ) {
+      tabElem[j].classList.remove("select");
       articleElem[j].style.display = "none";
     }
     
+    tabElem[i].classList.add("select");
     articleElem[i].style.display = "block";
   });
 }
