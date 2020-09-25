@@ -66,6 +66,11 @@ a {
   text-decoration: none;
   color: currentColor;
 }
+/* safari input default style 삭제 */
+input, textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 
 /* 폰트 설정 */
 .serif {
@@ -77,7 +82,6 @@ a {
 .sans {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
 
 
 

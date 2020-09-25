@@ -31,17 +31,6 @@
 
 
 
-
-
-
-/* 객실 디폴트 숨김 (탭을 선택하면 선택된 객실이 보임 js) */
-.layout_tab article {
-  display: none;
-}
-.layout_tab article:first-of-type {
-  display: block;
-}
-
 /* 이미지 슬라이드 영역 */
 .layout_tab .slide_img {
   display: flex;
@@ -75,6 +64,10 @@
 .layout_tab .dot.select {
   background-color: #a68c5d;
 }
+
+
+
+
 
 
 /* 서브타이틀 */
