@@ -470,10 +470,10 @@ section .tit>p {
 }
 /* 이미지 링크 */
 #index_dining .article_1 .img {
-  background-image: url("../images/02dining_6.jpg");
+  background-image: url("../images/02dining_1_1.jpg");
 }
 #index_dining .article_2 .img {
-  background-image: url("../images/02dining_7.jpg");
+  background-image: url("../images/02dining_2_1.jpg");
 }
 /* 텍스트 사이즈, 여백 설정 */
 #index_dining article .txt {
