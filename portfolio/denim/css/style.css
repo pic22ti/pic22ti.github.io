@@ -68,6 +68,9 @@ a {
 }
 /* safari input default style 삭제 */
 input, textarea {
+  /* -webkit-border-radius: 0; */
+  border: none;
+  border-radius: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
