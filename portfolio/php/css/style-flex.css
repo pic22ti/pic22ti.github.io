@@ -11,22 +11,24 @@
 body {
   max-width: 1280px;
   margin: 0 auto;
-  /* background-color: white; */
-  /* background-color: rgb(245, 245, 245); */
+  border-left: 1px solid #e7eaeb;
+  border-right: 1px solid #e7eaeb;
 }
 
 /* 텍스트 컬러 설정 */
 div, p, input, textarea, h2, h3 {
-  color: royalblue;
+  color: #02152a;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* 폰트 사이즈 설정 */
 h2 {
   font-size: 28px;
+  font-weight: 700;
 }
 h3 {
   font-size: 20px;
+  font-weight: 700;
 }
 div, p, input, textarea {
   font-size: 13px;
@@ -50,24 +52,25 @@ div, p, input, textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
   height: 80px;
+  border-bottom: 1px solid #e7eaeb;
 }
 #header div {
-  box-sizing: border-box;
   padding: 0 20px;
 }
 #header p {
   display: inline-block;
+  color: #9da1a7;
 }
-
+#header div.logo a {
+  color: #164ffa;
+  font-weight: 700;
+}
 
 /* 사이드 */
 aside {
-  box-shadow: 4px 4px 6px 0 rgba(100, 100, 100, 0.2) inset, 2px 2px 8px 0 rgba(255, 255, 255, 0.5);
-  border-radius: 25px;
-  /* border: 1px solid #ddd; */
-
   width: 280px;
   height: calc(100% - 120px);
   margin: 0 20px 40px 20px;
@@ -81,58 +84,53 @@ aside [type=button] {
 
 /* 섹션 */
 section {
-  /* border: 1px solid #ddd; */
-
   width: calc(100% - 320px);
   height: calc(100% - 80px);
+  border-left: 1px solid #e7eaeb;
 }
 
 /* 메인 */
 section#main {
   width: 100%;
   height: calc(100vh - 80px);
-}
-
-section#main .main-img {
-  background-color: royalblue;
-  width: 100%;
-  height: calc(100% - 403px);
+  border-left: none;
 }
 
 section#main article {
   float: left;
   width: 50%;
+  height: 100%;
 }
-
+/* 메인 최신 게시글 오른쪽만 보더 */
+section#main article.latest {
+  border-right: 1px solid #e7eaeb;
+}
 section#main article ul {
   height: 303px;
 }
 
 /* 공통 버튼 스타일 */
 .plus-btn {
+  background-color: #ffffff;
   cursor: pointer;
-  background-color: white;
-  /* background-color: rgb(249, 249, 249); */
-  box-shadow: -2px -2px 8px 0 rgba(255, 255, 255, 0.3) inset, -2px -2px 4px 0 rgba(255, 255, 255, 1), 4px 4px 6px 0 rgba(100, 100, 100, 0.2);
   padding: 10px;
   border: none;
-  border-radius: 25px;
+
   font-size: 13px;
-  color: royalblue;
+  color: #9da1a7;
 }
 .plus-btn:hover {
-  /* background-color: rgb(247, 247, 247); */
-  box-shadow: -2px -2px 8px 0 rgba(255, 255, 255, 0) inset, -2px -2px 4px 0 rgba(255, 255, 255, 0.5), 4px 4px 6px 0 rgba(100, 100, 100, 0.1);
+  color: #164ffa;
 }
 
 /* 음각 스타일 */
 .minus-style {
   background-color: white;
-  box-shadow: 4px 4px 6px 0 rgba(100, 100, 100, 0.2) inset;
   padding: 15px;
-  border: none;
-  border-radius: 25px;
   font-size: 13px;
+
+  /* 표시용 수정해야함 */
+  color: tomato;
 }
 
 

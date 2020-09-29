@@ -62,11 +62,11 @@
         } // if문 끝
         
         else { 
-          $logged = $username."님 [ 레벨".$userlevel." / ".$userpoint."p ]";
       ?>
 
       <div class="nav logout">
-        <p><?=$logged?></p>
+        <p><?=$username?>님</p>
+        <p>[ 레벨<?=$userlevel?> / <?=$userpoint?>p ]</p>
         <p><a href="message_box.php?mode=rv" class="plus-btn">쪽지</a></p>
         <p><a href="board_list.php" class="plus-btn">게시판</a></p>
         <p><a href="member_modify_form.php" class="plus-btn">정보수정</a></p>

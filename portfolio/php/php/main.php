@@ -1,7 +1,5 @@
 
 
-      <!-- 메인 이미지 -->
-      <div class="main-img"></div>
 
       <!-- 왼쪽 최근 게시글 영역 -->
       <article class="latest list_form">
