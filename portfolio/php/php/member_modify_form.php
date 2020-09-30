@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-short_form.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>회원 정보 수정</title>
 </head>
 <body>
@@ -75,7 +76,7 @@
         <div class="btn">
 
           <!-- 수정 저장 버튼 -->
-          <input type="button" class="save_btn plus-btn" value="저장하기" onclick="check_input()">
+          <input type="button" class="point-btn check" value="저장하기" onclick="check_input()">
 
           <!-- 취소 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="취소하기" onclick="reset_form()">

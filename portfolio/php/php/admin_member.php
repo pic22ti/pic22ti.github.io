@@ -6,8 +6,15 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-list_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>관리자 모드 - 회원 관리</title>
   <style>
+
+
+    /* 타이틀 밑에 블루 라인 */
+    .list_form h2::after {
+      width: 190px;
+    }
 
 
     /* 목록 요소 각 너비 지정 */
@@ -65,7 +72,7 @@
     <aside id="board_side">
 
       <!-- 회원 관리 버튼 -->
-      <input type="button" class="plus-btn" value="회원 관리" onclick="location.href='admin_member.php'">
+      <input type="button" class="point-btn" value="회원 관리" onclick="location.href='admin_member.php'">
 
       <!-- 게시판 관리 버튼 -->
       <input type="button" class="plus-btn" value="게시판 관리" onclick="location.href='admin_board.php'">
@@ -119,6 +126,7 @@
               $level = $row["level"];
               $point = $row["point"];
               $regist_day = $row["regist_day"];
+              $regist_day_short = substr($regist_day, 0, 10);
           ?>
 
 
@@ -129,7 +137,7 @@
           <form name="admin_member_form" method="post" action="admin_member_update.php?num=<?=$num?>">
             <li class="list">
               <p class="number"><?=$num?></p>
-              <p class="regist_day"><?=$regist_day?></p>
+              <p class="regist_day"><?=$regist_day_short?></p>
               <p class="id"><?=$id?></p>
               <p class="name"><?=$name?></p>
               <p class="level"><input type="text" name="level" value="<?=$level?>"></p>
@@ -137,11 +145,12 @@
 
               <!-- 회원 수정 버튼 -->
               <!-- <p class="update"><input type="button" value="수정" onclick="check_input()"></p> -->
-              <p class="update"><button type="submit">수정</button></p>
+              <p class="update"><input type="submit" value="수정"></p>
 
               <!-- 회원 삭제 버튼 -->
               <!-- <p class="delete"><input type="button" value="삭제" onclick="setfuncdelete()"></p> -->
-              <p class="delete"><button type="button" onclick="location.href='admin_member_update.php?=<?=$num?>'">삭제</button></p>
+              <p class="delete"><input type="button" value="삭제" onclick="location.href='admin_member_delete.php?num=<?=$num?>'">
+            </p>
             </li>
           </form>
 

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-view_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>답장 메세지 보내기</title>
   <style>
 
@@ -50,13 +51,12 @@
 
     <!-- 메세지 사이드 -->
     <aside id="message_side">
-
+      
       <!-- 받은 메세지 버튼 -->
-      <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      <input type="button" class="point-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
       <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
-
 
       <!-- 메세지 보내기 버튼 -->
       <?php
@@ -71,6 +71,7 @@
       <?php
         }
       ?>
+
     </aside>
 
 

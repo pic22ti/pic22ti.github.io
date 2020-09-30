@@ -8,7 +8,7 @@
         <h3>최근 게시글</h3>
 
         <ul class="latest_list">
-          <li class="list sub plus-btn">
+          <li class="list sub">
             <p class="subject">제목</p>
             <p class="id">아이디</p>
             <p class="date">등록일</p>
@@ -70,10 +70,10 @@
         <h3>포인트 랭킹</h3>
 
         <ul class="point_rank_list">
-          <li class="list sub plus-btn">
+          <li class="list sub">
             <p class="rank">랭크</p>
             <p class="id">아이디</p>
-            <p class="name">이*름</p>
+            <p class="name">이름</p>
             <p class="point">포인트</p>
           </li>
 

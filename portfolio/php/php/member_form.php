@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
-  <link rel="stylesheet" href="../css/style-short_form.css">
+	<link rel="stylesheet" href="../css/style-short_form.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>회원가입</title>
 </head>
 <body>
@@ -34,7 +35,7 @@
         <input type="text" id="chk_id1" name="id" placeholder="아이디">
 
         <!-- 아이디 중복 체크 버튼 -->
-        <input type="button" class="check plus-btn" value="중복확인" onclick="check_id()">
+        <input type="button" class="check point-btn" value="중복확인" onclick="check_id()">
 
         <!-- 아이디 중복 체크를 위한 보이지 않는 iframe -->
         <iframe src="" id="ifrm1" scrolling="no" frameborder="no" width="0" height="0" name="ifrm1"></iframe>
@@ -64,7 +65,7 @@
         <div class="btn">
 
           <!-- 가입 버튼 -->
-          <input type="button" class="plus-btn" value="가입하기" onclick="check_input()">
+          <input type="button" class="point-btn" value="가입하기" onclick="check_input()">
 
           <!-- 취소 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="취소하기" onclick="reset_form()">

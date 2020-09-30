@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-list_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시판 목록</title>
   <style>
 
@@ -55,13 +56,13 @@
     <aside id="board_side">
 
       <!-- 게시판 목록 버튼 -->
-      <input type="button" class="plus-btn" value="게시판 목록" onclick="location.href='board_list.php'">
+      <input type="button" class="point-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
       <?php
         if($userid) {
       ?>
-      <input type="button" class="plus-btn" value="글쓰기" onclick="location.href='board_form.php'">
+      <input type="button" class="plus-btn" value="게시글 쓰기" onclick="location.href='board_form.php'">
       <?php
         }
         else {
@@ -171,7 +172,7 @@
         <?php
           if( $total_page>=2 && $page>=2 ) {
             $new_page = $page-1;
-            echo "<p><a href='board_list.php?page=$new_page' class='plus-btn'>이전</a></p>";
+            echo "<p><a href='board_list.php?page=$new_page'>이전</a></p>";
           }
           else {
             echo "&nbsp";
@@ -179,7 +180,7 @@
 
           for( $i = 1; $i<=$total_page; $i++ ) {
             if( $page == $i ) {
-              echo "<p class='active plus-btn'>$i</p>";
+              echo "<p class='active'>$i</p>";
             }
             else {
               echo "<p><a href='board_list.php?page=$i'>$i</a></p>";
@@ -188,7 +189,7 @@
           
           if( $total_page>=2 && $page!=$total_page ) {
             $new_page = $page+1;
-            echo "<p><a href='board_list.php?page=$new_page' class='plus-btn'>다음</a></p>";
+            echo "<p><a href='board_list.php?page=$new_page'>다음</a></p>";
           }
           else {
             echo "&nbsp";

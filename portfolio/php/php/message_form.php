@@ -6,10 +6,14 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-view_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 보내기</title>
   <style>
-
     
+    /* 타이틀 밑에 블루 라인 */
+    .view_form h2::after {
+      width: 240px;
+    }
 
     /* 각 요소 사이즈 */
     .view_form .form_box .send_id {
@@ -49,19 +53,18 @@
 
     <!-- 메세지 사이드 -->
     <aside id="message_side">
-
+            
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
       <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
-
       <!-- 메세지 보내기 버튼 -->
       <?php
         if($userid) {
       ?>
-      <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
+      <input type="button" class="point-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
       <?php
         }
         else {
@@ -70,6 +73,7 @@
       <?php
         }
       ?>
+
     </aside>
 
 

@@ -6,8 +6,10 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-list_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>관리자 모드 - 게시판 관리</title>
   <style>
+
 
 
     /* 목록 요소 각 너비 지정 */
@@ -58,7 +60,7 @@
       <input type="button" class="plus-btn" value="회원 관리" onclick="location.href='admin_member.php'">
 
       <!-- 게시판 관리 버튼 -->
-      <input type="button" class="plus-btn" value="게시판 관리" onclick="location.href='admin_board.php'">
+      <input type="button" class="point-btn" value="게시판 관리" onclick="location.href='admin_board.php'">
       
     </aside>
 
@@ -106,7 +108,7 @@
               $subject = $row["subject"];
               $file_name = $row["file_name"];
               $regist_day = $row["regist_day"];
-              $regist_day = substr($regist_day, 0, 10);
+              $regist_day_short = substr($regist_day, 0, 10);
           ?>
 
 
@@ -133,7 +135,7 @@
                   }
                 ?>
               </p>
-              <p class="regist_day"><?=$regist_day?></p>
+              <p class="regist_day"><?=$regist_day_short?></p>
             </li>
 
 

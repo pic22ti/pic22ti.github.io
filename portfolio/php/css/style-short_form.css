@@ -6,7 +6,10 @@
 /* 사이드가 없는 경우 섹션의 너비를 100%로 설정 */
 section {
   width: 100%;
+  height: calc(100% - 80px);
   padding: 30px;
+  border-left: none;
+
   text-align: center;
 }
 
@@ -31,24 +34,26 @@ section {
 {
   display: block;
 
-  background-color: white;
+  background-color: #ffffff;
   width: 300px;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: none;
+  border-bottom: 1px solid #e7eaeb;
   margin: 10px auto;
 
   text-align: left;
   font-size: 13px;
-  color: #9da1a7;
+  color: #02152a;
 }
 
-.short_form .plus-btn {
+.short_form .point-btn,
+.short_form .plus-btn
+{
   width: 140px;
   margin: 0 5px;
 }
 
-.short_form .check,
-.short_form .save_btn
+.short_form .check
 {
   display: block;
   width: 290px;

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-view_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시글 수정</title>
   <style>
 
@@ -46,13 +47,13 @@
     <aside id="board_side">
 
       <!-- 게시판 목록 버튼 -->
-      <input type="button" class="plus-btn" value="게시판 목록" onclick="location.href='board_list.php'">
+      <input type="button" class="point-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
       <?php
         if($userid) {
       ?>
-      <input type="button" class="plus-btn" value="글쓰기" onclick="location.href='board_form.php'">
+      <input type="button" class="plus-btn" value="게시글 쓰기" onclick="location.href='board_form.php'">
       <?php
         }
         else {
@@ -126,8 +127,7 @@
           <div class="file">
             <p>첨부 파일</p>
             <p>
-              <label for="upfile">파일 선택</label>
-              <input type="file" id="upfile" name="upfile">
+              <input type="file" name="upfile">
               <?=$file_name?>
             </p>
           </div>

@@ -11,14 +11,42 @@
 
 /* 타이틀 */
 .list_form h2 {
+  position: relative;
+
   padding-left: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #e7eaeb;
 }
 .list_form h3 {
+  position: relative;
+
   padding-left: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e7eaeb;
+}
+
+/* 타이틀 밑에 블루 라인 */
+.list_form h2::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  width: 215px;
+  height: 2px;
+  background-color: #164ffa;
+}
+.list_form h3::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  width: 150px;
+  height: 2px;
+  background-color: #164ffa;
 }
 
 /* 목록 배경색 */
@@ -40,20 +68,21 @@
 /* 목록 요소 가로 배치 */
 .list_form .list {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 
   padding: 0 30px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e7eaeb;
 }
 
 
 /* 리스트 제일 윗줄 제목 */
 .list_form .list.sub {
-  /* background-color: thistle; */
-  border-bottom: none;
-  /* border: 1px solid #ddd; */
+  border: 1px solid #e7eaeb;
+  border-radius: 10px;
 }
-
+.list_form .list.sub p {
+  color: #9da1a7;
+}
 
 
 
@@ -65,7 +94,8 @@
 
 /* input text 스타일 */
 .list_form .list input[type=text],
-.list_form .list input[type=button]
+.list_form .list input[type=button],
+.list_form .list input[type=submit]
 {
   display: inline-block;
   background-color: white;
@@ -78,7 +108,9 @@
   text-align: center;
 }
 
-.list_form .list input[type=button] {
+.list_form .list input[type=button],
+.list_form .list input[type=submit]
+{
   max-width: 60px;
 }
 
@@ -95,7 +127,15 @@
 }
 .list_form .page p {
   display: inline-block;
-  margin: 20px 5px;
+  margin: 20px 10px;
+
+  color: #9da1a7;
+}
+.list_form .page p:hover,
+.list_form .page p.active
+{
+  color: #164ffa;
+  font-weight: bold;
 }
 
 /* 하단 버튼 오른쪽 정렬 */

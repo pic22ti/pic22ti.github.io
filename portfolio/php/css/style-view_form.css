@@ -11,8 +11,24 @@
 
 /* 타이틀 */
 .view_form h2 {
+  position: relative;
+
   padding-left: 30px;
   padding-bottom: 30px;
+  border-bottom: 1px solid #e7eaeb;
+}
+
+/* 타이틀 밑에 블루 라인 */
+.view_form h2::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  width: 215px;
+  height: 2px;
+  background-color: #164ffa;
 }
 
 /* 폼 배경색 */
@@ -26,7 +42,7 @@
 
 /* 각 줄 하단에 라인 */
 .view_form .form_box div {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e7eaeb;
 }
 
 /* 각 요소들 가로 배치와 여백 설정 */
@@ -89,7 +105,7 @@ textarea,
   /* padding: 5px; */
   margin: 5px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e7eaeb;
   /* border: 1px solid #ddd; */
   /* line-height: 13px; */
 }
@@ -97,7 +113,7 @@ textarea,
 textarea {
   height: 200px;
   padding: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #e7eaeb;
 }
 
 

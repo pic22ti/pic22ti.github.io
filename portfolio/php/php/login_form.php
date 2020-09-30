@@ -6,15 +6,8 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-short_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>로그인</title>
-  <style>
-
-
-
-
-
-
-  </style>
 </head>
 <body>
 
@@ -46,7 +39,7 @@
         <div class="btn">
 
           <!-- 로그인 버튼 -->
-          <input type="button" class="plus-btn" value="로그인" onclick="check_input()">
+          <input type="button" class="point-btn" value="로그인" onclick="check_input()">
 
           <!-- 회원가입 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="회원가입" onclick="signUp()">

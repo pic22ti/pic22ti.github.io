@@ -44,6 +44,66 @@ div, p, input, textarea {
 }
 
 
+/* 텍스트 버튼 스타일 */
+.text-btn {
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+
+  font-size: 13px;
+  color: #9da1a7;
+}
+.text-btn:hover {
+  color: #164ffa;
+}
+/* 포인트 버튼 스타일 */
+.point-btn {
+  background-color: #164ffa;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #164ffa;
+  border-radius: 10px;
+
+  font-size: 13px;
+  color: #ffffff;
+}
+.point-btn:hover {
+  background-color: #ffffff;
+  border: 1px solid #164ffa;
+  color: #164ffa;
+}
+/* 일반 버튼 스타일 */
+.plus-btn {
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #e7eaeb;
+  border-radius: 10px;
+
+  font-size: 13px;
+  color: #9da1a7;
+}
+.plus-btn:hover {
+  border: 1px solid #164ffa;
+  color: #164ffa;
+}
+
+/* 음각 스타일 */
+.minus-style {
+  background-color: white;
+  padding: 15px;
+  font-size: 13px;
+
+  /* 표시용 수정해야함 */
+  color: tomato;
+}
+
+
+
+
+
+
 
 /* ----------- 헤더 ----------- */
 
@@ -64,16 +124,19 @@ div, p, input, textarea {
   display: inline-block;
   color: #9da1a7;
 }
-#header div.logo a {
+#header div.logo i {
   color: #164ffa;
-  font-weight: 700;
 }
+#header div.logo:hover i {
+  color: #9da1a7;
+}
+
 
 /* 사이드 */
 aside {
-  width: 280px;
+  width: 240px;
   height: calc(100% - 120px);
-  margin: 0 20px 40px 20px;
+  margin: 0 10px 40px 10px;
 }
 /* 사이드 버튼 사이즈와 중앙정렬 */
 aside [type=button] {
@@ -84,10 +147,12 @@ aside [type=button] {
 
 /* 섹션 */
 section {
-  width: calc(100% - 320px);
+  width: calc(100% - 280px);
   height: calc(100% - 80px);
   border-left: 1px solid #e7eaeb;
 }
+/* section {
+} */
 
 /* 메인 */
 section#main {
@@ -109,29 +174,6 @@ section#main article ul {
   height: 303px;
 }
 
-/* 공통 버튼 스타일 */
-.plus-btn {
-  background-color: #ffffff;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
-
-  font-size: 13px;
-  color: #9da1a7;
-}
-.plus-btn:hover {
-  color: #164ffa;
-}
-
-/* 음각 스타일 */
-.minus-style {
-  background-color: white;
-  padding: 15px;
-  font-size: 13px;
-
-  /* 표시용 수정해야함 */
-  color: tomato;
-}
 
 
 
@@ -167,12 +209,12 @@ section#main article ul {
   left: -10px;
   height: 20px;
   width: 20px;
-  background-color: #eee;
+  background-color: #e7eaeb;
 }
 
 /* 체크박스가 체크되면 배경색 변경 */
 .check input:checked ~ .checkmark {
-  background-color: tomato;
+  background-color: #164ffa;
 }
 
 /* 체크 아이콘 만들기 (체크 안되어있을때는 숨김) */

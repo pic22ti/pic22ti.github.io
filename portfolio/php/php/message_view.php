@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-view_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 보기</title>
   <style>
 
@@ -58,11 +59,30 @@
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
+      <!-- *********************** 임시로 선택된 스타일 적용 -->
+      <?php
+        $mode = $_GET["mode"];
+        if( $mode == "send" ) {
+      ?>
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
+      <input type="button" class="point-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <?php
+        }
+        else {
+      ?>
+      <!-- 받은 메세지 버튼 -->
+      <input type="button" class="point-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      
+      <!-- 보낸 메세지 버튼 -->
       <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <?php
+        }
+      ?>
+
+
 
 
       <!-- 메세지 보내기 버튼 -->
@@ -78,6 +98,7 @@
       <?php
         }
       ?>
+
     </aside>
 
 
@@ -89,7 +110,7 @@
 
       <!-- 타이틀 -->
       <?php
-        $mode = $_GET["mode"];
+        
         $num = $_GET["num"];
 
         $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
@@ -165,7 +186,13 @@
       <div class="btn">
 
         <!-- 답장 보내기 버튼 -->
+        <?php
+          if( $mode == "rv" ) {
+        ?>
         <input type="button" class="plus-btn" value="답장 보내기" onclick="location.href='message_response_form.php?num=<?=$num?>'">
+        <?php
+          }
+        ?>
 
         <!-- 메세지 삭제 버튼 -->
         <input type="button" class="plus-btn" class="reset" value="메세지 삭제" onclick="delete_msg()">

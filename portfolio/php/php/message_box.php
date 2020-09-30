@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/style-reset.css">
   <link rel="stylesheet" href="../css/style-flex.css">
   <link rel="stylesheet" href="../css/style-list_form.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 박스</title>
   <style>
 
@@ -23,6 +24,9 @@
       width: 75%;
       text-align: left;
     }
+    .list_form .sub .subject {
+      text-align: center;
+    }
 
 
 
@@ -38,17 +42,61 @@
 		</header>
 
 
+    <?php
+        // page로 넘어온게 있는지 확인
+        // 처음에는 버튼 클릭해서 오면 mode만 넘어오고 page는 넘어온게 없음
+        if( isset($_GET["page"]) ) {
+          // 넘어온게 있으면 해당 페이지
+          $page = $_GET["page"];
+        }
+        else {
+          // 넘어온게 없으면 1페이지에서 시작
+          $page = 1;
+        }
 
+        $mode = $_GET["mode"];
+      ?>
 
 
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
+
+      <!-- *********************** 임시로 선택된 스타일 적용 -->
+      <?php
+        if( $mode == "send" ) {
+      ?>
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
       <!-- 보낸 메세지 버튼 -->
+      <input type="button" class="point-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <?php
+        }
+        else {
+      ?>
+      <!-- 받은 메세지 버튼 -->
+      <input type="button" class="point-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      
+      <!-- 보낸 메세지 버튼 -->
       <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
+      <?php
+        }
+      ?>
+      
+      <!-- 받은 메세지 버튼 -->
+      <!-- <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'"> -->
+      
+      <!-- 보낸 메세지 버튼 -->
+      <!-- <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'"> -->
+
+
+
+
+
+
+
+
 
 
       <!-- 메세지 보내기 버튼 -->
@@ -64,6 +112,7 @@
       <?php
         }
       ?>
+
     </aside>
 
 
@@ -78,18 +127,6 @@
 
       <!-- 타이틀 -->
       <?php
-        // page로 넘어온게 있는지 확인
-        // 처음에는 버튼 클릭해서 오면 mode만 넘어오고 page는 넘어온게 없음
-        if( isset($_GET["page"]) ) {
-          // 넘어온게 있으면 해당 페이지
-          $page = $_GET["page"];
-        }
-        else {
-          // 넘어온게 없으면 1페이지에서 시작
-          $page = 1;
-        }
-
-        $mode = $_GET["mode"];
         if( $mode == "send" ) {
           echo "<h2>보낸 메세지</h2>";
         }
@@ -163,6 +200,7 @@
             $num = $row["num"];
             $subject = $row["subject"];
             $regist_day = $row["regist_day"];
+            $regist_day_short = substr($regist_day, 0, 10);
 
             if( $mode == "send" ) {
               $msg_id = $row["rv_id"];
@@ -182,7 +220,7 @@
         <a href="message_view.php?mode=<?=$mode?>&num=<?=$num?>">
           <li class="list">
             <p class="number"><?=$number?></p>
-            <p class="regist_day"><?=$regist_day?></p>
+            <p class="regist_day"><?=$regist_day_short?></p>
             <p class="id"><?=$msg_id?></p>
             <p class="subject"><?=$subject?></p>
 
@@ -223,7 +261,7 @@
         <?php
           if( $total_page>=2 && $page>=2 ) {
             $new_page = $page-1;
-            echo "<p><a href='message_box.php?mode=$mode&page=$new_page' class='plus-btn'>이전</a></p>";
+            echo "<p><a href='message_box.php?mode=$mode&page=$new_page'>이전</a></p>";
           }
           else {
             echo "&nbsp";
@@ -231,7 +269,7 @@
 
           for( $i = 1; $i<=$total_page; $i++ ) {
             if( $page == $i ) {
-              echo "<p class='active plus-btn'>$i</p>";
+              echo "<p class='active'>$i</p>";
             }
             else {
               echo "<p><a href='message_box.php?mode=$mode&page=$i'>$i</a></p>";
@@ -240,7 +278,7 @@
           
           if( $total_page>=2 && $page!=$total_page ) {
             $new_page = $page+1;
-            echo "<p><a href='message_box.php?mode=$mode&page=$new_page' class='plus-btn'>다음</a></p>";
+            echo "<p><a href='message_box.php?mode=$mode&page=$new_page'>다음</a></p>";
           }
           else {
             echo "&nbsp";
