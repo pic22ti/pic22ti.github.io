@@ -16,6 +16,15 @@ Chrome, Safari, Edge, IE
 HTML5, CSS3, Vanilla JS
 
 ## 7. 사용된 기술
+*
+*
+*
+*
+*
+
 ## 8. 고찰 및 개선 방향
+*
+*
+
 ## 9. 기여
 * <http://www.cafedroptop.com/n/kr/src/main.php>
