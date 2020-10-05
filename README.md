@@ -8,19 +8,19 @@
 
 ## 3. 프로젝트 목차
 ### 3.1. HOTEL DENIM 
-  - 호텔 데님 사이트 리뉴얼
-  - Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim>
-  - 사이트 <https://pic22ti.github.io/portfolio/denim/index.html>
+  * 호텔 데님 사이트 리뉴얼
+  * Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim>
+  * 사이트 <https://pic22ti.github.io/portfolio/denim/index.html>
   
 ### 3.2. Community
-  - PHP, MySQL을 사용한 메세지, 게시판 기능이 있는 커뮤니티 사이트 제작
-  - Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php>
-  - 사이트 <https://pic22ti.dothome.co.kr/mysite/php/index.php>
+  * PHP, MySQL을 사용한 메세지, 게시판 기능이 있는 커뮤니티 사이트 제작
+  * Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php>
+  * 사이트 <https://pic22ti.dothome.co.kr/mysite/php/index.php>
   
 ### 3.3. Drop Top
-  - 카페 드롭탑 사이트 리뉴얼
-  - Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
-  - 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
+  * 카페 드롭탑 사이트 리뉴얼
+  * Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
+  * 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
 
 ## 4. 사이트 구조
 
@@ -49,10 +49,13 @@ HTML5, CSS3, Vanilla JS
 
 ## 10. 버전
 ### v0.1
-  - 
+  * index 페이지 구현 (PC)
   
 ### v0.2
-  - 
+  * 이메일 contact 연결
 
+### v0.3
+  * 반응형 디자인 적용 (Mobile)
+  
 ## 11. 기여
 * 
