@@ -20,8 +20,8 @@
   - Ferrari: (그레이) #a0a0a0, 
   - McLaren: (오렌지) #ff950e, (블루) #0357ca, (그레이) #b5b5b5
 
-* 폰트 (영문 sans serif)
-  - font-family: 'Russo One', sans-serif;
+* 폰트
+  - (메뉴) font-family: 'Russo One', sans-serif;
 
 ## 6. 브라우저 서포트
 Chrome, Safari, Edge, IE
