@@ -5,7 +5,7 @@
 2020.6.16 ~ 2020.9.25
 
 ## 3. URL
-* github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
+* Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
 * 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
 
 ## 4. 사이트 구조
@@ -13,7 +13,7 @@
 Chrome, Safari, Edge, IE
 
 ## 6. 사용된 언어
-html5, css3, Vanilla JS
+HTML5, CSS3, Vanilla JS
 
 ## 7. 사용된 기술
 ## 8. 고찰 및 개선 방향
