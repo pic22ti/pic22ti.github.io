@@ -12,7 +12,7 @@
   - Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim>
   - 사이트 <https://pic22ti.github.io/portfolio/denim/index.html>
   
-#### 3.2. Drop Top
+### 3.2. Drop Top
   - 카페 드롭탑 사이트 리뉴얼
   - Github 
   - 사이트 
