@@ -1,4 +1,4 @@
-![logo_droptop](/img.png)
+![img_portfolio](/img.png)
 
 ## 1. Portfolio
 포트폴리오
