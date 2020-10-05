@@ -9,7 +9,7 @@
 * 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
 
 ## 4. 사이트 구조
-## 5. 브라우저 최적화
+## 5. 브라우저 
 Chrome, Safari, Edge, IE
 
 ## 6. 사용된 언어
