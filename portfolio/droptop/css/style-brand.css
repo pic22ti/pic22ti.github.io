@@ -102,7 +102,7 @@
 #brand .content8 {
   height: 225px;
   background-color: #1a2e42;
-  color: white;
+  color: #ffffff;
 }
 #brand .content8 h2 {
   padding-top: 80px;
@@ -116,7 +116,7 @@
 #brand .content9 {
   height: 450px;
   background-color: #1a2e42;
-  color: white;
+  color: #ffffff;
 }
 #brand .content9 .container {
   height: 100%; 
@@ -128,8 +128,6 @@
   padding-left: 24px;
   line-height: 17px;
 }
-
-
 
 /* ================ 모바일 끝 ================ */
 
@@ -251,7 +249,7 @@
   height: 300px;
 
   background-color: #dcdcdc;
-  color: black;
+  color: #000000;
   text-align: center;
 }
 
@@ -278,12 +276,8 @@
   line-height: 24px;
 }
 
-
-
-
-
-
 /* 미디어 쿼리 끝 */
 }
 /* ================ PC 끝 ================ */
+
 /* ---------------- 브랜드 컨텐츠 끝 ---------------- */

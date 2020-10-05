@@ -50,15 +50,9 @@
 #menu button:hover,
 #menu button.click
 {
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
-
-
-
-
-
-
 
 /* ---------------- 모달창 ---------------- */
 
@@ -85,7 +79,7 @@
   top: 10px;
   right: 10px;
 
-  color: white;
+  color: #ffffff;
   font-size: 2.5rem;
 }
 
@@ -110,12 +104,6 @@
     transform: scale(1);
   }
 }
-
-
-
-
-
-
 
 /* ---------------- 메뉴 컨텐츠 ---------------- */
 /* 메뉴 컨텐츠
@@ -201,12 +189,6 @@
   line-height: 30px;
 }
 
-
-
-
-
-
-
 /* ---------------- 페이지 클릭하면 좌우로 슬라이드 하면서 해당 페이지를 보여줌 ---------------- */
 
 /* 신메뉴 newitem */
@@ -219,7 +201,7 @@ input[id="new2"]:checked ~ .slide {
 input[id="new1"]:checked ~ .page>label[for="new1"],
 input[id="new2"]:checked ~ .page>label[for="new2"]
 {
-  color: white;
+  color: #ffffff;
   background-color: #1a2e42;
 }
 
@@ -233,7 +215,7 @@ input[id="coffee2"]:checked ~ .slide {
 input[id="coffee1"]:checked ~ .page>label[for="coffee1"],
 input[id="coffee2"]:checked ~ .page>label[for="coffee2"]
 {
-  color: white;
+  color: #ffffff;
   background-color: #1a2e42;
 }
 
@@ -251,7 +233,7 @@ input[id="beverage1"]:checked ~ .page>label[for="beverage1"],
 input[id="beverage2"]:checked ~ .page>label[for="beverage2"],
 input[id="beverage3"]:checked ~ .page>label[for="beverage3"]
 {
-  color: white;
+  color: #ffffff;
   background-color: #1a2e42;
 }
 
@@ -269,15 +251,9 @@ input[id="food1"]:checked ~ .page>label[for="food1"],
 input[id="food2"]:checked ~ .page>label[for="food2"],
 input[id="food3"]:checked ~ .page>label[for="food3"]
 {
-  color: white;
+  color: #ffffff;
   background-color: #1a2e42;
 }
-
-
-
-
-
-
 /* ================ 모바일 끝 ================ */
 
 
@@ -309,8 +285,6 @@ input[id="food3"]:checked ~ .page>label[for="food3"]
   font-size: 20px;
 }
 
-
-
 /* 상단 메뉴 버튼 탭 영역 순서와 사이즈 변경 */
 #menu .btn {
   height: 50px;
@@ -328,10 +302,6 @@ input[id="food3"]:checked ~ .page>label[for="food3"]
 #menu .btn .flex button:nth-of-type(1) {
   border-left: 1px solid #dcdcdc;
 }
-
-
-
-
 
 /* ---------------- 메뉴 컨텐츠 ---------------- */
 
@@ -377,23 +347,8 @@ input[id="food3"]:checked ~ .page>label[for="food3"]
   margin-bottom: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 미디어 쿼리 끝 */
 }
 /* ================ PC 끝 ================ */
-
 
 /* ---------------- 메뉴 끝 ---------------- */

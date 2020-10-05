@@ -155,9 +155,6 @@
   left: 220px;
 }
 
-
-
-
 /* 컨텐츠4 */
 #coffee .content4 {
   grid-column: 1 / 3;
@@ -180,37 +177,6 @@
 #coffee .content5 .list {
   line-height: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 미디어 쿼리 끝 */
 }
