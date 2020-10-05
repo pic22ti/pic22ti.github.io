@@ -6,8 +6,10 @@
 2020.6.16 ~ 2020.9.25
 
 ## 3. URL
-* Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
-* 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
+* Github
+  <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
+* 사이트
+  <https://pic22ti.github.io/portfolio/droptop/index.html>
 
 ## 4. 사이트 구조
 
@@ -45,4 +47,5 @@ HTML5, CSS3, Vanilla JS
 * 컨텐츠를 전부 html로 직접 넣어 유지보수에 효율적이지 않음
 
 ## 9. 기여
-* 카페 드롭탑 사이트 <http://www.cafedroptop.com/n/kr/src/main.php>
+* 카페 드롭탑 사이트
+  <http://www.cafedroptop.com/n/kr/src/main.php>
