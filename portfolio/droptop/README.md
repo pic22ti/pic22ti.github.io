@@ -1,5 +1,5 @@
-## 1. Drop Top
 ![logo_droptop](/portfolio/droptop/logo_droptop.png)
+## 1. Drop Top
 
 ## 2. 개발 기간
 2020.6.16 ~ 2020.9.25
