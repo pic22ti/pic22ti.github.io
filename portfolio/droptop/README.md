@@ -1,4 +1,5 @@
 ![logo_droptop](/portfolio/droptop/logo_droptop.png)
+
 ## 1. Drop Top
 카페 드롭탑 사이트 리뉴얼
 
@@ -10,6 +11,7 @@
 * 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
 
 ## 4. 사이트 구조
+![sitemap_droptop](/portfolio/droptop/sitemap_droptop.jpg)
 
 ## 5. 기본 설정
 * 컬러
@@ -44,5 +46,5 @@ HTML5, CSS3, Vanilla JS
 ## 9. 고찰 및 개선 방향
 * 컨텐츠를 전부 html로 직접 넣어 유지보수에 효율적이지 않음
 
-## 10. 
+## 10. 기여
 * 카페 드롭탑 사이트 <http://www.cafedroptop.com/n/kr/src/main.php>
