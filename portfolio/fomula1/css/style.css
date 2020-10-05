@@ -7,6 +7,11 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Russo One', sans-serif;
 */
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 a {
 	text-decoration: none;
 	color: currentColor;
@@ -20,11 +25,6 @@ a {
 
   perspective: 2000px;
 }
-
-
-
-
-
 
 /* ------------- 메뉴 버튼 ------------- */
 .btnMenu {
@@ -71,13 +71,6 @@ a {
 .btnMenu:hover div:nth-child(3) {
   margin-left: 10px;
 }
-
-
-
-
-
-
-
 
 /* ------------- 메뉴바 ------------- */
 /* 메뉴바가 사라지면 메뉴 버튼이 보임 */
@@ -137,14 +130,6 @@ a {
   color: gray;
   transform: scale(0.95);
 }
-
-
-
-
-
-
-
-
 
 /* ------------- 컨텐츠 컨테이너 ------------- */
 
@@ -214,14 +199,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
 
 /* ------------- 컨텐츠 아이템 ------------- */
 
@@ -422,5 +399,3 @@ a {
   text-align: center;
   font-size: 50px;
 }
-
-
