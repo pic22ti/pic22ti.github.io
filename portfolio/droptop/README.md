@@ -21,13 +21,13 @@
   - (영문 serif) font-family: 'Pacifico', cursive; 
   - (영문, 한글 sans serif) font-family: 'Noto Sans KR', sans-serif;
 
-## 5. 브라우저 서포트
+## 6. 브라우저 서포트
 Chrome, Safari, Edge, IE
 
-## 6. 사용된 언어
+## 7. 사용된 언어
 HTML5, CSS3, Vanilla JS
 
-## 7. 사용된 기술
+## 8. 사용된 기술
 * CSS
   - checkbox를 사용하여 메뉴 열기/닫기 
   - 미디어쿼리를 사용한 반응형 사이트 구현
@@ -41,8 +41,8 @@ HTML5, CSS3, Vanilla JS
   - 게시글 슬라이드 다운
   - 모달 팝업창 구현
 
-## 8. 고찰 및 개선 방향
+## 9. 고찰 및 개선 방향
 * 컨텐츠를 전부 html로 직접 넣어 유지보수에 효율적이지 않음
 
-## 9. 기여
+## 10. 
 * 카페 드롭탑 사이트 <http://www.cafedroptop.com/n/kr/src/main.php>
