@@ -2,26 +2,14 @@
 
 /* ------------------ 모바일 스크롤 ------------------ */
 
-/*
-아래 사이트 참고해서 만듬
-
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
-
-https://stackoverflow.com/questions/9439725/javascript-how-to-detect-if-browser-window-is-scrolled-to-bottom
-*/
-
-
-
 // 스크롤 아이콘 가져오기
 var scrollIcon = document.querySelector("#mobile-scroll i");
-
 
 // 맨 위로 올라가는 함수 만들기
 function goToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 
 // 스크롤 될때 실행
 window.onscroll = function(e) {
@@ -41,7 +29,5 @@ window.onscroll = function(e) {
     scrollIcon.classList.remove('reverse');
   }
 };
-
-
 
 })();
