@@ -1,4 +1,4 @@
-![logo_fomula1](/portfolio/fomula1/logo_fomula1.png)
+![logo_fomula1](/portfolio/fomula1/logo_fomula1.jpg)
 
 ## 1. Fomula1
 포뮬러1 팀 소개 페이지
