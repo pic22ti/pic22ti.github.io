@@ -6,11 +6,16 @@
 ## 2. 개발 기간
 2020.10.5 ~ 
 
-## 3. 프로젝트 목치
+## 3. 프로젝트 목차
 * HOTEL DENIM 
   - 호텔 데님 사이트 리뉴얼
   - Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim>
   - 사이트 <https://pic22ti.github.io/portfolio/denim/index.html>
+  
+### Drop Top
+  - 카페 드롭탑 사이트 리뉴얼
+  - Github 
+  - 사이트 
 
 ## 4. 사이트 구조
 
