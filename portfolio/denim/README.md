@@ -1,7 +1,7 @@
 ![logo_denim](/portfolio/denim/logo_denim.png)
 
 ## 1. HOTEL DENIM
-카페 드롭탑 사이트 리뉴얼
+호텔 데님 사이트 리뉴얼
 
 ## 2. URL
 * [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim)
@@ -13,8 +13,7 @@
 ## 4. 사용된 기술
 * CSS
   - 미디어쿼리를 사용한 반응형 사이트 구현
-  - flex, grid 레이아웃을 사용한 디자인
-  - flex 레이아웃
+  - flex, grid 레이아웃을 사용한 디자인 구현
 
 * Vanilla JS
   - 선택된 탭을 보여주기
