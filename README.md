@@ -19,15 +19,29 @@
   * Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
   * 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
 
+### 2.4. F1
+  * 포뮬러1 레이싱팀 소개 페이지
+  * Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1>
+  * 사이트 <https://pic22ti.github.io/portfolio/fomula1/index.html>
+
+### 2.5. SOLAR SYSTEM
+  * 태양계 정보 페이지
+  * Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system>
+  * 사이트 <https://pic22ti.github.io/portfolio/solar_system/index.html>
+
 ## 3. 사이트 구조
 
 ## 4. 사용된 기술
 * Vanilla JS
-  - 
-  - 
+  - 기술
+  - 기술
+
+* CSS
+  - 기술
+  - 기술
 
 ## 5. 고찰 및 개선 방향
 * 
 
-## 6. 기여
+## 6. 
 * 
