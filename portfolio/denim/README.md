@@ -8,7 +8,7 @@
 * [사이트](https://pic22ti.github.io/portfolio/denim/index.html)
 
 ## 3. 사이트 구조
-![sitemap_denim](/portfolio/droptop/sitemap_denim.jpg)
+![sitemap_denim](/portfolio/denim/sitemap_denim.jpg)
 
 ## 4. 사용된 기술
 * CSS
