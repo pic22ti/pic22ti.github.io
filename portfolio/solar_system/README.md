@@ -20,4 +20,5 @@
 * 고화질 이미지가 늦게 뜨는 것에 대한 개선이 필요함
 
 ## 6. 참고 사항
-* 
+* [NASA](https://www.nasa.gov/)
+* [위키백과 태양계](https://ko.wikipedia.org/wiki/%ED%83%9C%EC%96%91%EA%B3%84)
