@@ -20,4 +20,6 @@
 * 고화질 이미지가 늦게 뜨는 것에 대한 개선이 필요함
 
 ## 6. 참고 사항
-* 
+* [Mercedes](https://www.mercedesamgf1.com/en/)
+* [Ferrari](https://www.ferrari.com/en-KR)
+* [McLaren](https://www.mclaren.com/)
