@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>관리자 모드 - 게시판 관리</title>
   <style>
-
-
-
     /* 목록 요소 각 너비 지정 */
     .list_form .check {
       width: 10%;
@@ -35,10 +32,6 @@
     .list_form .regist_day {
       width: 10%;
     }
-
-
-
-
   </style>
 </head>
 <body>
@@ -93,14 +86,17 @@
 
 
           <!-- 게시판 데이터 리스트 불러오기 -->
+          <!-- DB connect -->
           <?php
             $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
             $sql = "select * from board order by num desc";
             $result = mysqli_query($con, $sql);
             $total_record = mysqli_num_rows($result);
-            // 전체 글 수
+
+            // 전체 게시글 수
             $number = $total_record;
 
+            // 게시글들의 필요한 데이터를 가져오기
             while( $row = mysqli_fetch_array($result) ) {
               $num = $row["num"];
               $id = $row["id"];
@@ -114,8 +110,12 @@
 
 
 
-          <!-- 게시판 데이터 리스트 -->
+          <!-- 게시글들을 목록으로 출력 -->
+          <!-- *************************** 수정사항: 게시글 삭제버튼과 form이 while문 밖에 있고 li만 반복되야 한다. -->
           <form method="post" action="admin_board_delete.php">
+
+
+
             <li class="list">
               <p class="check">
                 <label>
@@ -130,6 +130,7 @@
               <p class="file">
                 <?=$file_name?>
                 <?php
+                  // 첨부파일이 없을 때 출력됨
                   if(!$file_name) {
                     echo "(파일 없음)";
                   }
@@ -150,13 +151,15 @@
 
 
 
-          <!-- sql 종료 -->
+          
           <?php
               $number--;
             }
+            // while문 종료
+
             mysqli_close($con);
           ?>
-
+          <!-- DB close -->
 
 
 

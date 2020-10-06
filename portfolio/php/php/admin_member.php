@@ -9,13 +9,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>관리자 모드 - 회원 관리</title>
   <style>
-
-
     /* 타이틀 밑에 블루 라인 */
     .list_form h2::after {
       width: 190px;
     }
-
 
     /* 목록 요소 각 너비 지정 */
     .list_form .number {
@@ -43,8 +40,6 @@
       width: 10%;
     }
 
-
-
     /* input 있는 부분만 여백 변경 */
     .list_form ul form p.level,
     .list_form ul form p.point,
@@ -52,8 +47,6 @@
     .list_form ul form p.delete {
       padding: 9px 0;
     }
-
-
   </style>
 </head>
 <body>
