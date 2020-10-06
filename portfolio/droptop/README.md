@@ -16,7 +16,7 @@
   - grid 레이아웃을 사용한 디자인 구현
   - flex 레이아웃 
 
-* Vanilla JS (단어 고치기)
+* Vanilla JS
   - url을 사용하여 선택한 메뉴로 이동
   - scroll 위치를 구해 gototop 버튼 활성화
   - 선택된 탭을 보여주기
@@ -27,4 +27,4 @@
 * 컨텐츠를 전부 html로 직접 넣어 유지보수에 효율적이지 않음
 
 ## 6. 참고 사항
-* [카페 드롭탑 사이트](http://www.cafedroptop.com/n/kr/src/main.php)
+* [카페 드롭탑](http://www.cafedroptop.com/n/kr/src/main.php)
