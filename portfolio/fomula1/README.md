@@ -4,8 +4,8 @@
 포뮬러1 팀 소개 페이지
 
 ## 2. URL
-* Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1>
-* 사이트 <https://pic22ti.github.io/portfolio/fomula1/index.html>
+* [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
+* [사이트](https://pic22ti.github.io/portfolio/fomula1/index.html)
 
 ## 3. 사이트 구조
 
