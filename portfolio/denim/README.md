@@ -1,4 +1,4 @@
-![logo_droptop](/portfolio/droptop/logo_droptop.png)
+![logo_denim](/portfolio/denim/logo_denim.png)
 
 ## 1. HOTEL DENIM
 카페 드롭탑 사이트 리뉴얼
@@ -8,7 +8,7 @@
 * [사이트](https://pic22ti.github.io/portfolio/denim/index.html)
 
 ## 3. 사이트 구조
-![sitemap_droptop](/portfolio/droptop/sitemap_droptop.jpg)
+![sitemap_denim](/portfolio/droptop/sitemap_denim.jpg)
 
 ## 4. 사용된 기술
 * CSS
