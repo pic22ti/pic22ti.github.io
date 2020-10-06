@@ -4,8 +4,8 @@
 카페 드롭탑 사이트 리뉴얼
 
 ## 2. URL
-* Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop>
-* 사이트 <https://pic22ti.github.io/portfolio/droptop/index.html>
+* [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop)
+* [사이트](https://pic22ti.github.io/portfolio/droptop/index.html)
 
 ## 3. 사이트 구조
 ![sitemap_droptop](/portfolio/droptop/sitemap_droptop.jpg)
@@ -27,4 +27,4 @@
 * 컨텐츠를 전부 html로 직접 넣어 유지보수에 효율적이지 않음
 
 ## 6. 참고 사항
-* 카페 드롭탑 사이트 <http://www.cafedroptop.com/n/kr/src/main.php>
+* [카페 드롭탑 사이트](http://www.cafedroptop.com/n/kr/src/main.php)
