@@ -16,7 +16,7 @@
   - flex, grid 레이아웃을 사용한 디자인
   - flex 레이아웃
 
-* Vanilla JS (단어 고치기)
+* Vanilla JS
   - 선택된 탭을 보여주기
   - 이미지 좌우로 넘기기
 
