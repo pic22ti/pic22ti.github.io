@@ -4,8 +4,8 @@
 태양계 행성들의 기본 정보를 제공하는 사이트
 
 ## 2. URL
-* Github <https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system>
-* 사이트 <https://pic22ti.github.io/portfolio/solar_system/index.html>
+* [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system)
+* [사이트](https://pic22ti.github.io/portfolio/solar_system/index.html)
 
 ## 3. 사이트 구조
 
