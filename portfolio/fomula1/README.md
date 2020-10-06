@@ -1,7 +1,7 @@
 ![logo_fomula1](/portfolio/fomula1/logo_fomula1.jpg)
 
 ## 1. Fomula1
-포뮬러1 팀 소개 페이지
+포뮬러1 상위 레이싱 팀 소개 페이지입니다.
 
 ## 2. URL
 * [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
@@ -11,10 +11,11 @@
 
 ## 4. 사용된 기술
 * CSS
-  - 3d
+  - grid-template를 사용한 레이아웃
+  - perspective, transform을 사용한 3d 회전 효과
 
 * Vanilla JS
-  - 메뉴
+  - 메뉴 탭
 
 ## 5. 고찰 및 개선 방향
 * 고화질 이미지가 늦게 뜨는 것에 대한 개선이 필요함
