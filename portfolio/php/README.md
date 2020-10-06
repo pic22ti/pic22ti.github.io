@@ -10,7 +10,10 @@
 ![sitemap_php](/portfolio/php/sitemap_php.jpg)
 
 ## 4. 사용된 기술
-* CSS
+* PHP
+  - 기술
+
+* MySQL
   - 기술
 
 * Vanilla JS
