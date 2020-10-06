@@ -25,3 +25,4 @@
 ## 6. 참고 사항
 * [호텔 데님](http://hoteldenim.com/)
 * [파라다이스시티 호텔](https://www.p-city.com/)
+* [폰트어썸](https://fontawesome.com/)
