@@ -28,3 +28,4 @@
 
 ## 6. 참고 사항
 * [카페 드롭탑](http://www.cafedroptop.com/n/kr/src/main.php)
+* [컨버스](https://www.converse.co.kr/)
