@@ -8,6 +8,7 @@
 * [사이트](https://pic22ti.github.io/portfolio/fomula1/index.html)
 
 ## 3. 사이트 구조
+![sitemap_fomula1](/portfolio/fomula1/sitemap_fomula1.jpg)
 
 ## 4. 사용된 기술
 * CSS
