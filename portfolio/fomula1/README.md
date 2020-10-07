@@ -1,7 +1,7 @@
 ![logo_fomula1](/portfolio/fomula1/logo_fomula1.jpg)
 
 ## 1. Fomula1
-포뮬러1 상위 레이싱 팀 소개 페이지입니다.
+포뮬러1 레이싱 팀 소개 페이지입니다.
 
 ## 2. URL
 * [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
