@@ -8,6 +8,7 @@
 * [사이트](https://pic22ti.github.io/portfolio/solar_system/index.html)
 
 ## 3. 사이트 구조
+![sitemap_solar_system](/portfolio/solar_system/sitemap_solar_system.jpg)
 
 ## 4. 사용된 기술
 * CSS
