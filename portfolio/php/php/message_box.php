@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 박스</title>
   <style>
-
     /* 목록 요소 각 너비 지정 */
     .list_form .number {
       width: 5%;
@@ -27,9 +26,6 @@
     .list_form .sub .subject {
       text-align: center;
     }
-
-
-
   </style>
 </head>
 <body>
@@ -45,12 +41,13 @@
     <?php
         // page로 넘어온게 있는지 확인
         // 처음에는 버튼 클릭해서 오면 mode만 넘어오고 page는 넘어온게 없음
+
+        // 넘어온게 있으면 해당 페이지
         if( isset($_GET["page"]) ) {
-          // 넘어온게 있으면 해당 페이지
           $page = $_GET["page"];
         }
+        // 넘어온게 없으면 1페이지에서 시작
         else {
-          // 넘어온게 없으면 1페이지에서 시작
           $page = 1;
         }
 
@@ -61,8 +58,8 @@
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
-
-      <!-- *********************** 임시로 선택된 스타일 적용 -->
+      <!-- ************************* 수정사항: 중복되는 부분 최소화하기
+      message_box.php와 message_view.php 둘다  -->
       <?php
         if( $mode == "send" ) {
       ?>
@@ -120,11 +117,6 @@
     <!-- 메세지 목록 섹선 -->
     <section id="message_box" class="list_form">
 
-
-
-
-
-
       <!-- 타이틀 -->
       <?php
         if( $mode == "send" ) {
@@ -135,17 +127,12 @@
         }
       ?>
 
-
-
-
-
-
-
       <!-- 메세지 목록 -->
       <ul class="message_list">
         <li class="list sub plus-btn">
           <p class="number">번호</p>
 
+          <!-- **************************** 개선사항: 날짜와 사람 if문을 합칠 수는 없을까 -->
           <?php
             if( $mode == "send" ) {
               echo "<p class='regist_day'>받은 날짜</p>";
@@ -154,7 +141,6 @@
               echo "<p class='regist_day'>보낸 날짜</p>";
             }
           ?>
-
           <?php
             if( $mode == "send" ) {
               echo "<p class='id'>받은 사람</p>";
@@ -167,6 +153,8 @@
           <p class="subject">제목</p>
         </li>
 
+        <!-- 메세지 데이터 가져오기 -->
+        <!-- DB connect -->
         <?php
           $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
 
@@ -179,6 +167,8 @@
 
           $result = mysqli_query($con, $sql);
           $total_record = mysqli_num_rows($result);
+
+          // 한 페이지에 보여줄 게시글 수를 설정
           $scale = 5;
 
           // 글 수가 5의 배수일때
@@ -216,41 +206,36 @@
 
 
 
-
+        <!-- 메세지들을 목록으로 출력 -->
         <a href="message_view.php?mode=<?=$mode?>&num=<?=$num?>">
           <li class="list">
             <p class="number"><?=$number?></p>
             <p class="regist_day"><?=$regist_day_short?></p>
             <p class="id"><?=$msg_id?></p>
             <p class="subject"><?=$subject?></p>
-
           </li>
         </a>
 
 
 
-
         <?php
               $number--;
-            } // for문 끝
+            } // for문 종료
 
-            // 쪽지가 없을 때 안내 문구 출력
+            // 메세지가 없을 때 안내 문구 출력
             if( !$total_record ) {
               if( $mode == "send" ) {
-                echo "<p class='no-message'>보낸 쪽지가 없습니다.</p>";
+                echo "<p class='no-message'>보낸 메세지가 없습니다.</p>";
               }
               else {
-                echo "<p class='no-message'>받은 쪽지가 없습니다.</p>";
+                echo "<p class='no-message'>받은 메세지가 없습니다.</p>";
               }
             } 
 
           mysqli_close($con);
         ?>
+        <!-- DB close -->
 
-
-
-        <!-- 쪽지가 없을 때 안내문구 -->
-        <!-- <p class='no-message'>받은 쪽지가 없습니다.</p> -->
       </ul>
 
 

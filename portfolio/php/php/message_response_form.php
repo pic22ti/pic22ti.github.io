@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>답장 메세지 보내기</title>
   <style>
-
-
-
     /* 첫번째 요소에 너비 고정 */
     .view_form .form_box div p:first-of-type
     {
@@ -31,10 +28,6 @@
     .view_form .form_box .content {
       width: 100%;
     }
-
-
-
-
   </style>
 </head>
 <body>
@@ -85,8 +78,10 @@
       <h2>답장 메세지 보내기</h2>
 
       <?php
+        // 메세지 고유번호 가져오기
         $num = $_GET["num"];
 
+        // DB connect
         $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
         $sql = "select * from messagebox where num=$num";
         $result = mysqli_query($con, $sql);
@@ -103,19 +98,14 @@
         $content = str_replace("\n", "\n>", $content);
         $content = "\n\n\n\n---------------------------------\n".$content;
 
+        // ********************************* 개선사항: sql2를 사용하면 위 result와 같은 형태로 수정할 수 있을 거같음...
         $result2 = mysqli_query($con, "select name from member where id='$send_id'");
         $record = mysqli_fetch_array($result2);
         $send_name = $record["name"];
+
+        // ********************************* 수정사항: DB 종료가 없음!!!!!!!!!! 확인 후 추가하기
+        // DB close
       ?>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -129,6 +119,7 @@
         <!-- 폼박스 -->
         <div class="form_box minus-style">
 
+          <!-- ********************************* 개선사항: 설명수정: 메세지를 보냈던 사람을 받는 사람으로 저장하는 것 -->
           <!-- 받는 사람 value값을 보내기 위해 숨긴 input -->
           <input type="hidden" name="rv_id" value="<?=$send_id?>">
 
@@ -187,6 +178,8 @@
 
   <!-- 자바스크립트 -->
   <script>
+
+    // 입력된 값이 없다면 리턴
     function check_input() {
       if( !document.message_form.subject.value ) {
         alert( "제목을 입력하세요." );
@@ -200,6 +193,8 @@
       }
       document.message_form.submit();
     }
+
+    // 입력값 초기화
     function reset_form() {
       document.message_form.subject.value = "";
       document.message_form.content.value = "";

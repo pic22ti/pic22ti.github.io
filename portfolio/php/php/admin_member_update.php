@@ -28,8 +28,6 @@
 	
 	// DB connect
 	$con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
-
-	// 수정된 데이터 update
 	$sql = "update member set level=$level, point=$point where num=$num";
 	mysqli_query($con, $sql);
 	mysqli_close($con);

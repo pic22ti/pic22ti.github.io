@@ -9,11 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시글 보기</title>
   <style>
-
-
-
-
-
     /* 첫번째 요소에 너비 고정 */
     .view_form .form_box .id p:first-of-type,
     .view_form .form_box .date p:first-of-type,
@@ -40,7 +35,6 @@
       width: 100%;
     }
 
-
     /* 첨부파일 이름 너비 변경 */
     .view_form .form_box div p.file_name {
       width: calc(100% - 400px);
@@ -59,11 +53,6 @@
       line-height: 13px;
       text-align: center;
     }
-
-
-
-
-
   </style>
 </head>
 <body>
@@ -79,9 +68,12 @@
 
 
     <?php
+    	// 게시글 고유번호와 
+      // 목록으로 다시 돌아갈때 게시글이 있던 페이지로 돌아가기 위해 페이지도 받아온다
       $num = $_GET["num"];
       $page = $_GET["page"];
 
+      // DB connect
       $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
       $sql = "select * from board where num=$num";
       $result = mysqli_query($con, $sql);
@@ -98,6 +90,7 @@
       $file_copied = $row["file_copied"];
       $hit = $row["hit"];
 
+      // **************************** 수정사항: 문자 변환 함수 알기
       $content = str_replace(" ", "&nbsp;", $content);
       $content = str_replace("\n", "<br>", $content);
 
@@ -106,10 +99,13 @@
       mysqli_query($con, $sql);
     ?>
 
+    <!-- **************************** 수정사항: sql 종료 어디감? -->
+    <!-- DB close -->
 
 
 
 
+    <!-- **************************** 수정사항: php문보다 밑에 있는 이유는? -->
     <!-- 게시판 사이드 -->
     <aside id="board_side">
 
@@ -170,6 +166,8 @@
         <div class="file">
           <p>첨부 파일</p>
           <?php
+
+            // 첨부된 파일이 있다면 '저장'버튼 노출
             if( $file_name ) {
               $real_name = $file_copied;
               $file_path = "./data/".$real_name;

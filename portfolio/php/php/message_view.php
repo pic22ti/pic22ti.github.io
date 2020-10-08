@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 보기</title>
   <style>
-
-    
     /* 첫번째 요소에 너비 고정 */
     .view_form .form_box .send_id p:first-of-type,
     .view_form .form_box .rv_id p:first-of-type,
@@ -36,10 +34,6 @@
     .view_form .form_box .content {
       width: 100%;
     }
-
-
-
-
   </style>
 </head>
 <body>
@@ -59,7 +53,8 @@
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
-      <!-- *********************** 임시로 선택된 스타일 적용 -->
+      <!-- ************************* 수정사항: 중복되는 부분 최소화하기
+      message_box.php와 message_view.php 둘다  -->
       <?php
         $mode = $_GET["mode"];
         if( $mode == "send" ) {
@@ -110,9 +105,10 @@
 
       <!-- 타이틀 -->
       <?php
-        
+        // 메세지 고유번호 받아오기
         $num = $_GET["num"];
 
+        // DB connect
         $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
         $sql = "select * from messagebox where num=$num";
         $result = mysqli_query($con, $sql);
@@ -143,6 +139,9 @@
         else {
           echo "<h2>받은 메세지 내용</h2>"; 
         }
+
+        // **************************** 수정사항: 데이터 종료 없음!!!!!!!!!!!!!
+        // DB close 
       ?>
 
 
@@ -191,7 +190,7 @@
         ?>
         <input type="button" class="plus-btn" value="답장 보내기" onclick="location.href='message_response_form.php?num=<?=$num?>'">
         <?php
-          }
+          } // if문 종료
         ?>
 
         <!-- 메세지 삭제 버튼 -->

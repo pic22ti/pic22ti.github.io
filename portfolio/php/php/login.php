@@ -1,14 +1,18 @@
 <meta charset="UTF-8">
 <?php
+
+	//
 	$id = $_POST["id"];
 	$pass = $_POST["pass"];
 
+	// DB connect
 	$con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
 	$sql = "select * from member where id='$id'";
 	$result = mysqli_query($con, $sql);
 
 	$num_match = mysqli_num_rows($result);
 
+	// 등록된 아이디가 없을 때 되돌아간다
 	if( !$num_match ) {
 		echo "
 			<script>
@@ -17,12 +21,16 @@
 			</script>
 		";
 	}
+
 	else {
 		$row = mysqli_fetch_array($result);
 		$db_pass = $row["pass"];
 
 		mysqli_close($con);
+		// *********************** 개선사항: 이렇게 애매한 위치에서 db를 종료해야하는 이유가 있나?
+		// DB close
 
+		// 비밀번호가 일치하지 않을 때 되돌아간다
 		if( $pass != $db_pass ) {
 			echo "
 				<script>
@@ -31,6 +39,8 @@
 				</script>
 			";
 		}
+
+		// 비밀번호가 일치한다면 세션 스타트로 로그인을 유지시킨다
 		else {
 			session_start();
 			$_SESSION["userid"] = $row["id"];
@@ -44,5 +54,5 @@
 				</script>
 			";
 		}
-	}
+	} 
 ?>

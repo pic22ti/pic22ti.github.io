@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시글 쓰기</title>
   <style>
-
     /* 첫번째 요소에 너비 고정 */
     .view_form .form_box div p:first-of-type {
       width: 100px;
@@ -29,20 +28,14 @@
       width: 100%;
     }
 
-
-
-
-
-
-
     /* 나중에 정리.. */
+    /* *********************** 수정사항: 파일 버튼 스타일 지정인듯 */
     .view_form .form_box .file p:last-of-type
     {
       padding: 0px;
       padding-left: 5px;
       padding-top: 9px;
     }
-
 
     .file label {
       cursor: pointer;
@@ -55,40 +48,7 @@
 
       line-height: 13px;
       text-align: center;
-
-      /* padding: .5em .75em; */
-      /* color: #fff; */
-      /* font-size: inherit; */
-      /* line-height: normal; */
-      /* vertical-align: middle; */
-      /* background-color: #5cb85c; */
-      /* border: 1px solid #4cae4c; */
-      /* border-radius: .25em; */
-      /* -webkit-transition: background-color 0.2s; */
-      /* transition: background-color 0.2s; */
     }
-
-    /* .file label:hover {
-      background-color: #6ed36e;
-    }
-
-    .file label:active {
-      background-color: #367c36;
-    } */
-
-    /* .file input[type="file"] {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    } */
-
-
-
   </style>
 </head>
 <body>
@@ -198,6 +158,8 @@
 
   <!-- 자바스크립트 -->
   <script type="text/javascript">
+
+    // 입력된 내용이 없다면 리턴하는 함수
     function check_input() {
       if( !document.board_form.subject.value ) {
         alert("제목을 입력하세요.");

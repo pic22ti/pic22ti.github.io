@@ -19,8 +19,6 @@
 
 
 
-
-
     <!-- 로그인 폼 섹선 -->
     <section id="login_form" class="short_form">
 
@@ -44,17 +42,9 @@
           <!-- 회원가입 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="회원가입" onclick="signUp()">
         </div>
-
       </form>
-
     </section>
       
-      
-
-
-
-
-
 
 
 
@@ -62,6 +52,8 @@
 
   <!-- 자바스크립트 -->
 	<script type="text/javascript">
+
+    // 입력된 내용이 없다면 리턴하는 함수
 		function check_input() {
 			if( !document.login_form.id.value ) {
 				alert("아이디를 입력하세요.");
@@ -74,7 +66,9 @@
 				return;
 			}
 			document.login_form.submit();
-		}
+    }
+    
+    // 회원가입 페이지로 이동하는 함수
 		function signUp() {
 			document.location = 'member_form.php';	
 		}

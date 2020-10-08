@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시판 목록</title>
   <style>
-
-
     /* 목록 요소 각 너비 지정 */
     .list_form .number {
       width: 5%;
@@ -31,12 +29,6 @@
     .list_form .views {
       width: 5%;
     }
-
-
-
-
-
-
   </style>
 </head>
 <body>
@@ -93,17 +85,23 @@
         </li>
 
         <?php
+          // page로 넘어온게 있는지 확인
+          // 넘어온게 있으면 해당 페이지
           if( isset($_GET["page"]) ) {
             $page = $_GET["page"];
           }
+          // 넘어온게 없으면 1페이지에서 시작
           else {
             $page = 1;
           }
 
+          // DB connect
           $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
           $sql = "select * from board order by num desc";
           $result = mysqli_query($con, $sql);
           $total_record = mysqli_num_rows($result);
+
+          // 한 페이지에 보여줄 게시글 수를 설정
           $scale = 5;
 
           if( $total_record%$scale == 0 ) {
@@ -129,6 +127,7 @@
 
             if( $row["file_name"] ) {
               // 이미지 크기가 커서 일단 사이즈 줄임
+              // **************************** 개선사항: 원래 이미지를 줄이던지...?
               $file_image = "<img src='./img/file.gif' height='14px'/>";
             }
             else {
@@ -138,7 +137,7 @@
 
 
 
-
+        <!-- 게시글들을 목록으로 출력 -->
         <a href="board_view.php?num=<?=$num?>&page=<?=$page?>">
           <li class="list">
             <p class="number"><?=$number?></p>
@@ -151,16 +150,20 @@
         </a>
 
 
-        <!-- 작성글없을때 안내문구 추가하기 **************************** -->
+        <!-- **************************** 개선사항: 작성글이 없을 때 안내문구 추가하기
+        ex) message_box.php line 225 참고하기 -->
+        
 
 
         <?php
               $number--;
-            }
+            } // for문 종료
+
           mysqli_close($con);
         ?>
-      </ul>
+        <!-- DB close -->
 
+      </ul>
 
 
 
@@ -170,10 +173,12 @@
       <!-- 페이지 -->
       <div class="page">
         <?php
+          // 전체 페이지와 현재 페이지가 2보다 클 때 '이전' 버튼 출력
           if( $total_page>=2 && $page>=2 ) {
             $new_page = $page-1;
             echo "<p><a href='board_list.php?page=$new_page'>이전</a></p>";
           }
+          // **************************** 개선사항: 왜 &nbsp 일까 그냥 "" 빈칸은 안되나?
           else {
             echo "&nbsp";
           }
@@ -187,6 +192,7 @@
             }
           }
           
+          // 전체 페이지가 2보다 크고, 현재 페이지가 마지막 페이지가 아닐 때 '다음' 버튼 출력
           if( $total_page>=2 && $page!=$total_page ) {
             $new_page = $page+1;
             echo "<p><a href='board_list.php?page=$new_page'>다음</a></p>";

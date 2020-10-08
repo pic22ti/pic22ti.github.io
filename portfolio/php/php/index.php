@@ -28,7 +28,6 @@
 	<section id="main">
 		<?php include "main.php"; ?>
 	</section>
-	
 
 </body>
 </html>

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 보내기</title>
   <style>
-    
     /* 타이틀 밑에 블루 라인 */
     .view_form h2::after {
       width: 240px;
@@ -30,13 +29,9 @@
     }
 
     /* 입력창 높이 조절 */
-    .view_form .form_box .rv_id p
-    {
+    .view_form .form_box .rv_id p {
       padding: 0px;
     }
-
-
-
   </style>
 </head>
 <body>
@@ -148,6 +143,8 @@
 
   <!-- 자바스크립트 -->
   <script>
+
+    // 입력된 값이 없다면 리턴
     function check_input() {
       if( !document.message_form.rv_id.value ) {
         alert( "받는 사람을 입력하세요." );
@@ -166,6 +163,8 @@
       }
       document.message_form.submit();
     }
+
+    // 입력값 초기화
     function reset_form() {
       document.message_form.rv_id.value = "";
       document.message_form.subject.value = "";

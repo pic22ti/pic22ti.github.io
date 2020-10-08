@@ -26,7 +26,8 @@
     <!-- 회원 정보 수정 섹선 -->
     <section id="member_form" class="short_form">
 
-      <!-- 회원 정보 db 불러오기 -->
+      <!-- 회원 정보 데이터 불러오기 -->
+      <!-- DB connect -->
       <?php
         $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
         $sql = "select * from member where id='$userid'";
@@ -39,6 +40,7 @@
 
         mysqli_close($con);
       ?>
+      <!-- DB close -->
 
 
 
@@ -84,9 +86,8 @@
           <!-- 회원탈퇴 버튼 -->
           <input type="button" class="plus-btn" value="회원탈퇴" onclick="delete_id()">
         </div>
-
       </form>
-
+      
     </section>
       
       
@@ -106,6 +107,8 @@
 
   <!-- 자바스크립트 -->
 	<script type="text/javascript">
+
+    // 입력된 값이 없다면 리턴
 		function check_input() {
 			if( !document.member_form.pass.value ) {
 				alert( "비밀번호를 입력하세요" );
@@ -134,7 +137,9 @@
 				return;
 			}
 			document.member_form.submit();
-		}
+    }
+    
+    // 입력값 초기화
 		function reset_form() {
 			document.member_form.pass.value = "";
 			document.member_form.pass_confirm.value = "";
@@ -143,7 +148,8 @@
 			document.member_form.id.focus();
 			return;
 		}
-		
+    
+    // 정말로 탈퇴할건지 확인하기
 		function delete_id() {
 			if( confirm( "정말로 탈퇴하시겠습니까?" ) == true ){
 				document.location.href = 'delete.php';

@@ -102,6 +102,7 @@
 
 
           <!-- 회원 데이터 리스트 불러오기 -->
+          <!-- DB connect -->
           <?php
             $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
             $sql = "select * from member order by num desc";
@@ -112,6 +113,7 @@
             // 전체 회원 수
             $number = $total_record;
 
+            // 회원 정보 데이터 가져오기
             while( $row = mysqli_fetch_array($result) ) {
               $num = $row["num"];
               $id = $row["id"];
@@ -126,7 +128,7 @@
         
 
 
-          <!-- 회원 데이터 리스트 -->
+          <!-- 회원 데이터 리스트 출력 -->
           <form name="admin_member_form" method="post" action="admin_member_update.php?num=<?=$num?>">
             <li class="list">
               <p class="number"><?=$num?></p>
@@ -151,13 +153,14 @@
 
 
 
-          <!-- sql 종료 -->
           <?php
               $number--;
             }
+            // while문 종료
+
             mysqli_close($con);
           ?>
-
+          <!-- DB close -->
 
 
 
