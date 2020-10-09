@@ -28,7 +28,7 @@
 			// 결과값 가져오기
 			let row = "<?=$num_record?>";
 			if( row == 1 ) {
-				parent.document.getElementById("chk_id2").value = "0";
+				parent.document.getElementById("chk_id2").value = "";
 				// 중복 아이디가 있다면 input 비우기
 				parent.document.getElementById("chk_id1").value = "";
 				parent.alert("이미 사용중인 아이디입니다.\n다른 아이디를 사용해주세요.");

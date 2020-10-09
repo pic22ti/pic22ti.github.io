@@ -30,12 +30,11 @@
 	$subject = $_POST["subject"];
 	$content = $_POST["content"];
 
-	// *********************** 수정사항: 어떤 함수인지 적기 (message.insert.php도 함께 수정)
+	// htmlspecialchars() 함수: 특수 문자를 HTML 특수 기호로 변환
 	$subject = htmlspecialchars($subject, ENT_QUOTES);
 	$content = htmlspecialchars($content, ENT_QUOTES);
 
 	// 시간대를 아시아/서울로 설정한다
-	// *********************** 개선사항: 기본 디폴트는 어디 시간대이며 왜 그런지 알아보기
 	date_default_timezone_set('Asia/Seoul');
 	$regist_day = date("Y-m-d (H:i)");
 	$upload_dir = './data/';

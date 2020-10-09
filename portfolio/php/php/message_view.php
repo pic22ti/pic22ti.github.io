@@ -53,32 +53,23 @@
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
-      <!-- ************************* 수정사항: 중복되는 부분 최소화하기
-      message_box.php와 message_view.php 둘다  -->
       <?php
         $mode = $_GET["mode"];
+
         if( $mode == "send" ) {
-      ?>
-      <!-- 받은 메세지 버튼 -->
-      <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
-      
-      <!-- 보낸 메세지 버튼 -->
-      <input type="button" class="point-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
-      <?php
+          $rv_message_style = "plus-btn";
+          $send_message_style = "point-btn";
         }
         else {
-      ?>
-      <!-- 받은 메세지 버튼 -->
-      <input type="button" class="point-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
-      
-      <!-- 보낸 메세지 버튼 -->
-      <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
-      <?php
+          $rv_message_style = "point-btn";
+          $send_message_style = "plus-btn";
         }
       ?>
-
-
-
+      <!-- 받은 메세지 버튼 -->
+      <input type="button" class="<?=$rv_message_style?>" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
+      
+      <!-- 보낸 메세지 버튼 -->
+      <input type="button" class="<?=$send_message_style?>" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
       <!-- 메세지 보내기 버튼 -->
       <?php
@@ -140,7 +131,7 @@
           echo "<h2>받은 메세지 내용</h2>"; 
         }
 
-        // **************************** 수정사항: 데이터 종료 없음!!!!!!!!!!!!!
+        mysqli_close($con);
         // DB close 
       ?>
 

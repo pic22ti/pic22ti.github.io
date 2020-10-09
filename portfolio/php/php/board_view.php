@@ -67,6 +67,30 @@
 
 
 
+    <!-- 게시판 사이드 -->
+    <aside id="board_side">
+
+      <!-- 게시판 목록 버튼 -->
+      <input type="button" class="point-btn" value="게시판 목록" onclick="location.href='board_list.php'">
+
+      <!-- 게시글 쓰기 버튼 -->
+      <?php
+        if($userid) {
+      ?>
+      <input type="button" class="plus-btn" value="게시글 쓰기" onclick="location.href='board_form.php'">
+      <?php
+        }
+        else {
+      ?>
+      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="글쓰기"></a>
+      <?php
+        }
+      ?>
+    </aside>
+
+
+
+
     <?php
     	// 게시글 고유번호와 
       // 목록으로 다시 돌아갈때 게시글이 있던 페이지로 돌아가기 위해 페이지도 받아온다
@@ -90,42 +114,16 @@
       $file_copied = $row["file_copied"];
       $hit = $row["hit"];
 
-      // **************************** 수정사항: 문자 변환 함수 알기
+      // str_replace() 함수: 특수 문자를 HTML 특수 기호로 변환하기 위해 사용
       $content = str_replace(" ", "&nbsp;", $content);
       $content = str_replace("\n", "<br>", $content);
 
       $new_hit = $hit+1;
       $sql = "update board set hit=$new_hit where num=$num";
       mysqli_query($con, $sql);
+      mysqli_close($con);
     ?>
-
-    <!-- **************************** 수정사항: sql 종료 어디감? -->
     <!-- DB close -->
-
-
-
-
-    <!-- **************************** 수정사항: php문보다 밑에 있는 이유는? -->
-    <!-- 게시판 사이드 -->
-    <aside id="board_side">
-
-      <!-- 게시판 목록 버튼 -->
-      <input type="button" class="point-btn" value="게시판 목록" onclick="location.href='board_list.php'">
-
-      <!-- 게시글 쓰기 버튼 -->
-      <?php
-        if($userid) {
-      ?>
-      <input type="button" class="plus-btn" value="게시글 쓰기" onclick="location.href='board_form.php'">
-      <?php
-        }
-        else {
-      ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="글쓰기"></a>
-      <?php
-        }
-      ?>
-    </aside>
 
 
 

@@ -150,14 +150,14 @@
         </a>
 
 
-        <!-- **************************** 개선사항: 작성글이 없을 때 안내문구 추가하기
-        ex) message_box.php line 225 참고하기 -->
-        
-
-
         <?php
               $number--;
             } // for문 종료
+            
+            // 게시글이 없을 때 안내 문구 출력
+            if( !$total_record ) {
+              echo "<p class='no-message'>게시글이 없습니다.</p>";
+            } 
 
           mysqli_close($con);
         ?>
@@ -178,10 +178,9 @@
             $new_page = $page-1;
             echo "<p><a href='board_list.php?page=$new_page'>이전</a></p>";
           }
-          // **************************** 개선사항: 왜 &nbsp 일까 그냥 "" 빈칸은 안되나?
-          else {
-            echo "&nbsp";
-          }
+          // else {
+          //   echo "&nbsp";
+          // }
 
           for( $i = 1; $i<=$total_page; $i++ ) {
             if( $page == $i ) {
@@ -197,9 +196,9 @@
             $new_page = $page+1;
             echo "<p><a href='board_list.php?page=$new_page'>다음</a></p>";
           }
-          else {
-            echo "&nbsp";
-          }
+          // else {
+          //   echo "&nbsp";
+          // }
         ?>
       </div>
 

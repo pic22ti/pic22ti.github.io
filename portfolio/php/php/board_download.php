@@ -1,15 +1,19 @@
 <?php
-	// 파일 정보 가져오기
+	// 파일 정보 전달받기
 	$real_name = $_GET["real_name"];
 	$file_name = $_GET["file_name"];
 	$file_type = $_GET["file_type"];
 	$file_path = $_GET["file_path"];
 	$file_path = "./data/".$real_name;
 
-	// 익플 한글파일 깨짐 방지 코드는 뺐음
+	// *********************** 개선사항: 익플 한글파일 깨짐 방지 코드 추가하기
 
-	// 만약 파일이 있다면 
-	// *********************** 수정사항: 사용된 함수내용 파악하고 적기
+	// 파일 존재 확인하고 출력
+	// file_exists() 함수: 파일이 존재하는지 확인하고 boolean값으로 반환하는 함수
+	// fopen() 함수: mode에 따라 파일을 열기
+	// Header() 함수: 파일의 정보를 브라우저에 알려준다
+	// fpassthru() 함수: 파일포인터($fp)에 저장된 파일 데이터를 출력 버퍼에 저장한다
+	// fclose() 함수: 파일 닫기
 	if( file_exists($file_path) ) {
 		$fp = fopen($file_path, "rb");
 

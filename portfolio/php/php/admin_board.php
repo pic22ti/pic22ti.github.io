@@ -83,9 +83,13 @@
             <p class="regist_day">작성일</p>
           </li>
 
+          <!-- 게시글 리스트를 묶는 폼 -->
+          <form method="post" action="admin_board_delete.php">
 
 
-          <!-- 게시판 데이터 리스트 불러오기 -->
+
+
+          <!-- 게시글 데이터 리스트 불러오기 -->
           <!-- DB connect -->
           <?php
             $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
@@ -110,13 +114,7 @@
 
 
 
-          <!-- 게시글들을 목록으로 출력 -->
-          <!-- *************************** 수정사항: 게시글 삭제버튼과 form이 while문 밖에 있고 li만 반복되야 한다.
-          (참고: admin_member의 회원관리는 한줄한줄 form으로 반복되는게 맞음) -->
-          <form method="post" action="admin_board_delete.php">
-
-
-
+            <!-- 게시글들을 목록으로 출력 -->
             <li class="list">
               <p class="check">
                 <label>
@@ -141,16 +139,6 @@
             </li>
 
 
-            <!-- 게시글 삭제 버튼 -->
-            <div class="btn">
-              <!-- <input type="button" class="plus-btn" value="선택한 글 삭제" onclick="funcdelete()"> -->
-              <button type="submit" class="plus-btn">선택한 글 삭제</button>
-            </div>
-          </form>
-
-
-
-
 
           
           <?php
@@ -165,8 +153,12 @@
 
 
 
-
-
+            <!-- 게시글 삭제 버튼 -->
+            <div class="btn">
+              <!-- <input type="button" class="plus-btn" value="선택한 글 삭제" onclick="funcdelete()"> -->
+              <button type="submit" class="plus-btn">선택한 글 삭제</button>
+            </div>
+          </form>
         </ul>
 
     </section>

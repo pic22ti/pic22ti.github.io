@@ -98,12 +98,12 @@
         $content = str_replace("\n", "\n>", $content);
         $content = "\n\n\n\n---------------------------------\n".$content;
 
-        // ********************************* 개선사항: sql2를 사용하면 위 result와 같은 형태로 수정할 수 있을 거같음...
-        $result2 = mysqli_query($con, "select name from member where id='$send_id'");
+        $sql2 = "select name from member where id='$send_id'";
+        $result2 = mysqli_query($con, $sql2);
         $record = mysqli_fetch_array($result2);
         $send_name = $record["name"];
 
-        // ********************************* 수정사항: DB 종료가 없음!!!!!!!!!! 확인 후 추가하기
+        mysqli_close($con);
         // DB close
       ?>
 
@@ -119,8 +119,7 @@
         <!-- 폼박스 -->
         <div class="form_box minus-style">
 
-          <!-- ********************************* 개선사항: 설명수정: 메세지를 보냈던 사람을 받는 사람으로 저장하는 것 -->
-          <!-- 받는 사람 value값을 보내기 위해 숨긴 input -->
+          <!-- 원래 메세지를 보냈던 사람 -> 받는 사람으로 값으로 보내기 위해 숨긴 input -->
           <input type="hidden" name="rv_id" value="<?=$send_id?>">
 
           <div class="send_id">

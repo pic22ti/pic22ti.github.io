@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시글 수정</title>
   <style>
-
-
-
     /* 각 요소 사이즈 */
     .view_form .form_box .id {
       width: 100%;
@@ -25,9 +22,6 @@
     .view_form .form_box .file {
       width: 100%;
     }
-
-
-
   </style>
 </head>
 <body>
@@ -78,9 +72,11 @@
 
 
       <?php
+        // 게시글 정보 받아오기
         $num = $_GET["num"];
         $page = $_GET["page"];
 
+        // DB connect
         $con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
         $sql = "select * from board where num='$num'";
         $result = mysqli_query($con, $sql);
@@ -92,6 +88,7 @@
         $file_name = $row["file_name"];
 
         mysqli_close($con);
+        // DB close
       ?>
 
 
@@ -124,6 +121,8 @@
             </p>
           </div>
 
+          <!-- 첨부파일은 수정이 안되고 새로 등록하는 것만 가능 -->
+          <!-- ********************************** 개선사항: 그대로 내용만 수정하면 기존에 첨부된 파일은 어떻게 되는지 파악하기 -->
           <div class="file">
             <p>첨부 파일</p>
             <p>
@@ -135,6 +134,7 @@
       
         <div class="btn">
 
+          <!-- ********************************** 개선사항: 본인이 쓴 게시글만 수정할 수 있게하기 -->
           <!-- 게시글 수정 버튼 -->
           <input type="button" class="plus-btn" value="수정" onclick="check_input()">
 
@@ -165,6 +165,8 @@
 
   <!-- 자바스크립트 -->
   <script type="text/javascript">
+
+    // 입력된 값이 없다면 리턴
     function check_input() {
       if( !document.board_form.subject.value ) {
         alert("제목을 입력하세요.");
@@ -178,6 +180,8 @@
       }
       document.board_form.submit();
     }
+
+    // 정말로 삭제할건지 확인하기
     function delete_board() {
       if( confirm( "정말로 삭제하시겠습니까?" ) == true ) {
         document.location.href = 'board_delete.php?num=<?=$num?>&page=<?=$page?>';

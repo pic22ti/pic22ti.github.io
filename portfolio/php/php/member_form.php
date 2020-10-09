@@ -40,12 +40,6 @@
         <!-- 아이디 중복 체크를 위한 보이지 않는 iframe -->
         <iframe src="" id="ifrm1" scrolling="no" frameborder="no" width="0" height="0" name="ifrm1"></iframe>
 
-				<!-- ********************************* 수정사항: 이거 왜 있는거지... -->
-				<!-- ********************************* 수정사항: 아이디 중복 체크 버튼을 누르지 않고 
-				그냥 회원가입을 시도하면 가입이 가능하게됨........ 
-				가입 버튼을 누를때도 중복 확인 하는 과정을 거치거나, 
-				중복확인 후에 가입버튼을 누를 수 있게 해야할거같음 -->
-
         <!-- 아이디 중복 체크를 위한 보이지 않는 input, 
              디폴트 : value="0" -->
         <input type="hidden" id="chk_id2" name="chk_id2" value="0">
@@ -98,6 +92,11 @@
 		function check_input() {
 			if( !document.member_form.id.value ) {
 				alert( "아이디를 입력하세요." );
+				document.member_form.id.focus();
+				return;
+			}
+			if( !document.member_form.chk_id2.value ) {
+				alert( "중복확인을 해주세요." );
 				document.member_form.id.focus();
 				return;
 			}
