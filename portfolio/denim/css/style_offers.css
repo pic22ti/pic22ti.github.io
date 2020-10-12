@@ -1,5 +1,4 @@
 /* ================= mobile start ================= */
-
 /* 컨텐츠 스타일 */
 #offers article {
   height: auto;
@@ -81,14 +80,7 @@
   color: white;
   letter-spacing: -1px;
 }
-
 /* ================= mobile end ================= */
-
-
-
-
-
-
 
 
 
@@ -144,7 +136,5 @@
   color: #a68c5d;
   transition:0.5s;
 }
-
-
 }
 /* ================= pc end ================= */

@@ -1,5 +1,4 @@
 /* ================= mobile start ================= */
-
 #reservation {
   margin-bottom: 50px;
 }
@@ -89,12 +88,6 @@
 
 
 
-
-
-
-
-
-
 /* 객실 목록 구분선 */
 #reservation article {
   box-sizing: border-box;
@@ -155,12 +148,7 @@
   text-align: center;
   letter-spacing: -1px;
 }
-
 /* ================= mobile end ================= */
-
-
-
-
 
 
 
@@ -171,12 +159,6 @@
 #reservation .tit {
   height: 120px;
 }
-
-
-
-
-
-
 
 /* 폼 스타일 flex */
 #reservation .room_search_form {
@@ -234,8 +216,6 @@
 
 
 
-
-
 /* 객실 목록 스타일 */
 #reservation article {
   display: flex;
@@ -261,6 +241,5 @@
   color: #a68c5d;
   transition: 0.5s;
 }
-
 }
 /* ================= pc end ================= */

@@ -27,12 +27,7 @@
 
 
 
-
-
-
-
 /* ----------------- mobile section start ----------------- */
-
 /* ----------------- 섹션 공통 */
 /* pc에서만 노출되는 섹션 모바일에서 숨김 */
 #index_dining, #index_membership {
@@ -52,9 +47,6 @@ section .tit>h2 {
 section .tit>p {
   padding-bottom: 0;
 }
-
-
-
 
 
 
@@ -108,10 +100,6 @@ section .tit>p {
 #index_offers>article .txt>p:last-of-type {
   display: none;
 }
-
-
-
-
 
 
 
@@ -181,10 +169,6 @@ section .tit>p {
 
 
 
-
-
-
-
 /* ----------------- index_location 섹션 */
 #index_location {
   height: 440px;
@@ -201,15 +185,6 @@ section .tit>p {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ================= tablet start ================= */
 @media screen and (min-width: 768px)
 {
@@ -221,8 +196,6 @@ section .tit>p {
   padding-top: 40vh;
 }
 /* ----------------- tablet main end ----------------- */
-
-
 
 
 
@@ -269,15 +242,6 @@ section .tit>p {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ================= pc end ================= */
 @media screen and (min-width: 1200px)
 {
@@ -296,9 +260,6 @@ section .tit>p {
   text-shadow: none;
   font-size: 42px;
 }
-
-
-
 /* 폼 스타일 flex */
 #main .room_search_form {
   display: flex;
@@ -377,11 +338,6 @@ section .tit>p {
 
 
 
-
-
-
-
-
 /* ----------------- pc section start ----------------- */
 /* 섹션 공통 타이틀 */
 section .tit {
@@ -394,8 +350,6 @@ section .tit>h2 {
 section .tit>p {
   font-size: 16px;
 }
-
-
 
 
 
@@ -429,8 +383,6 @@ section .tit>p {
   font-weight: 300;
   color: #5e5e5e;
 }
-
-
 
 
 
@@ -501,8 +453,6 @@ section .tit>p {
 
 
 
-
-
 /* ----------------- index_rooms 섹션 */
 #index_rooms {
   background-color: #ffffff;
@@ -547,8 +497,6 @@ section .tit>p {
 
 
 
-
-
 /* ----------------- index_membership 섹션 */
 /* 노출, 높이, 이미지 설정 */
 #index_membership {
@@ -588,8 +536,6 @@ section .tit>p {
 
 
 
-
-
 /* ----------------- index_location 섹션 */
 #index_location {
   height: 520px;
@@ -600,12 +546,6 @@ section .tit>p {
 #index_location>iframe {
   height: 340px;
 }
-
-
-
-
-
-
 /* ----------------- pc section end ----------------- */
 }
 /* ================= pc end ================= */

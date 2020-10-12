@@ -3,55 +3,30 @@
 
 
 
-
-
-
-
 /* 컬러칩
-(다크그레이) #212121 : 
+(다크그레이) #212121 
 헤더, 푸터 배경색 
 
-(그레이) #434343 :
+(그레이) #434343
 헤더 구분선
 
-(그레이) #5e5e5e :
+(그레이) #5e5e5e
 짧은 설명 텍스트
 
-(라이트그레이) #bebebe :
+(라이트그레이) #bebebe
 선택안된 탭 색상
 
-(밝은 라이트그레이) #e5e5e5 :
+(밝은 라이트그레이) #e5e5e5
 박스 테두리
 
-(더 밝은 라이트그레이) #f5f5f5 :
+(더 밝은 라이트그레이) #f5f5f5
 그레이 배경
 
-(오트밀) #a68c5d :
+(오트밀) #a68c5d
 버튼, 타이틀
 
-(밝은 오트밀) #f6f3ee :
+(밝은 오트밀) #f6f3ee
 index_rooms 배경색
-
-*/
-
-/* 폰트 사이즈 변경
-
-  font-size: 0.7rem; 11px;
-  font-size: 0.8rem; 12px;
-  font-size: 0.9rem; 14px;
-  font-size: 1rem; 16px;
-  font-size: 1.1rem; 18px;
-  font-size: 1.2rem; 19px;
-  font-size: 1.3rem; 20px;
-
-  font-size: 1.5rem; 24px;
-  font-size: 1.6rem; 25px;
-
-  font-size: 1.8rem; 29px;
-  font-size: 1.9rem; 30px;
-  font-size: 2rem; 32px;
-
-  font-size: 2.2rem; 35px;
 */
 
 /* ----------------- reset ----------------- */
@@ -68,7 +43,6 @@ a {
 }
 /* safari input default style 삭제 */
 input, textarea {
-  /* -webkit-border-radius: 0; */
   border: none;
   border-radius: 0;
   -moz-appearance: none;
@@ -85,7 +59,6 @@ input, textarea {
 .sans {
   font-family: 'Noto Sans KR', sans-serif;
 }
-
 
 
 
@@ -118,9 +91,6 @@ input, textarea {
   font-size: 9px;
   letter-spacing: 6px;
 }
-
-
-
 
 
 
@@ -207,9 +177,6 @@ input, textarea {
 
 
 
-
-
-
 /* ----------------- mobile section start ----------------- */
 section .tit {
   width: 100%;
@@ -233,9 +200,6 @@ section .tit>p {
   letter-spacing: -1px;
 }
 /* ----------------- mobile section end ----------------- */
-
-
-
 
 
 
@@ -280,15 +244,6 @@ section .tit>p {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ================= tablet end ================= */
 @media screen and (min-width: 768px)
 {
@@ -319,15 +274,6 @@ section .tit>p {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ================= pc start ================= */
 @media screen and (min-width: 1200px)
 {
@@ -350,8 +296,6 @@ section .tit>p {
 .logo .serif:last-child {
   font-size: 12px;
 }
-
-
 
 
 
@@ -417,9 +361,6 @@ section .tit>p {
 
 
 
-
-
-
 /* ----------------- pc section start ----------------- */
 section .tit {
   height: 160px;
@@ -433,9 +374,6 @@ section .tit>p {
   font-size: 16px;
 }
 /* ----------------- pc section end ----------------- */
-
-
-
 
 
 
