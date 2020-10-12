@@ -3,8 +3,6 @@
 /* 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 
-/* ================ 모바일 시작 ================ */
-
 /* 컬러칩
    화이트 : #ffffff
    라이트 그레이 : #dcdcdc
@@ -13,6 +11,8 @@
    네이비 : #1a2e42
    베이지 : #d1c0a5
 */
+
+/* ================ 모바일 시작 ================ */
 
 /* 폰트 사이즈 */
 h2 {
@@ -431,7 +431,6 @@ h3 {
 
 /* 내비 안에 여백 변경 */
 #header .nav>.container {
-  /* position: relative; */
   padding: 0;
   text-align: center;
 }
