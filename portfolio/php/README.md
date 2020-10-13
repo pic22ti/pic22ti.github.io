@@ -4,7 +4,7 @@
 
 ## 2. URL
 * [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
-* [사이트](http://pic22ti.dothome.co.kr/mysite/php/index.php)
+* 사이트
 
 ## 3. 사이트 구조
 ![sitemap_php](/portfolio/php/sitemap_php.jpg)
