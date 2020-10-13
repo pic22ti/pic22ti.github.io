@@ -12,7 +12,7 @@
 ### 2.2. Community
   * PHP, MySQL을 사용한 메세지, 게시판 기능이 있는 커뮤니티 사이트
   * [Github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
-  * [사이트](http://pic22ti.dothome.co.kr/mysite/php/index.php)
+  * 사이트
   
 ### 2.3. Drop Top
   * 카페 드롭탑 사이트 리뉴얼
