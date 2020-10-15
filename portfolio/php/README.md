@@ -1,4 +1,4 @@
-
+![logo_php](/portfolio/php/logo_php.jpg)
 
 ## 1. Community
 * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
