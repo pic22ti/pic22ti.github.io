@@ -1,9 +1,9 @@
 ![logo_droptop](/portfolio/droptop/logo_droptop.png)
 
 ## 1. Drop Top
+카페 드롭탑 리뉴얼 사이트
 * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop)
 * [바로가기](https://pic22ti.github.io/portfolio/droptop/index.html)
-* 카페 드롭탑 리뉴얼 사이트
 
 ## 2. 기능 구현
 * 반응형 웹 페이지 구현

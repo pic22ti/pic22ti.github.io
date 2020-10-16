@@ -1,9 +1,9 @@
 ![logo_solar_system](/portfolio/solar_system/logo_solar_system.jpg)
 
 ## 1. SOLAR SYSTEM
+태양계 행성 정보 제공 사이트
 * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system)
 * [바로가기](https://pic22ti.github.io/portfolio/solar_system/index.html)
-* 태양계 행성 정보 제공 사이트
 
 ## 2. 기능 구현
 * 인터렉티브 웹 페이지 구현

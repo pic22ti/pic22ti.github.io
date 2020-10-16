@@ -1,9 +1,9 @@
 ![logo_fomula1](/portfolio/fomula1/logo_fomula1.jpg)
 
 ## 1. Fomula1
+포뮬러1 레이싱 팀 소개 사이트
 * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
 * [바로가기](https://pic22ti.github.io/portfolio/fomula1/index.html)
-* 포뮬러1 레이싱 팀 소개 사이트
 
 ## 2. 기능 구현
 * 인터렉티브 웹 페이지 구현

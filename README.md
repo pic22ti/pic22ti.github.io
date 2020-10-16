@@ -6,33 +6,33 @@
 ## 2. 프로젝트 목차
 ### 2.1. HOTEL DENIM 
   * 호텔 데님 리뉴얼 사이트
-  * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim)
-  * [바로가기](https://pic22ti.github.io/portfolio/denim/index.html)
+    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim)
+    - [바로가기](https://pic22ti.github.io/portfolio/denim/index.html)
   
 ### 2.2. Community
   * 게시판 구현 커뮤니티 사이트
-  * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
-  * [바로가기](http://pic22ti.dothome.co.kr/mysite/php/index.php)
+    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
+    - [바로가기](http://pic22ti.dothome.co.kr/mysite/php/index.php)
   
 ### 2.3. Drop Top
   * 카페 드롭탑 리뉴얼 사이트
-  * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop)
-  * [바로가기](https://pic22ti.github.io/portfolio/droptop/index.html)
+    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop)
+    - [바로가기](https://pic22ti.github.io/portfolio/droptop/index.html)
 
 ### 2.4. F1
   * 포뮬러1 레이싱 팀 소개 사이트
-  * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
-  * [바로가기](https://pic22ti.github.io/portfolio/fomula1/index.html)
+    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
+    - [바로가기](https://pic22ti.github.io/portfolio/fomula1/index.html)
 
 ### 2.5. SOLAR SYSTEM
   * 태양계 행성 정보 제공 사이트
-  * [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system)
-  * [바로가기](https://pic22ti.github.io/portfolio/solar_system/index.html)
+    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system)
+    - [바로가기](https://pic22ti.github.io/portfolio/solar_system/index.html)
 
 ### 2.5. TO DO LIST
   * 할 일 목록 관리 사이트
-  * [github](https://github.com/pic22ti/todolist)
-  * [바로가기](https://pic22ti.github.io/todolist/)
+    - [github](https://github.com/pic22ti/todolist)
+    - [바로가기](https://pic22ti.github.io/todolist/)
 
 ## 3. 기능 구현
 * flex 레이아웃 적용
