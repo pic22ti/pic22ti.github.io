@@ -21,6 +21,38 @@
 ![sitemap_php](/portfolio/php/sitemap_php.jpg)
 
 ## 5. DB 구조
+|member(회원)||||
+|------|---|---|---|
+|num **(PK)**|회원번호|int(11)|NOT NULL|
+|id|아이디|char(15)|NOT NULL|
+|pass|비밀번호|char(15)|NOT NULL|
+|name|이름|char(10)|NOT NULL|
+|email|이메일|char(80)|NULL|
+|regist_day|등록날짜|char(20)|NULL|
+|level|레벨|int(11)|NULL|
+|point|포인트|int(11)|NULL|
+
+|messagebox(메세지)||||
+|------|---|---|---|
+|num **(PK)**|메세지번호|int(11)|NOT NULL|
+|send_id|보낸 사람|char(15)|NOT NULL|
+|rv_id|받은 사람|char(15)|NOT NULL|
+|subject|제목|char(200)|NOT NULL|
+|content|내용|text|NOT NULL|
+|regist_day|보낸날짜|char(20)|NULL|
+
+|board(게시판)||||
+|------|------|---|---|
+|num **(PK)**|게시글번호|int(11)|NOT NULL|
+|id|아이디|char(15)|NOT NULL|
+|name|이름|char(15)|NOT NULL|
+|subject|제목|char(200)|NOT NULL|
+|content|내용|text|NOT NULL|
+|regist_day|등록날짜|char(20)|NOT NULL|
+|hit|조회수|int(11)|NOT NULL|
+|file_name|파일명|char(40)|NULL|
+|file_type|파일 타입|char(40)|NULL|
+|file_copied|저장용 파일명|char(40)|NULL|
 
 ## 6. 고찰 및 개선 방향
 * 데이터 보안 문제
