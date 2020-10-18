@@ -8,33 +8,6 @@
   <link rel="stylesheet" href="../css/style-view_form.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 보기</title>
-  <style>
-    /* 첫번째 요소에 너비 고정 */
-    .view_form .form_box .send_id p:first-of-type,
-    .view_form .form_box .rv_id p:first-of-type,
-    .view_form .form_box .date p:first-of-type
-    {
-      width: 100px;
-    }
-
-    /* 각 요소 사이즈 */
-    .view_form .form_box .send_id {
-      width: calc(100% / 3);
-    }
-    .view_form .form_box .rv_id {
-      width: calc(100% / 3);
-    }
-    .view_form .form_box .date {
-      width: calc(100% / 3);
-    }
-    .view_form .form_box .subject {
-      width: 100%;
-      font-weight: bold;
-    }
-    .view_form .form_box .content {
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
@@ -45,15 +18,11 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
-
-
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
       <?php
+        // 들어온 모드에 따라 버튼 스타일 변경
         $mode = $_GET["mode"];
 
         if( $mode == "send" ) {
@@ -65,6 +34,7 @@
           $send_message_style = "plus-btn";
         }
       ?>
+      
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="<?=$rv_message_style?>" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
@@ -72,24 +42,8 @@
       <input type="button" class="<?=$send_message_style?>" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
       <!-- 메세지 보내기 버튼 -->
-      <?php
-        if($userid) {
-      ?>
       <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
-      <?php
-        }
-        else {
-      ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="메세지 보내기"></a>
-      <?php
-        }
-      ?>
-
     </aside>
-
-
-
-
 
     <!-- 메세지 보기 섹선 -->
     <section id="message_view" class="view_form">
@@ -135,14 +89,8 @@
         // DB close 
       ?>
 
-
-
-
-
-
-
       <!-- 폼박스 -->
-      <div class="form_box minus-style">
+      <div class="form_box">
 
         <!-- 메세지 내용 보기 -->
         <div class="send_id">
@@ -187,29 +135,14 @@
         <!-- 메세지 삭제 버튼 -->
         <input type="button" class="plus-btn" class="reset" value="메세지 삭제" onclick="delete_msg()">
       </div>
-      
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
   </div>
 
-
-
-
-
-  <!-- 자바스크립트 -->
+  <!-- javascript -->
   <script type="text/javascript">
     function delete_msg() {
       if( confirm( "메세지를 삭제하시겠습니까?" ) == true ) {
-        document.location.href = 'message_delete.php?num=<?=$num?>&mode=<?=$mode?>';
+        location.href = 'message_delete.php?num=<?=$num?>&mode=<?=$mode?>';
       }
       else {
         return;

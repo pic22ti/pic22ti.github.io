@@ -8,25 +8,6 @@
   <link rel="stylesheet" href="../css/style-list_form.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 박스</title>
-  <style>
-    /* 목록 요소 각 너비 지정 */
-    .list_form .number {
-      width: 5%;
-    }
-    .list_form .regist_day {
-      width: 10%;
-    }
-    .list_form .id {
-      width: 10%;
-    }
-    .list_form .subject {
-      width: 75%;
-      text-align: left;
-    }
-    .list_form .sub .subject {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
@@ -37,8 +18,7 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-    <?php
+      <?php
         // page로 넘어온게 있는지 확인
         // 처음에는 버튼 클릭해서 오면 mode만 넘어오고 page는 넘어온게 없음
 
@@ -52,13 +32,13 @@
         }
       ?>
 
-
     <!-- 메세지 사이드 -->
     <aside id="message_side">
 
       <?php
+        // 들어온 모드에 따라 버튼 스타일 변경
         $mode = $_GET["mode"];
-        
+
         if( $mode == "send" ) {
           $rv_message_style = "plus-btn";
           $send_message_style = "point-btn";
@@ -68,29 +48,16 @@
           $send_message_style = "plus-btn";
         }
       ?>
+      
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="<?=$rv_message_style?>" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
-
+      
       <!-- 보낸 메세지 버튼 -->
       <input type="button" class="<?=$send_message_style?>" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
       <!-- 메세지 보내기 버튼 -->
-      <?php
-        if($userid) {
-      ?>
       <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
-      <?php
-        }
-        else {
-      ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="메세지 보내기"></a>
-      <?php
-        }
-      ?>
-
     </aside>
-
-
 
     <!-- 메세지 목록 섹선 -->
     <section id="message_box" class="list_form">
@@ -107,24 +74,21 @@
 
       <!-- 메세지 목록 -->
       <ul class="message_list">
-        <li class="list sub plus-btn">
+        <li class="list sub">
           <p class="number">번호</p>
 
-          <!-- **************************** 개선사항: 날짜와 사람 if문을 합칠 수는 없을까 -->
           <?php
             if( $mode == "send" ) {
-              echo "<p class='regist_day'>받은 날짜</p>";
+              echo "
+                <p class='regist_day'>받은 날짜</p>
+                <p class='id'>받은 사람</p>
+              ";
             }
             else {
-              echo "<p class='regist_day'>보낸 날짜</p>";
-            }
-          ?>
-          <?php
-            if( $mode == "send" ) {
-              echo "<p class='id'>받은 사람</p>";
-            }
-            else {
-              echo "<p class='id'>보낸 사람</p>";
+              echo "
+                <p class='regist_day'>보낸 날짜</p>
+                <p class='id'>보낸 사람</p>
+              ";
             }
           ?>
 
@@ -182,8 +146,6 @@
             $msg_name = $record["name"];
         ?>
 
-
-
         <!-- 메세지들을 목록으로 출력 -->
         <a href="message_view.php?mode=<?=$mode?>&num=<?=$num?>">
           <li class="list">
@@ -194,8 +156,6 @@
           </li>
         </a>
 
-
-
         <?php
               $number--;
             } // for문 종료
@@ -203,10 +163,10 @@
             // 메세지가 없을 때 안내 문구 출력
             if( !$total_record ) {
               if( $mode == "send" ) {
-                echo "<p class='no-message'>보낸 메세지가 없습니다.</p>";
+                echo "<p class='no_item'>보낸 메세지가 없습니다.</p>";
               }
               else {
-                echo "<p class='no-message'>받은 메세지가 없습니다.</p>";
+                echo "<p class='no_item'>받은 메세지가 없습니다.</p>";
               }
             } 
 
@@ -216,9 +176,6 @@
 
       </ul>
 
-
-
-
       <!-- 페이지 -->
       <div class="page">
         <?php
@@ -227,9 +184,6 @@
             $new_page = $page-1;
             echo "<p><a href='message_box.php?mode=$mode&page=$new_page'>이전</a></p>";
           }
-          // else {
-          //   echo "&nbsp";
-          // }
 
           for( $i = 1; $i<=$total_page; $i++ ) {
             if( $page == $i ) {
@@ -245,28 +199,9 @@
             $new_page = $page+1;
             echo "<p><a href='message_box.php?mode=$mode&page=$new_page'>다음</a></p>";
           }
-          // else {
-          //   echo "&nbsp";
-          // }
         ?>
       </div>
-
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <!-- <?php include "footer.php"; ?> -->
-    </footer>
   </div>
-
-
-
-
-
 </body>
 </html>

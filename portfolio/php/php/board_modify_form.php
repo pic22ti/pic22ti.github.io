@@ -8,21 +8,6 @@
   <link rel="stylesheet" href="../css/style-view_form.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시글 수정</title>
-  <style>
-    /* 각 요소 사이즈 */
-    .view_form .form_box .id {
-      width: 100%;
-    }
-    .view_form .form_box .subject {
-      width: 100%;
-    }
-    .view_form .form_box .content {
-      width: 100%;
-    }
-    .view_form .form_box .file {
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
@@ -33,43 +18,20 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
-
     <!-- 게시판 사이드 -->
     <aside id="board_side">
-
       <!-- 게시판 목록 버튼 -->
       <input type="button" class="point-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
-      <?php
-        if($userid) {
-      ?>
       <input type="button" class="plus-btn" value="게시글 쓰기" onclick="location.href='board_form.php'">
-      <?php
-        }
-        else {
-      ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="글쓰기"></a>
-      <?php
-        }
-      ?>
     </aside>
-
-
-
 
     <!-- 게시글 수정 섹선 -->
     <section id="board_modify_form" class="view_form">
 
       <!-- 타이틀 -->
       <h2>게시글 수정</h2>
-
-
-
-
 
       <?php
         // 게시글 정보 받아오기
@@ -91,20 +53,15 @@
         // DB close
       ?>
 
-
-
-
-
-
       <!-- 글쓰기 폼 -->
       <form name="board_form" method="post" action="board_modify.php?num=<?=$num?>&page=<?=$page?>" enctype="multipart/form-data">
 
         <!-- 폼박스 -->
-        <div class="form_box minus-style">
+        <div class="form_box">
         
           <div class="id">
-            <p>아이디</p>
-            <p><?=$userid?></p>
+            <p>작성자</p>
+            <p><?=$id?></p>
           </div>
 
           <div class="subject">
@@ -122,7 +79,6 @@
           </div>
 
           <!-- 첨부파일은 수정이 안되고 새로 등록하는 것만 가능 -->
-          <!-- ********************************** 개선사항: 그대로 내용만 수정하면 기존에 첨부된 파일은 어떻게 되는지 파악하기 -->
           <div class="file">
             <p>첨부 파일</p>
             <p>
@@ -133,10 +89,8 @@
         </div>
       
         <div class="btn">
-
-          <!-- ********************************** 개선사항: 본인이 쓴 게시글만 수정할 수 있게하기 -->
           <!-- 게시글 수정 버튼 -->
-          <input type="button" class="plus-btn" value="수정" onclick="check_input()">
+          <input type="button" class="plus-btn" value="등록" onclick="check_input()">
 
           <!-- 취소 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="취소" onclick="history.go(-1)">
@@ -144,28 +98,12 @@
           <!-- 게시글 삭제 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="삭제" onclick="delete_board()">
         </div>
-      
       </form>
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
   </div>
 
-
-
-
-
-  <!-- 자바스크립트 -->
+  <!-- javascript -->
   <script type="text/javascript">
-
     // 입력된 값이 없다면 리턴
     function check_input() {
       if( !document.board_form.subject.value ) {
@@ -184,7 +122,7 @@
     // 정말로 삭제할건지 확인하기
     function delete_board() {
       if( confirm( "정말로 삭제하시겠습니까?" ) == true ) {
-        document.location.href = 'board_delete.php?num=<?=$num?>&page=<?=$page?>';
+        location.href = 'board_delete.php?num=<?=$num?>&page=<?=$page?>';
       }
       else {
         return;

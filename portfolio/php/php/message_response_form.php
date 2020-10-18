@@ -8,27 +8,6 @@
   <link rel="stylesheet" href="../css/style-view_form.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>답장 메세지 보내기</title>
-  <style>
-    /* 첫번째 요소에 너비 고정 */
-    .view_form .form_box div p:first-of-type
-    {
-      width: 100px;
-    }
-
-    /* 각 요소 사이즈 */
-    .view_form .form_box .send_id {
-      width: 50%;
-    }
-    .view_form .form_box .rv_id {
-      width: 50%;
-    }
-    .view_form .form_box .subject {
-      width: 100%;
-    }
-    .view_form .form_box .content {
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
@@ -39,12 +18,8 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
     <!-- 메세지 사이드 -->
     <aside id="message_side">
-      
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="point-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
@@ -52,24 +27,8 @@
       <input type="button" class="plus-btn" value="보낸 메세지" onclick="location.href='message_box.php?mode=send'">
 
       <!-- 메세지 보내기 버튼 -->
-      <?php
-        if($userid) {
-      ?>
       <input type="button" class="plus-btn" value="메세지 보내기" onclick="location.href='message_form.php'">
-      <?php
-        }
-        else {
-      ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="메세지 보내기"></a>
-      <?php
-        }
-      ?>
-
     </aside>
-
-
-
-
 
     <!-- 답장 메세지 보내기 섹선 -->
     <section id="message_response_form" class="view_form">
@@ -107,17 +66,11 @@
         // DB close
       ?>
 
-
-
-
-
-
-
       <!-- 답장 메세지 폼 -->
       <form class="message_form" name="message_form" method="post" action="message_insert.php?send_id=<?=$userid?>">
 
         <!-- 폼박스 -->
-        <div class="form_box minus-style">
+        <div class="form_box">
 
           <!-- 원래 메세지를 보냈던 사람 -> 받는 사람으로 값으로 보내기 위해 숨긴 input -->
           <input type="hidden" name="rv_id" value="<?=$send_id?>">
@@ -149,35 +102,18 @@
         </div>
 
         <div class="btn">
-
           <!-- 메세지 보내기 버튼 -->
           <input type="button" class="plus-btn" value="보내기" onclick="check_input()">
 
           <!-- 다시쓰기 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="다시쓰기" onclick="reset_form()">
         </div>
-      
       </form>
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
   </div>
 
-
-
-
-
-  <!-- 자바스크립트 -->
-  <script>
-
+  <!-- javascript -->
+  <script type="text/javascript">
     // 입력된 값이 없다면 리턴
     function check_input() {
       if( !document.message_form.subject.value ) {

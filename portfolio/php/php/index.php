@@ -8,14 +8,6 @@
 	<link rel="stylesheet" href="../css/style-list_form.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<title>Home</title>
-	<style>
-		#main .latest_list p {
-			width: calc(100% / 3);
-		}
-		#main .point_rank_list p {
-			width: calc(100% / 4);
-		}
-	</style>
 </head>
 <body>
 

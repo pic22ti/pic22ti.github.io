@@ -14,7 +14,7 @@
 	// DB connect
 	$con = mysqli_connect('localhost', 'pic22ti', 'myport000!', 'pic22ti');
 	$sql = "insert into member (id, pass, name, email, regist_day, level, point)";
-	$sql .= " values ('$id', '$pass', '$name', '$email', '$regist_day', 9, 0)";
+	$sql .= " values ('$id', '$pass', '$name', '$email', '$regist_day', 9, 100)";
 
 	mysqli_query($con, $sql);
 	mysqli_close($con);

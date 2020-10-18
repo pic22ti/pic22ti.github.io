@@ -48,27 +48,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-
-/* my reset */
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-* {
-	box-sizing: border-box;
-}
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-/* color map */
-/*  
-#fffffff (white) background
-#e0e4fe (very light blue) 
-#b2bafc (light blue) none select
-#164ffa (blue) point
-#02152a (dark navy) text
-#e7eaeb (light gray) border
-#9da1a7 (gray) text
-*/

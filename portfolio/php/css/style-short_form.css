@@ -1,12 +1,8 @@
-
-/* ----------- 임시 적용 ----------- */
-
 /* ----------- 짧은 폼 스타일 ----------- */
-
 /* 사이드가 없는 경우 섹션의 너비를 100%로 설정 */
 section {
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100vh - 80px);
   padding: 30px;
   border-left: none;
 
@@ -18,11 +14,6 @@ section {
   padding-bottom: 20px;
   text-align: center;
 }
-
-/* 폼 스타일 */
-/* .short_form form {
-
-} */
 
 /* input 스타일 */
 .short_form .call_id,

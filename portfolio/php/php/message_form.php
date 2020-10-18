@@ -8,31 +8,6 @@
   <link rel="stylesheet" href="../css/style-view_form.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>메세지 보내기</title>
-  <style>
-    /* 타이틀 밑에 블루 라인 */
-    .view_form h2::after {
-      width: 240px;
-    }
-
-    /* 각 요소 사이즈 */
-    .view_form .form_box .send_id {
-      width: 100%;
-    }
-    .view_form .form_box .rv_id {
-      width: 100%;
-    }
-    .view_form .form_box .subject {
-      width: 100%;
-    }
-    .view_form .form_box .content {
-      width: 100%;
-    }
-
-    /* 입력창 높이 조절 */
-    .view_form .form_box .rv_id p {
-      padding: 0px;
-    }
-  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
@@ -43,12 +18,8 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
     <!-- 메세지 사이드 -->
     <aside id="message_side">
-            
       <!-- 받은 메세지 버튼 -->
       <input type="button" class="plus-btn" value="받은 메세지" onclick="location.href='message_box.php?mode=rv'">
       
@@ -64,16 +35,12 @@
         }
         else {
       ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="메세지 보내기"></a>
+      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" class="point-btn" value="메세지 보내기"></a>
       <?php
         }
       ?>
 
     </aside>
-
-
-
-
 
     <!-- 메세지 보내기 섹선 -->
     <section id="message_form" class="view_form">
@@ -85,7 +52,7 @@
       <form class="message_form" name="message_form" method="post" action="message_insert.php?send_id=<?=$userid?>">
 
         <!-- 폼박스 -->
-        <div class="form_box minus-style">
+        <div class="form_box">
         
           <div class="send_id">
             <p>보내는 사람</p>
@@ -115,35 +82,18 @@
         </div>
 
         <div class="btn">
-
           <!-- 메세지 보내기 버튼 -->
           <input type="button" class="plus-btn" value="보내기" onclick="check_input()">
 
           <!-- 다시쓰기 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="다시쓰기" onclick="reset_form()">
         </div>
-      
       </form>
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
   </div>
 
-
-
-
-
-  <!-- 자바스크립트 -->
-  <script>
-
+  <!-- javascript -->
+  <script type="text/javascript">
     // 입력된 값이 없다면 리턴
     function check_input() {
       if( !document.message_form.rv_id.value ) {

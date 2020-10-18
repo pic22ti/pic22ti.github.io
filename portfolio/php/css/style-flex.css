@@ -1,26 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
-/* ----------- 임시 적용 ----------- */
-
-/* 푸터는 아마 없을 예정이므로 숨겨둠 */
-#footer {
-  display: none;
+* {
+	box-sizing: border-box;
 }
-
-
-/* ----------- 페이지 공통 ----------- */
 body {
   max-width: 1280px;
   margin: 0 auto;
   border-left: 1px solid #e7eaeb;
   border-right: 1px solid #e7eaeb;
 }
-
+a {
+  color: currentColor;
+  text-decoration: none;
+}
 /* 텍스트 컬러 설정 */
 div, p, input, textarea, h2, h3 {
   color: #02152a;
   font-family: 'Nanum Gothic', sans-serif;
 }
-
 /* 폰트 사이즈 설정 */
 h2 {
   font-size: 28px;
@@ -42,7 +39,6 @@ div, p, input, textarea {
   display: flex;
   flex-flow: row wrap;
 }
-
 
 /* 텍스트 버튼 스타일 */
 .text-btn {
@@ -89,24 +85,7 @@ div, p, input, textarea {
   color: #164ffa;
 }
 
-/* 음각 스타일 */
-.minus-style {
-  background-color: white;
-  padding: 15px;
-  font-size: 13px;
-
-  /* 표시용 수정해야함 */
-  color: tomato;
-}
-
-
-
-
-
-
-
-/* ----------- 헤더 ----------- */
-
+/* ************************* 헤더  */
 /* 가로로 배치하기 위해 flex */
 #header {
   display: flex;
@@ -131,8 +110,7 @@ div, p, input, textarea {
   color: #9da1a7;
 }
 
-
-/* 사이드 */
+/* ************************* 사이드 */
 aside {
   width: 240px;
   height: calc(100% - 120px);
@@ -145,22 +123,19 @@ aside [type=button] {
   margin: 20px auto;
 }
 
-/* 섹션 */
+/* ************************* 섹션 */
 section {
   width: calc(100% - 280px);
   height: calc(100% - 80px);
   border-left: 1px solid #e7eaeb;
 }
-/* section {
-} */
 
-/* 메인 */
+/* ************************* 메인 */
 section#main {
   width: 100%;
   height: calc(100vh - 80px);
   border-left: none;
 }
-
 section#main article {
   float: left;
   width: 50%;
@@ -173,73 +148,3 @@ section#main article.latest {
 section#main article ul {
   height: 303px;
 }
-
-
-
-
-
-
-/* 체크박스 스타일 */
-
-/* 디폴트 체크박스와 새로 만든 체크박스를 감싸고 있는 라벨 */
-.check label {
-  display: inline-block;
-  position: relative;
-  padding: 0px;
-  margin: 0px;
-
-  cursor: pointer;
-  font-size: 22px;
-}
-
-/* 브라우저의 디폴트 체크박스를 숨기기 */
-.check input {
-  display: none;
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* 새로운 체크박스 만들기 */
-.check .checkmark {
-  position: absolute;
-  top: -15px;
-  left: -10px;
-  height: 20px;
-  width: 20px;
-  background-color: #e7eaeb;
-}
-
-/* 체크박스가 체크되면 배경색 변경 */
-.check input:checked ~ .checkmark {
-  background-color: #164ffa;
-}
-
-/* 체크 아이콘 만들기 (체크 안되어있을때는 숨김) */
-.check .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* 체크되면 체크 아이콘 노출 */
-.check input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* 체크 아이콘 스타일 */
-.check  .checkmark:after {
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-}
-
-
-
-

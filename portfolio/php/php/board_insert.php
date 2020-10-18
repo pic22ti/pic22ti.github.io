@@ -16,11 +16,11 @@
 		$username = "";
 	}
 	
-	// *********************** 개선사항: 어차피 로그인해야 게시판 버튼이 보이는데 필요한 부분인가?
+	// 로그인해야 게시글 쓰기를 사용할 수 있다.
 	if( !$userid ) {
 		echo ("
 			<script>
-				alert('게시판은 로그인 후 사용할 수 있습니다.');
+				alert('게시글 쓰기는 로그인 후 사용할 수 있습니다.');
 				history.go(-1);
 			</script>
 		");
@@ -91,14 +91,17 @@
 	$sql .= "'$upfile_name', '$upfile_type', '$copied_file_name')";
 	mysqli_query($con, $sql);
 
-	$point_up = 100;
-	$sql = "select point from member where id='$userid'";
-	$result = mysqli_query($con, $sql);
-	$row = mysqli_fetch_array($result);
-	$new_point = $row["point"]+$point_up;
+	// 관리자가 아니라면 실행
+	if($_SESSION["userlevel"] != 1) {
+		$point_up = 100;
+		$sql = "select point from member where id='$userid'";
+		$result = mysqli_query($con, $sql);
+		$row = mysqli_fetch_array($result);
+		$new_point = $row["point"]+$point_up;
 
-	$sql = "update member set point=$new_point where id='$userid'";
-	mysqli_query($con, $sql);
+		$sql = "update member set point=$new_point where id='$userid'";
+		mysqli_query($con, $sql);
+	}
 
 	mysqli_close($con);
 	// DB close

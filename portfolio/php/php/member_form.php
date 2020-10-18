@@ -11,16 +11,10 @@
 </head>
 <body>
 
-
     <!-- 헤더 -->
     <header id="header">
       <?php include "header.php"; ?>
 		</header>
-
-
-
-
-
 
     <!-- 회원가입 섹선 -->
     <section id="member_form" class="short_form">
@@ -44,9 +38,6 @@
              디폴트 : value="0" -->
         <input type="hidden" id="chk_id2" name="chk_id2" value="0">
 
-
-
-
         <!-- 비밀번호 입력 -->
         <input type="password" name="pass" placeholder="비밀번호">
 
@@ -59,9 +50,6 @@
         <!-- 이메일 입력 -->
         <input type="text" name="email" placeholder="이메일">
 
-
-        
-
         <div class="btn">
 
           <!-- 가입 버튼 -->
@@ -70,24 +58,11 @@
           <!-- 취소 버튼 -->
           <input type="button" class="plus-btn" class="reset" value="취소하기" onclick="reset_form()">
         </div>
-
       </form>
-
     </section>
       
-      
-
-
-
-
-
-
-
-
-
-  <!-- 자바스크립트 -->
-	<script type="text/javascript">
-
+  <!-- javascript -->
+  <script type="text/javascript">
 		// 입력된 값이 없다면 리턴
 		function check_input() {
 			if( !document.member_form.id.value ) {

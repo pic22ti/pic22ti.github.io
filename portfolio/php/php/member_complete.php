@@ -16,11 +16,6 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
- 
-
     <!-- 회원가입 완료 섹선 -->
     <section id="member_complete" class="short_form">
 
@@ -35,30 +30,15 @@
         <!-- 홈으로 가기 버튼 -->
         <input type="button" class="plus-btn" value="홈으로 가기" onclick="go_home()">
       </div>
-
     </section>
-      
-      
 
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <!-- <?php include "footer.php"; ?> -->
-    </footer>
-
-
-
-
-
-  <!-- 자바스크립트 -->
+  <!-- javascript -->
   <script type="text/javascript">
 		function check_input() {
-			document.location.href = 'login_form.php';
+			location.href = 'login_form.php';
 		}
 		function go_home() {
-			document.location.href = 'index.php';
+			location.href = 'index.php';
 		}
 	</script>
 </body>

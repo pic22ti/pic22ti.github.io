@@ -8,28 +8,6 @@
   <link rel="stylesheet" href="../css/style-list_form.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>게시판 목록</title>
-  <style>
-    /* 목록 요소 각 너비 지정 */
-    .list_form .number {
-      width: 5%;
-    }
-    .list_form .subject {
-      width: 60%;
-      text-align: left;
-    }
-    .list_form .file {
-      width: 10%;
-    }
-    .list_form .id {
-      width: 10%;
-    }
-    .list_form .regist_day {
-      width: 10%;
-    }
-    .list_form .views {
-      width: 5%;
-    }
-  </style>
 </head>
 <body>
   <!-- 전체를 감싸는 wrap -->
@@ -38,34 +16,16 @@
     <!-- 헤더 -->
     <header id="header">
       <?php include "header.php"; ?>
-		</header>
-
-
-
-
+    </header>
 
     <!-- 게시판 사이드 -->
     <aside id="board_side">
-
       <!-- 게시판 목록 버튼 -->
       <input type="button" class="point-btn" value="게시판 목록" onclick="location.href='board_list.php'">
 
       <!-- 게시글 쓰기 버튼 -->
-      <?php
-        if($userid) {
-      ?>
       <input type="button" class="plus-btn" value="게시글 쓰기" onclick="location.href='board_form.php'">
-      <?php
-        }
-        else {
-      ?>
-      <a href="javascript:alert('로그인 후 이용해주세요.')"><input type="button" value="글쓰기"></a>
-      <?php
-        }
-      ?>
     </aside>
-
-
 
     <!-- 게시판 목록 섹선 -->
     <section id="board_list" class="list_form">
@@ -75,7 +35,7 @@
 
       <!-- 게시판 목록 -->
       <ul class="board_list">
-        <li class="list sub plus-btn">
+        <li class="list sub">
           <p class="number">번호</p>
           <p class="subject">제목</p>
           <p class="file">첨부 파일</p>
@@ -126,16 +86,12 @@
             $regist_day_short = substr($regist_day, 0, 10);
 
             if( $row["file_name"] ) {
-              // 이미지 크기가 커서 일단 사이즈 줄임
-              // **************************** 개선사항: 원래 이미지를 줄이던지...?
               $file_image = "<img src='./img/file.gif' height='14px'/>";
             }
             else {
               $file_image = "";
             }
         ?>
-
-
 
         <!-- 게시글들을 목록으로 출력 -->
         <a href="board_view.php?num=<?=$num?>&page=<?=$page?>">
@@ -149,14 +105,13 @@
           </li>
         </a>
 
-
         <?php
               $number--;
             } // for문 종료
             
             // 게시글이 없을 때 안내 문구 출력
             if( !$total_record ) {
-              echo "<p class='no-message'>게시글이 없습니다.</p>";
+              echo "<p class='no_item'>게시글이 없습니다.</p>";
             } 
 
           mysqli_close($con);
@@ -164,11 +119,6 @@
         <!-- DB close -->
 
       </ul>
-
-
-
-
-
 
       <!-- 페이지 -->
       <div class="page">
@@ -178,9 +128,6 @@
             $new_page = $page-1;
             echo "<p><a href='board_list.php?page=$new_page'>이전</a></p>";
           }
-          // else {
-          //   echo "&nbsp";
-          // }
 
           for( $i = 1; $i<=$total_page; $i++ ) {
             if( $page == $i ) {
@@ -196,26 +143,9 @@
             $new_page = $page+1;
             echo "<p><a href='board_list.php?page=$new_page'>다음</a></p>";
           }
-          // else {
-          //   echo "&nbsp";
-          // }
         ?>
       </div>
-
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
   </div>
-
-
-
 </body>
 </html>

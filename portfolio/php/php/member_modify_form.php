@@ -18,11 +18,6 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
-
-
     <!-- 회원 정보 수정 섹선 -->
     <section id="member_form" class="short_form">
 
@@ -41,13 +36,6 @@
         mysqli_close($con);
       ?>
       <!-- DB close -->
-
-
-
-
-
-
-
 
       <!-- 타이틀 -->
       <h2>회원 정보 수정</h2>
@@ -72,9 +60,6 @@
         <!-- 이메일 수정 -->
         <input type="text" name="email" value="<?=$email?>">
 
-
-        
-
         <div class="btn">
 
           <!-- 수정 저장 버튼 -->
@@ -87,27 +72,11 @@
           <input type="button" class="plus-btn" value="회원탈퇴" onclick="delete_id()">
         </div>
       </form>
-      
     </section>
-      
-      
-
-
-
-
-    <!-- 푸터 -->
-    <footer id="footer">
-      <?php include "footer.php"; ?>
-    </footer>
   </div>
 
-
-
-
-
-  <!-- 자바스크립트 -->
-	<script type="text/javascript">
-
+  <!-- javascript -->
+  <script type="text/javascript">
     // 입력된 값이 없다면 리턴
 		function check_input() {
 			if( !document.member_form.pass.value ) {
@@ -152,7 +121,7 @@
     // 정말로 탈퇴할건지 확인하기
 		function delete_id() {
 			if( confirm( "정말로 탈퇴하시겠습니까?" ) == true ){
-				document.location.href = 'delete.php';
+				location.href = 'delete.php';
 			}
 			else {
 				return;

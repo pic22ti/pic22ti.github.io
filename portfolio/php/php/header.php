@@ -44,8 +44,8 @@
   if( !$userid ) {
 ?>
 <div class="nav login">
-  <p><a href="member_form.php" class="text-btn">Join</a></p>
-  <p><a href="login_form.php" class="text-btn">Login</a></p>
+  <p><a href="member_form.php" class="text-btn">회원가입</a></p>
+  <p><a href="login_form.php" class="text-btn">로그인</a></p>
 </div>
 
 <!-- 로그인 상태일 때 보임 -->
@@ -61,7 +61,7 @@
   <p><a href="message_box.php?mode=rv" class="text-btn">메세지</a></p>
   <p><a href="board_list.php" class="text-btn">게시판</a></p>
   <p><a href="member_modify_form.php" class="text-btn">정보수정</a></p>
-  <p><a href="logout.php" class="text-btn">Logout</a></p>
+  <p><a href="logout.php" class="text-btn">로그아웃</a></p>
 
   <!-- 레벨 1일 때 관리자 모드도 보임 -->
   <?php

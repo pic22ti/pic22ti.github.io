@@ -18,7 +18,7 @@
 	// 수정 후 게시글이 있던 리스트 페이지로 다시 돌아간다
 	echo "
 		<script>
-			location.href = 'board_list.php?page=$page';
+			location.href = 'board_view.php?num=$num&page=$page';
 		</script>
 	";
 ?>

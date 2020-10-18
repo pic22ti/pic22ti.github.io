@@ -6,8 +6,6 @@
 	$file_path = $_GET["file_path"];
 	$file_path = "./data/".$real_name;
 
-	// *********************** 개선사항: 익플 한글파일 깨짐 방지 코드 추가하기
-
 	// 파일 존재 확인하고 출력
 	// file_exists() 함수: 파일이 존재하는지 확인하고 boolean값으로 반환하는 함수
 	// fopen() 함수: mode에 따라 파일을 열기

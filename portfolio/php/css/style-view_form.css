@@ -1,14 +1,9 @@
-
-/* ----------- 임시 적용 ----------- */
-
-
 /* ----------- 뷰 스타일 ----------- */
 
 /* 전체 여백 */
 .view_form {
   padding: 30px;
 }
-
 /* 타이틀 */
 .view_form h2 {
   position: relative;
@@ -17,7 +12,6 @@
   padding-bottom: 30px;
   border-bottom: 1px solid #e7eaeb;
 }
-
 /* 타이틀 밑에 블루 라인 */
 .view_form h2::after {
   content: '';
@@ -30,91 +24,68 @@
   height: 2px;
   background-color: #164ffa;
 }
-
 /* 폼 배경색 */
 .view_form .form_box {
   background-color: white;
+  width: 100%;
   padding: 20px;
 
   display: flex;
   flex-flow: row wrap;
 }
+/* 폼 영역 설정 */
+.view_form .form_box>div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 
-/* 각 줄 하단에 라인 */
-.view_form .form_box div {
+  width: 100%;
   border-bottom: 1px solid #e7eaeb;
 }
-
-/* 각 요소들 가로 배치와 여백 설정 */
-.view_form .form_box div p {
-  display: inline-block;
-  /* padding: 15px; */
-}
-
-
-/* 첫번째 요소에 너비 고정 */
-.view_form .form_box div p:first-of-type
-{
-  width: 100px;
-  float: left;
-  padding: 15px;
-}
-.view_form .form_box .id p,
-.view_form .form_box .send_id p,
-.view_form .form_box .rv_id p,
-.view_form .form_box .date p,
-.view_form .form_box .file p
-{
-  padding: 15px 10px;
-}
-
-/*  */
-.view_form .form_box div p:last-of-type
-{
-  clear: both;
-  width: calc(100% - 105px);
-}
-
-
-
 /* 하단 버튼 */
 .view_form .btn {
   margin: 20px 5px;
   text-align: right;
 }
+/* 첫번째 p 가로 100px
+   나머지 내용부분은 100% - 100px */
+.view_form .form_box>div>p:first-of-type {
+  width: 100px;
+  padding: 15px;
+}
+.view_form .form_box>div>p:last-of-type {
+  width: calc(100% - 100px);
+  padding: 5px;
+}
 
-
-
-
-
-
-
-
-
-/* input text 스타일 */
-textarea,
-.view_form .form_box input[type=text],
-.view_form .form_box input[type=button]
-{
-  display: inline-block;
-  /* background-color: white; */
+/* input, textarea 설정 */
+.view_form .form_box>div.rv_id>p:last-of-type>input,
+.view_form .form_box>div.subject>p:last-of-type>input {
   width: 100%;
-  height: 0px;
-  /* height: 25px; */
-  padding: 15px 5px;
-  /* padding: 5px; */
-  margin: 5px;
   border: none;
   border-bottom: 1px solid #e7eaeb;
-  /* border: 1px solid #ddd; */
-  /* line-height: 13px; */
+  padding: 10px;
 }
-
-textarea {
+.view_form .form_box>div.content>p:last-of-type>textarea {
+  width: 100%;
   height: 200px;
-  padding: 5px;
+  border: none;
   border: 1px solid #e7eaeb;
+  padding: 10px;
 }
 
-
-
+/* board_view, message_view
+   제목, 내용 영역 설정 */
+#board_view.view_form .form_box>div.subject>p,
+#message_view.view_form .form_box>div.subject>p
+{
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+}
+#board_view.view_form .form_box>div.content>p,
+#message_view.view_form .form_box>div.content>p
+{
+  width: 100%;
+  padding: 15px;
+}

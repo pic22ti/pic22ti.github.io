@@ -21,7 +21,7 @@
 
       // 작성된 게시글이 없을 때 안내문구 출력
       if( !$total_num ) {
-        echo "<p class='no-message'>작성된 게시글이 없습니다.</p>";
+        echo "<p class='no_item'>작성된 게시글이 없습니다.</p>";
       }
 
       // 작성된 게시글이 있을 때 최근 게시글들을 목록으로 출력
@@ -43,11 +43,6 @@
   </ul>
 </article>
 
-
-
-
-
-
 <!-- 오른쪽 포인트 랭킹 영역 -->
 <article class="point_rank list_form">
 
@@ -67,8 +62,6 @@
       $rank = 1;
       $sql = "select * from member order by point desc limit 5";
       $result = mysqli_query($con, $sql);
-
-      // ************************** 개선사항: 가입된 회원이 없을 때 안내문구 출력
 
       // 포인트 랭킹 상위 5개 회원의 데이터를 목록으로 출력
       while( $row = mysqli_fetch_array($result) ) {

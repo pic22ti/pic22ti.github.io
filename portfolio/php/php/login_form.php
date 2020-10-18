@@ -16,9 +16,6 @@
       <?php include "header.php"; ?>
 		</header>
 
-
-
-
     <!-- 로그인 폼 섹선 -->
     <section id="login_form" class="short_form">
 
@@ -44,15 +41,9 @@
         </div>
       </form>
     </section>
-      
 
-
-
-
-
-  <!-- 자바스크립트 -->
-	<script type="text/javascript">
-
+  <!-- javascript -->
+  <script type="text/javascript">
     // 입력된 내용이 없다면 리턴하는 함수
 		function check_input() {
 			if( !document.login_form.id.value ) {
@@ -70,7 +61,7 @@
     
     // 회원가입 페이지로 이동하는 함수
 		function signUp() {
-			document.location = 'member_form.php';	
+			location.href = 'member_form.php';	
 		}
 	</script>
 </body>
