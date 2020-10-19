@@ -74,7 +74,6 @@ input, textarea {
   width: 130px;
   box-sizing: border-box;
   padding: 11px 0 8px 0;
-  /* margin: 0 auto; */
 
   color: white;
   text-align: center;
@@ -125,6 +124,11 @@ input, textarea {
   width: 14px;
   height: 1px;
   margin-bottom: 4px;
+}
+
+/* 시간, 날짜 출력 모바일에서 숨김 */
+#header .now {
+  display: none;
 }
 
 /* book 버튼 */
@@ -305,6 +309,7 @@ section .tit>p {
   height: 153px;
 }
 #header>.container.first {
+  position: relative;
   height: 112px;
   justify-content: center;
   align-items: center;
@@ -314,6 +319,15 @@ section .tit>p {
 #header .btn_book
 {
   display: none;
+}
+/* 시간, 날짜 출력 */
+#header .now {
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 65px;
+  color: #999;
+  text-align: center;
 }
 /* 내비, 내비 리스트 모두 항상 보임으로 변경 */
 #header .nav {
