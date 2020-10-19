@@ -2,6 +2,7 @@
 
 ## 1. Yeseul's Portfolio
 프론트엔드 개발자 이예슬 포트폴리오입니다.
+* [바로가기](#)
 
 ## 2. 프로젝트 목차
 ### 2.1. HOTEL DENIM 
@@ -45,7 +46,8 @@
 * Photoshop
 
 ## 5. 개발 기간
-* 5일
+* (5일) 2020.10.9 ~ 2020.10.13
 
 ## 6. 참고 사항
 * [Full page Vanilla JS](https://codepen.io/nearee/pen/zYYENMa)
+* [MATERIAL DESIGN](https://material.io/resources/icons/?style=baseline)
