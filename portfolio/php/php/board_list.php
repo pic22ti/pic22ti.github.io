@@ -86,7 +86,7 @@
             $regist_day_short = substr($regist_day, 0, 10);
 
             if( $row["file_name"] ) {
-              $file_image = "<img src='./img/file.gif' height='14px'/>";
+              $file_image = "<img src='../img/file.gif' height='14px'/>";
             }
             else {
               $file_image = "";

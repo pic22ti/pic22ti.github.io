@@ -56,7 +56,7 @@
 ?>
 
 <div class="nav logout">
-  <p><?=$username?>님</p>
+  <p><?=$userid?>님</p>
   <p>[ 레벨<?=$userlevel?> / <?=$userpoint?>p ]</p>
   <p><a href="message_box.php?mode=rv" class="text-btn">메세지</a></p>
   <p><a href="board_list.php" class="text-btn">게시판</a></p>

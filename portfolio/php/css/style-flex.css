@@ -1,3 +1,4 @@
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 * {
@@ -29,11 +30,12 @@ h3 {
 }
 div, p, input, textarea {
   font-size: 13px;
+  line-height: normal;
 }
 
 /* 전체를 감싸는 wrap 스타일  */
 .wrap {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   
   display: flex;
@@ -126,7 +128,8 @@ aside [type=button] {
 /* ************************* 섹션 */
 section {
   width: calc(100% - 280px);
-  height: calc(100% - 80px);
+  /* height: calc(100% - 80px); */
+  min-height: 100vh;
   border-left: 1px solid #e7eaeb;
 }
 

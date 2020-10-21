@@ -52,7 +52,7 @@
 		$copied_name = $row["file_copied"];
 
 		if( $copied_name ) {
-			$file_path = "./data/".$copied_name;
+			$file_path = "../data/".$copied_name;
 			unlink($file_path);
 		}
 

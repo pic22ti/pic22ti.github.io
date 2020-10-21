@@ -78,13 +78,22 @@
             </p>
           </div>
 
-          <!-- 첨부파일은 수정이 안되고 새로 등록하는 것만 가능 -->
+          <!-- 첨부파일은 수정이 안됨 -->
           <div class="file">
             <p>첨부 파일</p>
-            <p>
-              <input type="file" name="upfile">
-              <?=$file_name?>
-            </p>
+            <?php
+            if( $file_name ) {
+              $real_name = $file_copied;
+              $file_path = "../data/".$real_name;
+              $file_size = filesize($file_path);
+              echo ("<p class='file_name'>$file_name ($file_size Byte)</p>");
+            }
+            else {
+              echo ("
+                <p class='file_name'>(첨부된 파일이 없습니다.)</p>
+              ");
+            }
+          ?>
           </div>
         </div>
       

@@ -4,7 +4,7 @@
 	$file_name = $_GET["file_name"];
 	$file_type = $_GET["file_type"];
 	$file_path = $_GET["file_path"];
-	$file_path = "./data/".$real_name;
+	$file_path = "../data/".$real_name;
 
 	// 파일 존재 확인하고 출력
 	// file_exists() 함수: 파일이 존재하는지 확인하고 boolean값으로 반환하는 함수

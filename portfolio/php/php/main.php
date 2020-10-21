@@ -32,7 +32,7 @@
 
     <li class="list">
       <p class="subject"><?=$row["subject"]?></p>
-      <p class="id"><?=$row["name"]?></p>
+      <p class="id"><?=$row["id"]?></p>
       <p class="date"><?=$regist_day?></p>
     </li>
 

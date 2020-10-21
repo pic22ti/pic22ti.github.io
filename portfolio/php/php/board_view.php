@@ -100,7 +100,7 @@
             // 첨부된 파일이 있다면 '저장'버튼 노출
             if( $file_name ) {
               $real_name = $file_copied;
-              $file_path = "./data/".$real_name;
+              $file_path = "../data/".$real_name;
               $file_size = filesize($file_path);
               echo ("
                 <a href='board_download.php?num=$num&real_name=$real_name&file_name=$file_name&file_type=$file_type' class='file_save_button'>저장</a>

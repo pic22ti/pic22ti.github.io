@@ -1,5 +1,6 @@
-/* ----------- 뷰 스타일 ----------- */
+@charset "utf-8";
 
+/* ----------- 뷰 스타일 ----------- */
 /* 전체 여백 */
 .view_form {
   padding: 30px;
@@ -81,6 +82,7 @@
 {
   width: 100%;
   padding: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 #board_view.view_form .form_box>div.content>p,
@@ -88,4 +90,15 @@
 {
   width: 100%;
   padding: 15px;
+}
+
+#board_view.view_form .form_box>div.file .file_save_button {
+  background-color: #164ffa;
+  width: 60px;
+  height: 25px;
+  padding: 5px;
+  
+  color: #fff;
+  line-height: 13px;
+  text-align: center;
 }

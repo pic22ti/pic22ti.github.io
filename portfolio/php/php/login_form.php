@@ -25,11 +25,11 @@
       <!-- 로그인 폼 -->
       <form method="post" name="login_form" action="login.php">
 
-        <!-- 아이디 입력 -->
-        <input type="text" name="id" placeholder="아이디">
+        <!-- 아이디 입력 (sample id: admin) -->
+        <input type="text" name="id" placeholder="아이디" value="admin">
 
-        <!-- 비밀번호 입력 -->
-        <input type="password" name="pass" placeholder="비밀번호">
+        <!-- 비밀번호 입력 (sample pw: admin) -->
+        <input type="password" name="pass" placeholder="비밀번호" value="admin">
 
         <div class="btn">
 

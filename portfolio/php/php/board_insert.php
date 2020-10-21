@@ -37,7 +37,7 @@
 	// 시간대를 아시아/서울로 설정한다
 	date_default_timezone_set('Asia/Seoul');
 	$regist_day = date("Y-m-d (H:i)");
-	$upload_dir = './data/';
+	$upload_dir = '../data/';
 
 	// 첨부된 파일을 업로드 준비
 	$upfile_name = $_FILES["upfile"]["name"];
