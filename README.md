@@ -1,8 +1,6 @@
-![thum_portfolio](/thum_portfolio.jpg)
-
 ## 1. Yeseul's Portfolio
-프론트엔드 개발자 이예슬 포트폴리오입니다.
-* [바로가기](https://github.com/pic22ti/pic22ti.github.io)
+프론트엔드 개발자 이예슬 포트폴리오
+* [바로가기](https://pic22ti.github.io/index.html)
 
 ## 2. 프로젝트 목차
 ### 2.1. HOTEL DENIM 
@@ -20,7 +18,7 @@
     - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop)
     - [바로가기](https://pic22ti.github.io/portfolio/droptop/index.html)
 
-### 2.4. F1
+### 2.4. Fomula1
   * 포뮬러1 레이싱 팀 소개 사이트
     - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
     - [바로가기](https://pic22ti.github.io/portfolio/fomula1/index.html)
