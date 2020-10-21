@@ -22,7 +22,7 @@
 * 이미지 크기에 따른 효율성 개선 필요
 * 메뉴 이동 시 index 처리 문제 개선 필요
 
-## 6. 참고 사항
+## 6. 참고
 * [카페 드롭탑](http://www.cafedroptop.com/n/kr/src/main.php)
 * [컨버스](https://www.converse.co.kr/)
 * [폰트어썸](https://fontawesome.com/)

@@ -20,6 +20,6 @@
 ## 5. 고찰 및 개선 방향
 * 이미지 크기에 따른 효율성 개선 필요
 
-## 6. 참고 사항
+## 6. 참고
 * [NASA](https://www.nasa.gov/)
 * [위키백과 태양계](https://ko.wikipedia.org/wiki/%ED%83%9C%EC%96%91%EA%B3%84)

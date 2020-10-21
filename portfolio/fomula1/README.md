@@ -20,7 +20,7 @@
 ## 5. 고찰 및 개선 방향
 * 현재 PC용으로 제작되어 반응형 웹으로 업데이트 필요
 
-## 6. 참고 사항
+## 6. 참고
 * [Mercedes](https://www.mercedesamgf1.com/en/)
 * [Ferrari](https://www.ferrari.com/en-KR)
 * [McLaren](https://www.mclaren.com/)
