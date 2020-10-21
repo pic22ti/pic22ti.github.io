@@ -1,5 +1,6 @@
-/* ---------------- 모든 페이지 공통 시작 ---------------- */
+@charset "utf-8";
 
+/* ---------------- 모든 페이지 공통 시작 ---------------- */
 /* 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Pacifico&display=swap');
 

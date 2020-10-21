@@ -1,4 +1,4 @@
-![logo_droptop](/portfolio/droptop/logo_droptop.png)
+![thum_droptop](/portfolio/droptop/thum_droptop.jpg)
 
 ## 1. Drop Top
 카페 드롭탑 리뉴얼 사이트
