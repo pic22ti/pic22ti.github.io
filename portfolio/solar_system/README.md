@@ -1,4 +1,4 @@
-![logo_solar_system](/portfolio/solar_system/logo_solar_system.jpg)
+![thum_solar_system](/portfolio/solar_system/thum_solar_system.jpg)
 
 ## 1. SOLAR SYSTEM
 태양계 행성 정보 제공 사이트
