@@ -1,0 +1,572 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
+
+/* 
+(기본 font) font-family: 'Noto Sans KR', sans-serif;
+(영문 sans-serif) font-family: 'Raleway', sans-serif;
+(영문 serif) font-family: 'EB Garamond', serif;
+
+color
+(화이트) #fff 
+(그레이) #777
+(블랙) #000
+(퍼플) #b941b5 
+*/
+
+/* ---------------------------- reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+}
+a {
+  cursor: pointer;
+  color: currentColor;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+a, h1, h2, h3, p, li, span, input, textarea {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ---------------------------- header */
+/* 상단에 고정되는 헤더 */
+#header>a {
+  position: fixed;
+  top: 90px;
+  z-index: 3;
+  color: #777;
+}
+/* 로고 */
+#header>.logo {
+  left: 160px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-family: 'Raleway', sans-serif;
+}
+/* 메뉴 열기 버튼 */
+#header>.open_nav {
+  right: 160px;
+}
+#header>.logo:hover,
+#header>.open_nav:hover
+{
+  transition: 0.5s;
+  opacity: 0.5;
+}
+/* 메뉴가 열리면 어둡게 되는 배경 */
+#header>.nav_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: none;
+}
+/* 메뉴 */
+#header>.nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 6;
+
+  width: 0;
+  height: 100%;
+  padding: 100px 0;
+  background-color: #fff;
+  text-align: center;
+  
+  overflow-x: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+/* 메뉴 리스트 */
+#header>.nav>a {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 7vmin;
+}
+#header>.nav>a:hover {
+  transition: 0.5s;
+  text-decoration: underline;
+  color: #b941b5;
+}
+/* 메뉴 닫기 버튼 */
+#header>.nav>.close_nav {
+  position: absolute;
+  top: 90px;
+  right: 160px;
+
+  font-size: inherit;
+}
+
+/* ---------------------------- 모달창 상세 페이지 */
+#modal_detail {
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  padding: 90px 120px;
+
+  display: none;
+}
+#modal_detail>.close_modal {
+  position: absolute;
+  top: 180px;
+  right: 340px;
+}
+#modal_detail>.detail_page {
+  background-color: #fff;
+  width: 100%;
+  padding: 90px 220px;
+  display: none;
+}
+#modal_detail>.detail_page>a {
+  position: relative;
+  margin-right: 15px;
+  color: #b941b5;
+  font-weight: 600;
+}
+#modal_detail>.detail_page>a:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b941b5;
+}
+#modal_detail>.detail_page>.project_title {
+  padding-top: 76px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 7vmin;
+}
+#modal_detail>.detail_page>.project_text {
+  padding-top: 10px;
+}
+#modal_detail>.detail_page>.project_func {
+  padding-top: 38px;
+}
+#modal_detail>.detail_page>.project_skill>li {
+  display: inline-block;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+#modal_detail>.detail_page>.detail_img {
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 76px;
+}
+#modal_detail>.detail_page>.detail_img>img {
+  width:100%;
+  height: auto;
+}
+
+/* ---------------------------- wrap */
+.wrap {
+  overflow: hidden;
+  position: relative;
+  transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+/* panel 공통 */
+.panel {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+/* ---------------------------- main */
+#main {
+  background-color: #111;
+  color: #fff
+}
+#main>.main_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  min-width: 100%;
+  min-height: 100%;
+}
+#main>.pause_btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 340px;
+  z-index: 2;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fff;
+}
+#main>.pause_btn:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+#main>.main_content {
+  position: absolute;
+  z-index: 1;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  
+  width: 100%;
+  height: 100%;
+  padding: 140px 340px;
+}
+#main>.main_content>.main_title {
+  font-family: 'EB Garamond', serif;
+  font-size: 7vmin;
+  font-weight: 500;
+  color: #fff;
+}
+#main>.main_content>.main_text {
+  padding-top: 30px;
+
+  font-size: 15px;
+  font-weight: 100;
+}
+
+
+/* ---------------------------- portfolio */
+#portfolio {
+  position: relative;
+}
+/* 넘버링 */
+#portfolio>.num {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+#portfolio>.num>span {
+  position: absolute;
+  font-family: 'EB Garamond', serif;
+  font-size: 40px;
+}
+#portfolio>.num>.show_num {
+  top: -32px;
+  left: -30px;
+  color: #b941b5;
+  font-size: 65px;
+}
+#portfolio>.num>.total_num {
+  top: 12px;
+  left: 10px;
+}
+
+/* 좌우 이동 */
+#portfolio>.arr {
+  position: relative;
+  height: 100%;
+}
+#portfolio>.arr>a {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-left: 1px solid #777;
+  border-bottom: 1px solid #777;
+  opacity: 0.5;
+
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+#portfolio>.arr>.pre_btn {
+  left: 20%;
+  transform: translateY(-50%) rotate(45deg);
+  animation-name: movePreBtn;
+}
+#portfolio>.arr>.next_btn {
+  right: 20%;
+  transform: translateY(-50%) rotate(-135deg);
+  animation-name: moveNextBtn;
+}
+#portfolio>.arr>.pre_btn:hover,
+#portfolio>.arr>.next_btn:hover {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+@keyframes movePreBtn {
+  0% {
+    left: 20%;
+  }
+  100% {
+    left: 19%;
+  }
+}
+@keyframes moveNextBtn {
+  0% {
+    right: 20%;
+  }
+  100% {
+    right: 19%;
+  }
+}
+
+/* 포트폴리오 썸네일 */
+#portfolio>.container {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+
+  transition: 1s;
+}
+#portfolio>.container>article {
+  position: absolute;
+  top: calc(50% + 35px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60%;
+  text-align: center;
+
+  transition: 0.5s;
+}
+#portfolio>.container>.thum1 {
+  left: 0;
+}
+#portfolio>.container>.thum2 {
+  left: 60%;
+}
+#portfolio>.container>.thum3 {
+  left: 120%;
+}
+#portfolio>.container>.thum4 {
+  left: 180%;
+}
+#portfolio>.container>.thum5 {
+  left: 240%;
+}
+#portfolio>.container>.thum6 {
+  left: 300%;
+}
+/* 썸네일 이미지 */
+#portfolio>.container>article>.thum_img {
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  max-width: 960px;
+  height: auto;
+}
+#portfolio>.container>article>.thum_img:hover {
+  transition: 0.5s;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.09);
+}
+#portfolio>.container>article>.thum_content {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 120px;
+
+  color: #fff;
+}
+#portfolio>.container>article>.thum_content>.thum_title {
+  padding: 15px 0 2px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+#portfolio>.container>article>.thum_content>.thum_text {
+  padding-bottom: 14px;
+  font-size: 14px;
+}
+#portfolio>.container>article>.thum_content>.link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+#portfolio>.container>article>.thum_content>.link>a {
+  width: 100px;
+  background-color: #333;
+  height: 35px;
+
+  padding-top: 6px;
+  font-size: 14px;
+}
+#portfolio>.container>article>.thum_content>.link>a:hover {
+  transition: 0.5s;
+  background-color: #b941b5;
+}
+
+/* ---------------------------- about */
+#about {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 140px 340px;
+}
+/* about 컨텐츠 */
+#about>.about_content {
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+#about>.about_content>.about_title {
+  font-family: 'EB Garamond', serif;
+  font-size: 7vmin;
+  font-weight: 500;
+}
+#about>.about_content>.about_text {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: right;
+}
+/* about 키워드 */
+#about>.keywords_box {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#about>.keywords_box>li {
+  width: calc(93% / 3);
+}
+#about>.keywords_box>li>.keyword_title {
+  font-size: 20px;
+  color: #b941b5;
+}
+#about>.keywords_box>li>.keyword_text {
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #777;
+}
+
+/* ---------------------------- contact */
+#contact {
+  display: flex;
+  flex-flow: row wrap;
+}
+#contact>.contact_container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: calc(100% - 200px);
+  padding: 140px 340px;
+}
+/* contact 타이틀 */
+#contact>.contact_container>.contact_title {
+  flex: 1;
+  font-family: 'EB Garamond', serif;
+  font-size: 7vmin;
+  font-weight: 500;
+}
+/* 메일 작성 폼 */
+#contact>.contact_container>.contact_form {
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#contact>.contact_container>.contact_form>input,
+#contact>.contact_container>.contact_form>textarea
+{
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border: 1px solid #000;
+  margin-bottom: 15px;
+
+  font-family: 'Raleway', sans-serif;
+}
+#contact>.contact_container>.contact_form>textarea {
+  flex: 1;
+}
+/* 보내기 버튼 */
+#contact>.contact_container>.contact_form>.send_btn {
+  cursor: pointer;
+  background-color: #000;
+  margin-bottom: 0px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+#contact>.contact_container>.contact_form>.send_btn:hover {
+  transition: 0.5s;
+  background-color: #b941b5;
+  border: 1px solid #b941b5;
+}
+/* 스팸 방지 (일반적인 사용자에게 보이지 않도록 숨김) */
+#honeypot {
+  display: none !important; 
+}
+/* 메일 송신 안내 문구 */
+#contact>.contact_container>.contact_form>.thankyou_message {
+  display: none;
+}
+
+/* ---------------------------- footer */
+#contact>.footer {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: #111;
+  width: 100%;
+  height: 200px;
+  padding: 40px 0;
+
+  color: #fff;
+}
+#contact>.footer>.site_map {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+}
+#contact>.footer>.site_map>a {
+  font-family: 'Raleway', sans-serif;
+}
+#contact>.footer>.site_map>a:hover {
+  transition: 0.5s;
+  color: #b941b5;
+}
+#contact>.footer>.line {
+  background-color: #777;
+  width: 400px;
+  height: 1px;
+}
+#contact>.footer>.gototop_btn {
+  display: inline-block;
+  color: #777;
+  font-family: 'Raleway', sans-serif;
+}
+#contact>.footer>.gototop_btn:hover {
+  transition: 0.5s;
+  color: #fff;
+}
