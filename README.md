@@ -1,4 +1,4 @@
-## 1. Yeseul's Portfolio
+## 1. Front-end developer Yeseul Lee
 프론트엔드 개발자 이예슬 포트폴리오
 * [바로가기](https://pic22ti.github.io/index.html)
 
@@ -46,6 +46,6 @@
 ## 5. 개발 기간
 * (5일) 2020.10.9 ~ 2020.10.13
 
-## 6. 참고 사항
+## 6. 참고
 * [Full page Vanilla JS](https://codepen.io/nearee/pen/zYYENMa)
 * [MATERIAL DESIGN](https://material.io/resources/icons/?style=baseline)
