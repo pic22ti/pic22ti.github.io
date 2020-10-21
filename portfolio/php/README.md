@@ -1,4 +1,4 @@
-![logo_php](/portfolio/php/logo_php.jpg)
+![thum_community](/portfolio/php/thum_community.jpg)
 
 ## 1. Community
 게시판 구현 커뮤니티 사이트
@@ -18,7 +18,7 @@
 * Javascript
 
 ## 4. 사이트 구조
-![sitemap_php](/portfolio/php/sitemap_php.jpg)
+![sitemap_community](/portfolio/php/sitemap_community.jpg)
 
 ## 5. DB 구조
 |member(회원)||||
