@@ -1,4 +1,4 @@
-![logo_denim](/portfolio/denim/logo_denim.png)
+![thum_hotel_denim](/portfolio/denim/thum_hotel_denim.jpg)
 
 ## 1. HOTEL DENIM
 호텔 데님 리뉴얼 사이트
@@ -17,7 +17,7 @@
 * Photoshop
 
 ## 4. 사이트 구조
-![sitemap_denim](/portfolio/denim/sitemap_denim.jpg)
+![sitemap_hotel_denim](/portfolio/denim/sitemap_hotel_denim.jpg)
 
 ## 5. 고찰 및 개선 방향
 * 크로스 브라우징 처리 보안 예정
@@ -27,4 +27,3 @@
 * [호텔 데님](http://hoteldenim.com/)
 * [파라다이스시티 호텔](https://www.p-city.com/)
 * [폰트어썸](https://fontawesome.com/)
-* [OpenWeatherMap](https://openweathermap.org/)
