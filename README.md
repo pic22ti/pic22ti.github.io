@@ -1,5 +1,8 @@
-## 1. Front-end developer Yeseul Lee
-프론트엔드 개발자 이예슬 포트폴리오
+![thum_portfolio](thum_portfolio.jpg)
+
+## 1. Yeseul's portfolio
+이예슬 포트폴리오
+* [github](https://github.com/pic22ti/pic22ti.github.io)
 * [바로가기](https://pic22ti.github.io/index.html)
 
 ## 2. 프로젝트 목차
