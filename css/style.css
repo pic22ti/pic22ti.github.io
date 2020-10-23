@@ -132,19 +132,19 @@ input, textarea {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100vh;
-  padding: 90px 120px;
+  padding: 9vh 8vw;
 
   display: none;
 }
 #modal_detail>.close_modal {
   position: absolute;
-  top: 180px;
-  right: 340px;
+  top: 18vh;
+  right: 20vw;
 }
 #modal_detail>.detail_page {
   background-color: #fff;
   width: 100%;
-  padding: 90px 220px;
+  padding: 9vh 10vw;
   display: none;
 }
 #modal_detail>.detail_page>a {
