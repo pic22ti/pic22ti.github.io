@@ -1,42 +1,33 @@
 (function(){
   "use strict";
   
-
   /*[pan and wrap CSS scrolls]*/
-  let pnls = document.querySelectorAll('.panel').length, scdir, hold = false;
+  let pnls = document.querySelectorAll('.panel').length;
+  let scdir, hold = false;
   let slength, plength, pan, step;
 
   function _scrollY(obj) {
     slength, plength, pan, step = 100;
-    let vh = window.innerHeight / 100,
-        vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
+    let vh = window.innerHeight / 100;
+    let vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
 
-    // this가 있고 this가 wrap 일때, 또는 인자가 있고 인자가 wrap일때 실행
-    // pan은 this 이거나 obj
-    // 패널 높이 새로 설정
     if ((this !== undefined && this.id === 'wrap') || (obj !== undefined && obj.id === 'wrap')) {
       pan = this || obj;
       plength = parseInt(pan.offsetHeight / vh);
     }
-
-    // pan이 없을 때 리턴
     if (pan === undefined) {
       return;
     }
 
-    // 패널 높이는 패널 넢이 이거나 새로 설정
-    // 스크롤 높이를 새로 설정
     plength = plength || parseInt(pan.offsetHeight / vmin);
     slength = parseInt(pan.style.transform.replace('translateY(', ''));
 
-    // 스크롤방향이 up/down
     if (scdir === 'up' && Math.abs(slength) < (plength - plength / pnls)) {
       slength = slength - step;
     } else if (scdir === 'down' && slength < 0) {
       slength = slength + step;
     } 
 
-    // 홀드 값이 false일때, true 값을 넣고 이동하고, 0.5초 이후 다시 false로 돌아감
     if (hold === false) {
       hold = true;
       pan.style.transform = 'translateY(' + slength + 'vh)';
@@ -50,7 +41,6 @@
   let wrap = document.getElementById('wrap');
   wrap.style.transform = 'translateY(0)';
   wrap.addEventListener('wheel', function(e) {
-    // WheelEvent의 deltaY 속성: 아래로 스크롤 양수, 위로 스크롤 음수 또는 0 반환
     if (e.deltaY < 0) {
       scdir = 'down';
     }
@@ -63,14 +53,6 @@
   wrap.addEventListener('wheel', _scrollY);
 
 
-
-
-
-
-
-
-  
-  
   // 메뉴 여는 함수
   const nav = document.querySelector('.nav');
   const navBG = document.querySelector('.nav_bg');
@@ -136,6 +118,7 @@
     goNav(e);
   });
 
+  // 헤더 로고 버튼 클릭 이벤트
   const headerLogo = document.querySelector('#header>.logo');
   headerLogo.addEventListener('click', function(e){
     goNav(e);
