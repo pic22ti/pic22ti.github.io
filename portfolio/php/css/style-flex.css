@@ -32,6 +32,13 @@ div, p, input, textarea {
   font-size: 13px;
   line-height: normal;
 }
+/* safari input default style 삭제 */
+input, textarea {
+  border: none;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 
 /* 전체를 감싸는 wrap 스타일  */
 .wrap {
