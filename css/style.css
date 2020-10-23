@@ -36,6 +36,13 @@ li {
 a, h1, h2, h3, p, li, span, input, textarea {
   font-family: 'Noto Sans KR', sans-serif;
 }
+/* safari input default style 삭제 */
+input, textarea {
+  border: none;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 
 /* ---------------------------- header */
 /* 상단에 고정되는 헤더 */
