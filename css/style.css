@@ -377,6 +377,9 @@ input, textarea {
 #portfolio>.container>.thum6 {
   left: 300%;
 }
+#portfolio>.container>.thum7 {
+  left: 360%;
+}
 /* 썸네일 이미지 */
 #portfolio>.container>article>.thum_img {
   cursor: pointer;

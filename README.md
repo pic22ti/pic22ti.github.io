@@ -31,10 +31,15 @@
     - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/solar_system)
     - [바로가기](https://pic22ti.github.io/portfolio/solar_system/index.html)
 
-### 2.5. TO DO LIST
+### 2.6. TO DO LIST
   * 할 일 목록 관리 사이트
     - [github](https://github.com/pic22ti/todolist)
     - [바로가기](https://pic22ti.github.io/todolist/)
+
+### 2.7. Movie App
+  * 베스트 영화 소개 어플
+    - [github](https://github.com/pic22ti/movie_app)
+    - [바로가기](https://pic22ti.github.io/movie_app/)
 
 ## 3. 기능 구현
 * flex 레이아웃 적용
