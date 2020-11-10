@@ -11,16 +11,16 @@
     - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/denim)
     - [바로가기](https://pic22ti.github.io/portfolio/denim/index.html)
   
-### 2.2. Community
-  * 게시판 구현 커뮤니티 사이트
-    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
-    - [바로가기](http://pic22ti.dothome.co.kr/mysite/php/index.php)
-  
-### 2.3. Drop Top
+### 2.2. Drop Top
   * 카페 드롭탑 리뉴얼 사이트
     - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/droptop)
     - [바로가기](https://pic22ti.github.io/portfolio/droptop/index.html)
 
+### 2.3. Community
+  * 게시판 구현 커뮤니티 사이트
+    - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/php)
+    - [바로가기](http://pic22ti.dothome.co.kr/mysite/php/index.php)
+  
 ### 2.4. Fomula1
   * 포뮬러1 레이싱 팀 소개 사이트
     - [github](https://github.com/pic22ti/pic22ti.github.io/tree/master/portfolio/fomula1)
