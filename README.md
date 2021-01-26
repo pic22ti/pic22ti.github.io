@@ -1,7 +1,5 @@
-![thum_portfolio](thum_portfolio.jpg)
-
-## 1. High Quality Web Development
-프론트엔드 개발자 이예슬 포트폴리오
+## 1. High Quality Markup Development
+마크업 개발자 이예슬 포트폴리오
 * [github](https://github.com/pic22ti/pic22ti.github.io)
 * [바로가기](https://pic22ti.github.io/index.html)
 
@@ -43,7 +41,6 @@
 
 ## 3. 기능 구현
 * flex 레이아웃 적용
-* google mail API 사용
 
 ## 4. 스킬
 * 기여도 100%
