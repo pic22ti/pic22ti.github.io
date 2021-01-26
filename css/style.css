@@ -494,60 +494,15 @@ input, textarea {
   flex-flow: column wrap;
   justify-content: center;
 }
-#contact>.contact_container>.about_text {
-  padding-top: 20px;
-  font-size: 20px;
-  /* text-align: right; */
-}
 /* contact 타이틀 */
 #contact>.contact_container>.contact_title {
-  /* flex: 1; */
   font-family: 'EB Garamond', serif;
   font-size: 7vmin;
   font-weight: 500;
 }
-/* 메일 작성 폼 */
-#contact>.contact_container>.contact_form {
-  flex: 1;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-#contact>.contact_container>.contact_form>input,
-#contact>.contact_container>.contact_form>textarea
-{
-  display: inline-block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border: 1px solid #000;
-  margin-bottom: 15px;
-
-  font-family: 'Raleway', sans-serif;
-}
-#contact>.contact_container>.contact_form>textarea {
-  flex: 1;
-}
-/* 보내기 버튼 */
-#contact>.contact_container>.contact_form>.send_btn {
-  cursor: pointer;
-  background-color: #000;
-  margin-bottom: 0px;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-}
-#contact>.contact_container>.contact_form>.send_btn:hover {
-  transition: 0.5s;
-  background-color: #b941b5;
-  border: 1px solid #b941b5;
-}
-/* 스팸 방지 (일반적인 사용자에게 보이지 않도록 숨김) */
-#honeypot {
-  display: none !important; 
-}
-/* 메일 송신 안내 문구 */
-#contact>.contact_container>.contact_form>.thankyou_message {
-  display: none;
+#contact>.contact_container>.contact_text {
+  padding-top: 20px;
+  font-size: 20px;
 }
 
 /* ---------------------------- footer */
